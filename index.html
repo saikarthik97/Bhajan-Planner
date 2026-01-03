@@ -14,24 +14,23 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <img src="logo.png" alt="Sri Sathya Sai Centenary" class="header-logo">
             <div class="header-title-group">
                 <div class="om-symbol">ॐ</div>
-                <h1 class="main-title">Aum Sri Sai Ram</h1>
+                <h1 class="main-title">Om Sri Sai Ram</h1>
                 <div class="om-symbol">ॐ</div>
             </div>
         </header>
 
         <!-- Main Title -->
         <div class="page-title">
-            <h1>Premsadan Bhajan Planner</h1>
+            <h1>Premsadan Bhajans Planner </h1>
         </div>
 
         <!-- Search by Name Section -->
         <section class="search-section">
             <h2 class="section-title">Search by Bhajan Name</h2>
             <div class="search-box">
-                <input type="text" id="nameSearch" placeholder="Enter bhajan name..." class="search-input" oninput="searchByName()">
+                <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input" oninput="searchByName()">
             </div>
             <div id="nameSearchResults" class="live-results"></div>
         </section>
@@ -63,7 +62,7 @@
                     </select>
                 </div>
 
-                <!-- Beat Filter -->
+                <!-- Beat Filter (commented out for future use)
                 <div class="filter-group">
                     <label class="filter-label">Beat:</label>
                     <div class="checkbox-group">
@@ -81,6 +80,7 @@
                         </label>
                     </div>
                 </div>
+                -->
 
                 <!-- Speed Filter -->
                 <div class="filter-group">
@@ -108,6 +108,34 @@
             </div>
             <div class="search-box">
                 <button onclick="searchByDate()" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Live Bhajan Audios Section -->
+        <section class="search-section audio-section">
+            <h2 class="section-title">🎵 Live Bhajan Audios</h2>
+            <p class="section-description">Select a date to listen to bhajans recorded on that day.</p>
+            <div class="audio-controls">
+                <div class="filter-group">
+                    <label for="audioDateSelect" class="filter-label">Select Date:</label>
+                    <select id="audioDateSelect" class="filter-select" onchange="loadAudio()">
+                        <option value="">-- Choose a date --</option>
+                    </select>
+                </div>
+            </div>
+            <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
+                <div class="audio-label" id="audioLabel"></div>
+                <iframe id="soundcloudPlayer"
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="">
+                </iframe>
+            </div>
+            <div id="noAudioMessage" class="no-audio-message" style="display: none;">
+                No audio available for the selected date.
             </div>
         </section>
 
@@ -159,6 +187,7 @@
     </div> -->
 
     <script src="bhajans.js"></script>
+    <script src="audios.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
