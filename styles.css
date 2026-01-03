@@ -497,18 +497,31 @@ body {
     .header {
         flex-direction: column;
         gap: 10px;
+        padding-top: 10px;
+    }
+
+    .header-logo {
+        position: static;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .header-title-group {
+        padding: 15px 0;
+        gap: 10px;
     }
 
     .om-symbol {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .main-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .page-title h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding: 10px;
     }
 
     .search-section {
