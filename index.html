@@ -14,24 +14,26 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <div class="om-symbol">ॐ</div>
-            <h1 class="main-title">Aum Sri Sai Ram</h1>
-            <div class="om-symbol">ॐ</div>
+            <img src="logo.png" alt="Sri Sathya Sai Centenary" class="header-logo">
+            <div class="header-title-group">
+                <div class="om-symbol">ॐ</div>
+                <h1 class="main-title">Aum Sri Sai Ram</h1>
+                <div class="om-symbol">ॐ</div>
+            </div>
         </header>
 
         <!-- Main Title -->
         <div class="page-title">
-            <h1>Premsadan Planner</h1>
+            <h1>Premsadan Bhajan Planner</h1>
         </div>
 
         <!-- Search by Name Section -->
         <section class="search-section">
-            <h2 class="section-title">Search by Name</h2>
-            <p class="section-description">Search bhajans by their name in the database.</p>
+            <h2 class="section-title">Search by Bhajan Name</h2>
             <div class="search-box">
-                <input type="text" id="nameSearch" placeholder="Enter bhajan name..." class="search-input">
-                <button onclick="searchByName()" class="search-button">Search</button>
+                <input type="text" id="nameSearch" placeholder="Enter bhajan name..." class="search-input" oninput="searchByName()">
             </div>
+            <div id="nameSearchResults" class="live-results"></div>
         </section>
 
         <!-- Quick Search Section -->
@@ -73,6 +75,10 @@
                             <input type="checkbox" id="beat7" value="7">
                             <span>7 Beat</span>
                         </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="beat8" value="8">
+                            <span>8 Beat</span>
+                        </label>
                     </div>
                 </div>
 
@@ -83,9 +89,7 @@
                         <option value="all">All Speeds</option>
                         <option value="slow">Slow</option>
                         <option value="medium">Medium</option>
-                        <option value="mediumfast">Medium Fast</option>
                         <option value="fast">Fast</option>
-                        <option value="third">Third Speed</option>
                     </select>
                 </div>
             </div>
@@ -108,7 +112,7 @@
         </section>
 
         <!-- Administration Section -->
-        <section class="admin-section">
+        <!-- <section class="admin-section">
             <h2 class="section-title">Administration</h2>
             <div class="admin-buttons">
                 <button onclick="showLogin()" class="admin-button">
@@ -120,7 +124,7 @@
                     Login
                 </button>
             </div>
-        </section>
+        </section> -->
 
         <!-- Results Section -->
         <section id="resultsSection" class="results-section" style="display: none;">
@@ -136,7 +140,7 @@
     </div>
 
     <!-- Login Modal -->
-    <div id="loginModal" class="modal" style="display: none;">
+    <!-- <div id="loginModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close" onclick="closeLogin()">&times;</span>
             <h2>Administrator Login</h2>
@@ -152,8 +156,9 @@
                 <button type="submit" class="submit-button">Login</button>
             </form>
         </div>
-    </div>
+    </div> -->
 
+    <script src="bhajans.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
