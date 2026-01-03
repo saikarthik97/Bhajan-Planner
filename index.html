@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premsadan Planner - Bhajan Planning and Management System">
+    <title>Premsadan Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="om-symbol">ॐ</div>
+            <h1 class="main-title">Aum Sri Sai Ram</h1>
+            <div class="om-symbol">ॐ</div>
+        </header>
+
+        <!-- Main Title -->
+        <div class="page-title">
+            <h1>Premsadan Planner</h1>
+        </div>
+
+        <!-- Search by Name Section -->
+        <section class="search-section">
+            <h2 class="section-title">Search by Name</h2>
+            <p class="section-description">Search bhajans by their name in the database.</p>
+            <div class="search-box">
+                <input type="text" id="nameSearch" placeholder="Enter bhajan name..." class="search-input">
+                <button onclick="searchByName()" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Quick Search Section -->
+        <section class="search-section">
+            <h2 class="section-title">Quick Search</h2>
+            <div class="quick-search-grid">
+                <!-- Deity Filter -->
+                <div class="filter-group">
+                    <label for="deityFilter" class="filter-label">Deity:</label>
+                    <select id="deityFilter" class="filter-select">
+                        <option value="all">All Deities</option>
+                        <option value="ganesha">Ganesha</option>
+                        <option value="guru">Guru</option>
+                        <option value="devi">Devi</option>
+                        <option value="eshwaramba">Eshwaramba</option>
+                        <option value="sai">Sai</option>
+                        <option value="sarvadharma">Sarvadharma</option>
+                        <option value="vittala">Vittala</option>
+                        <option value="rama">Rama</option>
+                        <option value="dattatreya">Dattatreya</option>
+                        <option value="krishna">Krishna</option>
+                        <option value="narayana">Narayana</option>
+                        <option value="shiva">Shiva</option>
+                        <option value="srinivasa">Srinivasa</option>
+                        <option value="hanuman">Hanuman</option>
+                        <option value="subramanya">Subramanya</option>
+                    </select>
+                </div>
+
+                <!-- Beat Filter -->
+                <div class="filter-group">
+                    <label class="filter-label">Beat:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="beat6" value="6">
+                            <span>6 Beat</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="beat7" value="7">
+                            <span>7 Beat</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Speed Filter -->
+                <div class="filter-group">
+                    <label for="speedFilter" class="filter-label">Speed:</label>
+                    <select id="speedFilter" class="filter-select">
+                        <option value="all">All Speeds</option>
+                        <option value="slow">Slow</option>
+                        <option value="medium">Medium</option>
+                        <option value="mediumfast">Medium Fast</option>
+                        <option value="fast">Fast</option>
+                        <option value="third">Third Speed</option>
+                    </select>
+                </div>
+            </div>
+            <div class="search-box">
+                <button onclick="quickSearch()" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Bhajans Sung On Section -->
+        <section class="search-section">
+            <h2 class="section-title">Bhajans Sung On</h2>
+            <div class="date-search">
+                <label for="dateFilter" class="filter-label">Select Date:</label>
+                <input type="date" id="dateFilter" class="date-input">
+                <p class="section-description">Select a date to see bhajans sung on that day.</p>
+            </div>
+            <div class="search-box">
+                <button onclick="searchByDate()" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <!-- Administration Section -->
+        <section class="admin-section">
+            <h2 class="section-title">Administration</h2>
+            <div class="admin-buttons">
+                <button onclick="showLogin()" class="admin-button">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                        <polyline points="10 17 15 12 10 7"></polyline>
+                        <line x1="15" y1="12" x2="3" y2="12"></line>
+                    </svg>
+                    Login
+                </button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <h2 class="section-title">Search Results</h2>
+            <div id="resultsContainer" class="results-container"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Premsadan Planner. All rights reserved.</p>
+            <p>Aum Sri Sai Ram</p>
+        </footer>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Administrator Login</h2>
+            <form onsubmit="handleLogin(event)" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required class="form-input">
+                </div>
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

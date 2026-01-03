@@ -1,0 +1,27 @@
+{
+  "name": "premsadan-planner",
+  "version": "1.0.0",
+  "description": "A beautiful bhajan planning and management system",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "bhajan",
+    "planner",
+    "management",
+    "premsadan",
+    "sai-baba"
+  ],
+  "author": "Premsadan Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/premsadan-planner.git"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
