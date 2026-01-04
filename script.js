@@ -1,5 +1,3 @@
-// Bhajan data is loaded from bhajans.js file
-
 // Welcome Screen Curtain Functions
 function openCurtains() {
   const welcomeScreen = document.getElementById("welcomeScreen");
@@ -110,10 +108,6 @@ function searchByName() {
 // Quick Search Function
 function quickSearch() {
   const deity = document.getElementById("deityFilter").value;
-  // Beat filter (commented out for future use)
-  // const beat6 = document.getElementById("beat6").checked;
-  // const beat7 = document.getElementById("beat7").checked;
-  // const beat8 = document.getElementById("beat8").checked;
   const speed = document.getElementById("speedFilter").value;
 
   let results = bhajansDatabase;
@@ -122,16 +116,6 @@ function quickSearch() {
   if (deity !== "all") {
     results = results.filter((bhajan) => bhajan.deity === deity);
   }
-
-  // Filter by beat (commented out for future use)
-  // if (beat6 || beat7 || beat8) {
-  //   results = results.filter((bhajan) => {
-  //     if (beat6 && bhajan.beat === 6) return true;
-  //     if (beat7 && bhajan.beat === 7) return true;
-  //     if (beat8 && bhajan.beat === 8) return true;
-  //     return false;
-  //   });
-  // }
 
   // Filter by speed
   if (speed !== "all") {
@@ -231,31 +215,6 @@ function displayResults(results, title) {
   resultsSection.style.display = "block";
   resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
-
-// Login Modal Functions
-// function showLogin() {
-//     document.getElementById('loginModal').style.display = 'flex';
-// }
-
-// function closeLogin() {
-//     document.getElementById('loginModal').style.display = 'none';
-// }
-
-// function handleLogin(event) {
-//     event.preventDefault();
-//     const username = document.getElementById('username').value;
-//     const password = document.getElementById('password').value;
-
-//     // In production, this would validate against a backend
-//     if (username && password) {
-//         alert('Login functionality would be connected to backend in production');
-//         closeLogin();
-//         // Clear form
-//         document.getElementById('username').value = '';
-//         document.getElementById('password').value = '';
-//     }
-// }
-
 // Utility Functions
 function capitalizeFirst(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -389,33 +348,6 @@ function loadAudio() {
     if (audioPlayer) audioPlayer.pause();
   }
 }
-
-// SoundCloud version (kept aside for reference)
-// function loadAudioSoundCloud() {
-//   const audioDateSelect = document.getElementById("audioDateSelect");
-//   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
-//   const soundcloudPlayer = document.getElementById("soundcloudPlayer");
-//   const audioLabel = document.getElementById("audioLabel");
-//   const noAudioMessage = document.getElementById("noAudioMessage");
-//   const selectedDate = audioDateSelect.value;
-//   if (!selectedDate) {
-//     audioPlayerContainer.style.display = "none";
-//     noAudioMessage.style.display = "none";
-//     return;
-//   }
-//   const audioEntry = bhajanAudios.find(audio => audio.date === selectedDate);
-//   if (audioEntry && audioEntry.soundcloudUrl) {
-//     const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(audioEntry.soundcloudUrl)}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`;
-//     soundcloudPlayer.src = embedUrl;
-//     audioLabel.textContent = audioEntry.label || `Bhajans - ${formatDate(audioEntry.date)}`;
-//     audioPlayerContainer.style.display = "block";
-//     noAudioMessage.style.display = "none";
-//   } else {
-//     audioPlayerContainer.style.display = "none";
-//     noAudioMessage.style.display = "block";
-//   }
-// }
-
 // Add animation on scroll
 const observerOptions = {
   threshold: 0.1,
