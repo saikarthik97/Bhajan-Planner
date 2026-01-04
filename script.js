@@ -1,3 +1,10 @@
+// Combine Sunday and Thursday bhajans into a single database
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData];
+const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
+  id: index + 1,
+  ...bhajan,
+}));
+
 // Welcome Screen Curtain Functions
 function openCurtains() {
   const welcomeScreen = document.getElementById("welcomeScreen");
