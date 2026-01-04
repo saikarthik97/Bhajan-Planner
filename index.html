@@ -125,15 +125,20 @@
             </div>
             <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
                 <div class="audio-label" id="audioLabel"></div>
-                <iframe id="soundcloudPlayer"
-                    width="100%"
-                    height="166"
-                    scrolling="no"
-                    frameborder="no"
-                    allow="autoplay"
-                    src="">
-                </iframe>
+                <audio id="audioPlayer" controls style="width: 100%;">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
+            <!-- SoundCloud player (kept aside for reference)
+            <iframe id="soundcloudPlayer"
+                width="100%"
+                height="166"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="">
+            </iframe>
+            -->
             <div id="noAudioMessage" class="no-audio-message" style="display: none;">
                 No audio available for the selected date.
             </div>

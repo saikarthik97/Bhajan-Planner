@@ -323,7 +323,7 @@ function populateAudioDates() {
 function loadAudio() {
   const audioDateSelect = document.getElementById("audioDateSelect");
   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
-  const soundcloudPlayer = document.getElementById("soundcloudPlayer");
+  const audioPlayer = document.getElementById("audioPlayer");
   const audioLabel = document.getElementById("audioLabel");
   const noAudioMessage = document.getElementById("noAudioMessage");
 
@@ -332,24 +332,51 @@ function loadAudio() {
   if (!selectedDate) {
     audioPlayerContainer.style.display = "none";
     noAudioMessage.style.display = "none";
+    if (audioPlayer) audioPlayer.pause();
     return;
   }
 
   // Find the audio for the selected date
   const audioEntry = bhajanAudios.find(audio => audio.date === selectedDate);
 
-  if (audioEntry && audioEntry.soundcloudUrl) {
-    // Create SoundCloud embed URL
-    const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(audioEntry.soundcloudUrl)}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`;
-    soundcloudPlayer.src = embedUrl;
+  if (audioEntry && audioEntry.audioFile) {
+    // Play local audio file directly in browser
+    audioPlayer.src = audioEntry.audioFile;
     audioLabel.textContent = audioEntry.label || `Bhajans - ${formatDate(audioEntry.date)}`;
     audioPlayerContainer.style.display = "block";
     noAudioMessage.style.display = "none";
   } else {
     audioPlayerContainer.style.display = "none";
     noAudioMessage.style.display = "block";
+    if (audioPlayer) audioPlayer.pause();
   }
 }
+
+// SoundCloud version (kept aside for reference)
+// function loadAudioSoundCloud() {
+//   const audioDateSelect = document.getElementById("audioDateSelect");
+//   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
+//   const soundcloudPlayer = document.getElementById("soundcloudPlayer");
+//   const audioLabel = document.getElementById("audioLabel");
+//   const noAudioMessage = document.getElementById("noAudioMessage");
+//   const selectedDate = audioDateSelect.value;
+//   if (!selectedDate) {
+//     audioPlayerContainer.style.display = "none";
+//     noAudioMessage.style.display = "none";
+//     return;
+//   }
+//   const audioEntry = bhajanAudios.find(audio => audio.date === selectedDate);
+//   if (audioEntry && audioEntry.soundcloudUrl) {
+//     const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(audioEntry.soundcloudUrl)}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false`;
+//     soundcloudPlayer.src = embedUrl;
+//     audioLabel.textContent = audioEntry.label || `Bhajans - ${formatDate(audioEntry.date)}`;
+//     audioPlayerContainer.style.display = "block";
+//     noAudioMessage.style.display = "none";
+//   } else {
+//     audioPlayerContainer.style.display = "none";
+//     noAudioMessage.style.display = "block";
+//   }
+// }
 
 // Add animation on scroll
 const observerOptions = {
