@@ -5,6 +5,243 @@
     box-sizing: border-box;
 }
 
+/* Welcome Screen with Curtain Effect */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: linear-gradient(180deg, #1a0000 0%, #0d0000 100%);
+    overflow: hidden;
+}
+
+/* Golden rod at the top */
+.welcome-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(180deg, #ffd700 0%, #daa520 50%, #b8860b 100%);
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.curtain {
+    position: absolute;
+    top: 20px;
+    width: 52%;
+    height: calc(100% + 50px);
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #8B0000 0px,
+            #6d0000 8px,
+            #8B0000 16px,
+            #9a0000 24px,
+            #7a0000 32px,
+            #8B0000 40px
+        );
+    transition: transform 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Fabric folds effect */
+.curtain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 15px,
+            rgba(0, 0, 0, 0.2) 16px,
+            rgba(0, 0, 0, 0.3) 20px,
+            rgba(0, 0, 0, 0.2) 24px,
+            transparent 25px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.05) 0px,
+            transparent 8px,
+            transparent 32px,
+            rgba(255, 255, 255, 0.05) 40px
+        );
+    pointer-events: none;
+    animation: curtainSway 4s ease-in-out infinite;
+}
+
+@keyframes curtainSway {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.01); }
+}
+
+/* Gathered fabric at top */
+.curtain::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #7a0000 0px,
+            #8B0000 5px,
+            #6d0000 10px,
+            #8B0000 15px,
+            #9a0000 20px
+        );
+    border-radius: 0 0 50% 50% / 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.curtain-left {
+    left: 0;
+    transform-origin: left center;
+}
+
+.curtain-right {
+    right: 0;
+    transform-origin: right center;
+}
+
+.curtain-left.open {
+    transform: translateX(-100%) skewY(2deg);
+}
+
+.curtain-right.open {
+    transform: translateX(100%) skewY(-2deg);
+}
+
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
+}
+
+.swami-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffd700;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+.welcome-subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.enter-btn {
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #8B0000;
+    background: linear-gradient(180deg, #ffd700 0%, #ffed4a 50%, #ffd700 100%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+}
+
+.enter-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.7);
+}
+
+.welcome-screen.hidden {
+    pointer-events: none;
+}
+
+.welcome-screen.hidden .welcome-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.welcome-screen.fade-out {
+    display: none;
+}
+
+/* Responsive styles for welcome screen */
+@media (max-width: 768px) {
+    .swami-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+
+    .enter-btn {
+        padding: 12px 40px;
+        font-size: 1rem;
+    }
+
+    .curtain::after {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swami-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .welcome-title {
+        font-size: 1.5rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .enter-btn {
+        padding: 10px 35px;
+        font-size: 0.95rem;
+    }
+
+    .curtain::after {
+        height: 30px;
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 50%, #a18cd1 100%);
@@ -951,3 +1188,32 @@ body {
         padding: 15px 12px;
     }
 }
+
+/* Sound Toggle Button (commented out for future use)
+.sound-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sound-toggle:hover {
+    background: #f0f0f0;
+}
+
+.sound-toggle.playing {
+    background: #e8f5e9;
+    border-color: #4caf50;
+}
+*/

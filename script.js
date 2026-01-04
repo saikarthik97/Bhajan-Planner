@@ -1,4 +1,42 @@
 // Bhajan data is loaded from bhajans.js file
+
+// Welcome Screen Curtain Functions
+function openCurtains() {
+  const welcomeScreen = document.getElementById("welcomeScreen");
+  const curtainLeft = document.querySelector(".curtain-left");
+  const curtainRight = document.querySelector(".curtain-right");
+  // const bgAudio = document.getElementById("bgAudio");
+  // const soundToggle = document.getElementById("soundToggle");
+
+  // Add open class to curtains
+  curtainLeft.classList.add("open");
+  curtainRight.classList.add("open");
+
+  // Start background music (commented out for future use)
+  // if (bgAudio) {
+  //   bgAudio.volume = 0.1;
+  //   bgAudio.play().then(function() {
+  //     if (soundToggle) {
+  //       soundToggle.textContent = "🔊";
+  //       soundToggle.classList.add("playing");
+  //     }
+  //   }).catch(function(err) {
+  //     console.log("Audio play failed:", err);
+  //   });
+  // }
+
+  // Hide welcome content
+  welcomeScreen.classList.add("hidden");
+
+  // Remove welcome screen after animation
+  setTimeout(function() {
+    welcomeScreen.classList.add("fade-out");
+    setTimeout(function() {
+      welcomeScreen.style.display = "none";
+    }, 500);
+  }, 1800);
+}
+
 // Search by Name Function (Live Search with Date Sung)
 function searchByName() {
   const searchTerm = document
@@ -404,4 +442,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Populate audio dates dropdown
   populateAudioDates();
+
+  // Set initial volume for background audio (commented out for future use)
+  // const bgAudio = document.getElementById("bgAudio");
+  // if (bgAudio) {
+  //   bgAudio.volume = 0.1;
+  // }
 });
+
+// Toggle background sound on/off (commented out for future use)
+// function toggleSound() {
+//   const bgAudio = document.getElementById("bgAudio");
+//   const soundToggle = document.getElementById("soundToggle");
+//
+//   if (bgAudio.paused) {
+//     bgAudio.volume = 0.1; // 50% volume
+//     bgAudio.play();
+//     soundToggle.textContent = "🔊";
+//     soundToggle.classList.add("playing");
+//   } else {
+//     bgAudio.pause();
+//     soundToggle.textContent = "🔇";
+//     soundToggle.classList.remove("playing");
+//   }
+// }
