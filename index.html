@@ -141,7 +141,8 @@
             </div>
             <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
                 <div class="audio-label" id="audioLabel"></div>
-                <div class="audio-controls-row">
+                <!-- Desktop audio player -->
+                <div class="audio-controls-row desktop-audio">
                     <button class="skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
                         <span class="skip-icon">⏪</span>
                         <span class="skip-text">10s</span>
@@ -154,9 +155,38 @@
                         <span class="skip-icon">⏩</span>
                     </button>
                 </div>
+                <!-- Mobile custom audio player -->
+                <div class="mobile-audio-player">
+                    <div class="mobile-seekbar-row">
+                        <span class="mobile-time" id="mobileCurrentTime">0:00</span>
+                        <input type="range" id="mobileSeekbar" class="mobile-seekbar" value="0" min="0" max="100">
+                        <span class="mobile-time" id="mobileDuration">0:00</span>
+                    </div>
+                    <div class="mobile-controls-row">
+                        <button class="mobile-ctrl-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
+                            <span>⏪</span>
+                            <span>10s</span>
+                        </button>
+                        <button class="mobile-ctrl-btn mobile-play-btn" id="mobilePlayBtn" onclick="togglePlayPause()">
+                            ▶️
+                        </button>
+                        <button class="mobile-ctrl-btn" id="mobileMuteBtn" onclick="toggleMute()">
+                            🔊
+                        </button>
+                        <button class="mobile-ctrl-btn" onclick="skipAudio(10)" title="Forward 10 seconds">
+                            <span>10s</span>
+                            <span>⏩</span>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div id="noAudioMessage" class="no-audio-message" style="display: none;">
                 No audio available for the selected date.
+            </div>
+            <div id="audioSelectionPrompt" class="audio-selection-prompt" style="display: none;">
+                Select a bhajan to play or
+                <br>
+                <button class="play-all-btn" onclick="playAllBhajans()">▶ Play All</button>
             </div>
             <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
         </section>

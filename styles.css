@@ -1283,6 +1283,9 @@ body {
     background-clip: padding-box;
     position: relative;
     animation: fadeIn 0.4s ease;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .audio-player-container::before {
@@ -1437,27 +1440,183 @@ body {
     color: #6b7280;
 }
 
+/* Mobile Audio Player Styles */
+.mobile-audio-player {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-seekbar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-time {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #92400e;
+    min-width: 35px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.mobile-seekbar {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.mobile-seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4);
+    border: 2px solid white;
+}
+
+.mobile-seekbar::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4);
+    border: 2px solid white;
+}
+
+.mobile-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.mobile-ctrl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    padding: 4px 5px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+    min-width: auto;
+}
+
+.mobile-ctrl-btn span {
+    font-size: 1.4rem;
+}
+
+.mobile-ctrl-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.mobile-ctrl-btn:active {
+    transform: scale(0.98);
+}
+
+.mobile-play-btn {
+    padding: 5px 8px;
+    font-size: 1.8rem;
+}
+
+/* Audio selection prompt */
+.audio-selection-prompt {
+    text-align: center;
+    padding: 15px;
+    color: #92400e;
+    font-weight: 600;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 2px dashed #fcd34d;
+}
+
+.play-all-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
+}
+
+.play-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
 /* Responsive styles for audio section */
 @media (max-width: 768px) {
     .audio-player-container {
-        padding: 20px 15px;
+        padding: 15px 12px;
+        margin-top: 15px;
+        border-radius: 15px;
+    }
+
+    .audio-player-container::before {
+        border-radius: 17px;
     }
 
     .audio-label {
         font-size: 1rem;
+        margin-bottom: 10px;
+        word-wrap: break-word;
     }
 
-    .audio-controls-row {
-        gap: 10px;
+    .desktop-audio {
+        display: none;
     }
 
-    .skip-btn {
-        padding: 8px 10px;
-        font-size: 0.8rem;
+    .mobile-audio-player {
+        display: block;
     }
 
-    .skip-icon {
-        font-size: 0.9rem;
+    .mobile-seekbar-row {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .mobile-time {
+        font-size: 0.7rem;
+        min-width: 32px;
+    }
+
+    .mobile-controls-row {
+        gap: 6px;
     }
 
     .audio-bhajan-list {
@@ -1478,8 +1637,63 @@ body {
 
 @media (max-width: 480px) {
     .audio-player-container {
-        padding: 15px 12px;
+        padding: 10px 8px;
+        margin-top: 10px;
+        border-radius: 12px;
     }
+
+    .audio-player-container::before {
+        border-radius: 14px;
+    }
+
+    .audio-label {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .mobile-seekbar-row {
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+
+    .mobile-time {
+        font-size: 0.65rem;
+        min-width: 28px;
+    }
+
+    .mobile-seekbar {
+        height: 5px;
+    }
+
+    .mobile-seekbar::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+    }
+
+    .mobile-seekbar::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+    }
+
+    .mobile-controls-row {
+        gap: 5px;
+    }
+
+    .mobile-ctrl-btn {
+        padding: 4px 5px;
+        font-size: 1.2rem;
+        border-radius: 6px;
+    }
+
+    .mobile-ctrl-btn span {
+        font-size: 1rem;
+    }
+
+    .mobile-play-btn {
+        padding: 5px 8px;
+        font-size: 1.4rem;
+    }
+
 }
 
 /* Sound Toggle Button (commented out for future use)

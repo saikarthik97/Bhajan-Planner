@@ -363,6 +363,7 @@ function loadAudio() {
   const audioPlayer = document.getElementById("audioPlayer");
   const noAudioMessage = document.getElementById("noAudioMessage");
   const audioBhajanList = document.getElementById("audioBhajanList");
+  const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
 
   const selectedDate = audioDateSelect.value;
 
@@ -370,6 +371,7 @@ function loadAudio() {
     audioPlayerContainer.style.display = "none";
     noAudioMessage.style.display = "none";
     audioBhajanList.style.display = "none";
+    if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
     if (audioPlayer) audioPlayer.pause();
     return;
   }
@@ -422,8 +424,38 @@ function loadAudio() {
       </div>
     `;
     audioBhajanList.style.display = "block";
+    // Show the selection prompt if audio is available
+    if (hasAudio && audioSelectionPrompt) {
+      audioSelectionPrompt.style.display = "block";
+    } else if (audioSelectionPrompt) {
+      audioSelectionPrompt.style.display = "none";
+    }
   } else {
     audioBhajanList.style.display = "none";
+    if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+  }
+}
+
+// Play all bhajans sequentially
+function playAllBhajans() {
+  const audioDateSelect = document.getElementById("audioDateSelect");
+  const selectedDate = audioDateSelect.value;
+
+  if (!selectedDate) return;
+
+  // Get bhajans for the selected date
+  const bhajansForDate = bhajansDatabase.filter(
+    (bhajan) => bhajan.dateSung === selectedDate
+  );
+
+  if (bhajansForDate.length > 0) {
+    // Play the first bhajan (which starts the full audio)
+    const firstBhajan = bhajansForDate[0];
+    playBhajanAudio(firstBhajan.dateSung, "All Bhajans", null, null);
+
+    // Hide the selection prompt
+    const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
+    if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
   }
 }
 
@@ -456,6 +488,7 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
   const audioLabel = document.getElementById("audioLabel");
   const noAudioMessage = document.getElementById("noAudioMessage");
   const audioSection = document.querySelector(".audio-section");
+  const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
 
   // Parse timestamps (supports both seconds and "MM:SS" format)
   const startSeconds = parseTime(startTime);
@@ -482,6 +515,7 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
 
     audioPlayerContainer.style.display = "block";
     noAudioMessage.style.display = "none";
+    if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
 
     // Scroll to audio section
     audioSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -542,6 +576,90 @@ function skipAudio(seconds) {
     );
   }
 }
+
+// Mobile audio player controls
+function togglePlayPause() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const playBtn = document.getElementById("mobilePlayBtn");
+  if (audioPlayer && audioPlayer.src) {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playBtn.textContent = "⏸️";
+    } else {
+      audioPlayer.pause();
+      playBtn.textContent = "▶️";
+    }
+  }
+}
+
+function toggleMute() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const muteBtn = document.getElementById("mobileMuteBtn");
+  if (audioPlayer) {
+    audioPlayer.muted = !audioPlayer.muted;
+    muteBtn.textContent = audioPlayer.muted ? "🔇" : "🔊";
+  }
+}
+
+// Format time for mobile player display
+function formatMobileTime(seconds) {
+  if (isNaN(seconds) || !isFinite(seconds)) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, "0")}`;
+}
+
+// Initialize mobile audio player controls
+function initMobileAudioPlayer() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const seekbar = document.getElementById("mobileSeekbar");
+  const currentTimeEl = document.getElementById("mobileCurrentTime");
+  const durationEl = document.getElementById("mobileDuration");
+  const playBtn = document.getElementById("mobilePlayBtn");
+
+  if (!audioPlayer || !seekbar) return;
+
+  // Update seekbar and time display as audio plays
+  audioPlayer.addEventListener("timeupdate", function () {
+    if (audioPlayer.duration) {
+      const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+      seekbar.value = progress;
+      currentTimeEl.textContent = formatMobileTime(audioPlayer.currentTime);
+    }
+  });
+
+  // Update duration when metadata loads
+  audioPlayer.addEventListener("loadedmetadata", function () {
+    durationEl.textContent = formatMobileTime(audioPlayer.duration);
+    seekbar.value = 0;
+    currentTimeEl.textContent = "0:00";
+    playBtn.textContent = "▶️";
+  });
+
+  // Seek when user drags the seekbar
+  seekbar.addEventListener("input", function () {
+    if (audioPlayer.duration) {
+      audioPlayer.currentTime = (seekbar.value / 100) * audioPlayer.duration;
+    }
+  });
+
+  // Update play button when audio ends
+  audioPlayer.addEventListener("ended", function () {
+    playBtn.textContent = "▶️";
+  });
+
+  // Update play button when audio is paused externally
+  audioPlayer.addEventListener("pause", function () {
+    playBtn.textContent = "▶️";
+  });
+
+  audioPlayer.addEventListener("play", function () {
+    playBtn.textContent = "⏸️";
+  });
+}
+
+// Initialize mobile player when DOM is ready
+document.addEventListener("DOMContentLoaded", initMobileAudioPlayer);
 // Add animation on scroll
 const observerOptions = {
   threshold: 0.1,
