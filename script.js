@@ -104,10 +104,10 @@ function searchByName() {
     resultsContainer.innerHTML = results
       .map(
         (bhajan) => `
-            <div class="live-result-item">
-                <span class="bhajan-name clickable-info" onclick="showAudioHint('${formatDate(
-                  bhajan.dateSung
-                )}')">${bhajan.name}</span>
+            <div class="live-result-item clickable-row" onclick="showAudioHint('${formatDate(
+              bhajan.dateSung
+            )}')">
+                <span class="bhajan-name">${bhajan.name}</span>
                 <span class="detail-badge deity-badge">${capitalizeFirst(
                   bhajan.deity
                 )}</span>
@@ -189,11 +189,11 @@ function displayDateResults(results) {
     resultsContainer.innerHTML = results
       .map(
         (bhajan, index) => `
-            <div class="result-item date-result-item">
+            <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${formatDate(
+              bhajan.dateSung
+            )}')">
                 <span class="result-number">${index + 1}.</span>
-                <h3 class="result-title clickable-info" onclick="showAudioHint('${formatDate(
-                  bhajan.dateSung
-                )}')">${bhajan.name}</h3>
+                <h3 class="result-title">${bhajan.name}</h3>
                 <span class="detail-badge day-badge">${bhajan.day}</span>
                 <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
             </div>
@@ -222,11 +222,11 @@ function displayResults(results, title) {
     resultsContainer.innerHTML = results
       .map(
         (bhajan, index) => `
-            <div class="result-item quick-result-item">
+            <div class="result-item quick-result-item clickable-row" onclick="showAudioHint('${formatDate(
+              bhajan.dateSung
+            )}')">
                 <span class="result-number">${index + 1}.</span>
-                <span class="result-title clickable-info" onclick="showAudioHint('${formatDate(
-                  bhajan.dateSung
-                )}')">${bhajan.name}</span>
+                <span class="result-title">${bhajan.name}</span>
                 <span class="detail-badge deity-badge">${capitalizeFirst(
                   bhajan.deity
                 )}</span>

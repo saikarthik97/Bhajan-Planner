@@ -575,6 +575,11 @@ body {
     text-decoration: underline;
 }
 
+/* Clickable row - makes entire bhajan box clickable */
+.clickable-row {
+    cursor: pointer;
+}
+
 /* Audio Hint Modal Styles */
 .hint-modal {
     position: fixed;
