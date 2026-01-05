@@ -549,6 +549,123 @@ body {
     font-size: 1.15rem;
 }
 
+/* Clickable bhajan name styles */
+.clickable-bhajan {
+    cursor: pointer;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.clickable-bhajan:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+.live-result-item .clickable-bhajan:hover {
+    color: #667eea;
+}
+
+/* Clickable info - hint to use Live Audio section */
+.clickable-info {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.clickable-info:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+/* Audio Hint Modal Styles */
+.hint-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.hint-modal-content {
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+.hint-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 1.8rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hint-close:hover {
+    color: white;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    transform: rotate(90deg);
+}
+
+.hint-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hint-message {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hint-message strong {
+    color: #d97706;
+}
+
+.hint-ok-btn {
+    padding: 12px 50px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hint-ok-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.hint-ok-btn:active {
+    transform: translateY(0);
+}
+
 .live-result-item .bhajan-day {
     color: #ffffff;
     font-weight: 700;
@@ -766,33 +883,36 @@ body {
     border: 1px solid #059669;
 }
 
-/* Date Search Result Items (simplified) */
+/* Date Search Result Items (simplified & compact) */
 .date-result-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
-    padding: 18px 25px;
+    gap: 10px;
+    padding: 10px 15px;
+    border-left-width: 4px;
 }
 
 .date-result-item .result-number {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     color: #667eea;
-    min-width: 30px;
+    min-width: 25px;
 }
 
 .date-result-item .result-title {
     flex: 1;
     margin-bottom: 0;
-    font-size: 1.15rem;
-    min-width: 200px;
+    font-size: 1rem;
+    min-width: 180px;
 }
 
-.date-result-item .result-shruthi {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+.date-result-item .day-badge {
+    padding: 2px 8px;
+    font-size: 0.75rem;
+}
+
+.date-result-item .result-shruthi-simple {
     margin-bottom: 0;
 }
 
@@ -802,8 +922,37 @@ body {
 
 .shruthi-simple {
     color: #1e3a8a;
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Quick Search Result Items (compact list format) */
+.quick-result-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-left-width: 4px;
+}
+
+.quick-result-item .result-number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
+    min-width: 25px;
+}
+
+.quick-result-item .result-title {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 180px;
+}
+
+.quick-result-item .bhajan-shruthi {
+    font-size: 0.85rem;
 }
 
 /* Footer */
@@ -1172,6 +1321,117 @@ body {
     border: 2px solid #fca5a5;
 }
 
+.audio-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.audio-controls-row audio {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 12px;
+}
+
+.skip-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
+}
+
+.skip-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+}
+
+.skip-btn:active {
+    transform: scale(0.98);
+}
+
+.skip-icon {
+    font-size: 1rem;
+}
+
+.skip-text {
+    font-size: 0.75rem;
+}
+
+/* Audio Bhajan List Styles */
+.audio-bhajan-list {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+    border-radius: 15px;
+    border: 2px solid #fcd34d;
+}
+
+.audio-bhajan-list-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #92400e;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fcd34d;
+}
+
+.audio-bhajan-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.audio-bhajan-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #fde68a;
+}
+
+.audio-bhajan-item.has-audio:hover {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.2);
+}
+
+.audio-bhajan-item.no-audio {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.audio-bhajan-number {
+    font-weight: 700;
+    color: #d97706;
+    min-width: 25px;
+}
+
+.audio-bhajan-name {
+    flex: 1;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.audio-bhajan-shruthi {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
 /* Responsive styles for audio section */
 @media (max-width: 768px) {
     .audio-player-container {
@@ -1180,6 +1440,34 @@ body {
 
     .audio-label {
         font-size: 1rem;
+    }
+
+    .audio-controls-row {
+        gap: 10px;
+    }
+
+    .skip-btn {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .skip-icon {
+        font-size: 0.9rem;
+    }
+
+    .audio-bhajan-list {
+        padding: 15px;
+    }
+
+    .audio-bhajan-item {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+    }
+
+    .audio-bhajan-shruthi {
+        width: 100%;
+        margin-top: 5px;
+        padding-left: 35px;
     }
 }
 

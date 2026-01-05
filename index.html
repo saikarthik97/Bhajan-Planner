@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Welcome Splash Screen with Curtain Effect -->
     <div id="welcomeScreen" class="welcome-screen">
@@ -42,7 +45,8 @@
         <section class="search-section">
             <h2 class="section-title">Search by Bhajan Name</h2>
             <div class="search-box">
-                <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input" oninput="searchByName()">
+                <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
+                    oninput="searchByName()">
             </div>
             <div id="nameSearchResults" class="live-results"></div>
         </section>
@@ -137,13 +141,24 @@
             </div>
             <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
                 <div class="audio-label" id="audioLabel"></div>
-                <audio id="audioPlayer" controls style="width: 100%;">
-                    Your browser does not support the audio element.
-                </audio>
+                <div class="audio-controls-row">
+                    <button class="skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
+                        <span class="skip-icon">⏪</span>
+                        <span class="skip-text">10s</span>
+                    </button>
+                    <audio id="audioPlayer" controls>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <button class="skip-btn" onclick="skipAudio(10)" title="Forward 10 seconds">
+                        <span class="skip-text">10s</span>
+                        <span class="skip-icon">⏩</span>
+                    </button>
+                </div>
             </div>
             <div id="noAudioMessage" class="no-audio-message" style="display: none;">
                 No audio available for the selected date.
             </div>
+            <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
         </section>
 
         <!-- Administration Section -->
@@ -184,6 +199,16 @@
             <p>&copy; 2024 Premsadan Planner. All rights reserved.</p>
             <p>Aum Sri Sai Ram</p>
         </footer>
+    </div>
+
+    <!-- Audio Hint Modal -->
+    <div id="audioHintModal" class="hint-modal" style="display: none;">
+        <div class="hint-modal-content">
+            <span class="hint-close" onclick="closeAudioHint()">&times;</span>
+            <div class="hint-icon">🎵</div>
+            <p id="audioHintMessage" class="hint-message"></p>
+            <button class="hint-ok-btn" onclick="closeAudioHint()">OK</button>
+        </div>
     </div>
 
     <!-- Login Modal -->

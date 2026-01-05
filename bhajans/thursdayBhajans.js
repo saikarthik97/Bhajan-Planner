@@ -1,12 +1,13 @@
 const thursdayBhajansRawData = [
-  // 1st Jan 2026
+  // 1st Jan 2026 - Audio: audios/01st Jan 2026.mp3
   {
-    name: "Jaya Ganesh (3) Deva",
+    name: "Jai Ganesh (3) Deva",
     deity: "ganesha",
     speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "0:24",
   },
   {
     name: "Man Ek Baar Hari Bol",
@@ -15,6 +16,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "3:54",
   },
   {
     name: "Premaswaroopini Janani Maa",
@@ -23,6 +25,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "7:58",
   },
   {
     name: "Shiva Shambho(2) Shiva Shambho Mahadeva",
@@ -31,6 +34,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "5.5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "12:42",
   },
   {
     name: "Radhe Radhe Nanda Mukunda",
@@ -39,6 +43,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "17:07",
   },
   {
     name: "Govinda Nam Bhajo Gopala Naam Bhajo",
@@ -47,6 +52,7 @@ const thursdayBhajansRawData = [
     shruthi: { ladies: "6.5P " },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "20:44",
   },
   {
     name: "Raghuvamsa dhama Rama Ranaranga bheema Rama",
@@ -55,6 +61,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2.5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "23:22",
   },
   {
     name: "Sarva Dharma Swaroopa Sai",
@@ -63,6 +70,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "5P", ladies: "2.5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "28:52",
   },
   {
     name: "Mana Bangaru Parti Baba",
@@ -71,6 +79,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "33:15",
   },
   {
     name: "Sai Namame Brahmanandam",
@@ -79,6 +88,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "35:40",
   },
   {
     name: "Shankara (2) Sadashiva",
@@ -87,6 +97,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "38:46",
   },
   {
     name: "Nanda Kishora Narayana",
@@ -95,6 +106,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "41:10",
   },
   {
     name: "Yadukula Nandana Sri Hari Madhava",
@@ -103,6 +115,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "43:40",
   },
   {
     name: "Vittala Vittala Hari Vittala",
@@ -111,6 +124,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "45:32",
   },
   {
     name: "Anandame Sai Bhajana",
@@ -119,14 +133,16 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "7P", ladies: "4P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "48:01",
   },
   {
     name: "Ram(3) parama Sumangala Ram",
     deity: "ram",
     speed: "fast",
-    shruthi: { gents: "2.5P", ladies: "5.P" },
+    shruthi: { gents: "2.5P", ladies: "5.5P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "51:33",
   },
   {
     name: "Sri Anjaneyam Bhaje Prasannanjaneyam Bhaje",
@@ -135,6 +151,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "53:40",
   },
   {
     name: "Sai Prem Dey Shanti Dey",
@@ -143,5 +160,6 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4.5P", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-01-01",
+    startTime: "58:30",
   },
 ];
