@@ -45,7 +45,7 @@
             #7a0000 32px,
             #8B0000 40px
         );
-    transition: transform 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
@@ -186,11 +186,13 @@
 
 .welcome-screen.hidden .welcome-content {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .welcome-screen.fade-out {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
 /* Responsive styles for welcome screen */
@@ -785,6 +787,41 @@ body {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8f0ff 100%);
 }
 
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.results-header .section-title {
+    margin-bottom: 0;
+}
+
+.close-results-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 3px 10px rgba(239, 68, 68, 0.3);
+}
+
+.close-results-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.close-results-btn:active {
+    transform: translateY(0);
+}
+
 .results-container {
     margin-top: 25px;
     display: grid;
@@ -857,13 +894,23 @@ body {
 }
 
 .day-badge {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
     color: #ffffff;
     font-weight: 700;
     font-size: 0.9rem;
     padding: 2px 6px;
     border-radius: 8px;
+}
+
+/* Sunday - Red */
+.day-badge.day-sunday {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
     border: 1px solid #991b1b;
+}
+
+/* Thursday - Purple */
+.day-badge.day-thursday {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    border: 1px solid #5b21b6;
 }
 
 .result-shruthi {
@@ -891,30 +938,44 @@ body {
 /* Date Search Result Items (simplified & compact) */
 .date-result-item {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
-    padding: 10px 15px;
+    padding: 10px 15px !important;
     border-left-width: 4px;
+    border-radius: 10px !important;
 }
 
 .date-result-item .result-number {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #667eea;
-    min-width: 25px;
+    min-width: 22px;
+    flex-shrink: 0;
 }
 
 .date-result-item .result-title {
     flex: 1;
     margin-bottom: 0;
-    font-size: 1rem;
-    min-width: 180px;
+    font-size: 0.95rem;
+    min-width: 0;
 }
 
 .date-result-item .day-badge {
     padding: 2px 8px;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+.date-result-item .sung-date {
+    color: #ffffff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+    padding: 3px 8px;
+    border-radius: 6px;
     font-size: 0.75rem;
+    border: 1px solid #059669;
+    flex-shrink: 0;
 }
 
 .date-result-item .result-shruthi-simple {
@@ -958,6 +1019,36 @@ body {
 
 .quick-result-item .bhajan-shruthi {
     font-size: 0.85rem;
+}
+
+/* Connect With Us Section */
+.connect-section {
+    background: #f3f4f6;
+    padding: 12px 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.connect-title {
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.connect-email {
+    color: #667eea;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.connect-email:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -1184,17 +1275,423 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    /* Search input placeholder visibility for mobile */
+    .search-input {
+        font-size: 0.95rem;
+        padding: 14px 18px;
+    }
+
+    .search-input::placeholder {
+        color: #6b7280;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    /* Compact sections for mobile */
+    .search-section {
+        padding: 25px 15px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .section-description {
+        font-size: 0.9rem;
+    }
+
+    /* Compact date search results for mobile */
+    .results-section {
+        padding: 15px 12px;
+    }
+
+    .results-header {
+        gap: 8px;
+    }
+
+    .results-header .section-title {
+        font-size: 1.1rem;
+    }
+
+    .close-results-btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .results-container {
+        margin-top: 12px;
+        gap: 6px;
+    }
+
+    .result-item {
+        padding: 8px 10px;
+        border-radius: 8px;
+        border-left-width: 3px;
+    }
+
+    .result-item:hover {
+        transform: none;
+    }
+
+    .date-result-item {
+        padding: 6px 10px !important;
+        gap: 6px;
+        border-left-width: 3px;
+        flex-wrap: wrap;
+    }
+
+    .date-result-item .result-number {
+        font-size: 0.75rem;
+        min-width: 16px;
+    }
+
+    .date-result-item .result-title {
+        font-size: 0.8rem;
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .date-result-item .day-badge {
+        padding: 2px 6px;
+        font-size: 0.6rem;
+        order: 1;
+    }
+
+    .date-result-item .sung-date {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        order: 2;
+    }
+
+    /* Compact audio bhajan list for mobile */
+    .audio-bhajan-list {
+        padding: 10px;
+        margin-top: 12px;
+        border-radius: 10px;
+    }
+
+    .audio-bhajan-list-header {
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        gap: 6px;
+    }
+
+    .audio-bhajan-list-title {
+        font-size: 0.85rem;
+    }
+
+    .close-audio-list-btn {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+    }
+
+    .audio-bhajan-items {
+        gap: 4px;
+    }
+
+    .audio-bhajan-item {
+        padding: 5px 8px;
+        gap: 6px;
+        border-radius: 6px;
+    }
+
+    .audio-bhajan-number {
+        font-size: 0.75rem;
+        min-width: 18px;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.8rem;
+    }
+
+    .audio-bhajan-shruthi {
+        font-size: 0.7rem;
+        width: auto;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .playing-indicator {
+        height: 18px;
+        padding: 3px 8px;
+        gap: 2px;
+    }
+
+    .playing-bar {
+        width: 3px;
+    }
+
+    .playing-bar:nth-child(1) {
+        height: 7px;
+    }
+
+    .playing-bar:nth-child(2) {
+        height: 12px;
+    }
+
+    .playing-bar:nth-child(3) {
+        height: 9px;
+    }
+
+    /* Live search results compact */
+    .live-result-item {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .live-result-item .bhajan-name {
+        font-size: 0.9rem;
+    }
+
+    .live-result-item .sung-date {
+        font-size: 0.65rem;
+        padding: 2px 5px;
+    }
+
+    /* Filter controls compact */
+    .filter-group {
+        padding: 12px;
+    }
+
+    .filter-label {
+        font-size: 0.95rem;
+    }
+
+    .filter-select,
+    .date-input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* Audio player compact */
+    .audio-player-container {
+        padding: 12px 10px;
+    }
+
+    .audio-label {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .audio-selection-prompt {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .play-all-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 480px) {
     body {
+        padding: 8px;
+    }
+
+    /* Search input placeholder even more visible for small phones */
+    .search-input {
+        font-size: 0.9rem;
+        padding: 12px 14px;
+    }
+
+    .search-input::placeholder {
+        color: #4b5563;
+        font-weight: 600;
+        opacity: 1;
+    }
+
+    /* Even more compact sections */
+    .search-section {
+        padding: 20px 12px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .section-description {
+        font-size: 0.85rem;
+    }
+
+    /* Even more compact for small phones */
+    .results-section {
+        padding: 12px 8px;
+    }
+
+    .results-header .section-title {
+        font-size: 1rem;
+    }
+
+    .close-results-btn {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+
+    .results-container {
+        margin-top: 8px;
+        gap: 4px;
+    }
+
+    .result-item {
+        padding: 6px 8px;
+        border-radius: 6px;
+        border-left-width: 2px;
+    }
+
+    .date-result-item {
+        padding: 5px 8px !important;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .date-result-item .result-number {
+        font-size: 0.7rem;
+        min-width: 14px;
+    }
+
+    .date-result-item .result-title {
+        font-size: 0.75rem;
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .date-result-item .day-badge {
+        padding: 2px 5px;
+        font-size: 0.55rem;
+        order: 1;
+    }
+
+    .date-result-item .sung-date {
+        font-size: 0.55rem;
+        padding: 2px 5px;
+        order: 2;
+    }
+
+    /* Even more compact audio bhajan list for small phones */
+    .audio-bhajan-list {
+        padding: 8px;
+        margin-top: 8px;
+        border-radius: 8px;
+    }
+
+    .audio-bhajan-list-header {
+        margin-bottom: 6px;
+        padding-bottom: 5px;
+        gap: 5px;
+    }
+
+    .audio-bhajan-list-title {
+        font-size: 0.75rem;
+    }
+
+    .close-audio-list-btn {
+        padding: 4px 8px;
+        font-size: 0.6rem;
+    }
+
+    .audio-bhajan-items {
+        gap: 3px;
+    }
+
+    .audio-bhajan-item {
+        padding: 4px 6px;
+        gap: 5px;
+        border-radius: 5px;
+    }
+
+    .audio-bhajan-number {
+        font-size: 0.7rem;
+        min-width: 16px;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.75rem;
+    }
+
+    .audio-bhajan-shruthi {
+        font-size: 0.65rem;
+        display: none;
+    }
+
+    .playing-indicator {
+        height: 14px;
+        padding: 2px 6px;
+        gap: 2px;
+    }
+
+    .playing-bar {
+        width: 2px;
+    }
+
+    .playing-bar:nth-child(1) {
+        height: 5px;
+    }
+
+    .playing-bar:nth-child(2) {
+        height: 9px;
+    }
+
+    .playing-bar:nth-child(3) {
+        height: 7px;
+    }
+
+    /* Live search results even more compact */
+    .live-result-item {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .live-result-item .bhajan-name {
+        font-size: 0.85rem;
+    }
+
+    .live-result-item .bhajan-shruthi {
+        display: none;
+    }
+
+    /* Filter controls even more compact */
+    .filter-group {
         padding: 10px;
     }
 
+    .filter-label {
+        font-size: 0.9rem;
+    }
+
+    .filter-select,
+    .date-input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Audio player even more compact */
+    .audio-player-container {
+        padding: 10px 8px;
+    }
+
+    .audio-label {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .audio-selection-prompt {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .play-all-btn {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+
     .container {
-        border-radius: 20px;
+        border-radius: 15px;
     }
 
     .page-title h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .modal-content {
@@ -1378,35 +1875,69 @@ body {
 
 /* Audio Bhajan List Styles */
 .audio-bhajan-list {
-    margin-top: 25px;
-    padding: 20px;
+    margin-top: 20px;
+    padding: 15px;
     background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
-    border-radius: 15px;
+    border-radius: 12px;
     border: 2px solid #fcd34d;
 }
 
+.audio-bhajan-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fcd34d;
+}
+
 .audio-bhajan-list-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #92400e;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #fcd34d;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.close-audio-list-btn {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.close-audio-list-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.close-audio-list-btn:active {
+    transform: translateY(0);
 }
 
 .audio-bhajan-items {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .audio-bhajan-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
+    gap: 8px;
+    padding: 8px 12px;
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 1px solid #fde68a;
@@ -1426,18 +1957,85 @@ body {
 .audio-bhajan-number {
     font-weight: 700;
     color: #d97706;
-    min-width: 25px;
+    min-width: 20px;
+    font-size: 0.9rem;
 }
 
 .audio-bhajan-name {
     flex: 1;
     font-weight: 600;
     color: #1f2937;
+    font-size: 0.9rem;
 }
 
 .audio-bhajan-shruthi {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #6b7280;
+}
+
+/* Playing indicator - hidden by default */
+.playing-indicator {
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    height: 28px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+}
+
+.playing-bar {
+    width: 5px;
+    background: #ffffff;
+    border-radius: 3px;
+    animation: playing-bounce 0.5s ease-in-out infinite;
+}
+
+.playing-bar:nth-child(1) {
+    height: 12px;
+    animation-delay: 0s;
+}
+
+.playing-bar:nth-child(2) {
+    height: 20px;
+    animation-delay: 0.12s;
+}
+
+.playing-bar:nth-child(3) {
+    height: 14px;
+    animation-delay: 0.24s;
+}
+
+@keyframes playing-bounce {
+    0%, 100% {
+        transform: scaleY(0.35);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+}
+
+/* Show indicator when bhajan is playing */
+.audio-bhajan-item.playing .playing-indicator {
+    display: flex;
+}
+
+.audio-bhajan-item.playing {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-color: #f59e0b;
+    border-left: 5px solid #dc2626;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.audio-bhajan-item.playing .audio-bhajan-number {
+    color: #dc2626;
+}
+
+.audio-bhajan-item.playing .audio-bhajan-name {
+    color: #b45309;
+    font-weight: 700;
 }
 
 /* Mobile Audio Player Styles */

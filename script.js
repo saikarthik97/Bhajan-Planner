@@ -36,16 +36,16 @@ function openCurtains() {
   //   });
   // }
 
-  // Hide welcome content
+  // Hide welcome content immediately
   welcomeScreen.classList.add("hidden");
 
-  // Remove welcome screen after animation
+  // Remove welcome screen quickly after curtains open
   setTimeout(function () {
     welcomeScreen.classList.add("fade-out");
     setTimeout(function () {
       welcomeScreen.style.display = "none";
-    }, 500);
-  }, 1800);
+    }, 200);
+  }, 600);
 }
 
 // Search by Name Function (Live Search with Date Sung)
@@ -104,7 +104,7 @@ function searchByName() {
     resultsContainer.innerHTML = results
       .map(
         (bhajan) => `
-            <div class="live-result-item clickable-row" onclick="showAudioHint('${formatDate(
+            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
                 <span class="bhajan-name">${bhajan.name}</span>
@@ -114,7 +114,7 @@ function searchByName() {
                 <span class="bhajan-shruthi">${formatShruthi(
                   bhajan.shruthi
                 )}</span>
-                <span class="bhajan-day">${bhajan.day}</span>
+                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                 <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
             </div>
         `
@@ -124,10 +124,19 @@ function searchByName() {
 }
 
 // Show hint to use Live Audio section
-function showAudioHint(date) {
+function showAudioHint(dateSung, formattedDate) {
   const modal = document.getElementById("audioHintModal");
   const message = document.getElementById("audioHintMessage");
-  message.innerHTML = `To hear this bhajan, choose <strong>"${date}"</strong> from the Live Bhajan Audios list.`;
+
+  // Check if audio is available for this date
+  const audioEntry = bhajanAudios.find((audio) => audio.date === dateSung);
+
+  if (audioEntry && audioEntry.audioFile) {
+    message.innerHTML = `To hear this bhajan, choose <strong>"${formattedDate}"</strong> from the Live Bhajan Audios list.`;
+  } else {
+    message.innerHTML = `No audio file available for this bhajan.`;
+  }
+
   modal.style.display = "flex";
 }
 
@@ -173,6 +182,32 @@ function searchByDate() {
   displayDateResults(results);
 }
 
+// Close Results Section
+function closeResults() {
+  const resultsSection = document.getElementById("resultsSection");
+  resultsSection.style.display = "none";
+}
+
+// Close Audio Bhajan List
+function closeAudioBhajanList() {
+  const audioBhajanList = document.getElementById("audioBhajanList");
+  const audioPlayerContainer = document.getElementById("audioPlayerContainer");
+  const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
+  const audioDateSelect = document.getElementById("audioDateSelect");
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  // Hide the list and related elements
+  audioBhajanList.style.display = "none";
+  if (audioPlayerContainer) audioPlayerContainer.style.display = "none";
+  if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+
+  // Reset the dropdown
+  if (audioDateSelect) audioDateSelect.value = "";
+
+  // Stop audio if playing
+  if (audioPlayer) audioPlayer.pause();
+}
+
 // Display Date Search Results (simplified - only name and day)
 function displayDateResults(results) {
   const resultsSection = document.getElementById("resultsSection");
@@ -189,12 +224,12 @@ function displayDateResults(results) {
     resultsContainer.innerHTML = results
       .map(
         (bhajan, index) => `
-            <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${formatDate(
+            <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
                 <span class="result-number">${index + 1}.</span>
                 <h3 class="result-title">${bhajan.name}</h3>
-                <span class="detail-badge day-badge">${bhajan.day}</span>
+                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                 <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
             </div>
         `
@@ -222,7 +257,7 @@ function displayResults(results, title) {
     resultsContainer.innerHTML = results
       .map(
         (bhajan, index) => `
-            <div class="result-item quick-result-item clickable-row" onclick="showAudioHint('${formatDate(
+            <div class="result-item quick-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
                 <span class="result-number">${index + 1}.</span>
@@ -236,7 +271,7 @@ function displayResults(results, title) {
                 <span class="bhajan-shruthi">${formatShruthiSimple(
                   bhajan.shruthi
                 )}</span>
-                <span class="detail-badge day-badge">${bhajan.day}</span>
+                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                 <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
             </div>
         `
@@ -394,16 +429,19 @@ function loadAudio() {
   if (bhajansForDate.length > 0) {
     const dayOfWeek = bhajansForDate[0].day;
     audioBhajanList.innerHTML = `
-      <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(
-        selectedDate
-      )} - ${dayOfWeek}</h3>
+      <div class="audio-bhajan-list-header">
+        <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(
+          selectedDate
+        )} - ${dayOfWeek}</h3>
+        <button class="close-audio-list-btn" onclick="closeAudioBhajanList()">✕ Close</button>
+      </div>
       <div class="audio-bhajan-items">
         ${bhajansForDate
           .map(
             (bhajan, index) => `
           <div class="audio-bhajan-item ${
             hasAudio ? "has-audio" : "no-audio"
-          }" ${
+          }" data-bhajan-name="${bhajan.name.replace(/"/g, "&quot;")}" ${
               hasAudio
                 ? `onclick="playBhajanAudio('${
                     bhajan.dateSung
@@ -414,6 +452,11 @@ function loadAudio() {
             }>
             <span class="audio-bhajan-number">${index + 1}.</span>
             <span class="audio-bhajan-name">${bhajan.name}</span>
+            <span class="playing-indicator">
+              <span class="playing-bar"></span>
+              <span class="playing-bar"></span>
+              <span class="playing-bar"></span>
+            </span>
             <span class="audio-bhajan-shruthi">${formatShruthiSimple(
               bhajan.shruthi
             )}</span>
@@ -489,6 +532,19 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
   const noAudioMessage = document.getElementById("noAudioMessage");
   const audioSection = document.querySelector(".audio-section");
   const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
+
+  // Remove playing class from all bhajan items
+  document.querySelectorAll(".audio-bhajan-item.playing").forEach((item) => {
+    item.classList.remove("playing");
+  });
+
+  // Add playing class to the selected bhajan item
+  const selectedItem = document.querySelector(
+    `.audio-bhajan-item[data-bhajan-name="${bhajanName.replace(/"/g, "&quot;")}"]`
+  );
+  if (selectedItem) {
+    selectedItem.classList.add("playing");
+  }
 
   // Parse timestamps (supports both seconds and "MM:SS" format)
   const startSeconds = parseTime(startTime);

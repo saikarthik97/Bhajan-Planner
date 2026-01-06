@@ -400,7 +400,7 @@ const sundayBhajansRawData = [
     startTime: "34:07",
   },
   {
-    name: "Shiva Shiva Shambho hara Hara Shambho Sai Shambho Shankara ",
+    name: "Shiva(2) Shambho hara(2) Shambho Sai Shambho Shankara ",
     deity: "shiva",
     speed: "fast",
     shruthi: { gents: "3P" },
