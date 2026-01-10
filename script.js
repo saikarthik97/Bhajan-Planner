@@ -48,13 +48,62 @@ function openCurtains() {
   }, 600);
 }
 
+// Helper function to close all open sections
+function closeAllSections() {
+  // Close results section
+  const resultsSection = document.getElementById("resultsSection");
+  if (resultsSection) resultsSection.style.display = "none";
+
+  // Close name search results
+  const nameSearchResults = document.getElementById("nameSearchResults");
+  if (nameSearchResults) nameSearchResults.innerHTML = "";
+
+  // Close audio bhajan list
+  closeAudioBhajanList();
+}
+
+// Debounce timer for search
+let searchDebounceTimer = null;
+
 // Search by Name Function (Live Search with Date Sung)
 function searchByName() {
+  // Close other sections first (but keep audio playing)
+  const resultsSection = document.getElementById("resultsSection");
+  if (resultsSection) resultsSection.style.display = "none";
+
   const searchTerm = document
     .getElementById("nameSearch")
     .value.toLowerCase()
     .trim();
   const resultsContainer = document.getElementById("nameSearchResults");
+  const loadingIndicator = document.getElementById("nameSearchLoading");
+
+  // Clear previous debounce timer
+  if (searchDebounceTimer) {
+    clearTimeout(searchDebounceTimer);
+  }
+
+  // Hide loading if search term is empty or too short
+  if (!searchTerm || searchTerm.length < 3) {
+    if (loadingIndicator) loadingIndicator.classList.remove("active");
+  }
+
+  // Show loading indicator for valid searches
+  if (searchTerm.length >= 3 && loadingIndicator) {
+    loadingIndicator.classList.add("active");
+    resultsContainer.innerHTML = "";
+  }
+
+  // Debounce the search to prevent too many rapid searches
+  searchDebounceTimer = setTimeout(function() {
+    performSearch(searchTerm, resultsContainer, loadingIndicator);
+  }, 350);
+}
+
+// Perform the actual search (called after debounce)
+function performSearch(searchTerm, resultsContainer, loadingIndicator) {
+  // Hide loading indicator
+  if (loadingIndicator) loadingIndicator.classList.remove("active");
 
   // Clear results if search term is empty
   if (!searchTerm) {
@@ -107,15 +156,18 @@ function searchByName() {
             <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
-                <span class="bhajan-name">${bhajan.name}</span>
-                <span class="detail-badge deity-badge">${capitalizeFirst(
-                  bhajan.deity
-                )}</span>
-                <span class="bhajan-shruthi">${formatShruthi(
-                  bhajan.shruthi
-                )}</span>
-                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
-                <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                <div class="name-search-line-1">
+                    <span class="bhajan-name">${bhajan.name}</span>
+                    <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
+                </div>
+                <div class="name-search-line-2">
+                    <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
+                    <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                </div>
+                <div class="name-search-line-3">
+                    <span class="detail-badge deity-badge">${capitalizeFirst(bhajan.deity)}</span>
+                    <span class="detail-badge speed-badge">${formatSpeed(bhajan.speed)}</span>
+                </div>
             </div>
         `
       )
@@ -148,8 +200,13 @@ function closeAudioHint() {
 
 // Quick Search Function
 function quickSearch() {
+  // Close other sections first (but keep audio playing)
+  const nameSearchResults = document.getElementById("nameSearchResults");
+  if (nameSearchResults) nameSearchResults.innerHTML = "";
+
   const deity = document.getElementById("deityFilter").value;
   const speed = document.getElementById("speedFilter").value;
+  const singer = "all"; // Singer filter is currently disabled
 
   let results = bhajansDatabase;
 
@@ -163,11 +220,45 @@ function quickSearch() {
     results = results.filter((bhajan) => bhajan.speed === speed);
   }
 
+  // Filter by singer
+  if (singer !== "all") {
+    results = results.filter((bhajan) => bhajan.singer && bhajan.singer.toLowerCase() === singer.toLowerCase());
+  }
+
   displayResults(results, "Quick Search Results");
+}
+
+// Populate Singer Dropdown
+function populateSingerDropdown() {
+  const singerSelect = document.getElementById("singerFilter");
+  if (!singerSelect) return;
+
+  // Get unique singers from the database
+  const singers = new Set();
+  bhajansDatabase.forEach((bhajan) => {
+    if (bhajan.singer && bhajan.singer.trim() !== "") {
+      singers.add(bhajan.singer.toLowerCase());
+    }
+  });
+
+  // Sort singers alphabetically
+  const sortedSingers = Array.from(singers).sort();
+
+  // Add options for each singer
+  sortedSingers.forEach((singer) => {
+    const option = document.createElement("option");
+    option.value = singer;
+    option.textContent = capitalizeFirst(singer);
+    singerSelect.appendChild(option);
+  });
 }
 
 // Search by Date Function
 function searchByDate() {
+  // Close other sections first (but keep audio playing)
+  const nameSearchResults = document.getElementById("nameSearchResults");
+  if (nameSearchResults) nameSearchResults.innerHTML = "";
+
   const dateInput = document.getElementById("dateFilter").value;
 
   if (!dateInput) {
@@ -195,17 +286,59 @@ function closeAudioBhajanList() {
   const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
   const audioDateSelect = document.getElementById("audioDateSelect");
   const audioPlayer = document.getElementById("audioPlayer");
+  const showBtn = document.getElementById("showAudioListBtn");
 
   // Hide the list and related elements
   audioBhajanList.style.display = "none";
   if (audioPlayerContainer) audioPlayerContainer.style.display = "none";
   if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+  if (showBtn) showBtn.style.display = "none";
 
   // Reset the dropdown
   if (audioDateSelect) audioDateSelect.value = "";
 
   // Stop audio if playing
   if (audioPlayer) audioPlayer.pause();
+}
+
+// Hide Audio Bhajan List (keeps audio playing)
+function hideAudioBhajanList() {
+  const audioBhajanList = document.getElementById("audioBhajanList");
+  const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
+
+  // Hide the list but keep audio playing
+  if (audioBhajanList) audioBhajanList.style.display = "none";
+  if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+
+  // Show the "Show" button so user can bring back the list
+  const floatingShowBtn = document.getElementById("floatingShowBtn");
+  if (floatingShowBtn) floatingShowBtn.style.display = "block";
+}
+
+// Show hide button and hide close button when audio is playing
+function showHideButton() {
+  const hideBtn = document.getElementById("hideAudioListBtn");
+  const closeBtn = document.getElementById("closeAudioListBtn");
+  const floatingShowBtn = document.getElementById("floatingShowBtn");
+
+  if (hideBtn) hideBtn.style.display = "inline-block";
+  if (closeBtn) closeBtn.style.display = "none";
+  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+}
+
+// Show the audio bhajan list again
+function showAudioBhajanList() {
+  const audioBhajanList = document.getElementById("audioBhajanList");
+  const floatingShowBtn = document.getElementById("floatingShowBtn");
+
+  if (audioBhajanList) audioBhajanList.style.display = "block";
+  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+
+  // Scroll to audio section
+  const audioSection = document.querySelector(".audio-section");
+  if (audioSection) {
+    audioSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 // Display Date Search Results (simplified - only name and day)
@@ -227,10 +360,14 @@ function displayDateResults(results) {
             <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
-                <span class="result-number">${index + 1}.</span>
-                <h3 class="result-title">${bhajan.name}</h3>
-                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
-                <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                <div class="result-line-1">
+                    <span class="result-number">${index + 1}.</span>
+                    <h3 class="result-title">${bhajan.name}</h3>
+                </div>
+                <div class="result-line-2">
+                    <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
+                    <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
+                </div>
             </div>
         `
       )
@@ -241,7 +378,7 @@ function displayDateResults(results) {
   resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// Display Results Function
+// Display Results Function (Quick Search - only name and shruthi)
 function displayResults(results, title) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
@@ -257,22 +394,12 @@ function displayResults(results, title) {
     resultsContainer.innerHTML = results
       .map(
         (bhajan, index) => `
-            <div class="result-item quick-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
+            <div class="result-item quick-search-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
               bhajan.dateSung
             )}')">
                 <span class="result-number">${index + 1}.</span>
-                <span class="result-title">${bhajan.name}</span>
-                <span class="detail-badge deity-badge">${capitalizeFirst(
-                  bhajan.deity
-                )}</span>
-                <span class="detail-badge speed-badge">${formatSpeed(
-                  bhajan.speed
-                )}</span>
-                <span class="bhajan-shruthi">${formatShruthiSimple(
-                  bhajan.shruthi
-                )}</span>
-                <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
-                <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                <h3 class="result-title">${bhajan.name}</h3>
+                <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
             </div>
         `
       )
@@ -317,6 +444,7 @@ function formatShruthi(shruthi) {
 
 // Simple shruthi format for date search results
 function formatShruthiSimple(shruthi) {
+  if (!shruthi) return "";
   if (typeof shruthi === "string") {
     return `<span class="shruthi-simple">${shruthi}</span>`;
   }
@@ -324,9 +452,10 @@ function formatShruthiSimple(shruthi) {
     const parts = [];
     if (shruthi.gents) parts.push(`Gents: ${shruthi.gents}`);
     if (shruthi.ladies) parts.push(`Ladies: ${shruthi.ladies}`);
+    if (parts.length === 0) return "";
     return `<span class="shruthi-simple">${parts.join(" | ")}</span>`;
   }
-  return shruthi;
+  return "";
 }
 
 function formatDate(dateString) {
@@ -345,6 +474,35 @@ window.onclick = function (event) {
     closeLogin();
   }
 };
+
+// Close all open sections when clicking outside of them
+
+document.addEventListener("click", function (event) {
+  // Close results section (date search and quick search)
+  const resultsSection = document.getElementById("resultsSection");
+  if (resultsSection && resultsSection.style.display !== "none") {
+    const isClickInsideResults = resultsSection.contains(event.target);
+    const isClickOnSearchButton = event.target.closest('button[onclick="searchByDate()"]') ||
+                                   event.target.closest('button[onclick="quickSearch()"]');
+    const isClickOnDateInput = event.target.id === "dateFilter";
+    const isClickOnQuickSearchFilters = event.target.closest('.quick-search-grid');
+
+    if (!isClickInsideResults && !isClickOnSearchButton && !isClickOnDateInput && !isClickOnQuickSearchFilters) {
+      closeResults();
+    }
+  }
+
+  // Close name search results
+  const nameSearchResults = document.getElementById("nameSearchResults");
+  if (nameSearchResults && nameSearchResults.innerHTML !== "") {
+    const isClickInsideNameResults = nameSearchResults.contains(event.target);
+    const isClickOnNameInput = event.target.id === "nameSearch";
+
+    if (!isClickInsideNameResults && !isClickOnNameInput) {
+      nameSearchResults.innerHTML = "";
+    }
+  }
+});
 
 // Enable Enter key for search
 document.addEventListener("DOMContentLoaded", function () {
@@ -393,6 +551,8 @@ function populateAudioDates() {
 }
 
 function loadAudio() {
+  // Audio section stays independent - doesn't close other sections
+
   const audioDateSelect = document.getElementById("audioDateSelect");
   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
   const audioPlayer = document.getElementById("audioPlayer");
@@ -433,12 +593,16 @@ function loadAudio() {
         <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(
           selectedDate
         )} - ${dayOfWeek}</h3>
-        <button class="close-audio-list-btn" onclick="closeAudioBhajanList()">✕ Close</button>
+        <button id="closeAudioListBtn" class="close-audio-list-btn" onclick="closeAudioBhajanList()">Close</button>
+        <button id="hideAudioListBtn" class="hide-audio-list-btn" onclick="hideAudioBhajanList()" style="display: none;">Hide</button>
       </div>
       <div class="audio-bhajan-items">
         ${bhajansForDate
-          .map(
-            (bhajan, index) => `
+          .map((bhajan, index) => {
+            // Calculate end time as the start time of the next bhajan
+            const nextBhajan = bhajansForDate[index + 1];
+            const endTime = nextBhajan ? nextBhajan.startTime : null;
+            return `
           <div class="audio-bhajan-item ${
             hasAudio ? "has-audio" : "no-audio"
           }" data-bhajan-name="${bhajan.name.replace(/"/g, "&quot;")}" ${
@@ -447,7 +611,7 @@ function loadAudio() {
                     bhajan.dateSung
                   }', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(
                     bhajan.startTime
-                  )}, null)"`
+                  )}, ${formatTimeAttr(endTime)})"`
                 : ""
             }>
             <span class="audio-bhajan-number">${index + 1}.</span>
@@ -461,8 +625,8 @@ function loadAudio() {
               bhajan.shruthi
             )}</span>
           </div>
-        `
-          )
+        `;
+          })
           .join("")}
       </div>
     `;
@@ -503,8 +667,11 @@ function playAllBhajans() {
 }
 
 // Play audio for a specific bhajan by its dateSung with optional timestamps
-// startTime and endTime can be in seconds (number) or "MM:SS" format (string)
-let currentEndTime = null; // Track when to stop playing
+// startTime can be in seconds (number) or "MM:SS" format (string)
+
+// Store current date's bhajans for tracking which one is playing
+let currentDateBhajans = [];
+let currentPlayingBhajanName = "";
 
 // Parse time from either seconds (number) or "MM:SS" string format
 function parseTime(time) {
@@ -546,9 +713,8 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     selectedItem.classList.add("playing");
   }
 
-  // Parse timestamps (supports both seconds and "MM:SS" format)
+  // Parse start timestamp (supports both seconds and "MM:SS" format)
   const startSeconds = parseTime(startTime);
-  const endSeconds = parseTime(endTime);
 
   // Find the audio for the bhajan's dateSung
   const audioEntry = bhajanAudios.find((audio) => audio.date === dateSung);
@@ -559,6 +725,16 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     if (audioDateSelect) {
       audioDateSelect.value = dateSung;
     }
+
+    // Store the bhajans for this date for tracking
+    currentDateBhajans = bhajansDatabase
+      .filter((bhajan) => bhajan.dateSung === dateSung)
+      .map((bhajan) => ({
+        name: bhajan.name,
+        startTime: parseTime(bhajan.startTime)
+      }))
+      .filter((bhajan) => bhajan.startTime !== null);
+    currentPlayingBhajanName = bhajanName;
 
     // Check if timestamps are available
     const hasTimestamps = startSeconds !== null;
@@ -573,11 +749,11 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     noAudioMessage.style.display = "none";
     if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
 
+    // Show the hide button since audio is now playing
+    showHideButton();
+
     // Scroll to audio section
     audioSection.scrollIntoView({ behavior: "smooth", block: "start" });
-
-    // Set up the audio to play from startTime and stop at endTime
-    currentEndTime = endSeconds;
 
     audioPlayer.onloadedmetadata = function () {
       if (hasTimestamps) {
@@ -588,15 +764,38 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
       });
     };
 
-    // Stop at endTime if specified
+    // Track which bhajan is playing and update the label
     audioPlayer.ontimeupdate = function () {
-      if (
-        currentEndTime !== null &&
-        currentEndTime !== undefined &&
-        audioPlayer.currentTime >= currentEndTime
-      ) {
-        audioPlayer.pause();
-        currentEndTime = null; // Reset so user can continue if they want
+      if (currentDateBhajans.length === 0) return;
+
+      const currentTime = audioPlayer.currentTime;
+      let currentBhajan = null;
+
+      // Find which bhajan is currently playing based on time
+      for (let i = currentDateBhajans.length - 1; i >= 0; i--) {
+        if (currentTime >= currentDateBhajans[i].startTime) {
+          currentBhajan = currentDateBhajans[i];
+          break;
+        }
+      }
+
+      // Update if bhajan changed
+      if (currentBhajan && currentBhajan.name !== currentPlayingBhajanName) {
+        currentPlayingBhajanName = currentBhajan.name;
+
+        // Update the label
+        audioLabel.textContent = currentBhajan.name;
+
+        // Update the playing indicator in the list
+        document.querySelectorAll(".audio-bhajan-item.playing").forEach((item) => {
+          item.classList.remove("playing");
+        });
+        const newPlayingItem = document.querySelector(
+          `.audio-bhajan-item[data-bhajan-name="${currentBhajan.name.replace(/"/g, "&quot;")}"]`
+        );
+        if (newPlayingItem) {
+          newPlayingItem.classList.add("playing");
+        }
       }
     };
 
@@ -702,6 +901,9 @@ function initMobileAudioPlayer() {
   // Update play button when audio ends
   audioPlayer.addEventListener("ended", function () {
     playBtn.textContent = "▶️";
+    // Hide floating show button and update list buttons when audio ends
+    hideFloatingShowBtn();
+    resetAudioListButtons();
   });
 
   // Update play button when audio is paused externally
@@ -712,6 +914,21 @@ function initMobileAudioPlayer() {
   audioPlayer.addEventListener("play", function () {
     playBtn.textContent = "⏸️";
   });
+}
+
+// Hide the floating show button
+function hideFloatingShowBtn() {
+  const floatingShowBtn = document.getElementById("floatingShowBtn");
+  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+}
+
+// Reset audio list buttons - show Close, hide Hide (when audio is not playing)
+function resetAudioListButtons() {
+  const closeBtn = document.getElementById("closeAudioListBtn");
+  const hideBtn = document.getElementById("hideAudioListBtn");
+
+  if (closeBtn) closeBtn.style.display = "inline-block";
+  if (hideBtn) hideBtn.style.display = "none";
 }
 
 // Initialize mobile player when DOM is ready
@@ -742,6 +959,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Populate audio dates dropdown
   populateAudioDates();
+  populateSingerDropdown();
 
   // Set initial volume for background audio (commented out for future use)
   // const bgAudio = document.getElementById("bgAudio");

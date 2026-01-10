@@ -48,6 +48,10 @@
                 <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
                     oninput="searchByName()">
             </div>
+            <div id="nameSearchLoading" class="search-loading">
+                <div class="spinner"></div>
+                <span class="search-loading-text">Searching...</span>
+            </div>
             <div id="nameSearchResults" class="live-results"></div>
         </section>
 
@@ -60,21 +64,21 @@
                     <label for="deityFilter" class="filter-label">Deity:</label>
                     <select id="deityFilter" class="filter-select">
                         <option value="all">All Deities</option>
-                        <option value="ganesha">Ganesha</option>
-                        <option value="guru">Guru</option>
-                        <option value="devi">Devi</option>
-                        <option value="eshwaramba">Eshwaramba</option>
-                        <option value="sai">Sai</option>
-                        <option value="sarvadharma">Sarvadharma</option>
-                        <option value="vittala">Vittala</option>
-                        <option value="rama">Rama</option>
-                        <option value="dattatreya">Dattatreya</option>
-                        <option value="krishna">Krishna</option>
-                        <option value="narayana">Narayana</option>
-                        <option value="shiva">Shiva</option>
-                        <option value="srinivasa">Srinivasa</option>
-                        <option value="hanuman">Hanuman</option>
-                        <option value="subramanya">Subramanya</option>
+                        <option value="ganesha">ganesha</option>
+                        <option value="guru">guru</option>
+                        <option value="devi">devi</option>
+                        <option value="eshwaramba">eshwaramba</option>
+                        <option value="sai">sai</option>
+                        <option value="sarvadharma">sarvadharma</option>
+                        <option value="vittala">vittala</option>
+                        <option value="rama">rama</option>
+                        <option value="dattatreya">dattatreya</option>
+                        <option value="krishna">krishna</option>
+                        <option value="narayana">narayana</option>
+                        <option value="shiva">shiva</option>
+                        <option value="srinivasa">srinivasa</option>
+                        <option value="hanuman">hanuman</option>
+                        <option value="subramanya">subramanya</option>
                     </select>
                 </div>
 
@@ -108,6 +112,14 @@
                         <option value="fast">Fast</option>
                     </select>
                 </div>
+
+                <!-- Singer Filter commenting if needed will use -->
+                <!-- <div class="filter-group">
+                    <label for="singerFilter" class="filter-label">Singer:</label>
+                    <select id="singerFilter" class="filter-select">
+                        <option value="all">All Singers</option>
+                    </select>
+                </div> -->
             </div>
             <div class="search-box">
                 <button onclick="quickSearch()" class="search-button">Search</button>
@@ -179,6 +191,10 @@
                         </button>
                     </div>
                 </div>
+                <!-- Show Bhajan List Button (appears when list is hidden) -->
+                <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()" style="display: none;">
+                    🎵 Show Playing Bhajans List
+                </button>
             </div>
             <div id="noAudioMessage" class="no-audio-message" style="display: none;">
                 No audio available for the selected date.
@@ -190,21 +206,6 @@
             </div>
             <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
         </section>
-
-        <!-- Administration Section -->
-        <!-- <section class="admin-section">
-            <h2 class="section-title">Administration</h2>
-            <div class="admin-buttons">
-                <button onclick="showLogin()" class="admin-button">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                        <polyline points="10 17 15 12 10 7"></polyline>
-                        <line x1="15" y1="12" x2="3" y2="12"></line>
-                    </svg>
-                    Login
-                </button>
-            </div>
-        </section> -->
 
         <!-- Results Section -->
         <section id="resultsSection" class="results-section" style="display: none;">
@@ -237,7 +238,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2024 Premsadan Planner. All rights reserved.</p>
+            <p>&copy; 2025 Premsadan Planner. All rights reserved.</p>
             <p>Aum Sri Sai Ram</p>
         </footer>
     </div>
@@ -251,25 +252,6 @@
             <button class="hint-ok-btn" onclick="closeAudioHint()">OK</button>
         </div>
     </div>
-
-    <!-- Login Modal -->
-    <!-- <div id="loginModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close" onclick="closeLogin()">&times;</span>
-            <h2>Administrator Login</h2>
-            <form onsubmit="handleLogin(event)" class="login-form">
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" required class="form-input">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required class="form-input">
-                </div>
-                <button type="submit" class="submit-button">Login</button>
-            </form>
-        </div>
-    </div> -->
 
     <script src="bhajans/sundayBhajans.js"></script>
     <script src="bhajans/thursdayBhajans.js"></script>

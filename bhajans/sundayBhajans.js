@@ -8,6 +8,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "0:30",
+    singer : 'karthik'
   },
   {
     name: "Karunakaro Sai Dev",
@@ -17,6 +18,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "4:30",
+        singer : 'abhi'
+
   },
   {
     name: "Jaya Maa Ananda Mayi Janani",
@@ -26,6 +29,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "8:32",
+        singer : 'datta'
+
   },
   {
     name: "Govinda Madhava Gopala Keshava (Jaya Nanda Mukunda)",
@@ -35,6 +40,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "12:50",
+        singer : 'abhi'
+
   },
   {
     name: "Ravikula Bhanjana Rama Sri Rama",
@@ -44,6 +51,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "18:36",
+        singer : 'karthik'
+
   },
   {
     name: "Namo Namo Nataraja Namo",
@@ -64,10 +73,10 @@ const sundayBhajansRawData = [
     startTime: "27:36",
   },
   {
-    name: "Satya Dharma Shanthi Prema Swaroopa",
+    name: "Satya Dharma Shanti Prema Swaroopa Prashanthi Nilaya Deva",
     deity: "sarvadharma",
     speed: "medium",
-    shruthi: { gents: "2P", ladies: "6P" },
+    shruthi: { gents: "3P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "32:30",
@@ -746,7 +755,7 @@ const sundayBhajansRawData = [
     startTime: "31:47",
   },
   {
-    name: "Vaheguru Vaheguru Vaheguru Ji Bolo",
+    name: "Vaheguru(3)Ji Bolo",
     deity: "guru",
     speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
