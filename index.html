@@ -14,7 +14,10 @@
 </head>
 
 <body>
-    <!-- Welcome Splash Screen with Curtain Effect -->
+
+    <!-- ================================================================== -->
+    <!-- 1. WELCOME SCREEN -->
+    <!-- ================================================================== -->
     <div id="welcomeScreen" class="welcome-screen">
         <div class="curtain curtain-left"></div>
         <div class="curtain curtain-right"></div>
@@ -27,7 +30,10 @@
     </div>
 
     <div class="container">
-        <!-- Header -->
+
+        <!-- ================================================================== -->
+        <!-- 2. HEADER -->
+        <!-- ================================================================== -->
         <header class="header">
             <div class="header-title-group">
                 <div class="om-symbol">ॐ</div>
@@ -41,7 +47,9 @@
             <h1>Premsadan Bhajans Planner </h1>
         </div>
 
-        <!-- Search by Name Section -->
+        <!-- ================================================================== -->
+        <!-- 3. SEARCH BY BHAJAN NAME SECTION -->
+        <!-- ================================================================== -->
         <section class="search-section">
             <h2 class="section-title">Search by Bhajan Name</h2>
             <div class="search-box">
@@ -55,15 +63,17 @@
             <div id="nameSearchResults" class="live-results"></div>
         </section>
 
-        <!-- Quick Search Section -->
+        <!-- ================================================================== -->
+        <!-- 4. QUICK SEARCH SECTION -->
+        <!-- ================================================================== -->
         <section class="search-section">
             <h2 class="section-title">Quick Search</h2>
             <div class="quick-search-grid">
                 <!-- Deity Filter -->
                 <div class="filter-group">
                     <label for="deityFilter" class="filter-label">Deity:</label>
-                    <select id="deityFilter" class="filter-select">
-                        <option value="all">All Deities</option>
+                    <select id="deityFilter" class="filter-select" onchange="resetOtherFilters('deity')">
+                        <option value="all">Select</option>
                         <option value="ganesha">ganesha</option>
                         <option value="guru">guru</option>
                         <option value="devi">devi</option>
@@ -104,29 +114,31 @@
 
                 <!-- Speed Filter -->
                 <div class="filter-group">
-                    <label for="speedFilter" class="filter-label">Speed:</label>
-                    <select id="speedFilter" class="filter-select">
-                        <option value="all">All Speeds</option>
+                    <label for="speedFilter" class="filter-label">Search by Speed:</label>
+                    <select id="speedFilter" class="filter-select" onchange="resetOtherFilters('speed')">
+                        <option value="all">Select</option>
                         <option value="slow">Slow</option>
                         <option value="medium">Medium</option>
                         <option value="fast">Fast</option>
                     </select>
                 </div>
 
-                <!-- Singer Filter commenting if needed will use -->
-                <!-- <div class="filter-group">
-                    <label for="singerFilter" class="filter-label">Singer:</label>
-                    <select id="singerFilter" class="filter-select">
-                        <option value="all">All Singers</option>
+                <!-- Singer Filter -->
+                <div class="filter-group">
+                    <label for="singerFilter" class="filter-label">Search By Singer Name:</label>
+                    <select id="singerFilter" class="filter-select" onchange="resetOtherFilters('singer')">
+                        <option value="all">Select</option>
                     </select>
-                </div> -->
+                </div>
             </div>
             <div class="search-box">
                 <button onclick="quickSearch()" class="search-button">Search</button>
             </div>
         </section>
 
-        <!-- Bhajans Sung On Section -->
+        <!-- ================================================================== -->
+        <!-- 5. DATE SEARCH SECTION (BHAJANS SUNG ON) -->
+        <!-- ================================================================== -->
         <section class="search-section">
             <h2 class="section-title">Bhajans Sung On</h2>
             <div class="date-search">
@@ -139,10 +151,14 @@
             </div>
         </section>
 
-        <!-- Live Bhajan Audios Section -->
+        <!-- ================================================================== -->
+        <!-- 6. LIVE BHAJAN AUDIOS SECTION -->
+        <!-- ================================================================== -->
         <section class="search-section audio-section">
             <h2 class="section-title">🎵 Live Bhajan Audios</h2>
             <p class="section-description">Select a date to listen to bhajans recorded on that day.</p>
+
+            <!-- Audio Date Selector -->
             <div class="audio-controls">
                 <div class="filter-group">
                     <label for="audioDateSelect" class="filter-label">Select Date:</label>
@@ -151,9 +167,12 @@
                     </select>
                 </div>
             </div>
+
+            <!-- Audio Player Container -->
             <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
                 <div class="audio-label" id="audioLabel"></div>
-                <!-- Desktop audio player -->
+
+                <!-- Desktop Audio Player -->
                 <div class="audio-controls-row desktop-audio">
                     <button class="skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
                         <span class="skip-icon">⏪</span>
@@ -167,7 +186,8 @@
                         <span class="skip-icon">⏩</span>
                     </button>
                 </div>
-                <!-- Mobile custom audio player -->
+
+                <!-- Mobile Custom Audio Player -->
                 <div class="mobile-audio-player">
                     <div class="mobile-seekbar-row">
                         <span class="mobile-time" id="mobileCurrentTime">0:00</span>
@@ -191,23 +211,32 @@
                         </button>
                     </div>
                 </div>
+
                 <!-- Show Bhajan List Button (appears when list is hidden) -->
                 <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()" style="display: none;">
                     🎵 Show Playing Bhajans List
                 </button>
             </div>
+
+            <!-- No Audio Message -->
             <div id="noAudioMessage" class="no-audio-message" style="display: none;">
                 No audio available for the selected date.
             </div>
+
+            <!-- Audio Selection Prompt -->
             <div id="audioSelectionPrompt" class="audio-selection-prompt" style="display: none;">
                 Select a bhajan to play or
                 <br>
                 <button class="play-all-btn" onclick="playAllBhajans()">▶ Play All</button>
             </div>
+
+            <!-- Audio Bhajan List -->
             <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
         </section>
 
-        <!-- Results Section -->
+        <!-- ================================================================== -->
+        <!-- 7. SEARCH RESULTS SECTION -->
+        <!-- ================================================================== -->
         <section id="resultsSection" class="results-section" style="display: none;">
             <div class="results-header">
                 <h2 class="section-title">Search Results</h2>
@@ -228,6 +257,10 @@
         </button>
         -->
 
+        <!-- ================================================================== -->
+        <!-- 8. FOOTER SECTION -->
+        <!-- ================================================================== -->
+
         <!-- Connect With Us Section -->
         <section class="connect-section">
             <span class="connect-title">Connect With Us at </span>
@@ -243,6 +276,10 @@
         </footer>
     </div>
 
+    <!-- ================================================================== -->
+    <!-- 9. MODALS -->
+    <!-- ================================================================== -->
+
     <!-- Audio Hint Modal -->
     <div id="audioHintModal" class="hint-modal" style="display: none;">
         <div class="hint-modal-content">
@@ -253,6 +290,9 @@
         </div>
     </div>
 
+    <!-- ================================================================== -->
+    <!-- 10. SCRIPTS -->
+    <!-- ================================================================== -->
     <script src="bhajans/sundayBhajans.js"></script>
     <script src="bhajans/thursdayBhajans.js"></script>
     <script src="audios.js"></script>

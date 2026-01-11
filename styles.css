@@ -2657,3 +2657,121 @@ body {
     font-weight: 600;
     font-size: 0.95rem;
 }
+
+/* ============================================
+   SINGER INFO STYLES
+   ============================================ */
+
+/* Singer info for search by name results (line 4) */
+.name-search-line-4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+/* Singer info text styling */
+.singer-info {
+    color: #7c3aed;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+    border-radius: 8px;
+    border: 1px solid #ddd6fe;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.singer-info strong {
+    color: #6d28d9;
+    font-weight: 700;
+}
+
+/* Singer name in audio bhajan list */
+.audio-bhajan-singer {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7c3aed;
+    background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd6fe;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Playing state for singer name */
+.audio-bhajan-item.playing .audio-bhajan-singer {
+    color: #5b21b6;
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    border-color: #c4b5fd;
+}
+
+/* Quick search results singer info */
+.quick-search-item .singer-info {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   SINGER INFO MOBILE STYLES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .name-search-line-4 {
+        margin-top: 6px;
+    }
+
+    .singer-info {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+
+    .audio-bhajan-singer {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+    }
+
+    .quick-search-item .singer-info {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .quick-search-item {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-search-line-4 {
+        margin-top: 5px;
+    }
+
+    .singer-info {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+
+    .singer-info strong {
+        font-size: 0.85rem;
+    }
+
+    .audio-bhajan-singer {
+        font-size: 0.7rem;
+        padding: 2px 5px;
+    }
+
+    .quick-search-item .singer-info {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        width: auto;
+        margin-left: 28px;
+    }
+}

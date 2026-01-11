@@ -8,7 +8,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "0:30",
-    singer : 'karthik'
+    singer: 'Lal'
   },
   {
     name: "Karunakaro Sai Dev",
@@ -18,7 +18,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "4:30",
-        singer : 'abhi'
+    singer: 'Sunitha'
 
   },
   {
@@ -29,7 +29,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "8:32",
-        singer : 'datta'
+    singer: 'A.Srinivas'
 
   },
   {
@@ -40,7 +40,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "12:50",
-        singer : 'abhi'
+    singer: 'Lavanya'
 
   },
   {
@@ -51,17 +51,18 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "18:36",
-        singer : 'karthik'
+    singer: 'Shanta Krishna'
 
   },
   {
     name: "Namo Namo Nataraja Namo",
     deity: "shiva",
-    speed: "slow",
+    speed: "medium",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "23:15",
+    singer: 'Gayathri'
   },
   {
     name: "Radheshyama Hey Ghanashyama",
@@ -71,6 +72,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "27:36",
+    singer: 'G.Srinivas'
   },
   {
     name: "Satya Dharma Shanti Prema Swaroopa Prashanthi Nilaya Deva",
@@ -80,6 +82,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "32:30",
+    singers:'Chandini & Praneetha'
   },
   {
     name: "Hey Ayodhya Vasi Ram(2) Dasaratha Nandana Ram",
@@ -89,6 +92,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "36:47",
+    singer: 'Sridhar'
   },
   {
     name: "Shubha Aur Shyam Bol Hari Naam",
@@ -98,6 +102,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "40:42",
+    singers:'Vathsalya & Shruthi'
   },
   {
     name: "Manamohana Krishna Kunja Vihari",
@@ -107,6 +112,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "43:08",
+    singer: 'Swaroop'
   },
   // 21st Dec 2025 - No audio file available
   {
@@ -217,6 +223,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "0:00",
+    singer: 'Karthik'
   },
   {
     name: "Satya Dharma Shanti prema Sabko Deejo",
@@ -226,6 +233,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "3:09",
+    singer: ''
   },
   {
     name: "Maata Maheshwari Tribhuvani Janani",
@@ -235,6 +243,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "6:03",
+    singer: 'A.Srinivas'
   },
   {
     name: "Sita Rama Sri Raghurama",
@@ -244,6 +253,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "10:21",
+    singer: 'Sunitha'
   },
   {
     name: "Ghana Ghana Neela Vadana Ati Sundara",
@@ -253,6 +263,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "14:20",
+    singer: 'Sharath'
   },
   {
     name: "Yuga Yuga Ke Avataara Tum Hi Ho",
@@ -262,15 +273,17 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "18:27",
+    singer: 'Sahiti'
   },
   {
     name: "Tum ho Shankara Daata Sai Shankara",
     deity: "shiva",
-    speed: "slow",
+    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "22:57",
+    singer: 'Abhishek'
   },
   {
     name: "Manuva Bolo Radhe(3) Shyama Naam",
@@ -280,6 +293,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "26:20",
+    singer: 'Eshwar'
+
   },
   {
     name: "Jaya Jaya Mangala Sai Namo",
@@ -289,6 +304,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "30:11",
+    singer: 'Sridhar'
   },
   {
     name: "Bhajo Mathura Hari Naam Nirantara",
@@ -298,6 +314,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "32:48",
+    singers:'Vathsalya & Chandini'
   },
   {
     name: "Nandalala(2) nanda mukunda hari nandalala",
@@ -307,6 +324,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "35:58",
+    singer: 'Sharath'
   },
   {
     name: "Aao Pyaare Nayan Hamare ",
@@ -316,15 +334,17 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "38:04",
+    singer: 'Sahiti'
   },
   {
     name: "Sharanu Ghosha Priyaney Ayyappa",
     deity: "subramanya",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "42:00",
+    singer: 'G.Srinivas'
   },
   // 4th Jan 2026 - Audio: audios/4th Jan 2026.mp3
   {
@@ -335,6 +355,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "0:29",
+    singer: 'Lavanya'
   },
   {
     name: "Jaya Guru Omkara Sadguru Omkaara",
@@ -344,6 +365,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "3:32",
+    singer: 'A.Srinivas'
   },
   {
     name: "Jaya Maa Hey Sai Maa",
@@ -353,6 +375,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "7:46",
+    singer: 'Sunitha'
   },
   {
     name: "Narayana Hari Narayana",
@@ -362,6 +385,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "12:31",
+    singer: 'Abhishek'
   },
   {
     name: "Murali Krishna mukunda krishna",
@@ -371,6 +395,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "19:05",
+    singer: 'Geetha Jyothi & Eshwari'
   },
   {
     name: "Srirama Bhadra Sri rama chandra Sri Rama Jaya Sri Ram",
@@ -380,6 +405,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "22:52",
+    singer: 'Shanta Krishna'
   },
   {
     name: "Hari Om Namah Shivaya",
@@ -389,6 +415,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "28:02",
+    singer: 'Lavanya'
   },
   {
     name: "Jai(3) Manamohana Jai(3) Madhusudana",
@@ -398,15 +425,18 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "31:51",
+    singer: 'Eshwar'
   },
   {
     name: "Sitaram Nama Bhajo",
     deity: "rama",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "7P", ladies: "4P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "34:07",
+    singers:'Harshitha & Sri Vidya'
+
   },
   {
     name: "Shiva(2) Shambho hara(2) Shambho Sai Shambho Shankara ",
@@ -416,6 +446,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "36:10",
+    // singers:'Rajesh'
+
   },
   {
     name: "Seeta Rakshaka Rama Doota",
@@ -425,6 +457,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "39:20",
+    singer: 'Sunitha'
+
   },
   {
     name: "Sri Ranga Hare Vittala Sai Ranga hare vittala",
@@ -434,6 +468,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "41:22",
+    singer: 'Venu'
+
   },
   //19th Oct 2025
    {
@@ -444,6 +480,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "01:36",
+    singer: 'G.Srinivas'
+
   },
    {
     name: "Jaya Guru Shankara Girija Ramana",
@@ -453,6 +491,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "04:19",
+    singer: 'Lavanya'
+    
   },
    {
     name: "Janani Sai Devi Dayamayi",
@@ -462,6 +502,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "07:25",
+        singer: 'Venu'
+
   },
    {
     name: "Ajanubahum Aravinda Netram",
@@ -471,6 +513,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "10:55",
+    // singers:''
+
   },
    {
     name: "Chaitanya Mayi Sai",
@@ -480,15 +524,19 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "14:36",
+    singer: 'Lal'
+
   },
    {
     name: "Govinda Sai Krishna Govinda(2)",
     deity: "krishna",
-    speed: "fast",
+    speed: "medium",
     shruthi: { gents: "1.5P", ladies: "5.5P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "20:32",
+    // singers:''
+
   },
    {
     name: "Madhura(2) hey Muralidhari",
@@ -498,6 +546,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "23:33",
+    singer: 'Sridhar'
+
   },
 {
     name: "Rama hare Sai Krishna Hare Sarvadharma Priya",
@@ -507,6 +557,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "26:13",
+        // singers:''
+
   },
   {
     name: "Jaya(2) Rama Jaya Raghurama",
@@ -516,6 +568,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "29:55",
+        singer: 'A.Srinivas'
+
   },
   {
     name: "Panduranga Vittala Jai Pandarinatha Vittala",
@@ -525,6 +579,8 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "33:55",
+    singer: 'Geetha Jyothi & Eshwari'
+
   },
   {
     name: "Shambho Murarey Shankara Murarey",
@@ -534,6 +590,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "37:13",
+    singer: 'Eshwar'
   },
   {
     name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
@@ -543,6 +600,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "39:28",
+    singer: 'Lavanya'
   },
   {
     name: "Meeru Meghalaya Mayurasana",
@@ -552,6 +610,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "43:06",
+    singer: 'G.Srinivas'
   },
   //31st August 2025
    {
@@ -562,6 +621,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "0:00",
+    singer: 'A.Srinivas'
   },
   {
     name: "Sri Sai Natha Guru Govinda",
@@ -570,7 +630,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "4:56",
+    startTime: "4:31",
+    // singers:''
   },
   {
     name: "Devi Bhavani Jagat Janani",
@@ -579,7 +640,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1.5P", ladies: "5.5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "7:22",
+    startTime: "6:54",
+    singer: 'Sridhar'
   },
   {
     name: "Jaya Jaya Shankara Kailaasa Vaasi",
@@ -587,7 +649,8 @@ const sundayBhajansRawData = [
     speed: "slow",
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "11:09",
+    startTime: "10:35",
+    singer: 'Lavanya'
   },
   {
     name: "Madhuvana Sanchari Shyama Murari",
@@ -595,7 +658,8 @@ const sundayBhajansRawData = [
     speed: "slow",
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "15:25",
+    startTime: "14:42",
+    singer: 'Abhishek'
   },
   {
     name: "Jaya(2) Mangala Sai Namo",
@@ -604,7 +668,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "19:10",
+    startTime: "18:16",
+    // singers:''
   },
   {
     name: "Shiva(2) Shankara Hara Parameshwara",
@@ -613,7 +678,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "21:52",
+    startTime: "20:58",
+    singer: 'Venu'
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
@@ -622,7 +688,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "25:23",
+    startTime: "24:24",
+    singer: 'Geetha Jyothi & Eshwari'
   },
   {
     name: "Sri Rama Paratparara Ram Hey Rajeeva Lochana Ram",
@@ -630,7 +697,8 @@ const sundayBhajansRawData = [
     speed: "medium",
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "27:22",
+    startTime: "26:24",
+    singer: 'Eshwar'
   },
   {
     name: "Bhavasagara Se Paar Uthaaro",
@@ -639,7 +707,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1.5P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "31:10",
+    startTime: "30:03",
+    singer: 'Lavanya'
   },
   {
     name: "Sai Natha Bhagawaan",
@@ -648,7 +717,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "35:35",
+    startTime: "34:21",
+    singer: 'Venu'
   },
   {
     name: "Vittala Vittala Sai Narayana",
@@ -657,7 +727,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "6.5P"},
     day: "Sunday",
     dateSung: "2025-08-31",
-    startTime: "39:56",
+    startTime: "38:26",
+    singer: 'Abhishek'
   },
 //21st September 2025 Add
 {
@@ -667,6 +738,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "0:00",
+    singers:'Vathsalya & Shruthi'
   },
   {
     name: "Aruna Ramana Sri Gurudeva",
@@ -676,6 +748,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "2:36",
+    singer: 'A.Srinivas'
   },
   {
     name: "Durga Amba Bhavani Jai Jai",
@@ -693,6 +766,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "9:56",
+    singer: 'Lal'
   },
   {
     name: "Kamala Nayana Narayana",
@@ -701,6 +775,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "14:32",
+    singer: 'Sunitha'
   },
   {
     name: "Satya Dharma Shanti Prema Swaroopa Prashanthi Nilaya Deva",
@@ -710,11 +785,12 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "17:04",
+    singer: 'Karthik'
   },
   {
     name: "Atma Ram Aananda Ram",
     deity: "rama",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-09-21",
@@ -749,7 +825,7 @@ const sundayBhajansRawData = [
   {
     name: "Manamohana Nandalaal",
     deity: "krishna",
-    speed: "medium",
+    speed: "fast",
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "31:47",
@@ -762,11 +838,12 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "35:14",
+    singer: 'Abhishek'
   },
   {
     name: "Hey Rama Doota Hey Rama Bhakta",
     deity: "hanuman",
-    speed: "slow",
+    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
@@ -775,62 +852,63 @@ const sundayBhajansRawData = [
   {
     name: "Om Shivaaya Shivaaya",
     deity: "shiva",
-    speed: "slow",
+    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "43:10",
+    singer: 'Lavanya'
   },
   //11th January 2026
   {
     name: "Gajamukha Gajamukha",
     deity: "ganesha",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "0:00",
-    singer:'abhiram'
+    singer: 'Abhiram'
   },
   {
     name: "Karunya Roopa Sri Sai Deva",
     deity: "guru",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "3:13",
-    singer:'lavanya'
+    singer: 'Lavanya'
   },
   {
     name: "Jaya Devi Bhavani Maa",
     deity: "devi",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "6:20",
-    singer:'G Srinivas'
+    startTime: "6:39",
+    singer: 'G.Srinivas'
   },
   {
     name: "Allah Sai Allah Maula Sai Maula",
     deity: "sarvadharma",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "11:23",
-    singer:'gayathri'
+    startTime: "11:40",
+    singer: 'Gayathri'
   },
   {
     name: "Kodanda Rama Kalyana Rama",
     deity: "rama",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "16:05",
-    singer:'santa krishna'
+    startTime: "16:26",
+    singer: 'Shanta Krishna'
   },
   {
     name: "Panduranga Vittala",
@@ -839,77 +917,77 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "19:47",
-    singer:'Geeta Jyothi & Eswari'
+    startTime: "20:14",
+    singer: 'Geetha Jyothi & Eshwari'
   },
   {
-    name: "Ram Bhajaman Hare Hare",
+    name: "Ram(2) Bhajamana Hare Hare",
     deity: "rama",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "22:55",
-    singer:'sridhar'
+    startTime: "23:40",
+    singer: 'Sridhar'
   },
   {
     name: "Sarvatra Govinda Namasankeerthana Govinda Haro Govinda",
     deity: "sai",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "26:22",
-    singer:'vathsalya & chandini'
+    startTime: "26:49",
+    singers:'Vathsalya & Chandini'
   },
   {
     name: "Nandalala Nandalala Nanda Mukunda Hari Nandalala",
     deity: "krishna",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "29:33",
-    singer:'abhishek'
+    startTime: "29:51",
+    singer: 'Abhishek'
   },
   {
     name: "Jai Hari Bol Jai Sitaram",
     deity: "rama",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "31:45",
-    singer:'vani & praneetha'
+    startTime: "31:52",
+    singers:'Vani & Praneetha'
   },
   {
     name: "Vanamali Vasudeva Jaganmohana Radha Ramana",
     deity: "krishna",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "35:12",
-    singer:'abhiram'
+    startTime: "35:36",
+    singer: 'Abhiram'
   },
   {
     name: "Shambho Shankara Parvati Ramana Pasupati Paramesha",
     deity: "shiva",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "38:56",
-    singer:'sowmya & Sri vidhya'
+    startTime: "39:20",
+    singer:'Sowmya & Sri Vidya'
   },
   {
     name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
     deity: "hanuman",
-    speed: "medium",
+    speed: "fast",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-01-11",
-    startTime: "41:26",
-    singer:'swaroop'
+    startTime: "41:39",
+    singer:'Swaroop'
   },
 ];
