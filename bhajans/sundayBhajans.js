@@ -772,4 +772,135 @@ const sundayBhajansRawData = [
     dateSung: "2025-09-21",
     startTime: "43:10",
   },
+  //11th January 2026
+  {
+    name: "Gajamukha Gajamukha",
+    deity: "ganesha",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "0:00",
+    singer:'abhiram'
+  },
+  {
+    name: "Karunya Roopa Sri Sai Deva",
+    deity: "guru",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "3:13",
+    singer:'lavanya'
+  },
+  {
+    name: "Jaya Devi Bhavani Maa",
+    deity: "devi",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "6:20",
+    singer:'G Srinivas'
+  },
+  {
+    name: "Allah Sai Allah Maula Sai Maula",
+    deity: "sarvadharma",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "11:23",
+    singer:'gayathri'
+  },
+  {
+    name: "Kodanda Rama Kalyana Rama",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "16:05",
+    singer:'santa krishna'
+  },
+  {
+    name: "Panduranga Vittala",
+    deity: "vittala",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "19:47",
+    singer:'Geeta Jyothi & Eswari'
+  },
+  {
+    name: "Ram Bhajaman Hare Hare",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "22:55",
+    singer:'sridhar'
+  },
+  {
+    name: "Sarvatra Govinda Namasankeerthana Govinda Haro Govinda",
+    deity: "sai",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "26:22",
+    singer:'vathsalya & chandini'
+  },
+  {
+    name: "Nandalala Nandalala Nanda Mukunda Hari Nandalala",
+    deity: "krishna",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "29:33",
+    singer:'abhishek'
+  },
+  {
+    name: "Jai Hari Bol Jai Sitaram",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "31:45",
+    singer:'vani & praneetha'
+  },
+  {
+    name: "Vanamali Vasudeva Jaganmohana Radha Ramana",
+    deity: "krishna",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "35:12",
+    singer:'abhiram'
+  },
+  {
+    name: "Shambho Shankara Parvati Ramana Pasupati Paramesha",
+    deity: "shiva",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "38:56",
+    singer:'sowmya & Sri vidhya'
+  },
+  {
+    name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
+    deity: "hanuman",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-01-11",
+    startTime: "41:26",
+    singer:'swaroop'
+  },
 ];

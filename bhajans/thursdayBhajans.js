@@ -170,7 +170,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1.5P", ladies: "6P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "0:20",
+    startTime: "0:00",
+    singers:'vatsalya & sruthi'
   },
   {
     name: "Guru Paada Vandana ShataVandana",
@@ -179,7 +180,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "3P", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "3:18",
+    startTime: "0:33",
+    singers:'A.Srinivas'
   },
   {
     name: "Sangeeta Vani Veena Paani",
@@ -188,7 +190,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4.5P", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "6:51",
+    startTime: "3:57",
+    singers:'geetha jyothi & eswari'
   },
   {
     name: "Eko Bramha Swaroopa",
@@ -197,7 +200,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: '9:40',
+    startTime: '6:45',
+    singers:'santakrishna'
   },
   {
     name: "Ayodhya Vihari Sri Rama(2)",
@@ -206,7 +210,9 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2.5P", ladies: "6P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "14:25",
+    startTime: "11:31",
+    singers:'sruthi & vathsalya'
+
   },
   {
     name: "Chittha Raja Chitta Raja",
@@ -215,7 +221,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "5.5P", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "18:46",
+    startTime: "15:46",
+    singers:'Karthik'
   },
   {
     name: "Bhajaranga Hare Vittala",
@@ -224,7 +231,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2.5P", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "23:06",
+    startTime: "20:00",
+    singers:'chandini & praneetha'
   },
   {
     name: "Bolo Bolo Sabmil Bolo Om Namah Shivaya",
@@ -233,7 +241,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1.5P", ladies: "5.5P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "26:25",
+    startTime: "23:15",
+    singers:'Eshwar'
   },
   {
     name: "Shiva(2) Shambho Tandava Priyakara",
@@ -242,7 +251,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4.5P", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "30:18",
+    startTime: "27:05",
+    singers:'geetha jyothi & eswari'
   },
   {
     name: "Govinda Murali Gopala Murali",
@@ -251,7 +261,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1.5P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "33:00",
+    startTime: "29:46",
+    singers:'abhishek'
   },
   {
     name: "Satya Narayana Govinda Madhava",
@@ -260,7 +271,8 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "3P", ladies: "5.5P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "36:50",
+    startTime: "33:30",
+    singers:'chandini & praneetha'
   },
   {
     name: "Sai Ghanashyam (2)",
@@ -269,6 +281,9 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "4P" },
     day: "Thursday",
     dateSung: "2026-01-08",
-    startTime: "40:36",
+    startTime: "37:11",
+    singers:'ramakrishna'
   },
+  //8th Jan 2026
+
 ];
