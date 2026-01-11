@@ -317,7 +317,7 @@ const sundayBhajansRawData = [
     singers:'Vathsalya & Chandini'
   },
   {
-    name: "Nandalala(2) nanda mukunda hari nandalala",
+    name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
     deity: "krishna",
     speed: "fast",
     shruthi: { gents: "7P", ladies: "2P" },
@@ -941,7 +941,7 @@ const sundayBhajansRawData = [
     singers:'Vathsalya & Chandini'
   },
   {
-    name: "Nandalala Nandalala Nanda Mukunda Hari Nandalala",
+    name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
     deity: "krishna",
     speed: "fast",
     shruthi: { gents: "", ladies: "" },
