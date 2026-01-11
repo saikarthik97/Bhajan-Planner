@@ -515,23 +515,49 @@ body {
 
 .live-result-item {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-    padding: 18px 24px;
-    border-radius: 15px;
-    border-left: 5px solid;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border-left: 4px solid;
     border-image: linear-gradient(135deg, #667eea 0%, #f093fb 100%) 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     animation: fadeIn 0.4s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
 .live-result-item:hover {
-    transform: translateX(8px);
+    transform: translateX(5px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+/* Three-line layout for search by name results */
+.name-search-line-1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.name-search-line-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-search-line-3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.live-result-item .sung-date {
+    color: #047857;
+    font-weight: 600;
+    font-size: 0.85rem;
 }
 
 @keyframes fadeIn {
@@ -693,25 +719,25 @@ body {
 .shruthi-gents {
     color: #1e40af;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 .shruthi-gents strong {
     color: #1e3a8a;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 .shruthi-ladies {
     color: #be185d;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 .shruthi-ladies strong {
     color: #9d174d;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 .shruthi-value {
@@ -720,15 +746,6 @@ body {
     font-size: 1rem;
 }
 
-.live-result-item .sung-date {
-    color: #ffffff;
-    font-weight: 700;
-    background: linear-gradient(135deg, #065f46 0%, #047857 100%);
-    padding: 2px 6px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    border: 1px solid #059669;
-}
 
 .live-result-item.no-results {
     color: #718096;
@@ -935,51 +952,57 @@ body {
     border: 1px solid #059669;
 }
 
-/* Date Search Result Items (simplified & compact) */
+/* Date Search Result Items (two-line layout) */
 .date-result-item {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 12px 15px !important;
     border-left-width: 4px;
     border-radius: 10px !important;
 }
 
+.date-result-item .result-line-1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.date-result-item .result-line-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 30px;
+}
+
 .date-result-item .result-number {
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     color: #667eea;
-    min-width: 22px;
+    min-width: 24px;
     flex-shrink: 0;
 }
 
 .date-result-item .result-title {
     flex: 1;
     margin-bottom: 0;
-    font-size: 0.95rem;
-    min-width: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
 }
 
 .date-result-item .day-badge {
-    padding: 2px 8px;
-    font-size: 0.7rem;
-    flex-shrink: 0;
-}
-
-.date-result-item .sung-date {
-    color: #ffffff;
-    font-weight: 600;
-    background: linear-gradient(135deg, #065f46 0%, #047857 100%);
-    padding: 3px 8px;
-    border-radius: 6px;
+    padding: 3px 10px;
     font-size: 0.75rem;
-    border: 1px solid #059669;
     flex-shrink: 0;
 }
 
-.date-result-item .result-shruthi-simple {
-    margin-bottom: 0;
+.date-result-item .bhajan-shruthi {
+    color: #1e3a8a;
+    font-weight: 500;
+    font-size: 0.85rem;
 }
 
 .result-shruthi-simple {
@@ -989,10 +1012,45 @@ body {
 .shruthi-simple {
     color: #1e3a8a;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
-/* Quick Search Result Items (compact list format) */
+/* Quick Search Result Items (compact - only name + shruthi) */
+.quick-search-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px !important;
+    border-left-width: 4px;
+    border-radius: 10px !important;
+}
+
+.quick-search-item .result-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #667eea;
+    min-width: 25px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding-top: 2px;
+}
+
+.quick-search-item .result-title {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.quick-search-item .bhajan-shruthi {
+    font-size: 0.75rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+/* Legacy quick-result-item styles */
 .quick-result-item {
     display: flex;
     flex-wrap: wrap;
@@ -1335,33 +1393,36 @@ body {
     }
 
     .date-result-item {
-        padding: 6px 10px !important;
-        gap: 6px;
+        padding: 10px 12px !important;
+        gap: 5px;
         border-left-width: 3px;
-        flex-wrap: wrap;
+    }
+
+    .date-result-item .result-line-1 {
+        gap: 6px;
+    }
+
+    .date-result-item .result-line-2 {
+        padding-left: 26px;
+        gap: 8px;
     }
 
     .date-result-item .result-number {
-        font-size: 0.75rem;
-        min-width: 16px;
+        font-size: 0.85rem;
+        min-width: 20px;
     }
 
     .date-result-item .result-title {
-        font-size: 0.8rem;
-        flex: 1;
-        min-width: 120px;
+        font-size: 0.9rem;
     }
 
     .date-result-item .day-badge {
-        padding: 2px 6px;
-        font-size: 0.6rem;
-        order: 1;
+        padding: 2px 8px;
+        font-size: 0.7rem;
     }
 
-    .date-result-item .sung-date {
-        font-size: 0.6rem;
-        padding: 2px 6px;
-        order: 2;
+    .date-result-item .bhajan-shruthi {
+        font-size: 0.8rem;
     }
 
     /* Compact audio bhajan list for mobile */
@@ -1437,16 +1498,28 @@ body {
     /* Live search results compact */
     .live-result-item {
         padding: 10px 12px;
-        gap: 8px;
+        gap: 6px;
     }
 
     .live-result-item .bhajan-name {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .name-search-line-1 {
+        gap: 8px;
+    }
+
+    .name-search-line-2,
+    .name-search-line-3 {
+        gap: 6px;
     }
 
     .live-result-item .sung-date {
-        font-size: 0.65rem;
-        padding: 2px 5px;
+        font-size: 0.8rem;
+    }
+
+    .live-result-item .bhajan-shruthi {
+        font-size: 0.8rem;
     }
 
     /* Filter controls compact */
@@ -1541,32 +1614,35 @@ body {
     }
 
     .date-result-item {
-        padding: 5px 8px !important;
+        padding: 8px 10px !important;
         gap: 4px;
-        flex-wrap: wrap;
+    }
+
+    .date-result-item .result-line-1 {
+        gap: 5px;
+    }
+
+    .date-result-item .result-line-2 {
+        padding-left: 22px;
+        gap: 6px;
     }
 
     .date-result-item .result-number {
-        font-size: 0.7rem;
-        min-width: 14px;
+        font-size: 0.8rem;
+        min-width: 18px;
     }
 
     .date-result-item .result-title {
-        font-size: 0.75rem;
-        flex: 1;
-        min-width: 100px;
+        font-size: 0.85rem;
     }
 
     .date-result-item .day-badge {
-        padding: 2px 5px;
-        font-size: 0.55rem;
-        order: 1;
+        padding: 2px 6px;
+        font-size: 0.65rem;
     }
 
-    .date-result-item .sung-date {
-        font-size: 0.55rem;
-        padding: 2px 5px;
-        order: 2;
+    .date-result-item .bhajan-shruthi {
+        font-size: 0.75rem;
     }
 
     /* Even more compact audio bhajan list for small phones */
@@ -1637,18 +1713,66 @@ body {
         height: 7px;
     }
 
-    /* Live search results even more compact */
+    /* Live search results - mobile layout */
     .live-result-item {
-        padding: 8px 10px;
-        gap: 6px;
+        padding: 10px 12px;
+        gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .live-result-item .bhajan-name {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .name-search-line-1 {
+        gap: 6px;
+    }
+
+    .name-search-line-2,
+    .name-search-line-3 {
+        gap: 6px;
     }
 
     .live-result-item .bhajan-shruthi {
-        display: none;
+        font-size: 0.75rem;
+    }
+
+    .live-result-item .sung-date {
+        font-size: 0.75rem;
+    }
+
+    .name-search-line-3 .detail-badge {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+
+    /* Quick search items - mobile */
+    .quick-search-item {
+        padding: 8px 12px !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .quick-search-item .result-number {
+        font-size: 0.8rem;
+        min-width: 28px;
+        flex-shrink: 0;
+    }
+
+    .quick-search-item .result-title {
+        font-size: 0.85rem;
+        flex: 1;
+        min-width: calc(100% - 40px);
+    }
+
+    .quick-search-item .bhajan-shruthi {
+        font-size: 0.7rem;
+        margin-left: 28px;
+        color: #1e3a8a;
     }
 
     /* Filter controls even more compact */
@@ -1922,6 +2046,53 @@ body {
 }
 
 .close-audio-list-btn:active {
+    transform: translateY(0);
+}
+
+.hide-audio-list-btn {
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.hide-audio-list-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.hide-audio-list-btn:active {
+    transform: translateY(0);
+}
+
+.show-audio-list-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    margin-top: 10px;
+}
+
+.show-audio-list-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.show-audio-list-btn:active {
     transform: translateY(0);
 }
 
@@ -2322,3 +2493,167 @@ body {
     border-color: #4caf50;
 }
 */
+
+/* Show Bhajan List Button - appears inside audio player when list is hidden */
+.show-bhajan-list-btn {
+    display: none;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.4);
+}
+
+.show-bhajan-list-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 16px rgba(16, 185, 129, 0.5);
+}
+
+.show-bhajan-list-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile adjustments for show button */
+@media (max-width: 480px) {
+    .show-bhajan-list-btn {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   CONNECT SECTION - MOBILE IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    .connect-section {
+        flex-direction: column;
+        padding: 20px 15px;
+        margin: 20px 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .connect-title {
+        font-size: 0.9rem;
+    }
+
+    .connect-email {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .connect-section {
+        padding: 18px 12px;
+        margin: 15px 10px;
+        gap: 8px;
+    }
+
+    .connect-title {
+        font-size: 0.85rem;
+    }
+
+    .connect-email {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - IMPROVED COLOR CONTRASTS
+   ============================================ */
+
+/* Improved contrast for section descriptions */
+.section-description {
+    color: #374151;
+}
+
+/* Improved contrast for filter labels */
+.filter-label {
+    color: #1f2937;
+}
+
+/* Improved contrast for no results text */
+.live-result-item.no-results {
+    color: #4b5563;
+}
+
+/* Improved contrast for shruthi values */
+.shruthi-gents {
+    color: #1e40af;
+}
+
+.shruthi-ladies {
+    color: #9d174d;
+}
+
+/* Improved contrast for date badge */
+.sung-date {
+    color: #065f46;
+}
+
+/* Improved contrast for connect section */
+.connect-title {
+    color: #1f2937;
+}
+
+.connect-email {
+    color: #4338ca;
+}
+
+/* Improved contrast for audio label */
+.audio-label {
+    color: #78350f;
+}
+
+/* Improved contrast for placeholder text */
+.search-input::placeholder {
+    color: #4b5563;
+    opacity: 1;
+}
+
+/* ============================================
+   LOADING SPINNER FOR SEARCH
+   ============================================ */
+
+.search-loading {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 12px;
+}
+
+.search-loading.active {
+    display: flex;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.search-loading-text {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
