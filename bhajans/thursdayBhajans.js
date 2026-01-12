@@ -38,7 +38,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "12:40",
-    singers:'Chandini & Harshitha'
+    singer:'Chandini & Harshitha'
   },
   {
     name: "Radhe(3) Radhe Govinda",
@@ -58,7 +58,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "20:44",
-    singer: 'Geetha Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Raghuvamsa dhama Rama Ranaranga bheema Rama",
@@ -78,7 +78,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "28:52",
-    singers:'Sri & Sai Harshitha'
+    singer:'Sri & Sai Harshitha'
   },
   {
     name: "Mana Bangaru Parti Baba",
@@ -118,7 +118,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "41:10",
-    singers:'Chandini Sai Harshitha & Harshitha'
+    singer:'Chandini, Sai Harshitha & Harshitha'
   },
   {
     name: "Yadukula Nandana Sri Hari Madhava",
@@ -138,7 +138,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "45:32",
-    singer: 'Geeta Jyoti  Eswari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Anandame Sai Bhajana",
@@ -189,7 +189,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "0:00",
-    singers:'Vathsalya & Shruthi'
+    singer:'Vathsalya & Shruthi'
   },
   {
     name: "Guru Paada Vandana ShataVandana",
@@ -209,7 +209,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "3:57",
-    singer: 'Geeta Jyoti  Eswari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Eko Bramha Swaroopa",
@@ -229,7 +229,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "11:31",
-    singers:'Vathsalya & Shruthi'
+    singer:'Vathsalya & Shruthi'
 
   },
   {
@@ -250,7 +250,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "20:00",
-    singers:'Chandini & Praneetha'
+    singer:'Chandini & Praneetha'
   },
   {
     name: "Bolo Bolo Sabmil Bolo Om Namah Shivaya",
@@ -270,7 +270,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "27:05",
-    singer: 'Geeta Jyoti  Eswari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Govinda Murali Gopala Murali",
@@ -290,7 +290,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "33:30",
-    singers:'Chandini & Praneetha'
+    singer:'Chandini & Praneetha'
   },
   {
     name: "Sai Ghanashyam (2)",

@@ -52,12 +52,20 @@ function searchByName() {
   const resultsSection = document.getElementById("resultsSection");
   if (resultsSection) resultsSection.style.display = "none";
 
-  const searchTerm = document
-    .getElementById("nameSearch")
-    .value.toLowerCase()
-    .trim();
+  const nameSearchInput = document.getElementById("nameSearch");
+  const searchTerm = nameSearchInput.value.toLowerCase().trim();
   const resultsContainer = document.getElementById("nameSearchResults");
   const loadingIndicator = document.getElementById("nameSearchLoading");
+  const clearBtn = document.getElementById("clearNameSearch");
+
+  // Toggle clear button visibility
+  if (clearBtn) {
+    if (nameSearchInput.value.length > 0) {
+      clearBtn.classList.add("visible");
+    } else {
+      clearBtn.classList.remove("visible");
+    }
+  }
 
   // Clear previous debounce timer
   if (searchDebounceTimer) {
@@ -79,6 +87,24 @@ function searchByName() {
   searchDebounceTimer = setTimeout(function () {
     performSearch(searchTerm, resultsContainer, loadingIndicator);
   }, 350);
+}
+
+// Clear the name search input and results
+function clearNameSearch() {
+  const nameSearchInput = document.getElementById("nameSearch");
+  const resultsContainer = document.getElementById("nameSearchResults");
+  const clearBtn = document.getElementById("clearNameSearch");
+
+  if (nameSearchInput) {
+    nameSearchInput.value = "";
+    nameSearchInput.focus();
+  }
+  if (resultsContainer) {
+    resultsContainer.innerHTML = "";
+  }
+  if (clearBtn) {
+    clearBtn.classList.remove("visible");
+  }
 }
 
 // Perform the actual search (called after debounce)
@@ -164,7 +190,7 @@ function showAudioHint(dateSung, formattedDate) {
   const audioEntry = bhajanAudios.find((audio) => audio.date === dateSung);
 
   if (audioEntry && audioEntry.audioFile) {
-    message.innerHTML = `To hear this bhajan, choose <strong>"${formattedDate}"</strong> from the Live Bhajan Audios list.`;
+    message.innerHTML = `To hear this bhajan, choose date <strong>"${formattedDate}"</strong> from the Live Bhajan Audios list.`;
   } else {
     message.innerHTML = `No audio file available for this bhajan.`;
   }
@@ -231,11 +257,16 @@ function quickSearch() {
   // Filter by singer (check if singer name appears in the singer or singers field)
   if (singerFilter !== "all") {
     results = results.filter((bhajan) => {
-      const singerValue = bhajan.singer || bhajan.singers;
-      if (!singerValue) return false;
-      // Check if the selected singer is in the singers list
-      const singerList = singerValue.split(/[&,]/).map(s => s.trim().toLowerCase());
-      return singerList.includes(singerFilter.toLowerCase());
+      // For "singers" field, do exact match (e.g., "Geetha,Jyothi & Eshwari")
+      if (bhajan.singers) {
+        return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
+      }
+      // For "singer" field, check if selected singer is in the list
+      if (bhajan.singer) {
+        const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim().toLowerCase());
+        return singerList.includes(singerFilter.toLowerCase());
+      }
+      return false;
     });
   }
 
@@ -252,10 +283,12 @@ function populateSingerDropdown() {
   // Get unique singers from the database (handles both singer and singers fields)
   const singers = new Set();
   bhajansDatabase.forEach((bhajan) => {
-    const singerValue = bhajan.singer || bhajan.singers;
-    if (singerValue && singerValue.trim() !== "") {
-      // Split by & or , to handle multiple singers
-      const singerList = singerValue.split(/[&,]/).map(s => s.trim()).filter(s => s);
+    // If it's a "singers" field (like "Geetha,Jyothi & Eshwari"), keep as single entry
+    if (bhajan.singers && bhajan.singers.trim() !== "") {
+      singers.add(bhajan.singers.trim());
+    } else if (bhajan.singer && bhajan.singer.trim() !== "") {
+      // Split by & or , to handle multiple singers in singer field
+      const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim()).filter(s => s);
       singerList.forEach(singer => {
         singers.add(singer);
       });
