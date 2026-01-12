@@ -82,7 +82,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "32:30",
-    singers:'Chandini & Praneetha'
+    singers:'Vani & Praneetha'
   },
   {
     name: "Hey Ayodhya Vasi Ram(2) Dasaratha Nandana Ram",
