@@ -435,7 +435,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "34:07",
-    singers:'Harshitha & Sri Vidya'
+    singers:'Harshitha & Sri'
 
   },
   {
@@ -513,7 +513,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "10:55",
-    // singers:''
+    singers:'Chandini & Harshitha'
 
   },
    {
@@ -535,7 +535,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "20:32",
-    // singers:''
+    singers:'Vani & Yoshita'
 
   },
    {
@@ -557,7 +557,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "26:13",
-        // singers:''
+    singers:'Sai Harshitha & Ravali'
 
   },
   {
@@ -631,7 +631,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "4:31",
-    // singers:''
+    singers:'Vathsalya & Shruthi'
   },
   {
     name: "Devi Bhavani Jagat Janani",
@@ -669,7 +669,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "18:16",
-    // singers:''
+    singers:'Vani & Vathsalya'
   },
   {
     name: "Shiva(2) Shankara Hara Parameshwara",

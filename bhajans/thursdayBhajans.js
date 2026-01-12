@@ -38,7 +38,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "12:40",
-    // singers:''
+    singers:'Chandini & Harshitha'
   },
   {
     name: "Radhe(3) Radhe Govinda",
@@ -78,7 +78,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "28:52",
-    // singers:''
+    singers:'Sri & Sai Harshitha'
   },
   {
     name: "Mana Bangaru Parti Baba",
@@ -118,7 +118,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "41:10",
-    singers:'Vathsalya & Shruthi'
+    singers:'Chandini Sai Harshitha & Harshitha'
   },
   {
     name: "Yadukula Nandana Sri Hari Madhava",
@@ -302,5 +302,5 @@ const thursdayBhajansRawData = [
     startTime: "37:11",
     singer: 'Ramakrishna'
   },
-  
+
 ];
