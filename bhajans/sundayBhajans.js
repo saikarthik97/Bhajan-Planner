@@ -102,7 +102,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "40:42",
-    singer:'Vathsalya Shruthi & Harshitha'
+    singer:'Vathsalya & Shruthi & Harshitha'
   },
   {
     name: "Manamohana Krishna Kunja Vihari",
@@ -233,7 +233,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "3:09",
-    singer: 'Vathsalya Chandini & Yoshitha'
+    singer: 'Vathsalya & Chandini & Yoshitha'
   },
   {
     name: "Maata Maheshwari Tribhuvani Janani",
@@ -314,7 +314,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "32:48",
-    singer:'Vathsalya Chandini & Yoshitha'
+    singer:'Vathsalya & Chandini & Yoshitha'
   },
   {
     name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
