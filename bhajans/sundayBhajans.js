@@ -820,7 +820,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "26:22",
-    // singer:''
+    singer:'Sai Harshitha & Ravali'
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
@@ -840,7 +840,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "32:32",
-    // singer:''
+    singer:'Surekha & Praneetha'
     
   },
   {
@@ -861,7 +861,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "40:24",
-    // singer:''
+    singer:'Yoshitha & Vani'
   },
   {
     name: "Om Shivaaya Shivaaya",
