@@ -6,12 +6,23 @@
 // 1. DATABASE INITIALIZATION
 // ============================================================================
 
-// Combine Sunday and Thursday bhajans into a single database
-const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData];
+// Combine Sunday, Thursday, and Special Occasions bhajans into a single database
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026];
 const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
   id: index + 1,
   ...bhajan,
 }));
+
+// Festival dates mapping
+const festivalDates = {
+  "2026-01-14": "Festival - Bhogi",
+  "2026-01-15": "Festival - Sankranti"
+};
+
+// Get festival name for a given date
+function getFestivalName(dateString) {
+  return festivalDates[dateString] || null;
+}
 
 // ============================================================================
 // 2. WELCOME SCREEN CODE
@@ -360,11 +371,11 @@ function searchByDate() {
     (bhajan) => bhajan.dateSung === dateInput
   );
 
-  displayDateResults(results);
+  displayDateResults(results, dateInput);
 }
 
 // Display Date Search Results (simplified - only name and day)
-function displayDateResults(results) {
+function displayDateResults(results, selectedDate) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
 
@@ -376,7 +387,19 @@ function displayDateResults(results) {
             </div>
         `;
   } else {
-    resultsContainer.innerHTML = results
+    const dayOfWeek = results[0].day;
+    const festivalName = getFestivalName(selectedDate);
+    const headerHtml = `
+      <div class="date-results-header">
+        <h3 class="date-results-title">Bhajans on ${formatDate(selectedDate)}</h3>
+        <div class="date-results-badges">
+          <span class="detail-badge day-badge day-${dayOfWeek.toLowerCase()}">${dayOfWeek}</span>
+          ${festivalName ? `<span class="detail-badge festival-badge">${festivalName}</span>` : ''}
+        </div>
+      </div>
+    `;
+
+    resultsContainer.innerHTML = headerHtml + results
       .map(
         (bhajan, index) => `
             <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
@@ -387,7 +410,6 @@ function displayDateResults(results) {
                     <h3 class="result-title">${bhajan.name}</h3>
                 </div>
                 <div class="result-line-2">
-                    <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                     <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
                 </div>
             </div>
@@ -468,13 +490,20 @@ function loadAudio() {
   // Display bhajans list for the selected date
   if (bhajansForDate.length > 0) {
     const dayOfWeek = bhajansForDate[0].day;
+    const festivalName = getFestivalName(selectedDate);
     audioBhajanList.innerHTML = `
       <div class="audio-bhajan-list-header">
-        <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(
-          selectedDate
-        )} - ${dayOfWeek}</h3>
-        <button id="closeAudioListBtn" class="close-audio-list-btn" onclick="closeAudioBhajanList()">Close</button>
-        <button id="hideAudioListBtn" class="hide-audio-list-btn" onclick="hideAudioBhajanList()" style="display: none;">Hide</button>
+        <div class="audio-bhajan-header-content">
+          <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(selectedDate)}</h3>
+          <div class="audio-bhajan-badges">
+            <span class="detail-badge day-badge day-${dayOfWeek.toLowerCase()}">${dayOfWeek}</span>
+            ${festivalName ? `<span class="detail-badge festival-badge">${festivalName}</span>` : ''}
+          </div>
+        </div>
+        <div class="audio-bhajan-header-buttons">
+          <button id="closeAudioListBtn" class="close-audio-list-btn" onclick="closeAudioBhajanList()">Close</button>
+          <button id="hideAudioListBtn" class="hide-audio-list-btn" onclick="hideAudioBhajanList()" style="display: none;">Hide</button>
+        </div>
       </div>
       <div class="audio-bhajan-items">
         ${bhajansForDate
