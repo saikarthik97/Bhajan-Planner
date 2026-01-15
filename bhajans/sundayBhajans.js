@@ -82,7 +82,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "32:30",
-    singers:'Vani & Praneetha'
+    singer:'Vani & Praneetha'
   },
   {
     name: "Hey Ayodhya Vasi Ram(2) Dasaratha Nandana Ram",
@@ -95,14 +95,14 @@ const sundayBhajansRawData = [
     singer: 'Sridhar'
   },
   {
-    name: "Shubha Aur Shyam Bol Hari Naam",
+    name: "Subha Aur Shyam Bol Hari Naam",
     deity: "sai",
     speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "40:42",
-    singers:'Vathsalya Shruthi & Harshitha'
+    singer:'Vathsalya & Shruthi & Harshitha'
   },
   {
     name: "Manamohana Krishna Kunja Vihari",
@@ -233,7 +233,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "3:09",
-    singer: 'Vathsalya Chandini & Yoshitha'
+    singer: 'Vathsalya & Chandini & Yoshitha'
   },
   {
     name: "Maata Maheshwari Tribhuvani Janani",
@@ -314,7 +314,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "32:48",
-    singers:'Vathsalya Chandini & Yoshitha'
+    singer:'Vathsalya & Chandini & Yoshitha'
   },
   {
     name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
@@ -395,7 +395,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "19:05",
-    singer: 'Geetha Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Srirama Bhadra Sri rama chandra Sri Rama Jaya Sri Ram",
@@ -435,7 +435,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "34:07",
-    singers:'Harshitha & Sri'
+    singer:'Harshitha & Sri'
 
   },
   {
@@ -513,7 +513,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "10:55",
-    singers:'Chandini & Harshitha'
+    singer:'Chandini & Harshitha'
 
   },
    {
@@ -535,7 +535,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "20:32",
-    singers:'Vani & Yoshitha'
+    singer:'Vani & Yoshitha'
 
   },
    {
@@ -557,7 +557,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "26:13",
-    singers:'Sai Harshitha & Ravali'
+    singer:'Sai Harshitha & Ravali'
 
   },
   {
@@ -579,7 +579,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "33:55",
-    singer: 'Geetha Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
 
   },
   {
@@ -631,7 +631,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "4:31",
-    singers:'Vathsalya & Shruthi'
+    singer:'Vathsalya & Shruthi'
   },
   {
     name: "Devi Bhavani Jagat Janani",
@@ -671,7 +671,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "18:16",
-    singers:'Vani & Vathsalya'
+    singer:'Vani & Vathsalya'
   },
   {
     name: "Shiva(2) Shankara Hara Parameshwara",
@@ -691,7 +691,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "24:24",
-    singer: 'Geetha Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Sri Rama Paratparara Ram Hey Rajeeva Lochana Ram",
@@ -742,7 +742,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "1P" },
     dateSung: "2025-09-21",
     startTime: "0:00",
-    singers:'Vathsalya & Shruthi'
+    singer:'Vathsalya & Shruthi'
   },
   {
     name: "Aruna Ramana Sri Gurudeva",
@@ -751,7 +751,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1.5P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "2:36",
+    startTime: "2:18",
     singer: 'A.Srinivas'
   },
   {
@@ -790,7 +790,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "17:04",
+    startTime: "16:49",
     singer: 'Karthik'
   },
   {
@@ -800,7 +800,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "21:27",
+    startTime: "21:22",
+    singers:'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Madhava Madhusudana Muralidhara Mohana",
@@ -808,7 +809,8 @@ const sundayBhajansRawData = [
     speed: "fast",
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "23:54",
+    startTime: "24:10",
+    singer:'Venu'
   },
   {
     name: "Ganga Jatadhara Gowri Shankara Girija Mano Ramana",
@@ -817,7 +819,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "5.5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "26:08",
+    startTime: "26:22",
+    singer:'Sai Harshitha & Ravali'
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
@@ -826,7 +829,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "29:40",
+    startTime: "30:22",
+    singer:'Eshwar'
   },
   {
     name: "Manamohana Nandalaal",
@@ -835,7 +839,9 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "31:47",
+    startTime: "32:32",
+    singer:'Surekha & Praneetha'
+    
   },
   {
     name: "Vaheguru(3)Ji Bolo",
@@ -844,7 +850,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "35:14",
+    startTime: "35:53",
     singer: 'Abhishek'
   },
   {
@@ -854,7 +860,8 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "39:57",
+    startTime: "40:24",
+    singer:'Yoshitha & Vani'
   },
   {
     name: "Om Shivaaya Shivaaya",
@@ -863,7 +870,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
-    startTime: "43:10",
+    startTime: "43:15",
     singer: 'Lavanya'
   },
   //11th January 2026
@@ -925,7 +932,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "20:20",
-    singer: 'Geetha Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Ram(2) Bhajamana Hare Hare",
@@ -945,7 +952,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "26:49",
-    singers:'Vathsalya & Chandini'
+    singer:'Vathsalya & Chandini'
   },
   {
     name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
@@ -965,7 +972,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "31:52",
-    singers:'Vani & Praneetha'
+    singer:'Vani & Praneetha'
   },
   {
     name: "Vanamali Vasudeva Jaganmohana Radha Ramana",

@@ -53,8 +53,11 @@
         <section class="search-section">
             <h2 class="section-title">Search by Bhajan Name</h2>
             <div class="search-box">
-                <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
-                    oninput="searchByName()">
+                <div class="search-input-wrapper">
+                    <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
+                        oninput="searchByName()">
+                    <button type="button" id="clearNameSearch" class="clear-search-btn" onclick="clearNameSearch()" title="Clear search">×</button>
+                </div>
             </div>
             <div id="nameSearchLoading" class="search-loading">
                 <div class="spinner"></div>
@@ -244,19 +247,7 @@
             </div>
             <div id="resultsContainer" class="results-container"></div>
         </section>
-
-        <!-- Background Audio (commented out for future use)
-        <audio id="bgAudio" loop>
-            <source src="audios/16 Paramam.mp3" type="audio/mpeg">
-        </audio>
-        -->
-
-        <!-- Sound Toggle Button (commented out for future use)
-        <button id="soundToggle" class="sound-toggle" onclick="toggleSound()" title="Toggle Background Music">
-            🔇
-        </button>
-        -->
-
+        
         <!-- ================================================================== -->
         <!-- 8. FOOTER SECTION -->
         <!-- ================================================================== -->
@@ -271,7 +262,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Premsadan Planner. All rights reserved.</p>
+            <p>&copy; 2026 Premsadan Planner. All rights reserved.</p>
             <p>Aum Sri Sai Ram</p>
         </footer>
     </div>
