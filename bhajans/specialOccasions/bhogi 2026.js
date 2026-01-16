@@ -7,7 +7,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "00:01",
-    singer: "Vathsalya",
+    singer: "Vathsalya & Shruthi",
   },
   {
     name: "Jagadeeshwari Dayakaro Maa",
@@ -27,7 +27,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "05:55",
-    singer: "",
+    singer: "Chandini & Yoshitha",
   },
   {
     name: "Nirupama Gunasadana Charana Neeraja Dhala Nayana",
@@ -67,7 +67,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "19:04",
-    // singer: "Chamundeshwari & Vathsalya"
+    singer: "Chamundeshwari & Vathsalya"
   },
   {
     name: "Alak Niranjana Bhava Bhaya Bhanjana Narayan",
@@ -87,7 +87,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "25:11",
-    // singer: "Vathsalya"
+    singer: "Vathsalya & Shruthi"
   },
   {
     name: "Rama(2) Sai Rama",
@@ -97,7 +97,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "27:18",
-    singer: "",
+    singer: "Yoshitha & Chandini",
   },
   {
     name: "Jaya Panduranga Ranga Jaya Vittala",
