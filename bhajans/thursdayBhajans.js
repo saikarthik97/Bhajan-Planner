@@ -1,5 +1,3 @@
-const thursdayBhajansRawData = [
-  // 1st Jan 2026 - Audio: audios/01st Jan 2026.mp3
   /*
     name: "",
     deity: "",
@@ -10,6 +8,9 @@ const thursdayBhajansRawData = [
     startTime: "",
     singer: ''
   },*/
+
+const thursdayBhajansRawData = [
+  // 1st Jan 2026 - Audio: audios/01st Jan 2026.mp3
   {
     name: "Jai Ganesh (3) Deva",
     deity: "ganesha",
@@ -48,7 +49,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "12:45",
-    singer:'Chandini & Harshitha'
+    singer:'Sri & Sai Harshitha'
   },
   {
     name: "Radhe(3) Radhe Govinda",
@@ -88,7 +89,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "28:52",
-    singer:'Sri & Sai Harshitha'
+    singer:'Chandini & Harshitha' 
   },
   {
     name: "Mana Bangaru Parti Baba",
@@ -283,7 +284,7 @@ const thursdayBhajansRawData = [
     singers: 'Geetha,Jyothi & Eshwari'
   },
   {
-    name: "Govinda Murali Gopala Murali",
+    name: "Govinda Murari Gopala Murari",
     deity: "vittala",
     speed: "slow",
     shruthi: { gents: "1.5P" },

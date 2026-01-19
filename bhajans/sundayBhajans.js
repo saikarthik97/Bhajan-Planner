@@ -1,5 +1,3 @@
-const sundayBhajansRawData = [
-  // 28th Dec 2025 - Audio: audios/28th December.mp3
   /*
     name: "",
     deity: "",
@@ -10,6 +8,9 @@ const sundayBhajansRawData = [
     startTime: "",
     singer: ''
   },*/
+  
+const sundayBhajansRawData = [
+  // 28th Dec 2025 - Audio: audios/28th December.mp3
   {
     name: "Gajanana Hey Shubhanana Parama Niranjana Gajavadana",
     deity: "ganesha",
@@ -1082,7 +1083,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "26:00",
+    startTime: "25:57",
     singer: "Karthik"
   },
   {
