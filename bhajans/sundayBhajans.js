@@ -1014,6 +1014,7 @@ const sundayBhajansRawData = [
     startTime: "41:39",
     singer:'Swaroop'
   },
+  //18th Jan 2026
  {
     name: "Parvati Nandana Gajanana",
     deity: "ganesh",
@@ -1031,7 +1032,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "7", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "3:28",
+    startTime: "3:32",
     singer: "Gayathri"
   },
   {
@@ -1041,7 +1042,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "8:26",
+    startTime: "8:52",
     singer: "Sridhar"
   },
   {
@@ -1051,7 +1052,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "2½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "12:10",
+    startTime: "12:45",
     singer: "A.Srinivas"
   },
   {
@@ -1061,7 +1062,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "7½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "17:00",
+    startTime: "17:32",
     singer: "Shruthi & Vathsalya"
   },
   {
@@ -1071,7 +1072,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "2", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "19:58",
+    startTime: "20:45",
     singer: "Ganapathi"
   },
   {
@@ -1081,7 +1082,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "25:06",
+    startTime: "26:00",
     singer: "Karthik"
   },
   {
@@ -1091,7 +1092,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "6", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "29:44",
+    startTime: "30:32",
     singer: "Chandini & Praneetha"
   },
   {
@@ -1101,7 +1102,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "2½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "33:34",
+    startTime: "34:38",
     singer: "Charan"
   },
   {
@@ -1111,7 +1112,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "36:00",
+    startTime: "36:56",
     singer: "G.Srinivas"
   },
   {
@@ -1121,7 +1122,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "39:24",
+    startTime: "40:17",
     singer: "Shantha Krishna"
   },
   {
@@ -1131,7 +1132,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "1½", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
-    startTime: "43:04",
+    startTime: "44:06",
     singer: "G.Srinivas"
   },
 ];
