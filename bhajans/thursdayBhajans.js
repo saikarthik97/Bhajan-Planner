@@ -1,5 +1,15 @@
 const thursdayBhajansRawData = [
   // 1st Jan 2026 - Audio: audios/01st Jan 2026.mp3
+  /*
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },*/
   {
     name: "Jai Ganesh (3) Deva",
     deity: "ganesha",

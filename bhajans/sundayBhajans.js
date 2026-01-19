@@ -1,5 +1,15 @@
 const sundayBhajansRawData = [
   // 28th Dec 2025 - Audio: audios/28th December.mp3
+  /*
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },*/
   {
     name: "Gajanana Hey Shubhanana Parama Niranjana Gajavadana",
     deity: "ganesha",
@@ -1003,5 +1013,125 @@ const sundayBhajansRawData = [
     dateSung: "2026-01-11",
     startTime: "41:39",
     singer:'Swaroop'
+  },
+ {
+    name: "Parvati Nandana Gajanana",
+    deity: "ganesh",
+    speed: "",
+    shruthi: { gents: "5½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "0:00",
+    singer: "Abhishek"
+  },
+  {
+    name: "Gurudeva Priyadeva Saideva Dayamaya",
+    deity: "guru",
+    speed: "",
+    shruthi: { gents: "7", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "3:28",
+    singer: "Gayathri"
+  },
+  {
+    name: "Devi Sai Maa Devi Saraswati Maa",
+    deity: "devi",
+    speed: "",
+    shruthi: { gents: "1", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "8:26",
+    singer: "Sridhar"
+  },
+  {
+    name: "Govinda Bolo Gopala Bolo",
+    deity: "sarvadharma",
+    speed: "",
+    shruthi: { gents: "2½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "12:10",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Tumaho Ram Tumaho Shyam",
+    deity: "rama",
+    speed: "",
+    shruthi: { gents: "7½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "17:00",
+    singer: "Shruthi & Vathsalya"
+  },
+  {
+    name: "Jaya Jaya Ram Jagadabhi Ram",
+    deity: "rama",
+    speed: "",
+    shruthi: { gents: "2", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "19:58",
+    singer: "Ganapathi"
+  },
+  {
+    name: "Hey Partipurisha Prashanthi Vaasa Sai Murari",
+    deity: "sai",
+    speed: "",
+    shruthi: { gents: "1½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "25:06",
+    singer: "Karthik"
+  },
+  {
+    name: "Kodanda Rama Raghava Jaya Kalyana Rama Keshava",
+    deity: "rama",
+    speed: "",
+    shruthi: { gents: "6", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "29:44",
+    singer: "Chandini & Praneetha"
+  },
+  {
+    name: "Hey Govinda Hey Ananda Nanda Gopala",
+    deity: "krishna",
+    speed: "",
+    shruthi: { gents: "2½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "33:34",
+    singer: "Charan"
+  },
+  {
+    name: "Rama Jai Jai Ram Sai Ram Jai Jai Ram",
+    deity: "rama",
+    speed: "",
+    shruthi: { gents: "1½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "36:00",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Arunachala Shiva Shiva Shankara SambaShiva",
+    deity: "shiva",
+    speed: "",
+    shruthi: { gents: "4", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "39:24",
+    singer: "Shantha Krishna"
+  },
+  {
+    name: "Narayana Hari Nama Bhajore Narayana Veda Parayana",
+    deity: "narayana",
+    speed: "",
+    shruthi: { gents: "1½", ladies: "" },
+    day: "sunday",
+    dateSung: "2026-01-18",
+    startTime: "43:04",
+    singer: "G.Srinivas"
   },
 ];
