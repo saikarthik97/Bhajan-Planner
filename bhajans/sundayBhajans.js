@@ -1087,7 +1087,7 @@ const sundayBhajansRawData = [
     singer: "Karthik"
   },
   {
-    name: "Kodanda Rama Raghava Jaya Kalyana Rama Keshava",
+    name: "Kodanda Rama Raghava Jaya Kalyana Krishna Keshava",
     deity: "rama",
     speed: "",
     shruthi: { gents: "6", ladies: "" },
