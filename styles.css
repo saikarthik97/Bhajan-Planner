@@ -972,6 +972,71 @@ body {
     border: 1px solid #5b21b6;
 }
 
+/* Wednesday - Orange */
+.day-badge.day-wednesday {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    border: 1px solid #c2410c;
+}
+
+/* Festival Badge */
+.festival-badge {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    border: 1px solid #065f46;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Date Results Header (for calendar search) */
+.date-results-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.date-results-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.date-results-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Audio Bhajan Header Content */
+.audio-bhajan-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.audio-bhajan-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.audio-bhajan-header-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
 .result-shruthi {
     display: flex;
     flex-wrap: wrap;

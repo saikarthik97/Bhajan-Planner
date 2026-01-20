@@ -326,6 +326,6 @@ netlify logs                     # View logs
 
 **Remember**: Your site is now live and accessible worldwide! 🌍
 
-**URL Format**: `https://your-site-name.netlify.app`
+**URL Format**: `https://premsadan.netlify.app`
 
 Aum Sri Sai Ram 🙏
