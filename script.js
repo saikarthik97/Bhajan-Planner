@@ -273,6 +273,10 @@ function resetOtherFilters(changedFilter) {
   }
 }
 
+// Store current singer filter for show/hide functionality
+let currentSingerFilter = null;
+let currentSingerResults = [];
+
 // Show singer's songs automatically when singer is selected from dropdown
 function showSingerSongs() {
   const singerFilter = document.getElementById("singerFilter").value;
@@ -285,8 +289,13 @@ function showSingerSongs() {
   if (singerFilter === "all") {
     const resultsSection = document.getElementById("resultsSection");
     if (resultsSection) resultsSection.style.display = "none";
+    currentSingerFilter = null;
+    currentSingerResults = [];
     return;
   }
+
+  // Store the current singer filter
+  currentSingerFilter = singerFilter;
 
   // Filter bhajans by the selected singer
   let results = bhajansDatabase.filter((bhajan) => {
@@ -301,6 +310,9 @@ function showSingerSongs() {
     }
     return false;
   });
+
+  // Store current results
+  currentSingerResults = results;
 
   // Display the results with clickable audio links
   displaySingerResults(results, singerFilter);
@@ -385,6 +397,8 @@ function populateSingerDropdown() {
 function displaySingerResults(results, singerName) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
+  const hideBtn = document.getElementById("hideResultsBtn");
+  const closeBtn = document.querySelector(".close-results-btn");
 
   if (results.length === 0) {
     resultsContainer.innerHTML = `
@@ -393,6 +407,9 @@ function displaySingerResults(results, singerName) {
                 <p class="result-details">Try selecting a different singer</p>
             </div>
         `;
+    // Show Close button only
+    if (hideBtn) hideBtn.style.display = "none";
+    if (closeBtn) closeBtn.style.display = "inline-block";
   } else {
     resultsContainer.innerHTML = `
       <div class="singer-results-header">
@@ -413,7 +430,7 @@ function displaySingerResults(results, singerName) {
 
           return `
             <div class="result-item singer-search-item ${hasAudio ? 'clickable-row has-audio-indicator' : 'no-audio-item'}"
-                 ${hasAudio ? `onclick="playBhajanAudio('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})"` : ''}>
+                 ${hasAudio ? `onclick="playBhajanAudioFromSinger('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})"` : ''}>
                 <div class="singer-result-content">
                   <span class="result-number">${index + 1}.</span>
                   <h3 class="result-title">${bhajan.name}</h3>
@@ -424,6 +441,9 @@ function displaySingerResults(results, singerName) {
         })
         .join("")}
     `;
+    // Show both Hide and Close buttons
+    if (hideBtn) hideBtn.style.display = "none";
+    if (closeBtn) closeBtn.style.display = "inline-block";
   }
 
   resultsSection.style.display = "block";
@@ -778,6 +798,9 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     // Show the hide button since audio is now playing
     showHideButton();
 
+    // Show the stop button
+    showStopAudioButton();
+
     // Scroll to audio section
     audioSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
@@ -874,13 +897,16 @@ function closeAudioBhajanList() {
   const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
   const audioDateSelect = document.getElementById("audioDateSelect");
   const audioPlayer = document.getElementById("audioPlayer");
-  const showBtn = document.getElementById("showAudioListBtn");
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
 
   // Hide the list and related elements
   audioBhajanList.style.display = "none";
   if (audioPlayerContainer) audioPlayerContainer.style.display = "none";
   if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
-  if (showBtn) showBtn.style.display = "none";
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "none";
+
+  // Hide stop button
+  hideStopAudioButton();
 
   // Reset the dropdown
   if (audioDateSelect) audioDateSelect.value = "";
@@ -899,28 +925,28 @@ function hideAudioBhajanList() {
   if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
 
   // Show the "Show" button so user can bring back the list
-  const floatingShowBtn = document.getElementById("floatingShowBtn");
-  if (floatingShowBtn) floatingShowBtn.style.display = "block";
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "block";
 }
 
 // Show hide button and hide close button when audio is playing
 function showHideButton() {
   const hideBtn = document.getElementById("hideAudioListBtn");
   const closeBtn = document.getElementById("closeAudioListBtn");
-  const floatingShowBtn = document.getElementById("floatingShowBtn");
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
 
   if (hideBtn) hideBtn.style.display = "inline-block";
   if (closeBtn) closeBtn.style.display = "none";
-  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "none";
 }
 
 // Show the audio bhajan list again
 function showAudioBhajanList() {
   const audioBhajanList = document.getElementById("audioBhajanList");
-  const floatingShowBtn = document.getElementById("floatingShowBtn");
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
 
   if (audioBhajanList) audioBhajanList.style.display = "block";
-  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "none";
 
   // Scroll to audio section
   const audioSection = document.querySelector(".audio-section");
@@ -931,8 +957,72 @@ function showAudioBhajanList() {
 
 // Hide the floating show button
 function hideFloatingShowBtn() {
-  const floatingShowBtn = document.getElementById("floatingShowBtn");
-  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "none";
+}
+
+// Stop audio playback completely
+function stopAudioPlayback() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const audioPlayerContainer = document.getElementById("audioPlayerContainer");
+  const audioBhajanList = document.getElementById("audioBhajanList");
+  const audioSelectionPrompt = document.getElementById("audioSelectionPrompt");
+  const stopAudioContainer = document.getElementById("stopAudioContainer");
+  const showBhajanListContainer = document.getElementById("showBhajanListContainer");
+  const resultsSection = document.getElementById("resultsSection");
+  const floatingShowSingerBtn = document.getElementById("floatingShowSingerBtn");
+
+  // Stop and reset audio player
+  if (audioPlayer) {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }
+
+  // Hide audio player and related elements
+  if (audioPlayerContainer) audioPlayerContainer.style.display = "none";
+  if (audioBhajanList) audioBhajanList.style.display = "none";
+  if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+  if (stopAudioContainer) stopAudioContainer.style.display = "none";
+  if (showBhajanListContainer) showBhajanListContainer.style.display = "none";
+
+  // Remove playing states from all items
+  document.querySelectorAll(".audio-bhajan-item.playing").forEach((item) => {
+    item.classList.remove("playing");
+  });
+  document.querySelectorAll(".singer-search-item.currently-playing").forEach((item) => {
+    item.classList.remove("currently-playing");
+  });
+
+  // Keep singer results visible if they exist
+  if (currentSingerFilter && currentSingerResults.length > 0 && resultsSection) {
+    resultsSection.style.display = "block";
+    if (floatingShowSingerBtn) floatingShowSingerBtn.style.display = "none";
+
+    // Reset the buttons to show only Close
+    const hideBtn = document.getElementById("hideResultsBtn");
+    const closeBtn = document.querySelector(".close-results-btn");
+    if (hideBtn) hideBtn.style.display = "none";
+    if (closeBtn) closeBtn.style.display = "inline-block";
+  }
+
+  // Reset audio list buttons
+  resetAudioListButtons();
+
+  // Clear current playing bhajan tracking
+  currentPlayingBhajanName = "";
+  currentDateBhajans = [];
+}
+
+// Show stop audio button
+function showStopAudioButton() {
+  const stopAudioContainer = document.getElementById("stopAudioContainer");
+  if (stopAudioContainer) stopAudioContainer.style.display = "block";
+}
+
+// Hide stop audio button
+function hideStopAudioButton() {
+  const stopAudioContainer = document.getElementById("stopAudioContainer");
+  if (stopAudioContainer) stopAudioContainer.style.display = "none";
 }
 
 // Reset audio list buttons - show Close, hide Hide (when audio is not playing)
@@ -1020,6 +1110,7 @@ function initMobileAudioPlayer() {
     playBtn.textContent = "▶️";
     // Hide floating show button and update list buttons when audio ends
     hideFloatingShowBtn();
+    hideStopAudioButton();
     resetAudioListButtons();
   });
 
@@ -1037,10 +1128,89 @@ function initMobileAudioPlayer() {
 // 9. RESULTS SECTION CONTROLS
 // ============================================================================
 
+// Play audio from singer list (wrapper to track we're playing from singer list)
+function playBhajanAudioFromSinger(dateSung, bhajanName, startTime, endTime) {
+  playBhajanAudio(dateSung, bhajanName, startTime, endTime);
+
+  // Show hide button since audio is now playing
+  const hideBtn = document.getElementById("hideResultsBtn");
+  const closeBtn = document.querySelector(".close-results-btn");
+  if (hideBtn) hideBtn.style.display = "inline-block";
+  if (closeBtn) closeBtn.style.display = "none";
+}
+
+// Hide Results Section (keeps audio playing)
+function hideResults() {
+  const resultsSection = document.getElementById("resultsSection");
+  const floatingShowBtn = document.getElementById("floatingShowSingerBtn");
+
+  if (resultsSection) resultsSection.style.display = "none";
+
+  // Show floating show button if we have singer results
+  if (currentSingerFilter && currentSingerResults.length > 0 && floatingShowBtn) {
+    floatingShowBtn.style.display = "block";
+  }
+}
+
+// Show Singer Results again
+function showSingerResults() {
+  const resultsSection = document.getElementById("resultsSection");
+  const floatingShowBtn = document.getElementById("floatingShowSingerBtn");
+
+  if (resultsSection && currentSingerFilter && currentSingerResults.length > 0) {
+    // Re-display the singer results
+    displaySingerResults(currentSingerResults, currentSingerFilter);
+
+    // Re-enable hide button
+    const hideBtn = document.getElementById("hideResultsBtn");
+    const closeBtn = document.querySelector(".close-results-btn");
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    if (audioPlayer && audioPlayer.src && !audioPlayer.paused) {
+      if (hideBtn) hideBtn.style.display = "inline-block";
+      if (closeBtn) closeBtn.style.display = "none";
+    }
+  }
+
+  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+
+  // Scroll to results section
+  if (resultsSection) {
+    resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
 // Close Results Section
 function closeResults() {
   const resultsSection = document.getElementById("resultsSection");
+  const floatingShowBtn = document.getElementById("floatingShowSingerBtn");
+  const hideBtn = document.getElementById("hideResultsBtn");
+  const closeBtn = document.querySelector(".close-results-btn");
+  const audioPlayer = document.getElementById("audioPlayer");
+
   resultsSection.style.display = "none";
+
+  // Hide floating button and reset buttons
+  if (floatingShowBtn) floatingShowBtn.style.display = "none";
+  if (hideBtn) hideBtn.style.display = "none";
+  if (closeBtn) closeBtn.style.display = "inline-block";
+
+  // Stop audio if playing from singer list
+  if (audioPlayer && audioPlayer.src && !audioPlayer.paused) {
+    // Check if it was playing from singer results
+    const hasPlayingSingerItem = document.querySelector(".singer-search-item.currently-playing");
+    if (hasPlayingSingerItem) {
+      stopAudioPlayback();
+    }
+  }
+
+  // Clear singer filter and results
+  currentSingerFilter = null;
+  currentSingerResults = [];
+
+  // Reset the singer dropdown
+  const singerFilter = document.getElementById("singerFilter");
+  if (singerFilter) singerFilter.value = "all";
 }
 
 // Helper function to close all open sections
