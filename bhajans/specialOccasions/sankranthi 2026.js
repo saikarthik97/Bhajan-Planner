@@ -23,7 +23,7 @@ const sankranthi2026 = [
         name: "Narayana Hari Narasimha Hari",
         deity: "narayana",
         speed: "slow",
-        shruthi: { gents: "2.5P"},
+        shruthi: { gents: "2½ P"},
         day: "Thursday",
         dateSung: "2026-01-15",
         startTime: "12:06",
