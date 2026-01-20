@@ -62,7 +62,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "18:36",
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
 
   },
   {
@@ -416,7 +416,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "22:52",
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
   },
   {
     name: "Hari Om Namah Shivaya",
@@ -933,7 +933,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "16:26",
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
   },
   {
     name: "Panduranga(3) Vittala",
