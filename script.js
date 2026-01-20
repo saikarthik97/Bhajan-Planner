@@ -129,26 +129,54 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
     return;
   }
 
-  // Require at least 3 characters before searching
-  if (searchTerm.length < 3) {
+  // Require at least 5 characters before searching
+  if (searchTerm.length < 5) {
     resultsContainer.innerHTML = `
             <div class="live-result-item no-results">
-                Please enter at least 3 characters to search
+                Please enter at least 5 characters to search
             </div>
         `;
     return;
   }
 
-  // Filter bhajans where search term matches the start of the name or start of any word
+  // Filter bhajans with strict matching - case-sensitive and 30% complete name required
   const filteredResults = bhajansDatabase.filter((bhajan) => {
-    const bhajanName = bhajan.name.toLowerCase();
-    // Check if name starts with search term
+    const bhajanName = bhajan.name;
+    const bhajanNameLower = bhajanName.toLowerCase();
+    const searchTermLower = searchTerm.toLowerCase();
+
+    // Calculate 70% of the complete bhajan name length
+    const requiredLength = Math.ceil(bhajanName.length * 0.3);
+
+    // First try case-sensitive exact prefix match
     if (bhajanName.startsWith(searchTerm)) {
-      return true;
+      return searchTerm.length >= requiredLength;
     }
-    // Check if any word in the name starts with search term
-    const words = bhajanName.split(/\s+/);
-    return words.some((word) => word.startsWith(searchTerm));
+
+    // Then try case-insensitive prefix match
+    if (bhajanNameLower.startsWith(searchTermLower)) {
+      return searchTerm.length >= requiredLength;
+    }
+
+    // Check if search matches the start of any word sequence (case-sensitive first)
+    const bhajanWords = bhajanName.split(/\s+/);
+    for (let i = 0; i < bhajanWords.length; i++) {
+      const wordSequence = bhajanWords.slice(i).join(' ');
+      if (wordSequence.startsWith(searchTerm) && searchTerm.length >= requiredLength) {
+        return true;
+      }
+    }
+
+    // Check case-insensitive word sequence match
+    const bhajanWordsLower = bhajanNameLower.split(/\s+/);
+    for (let i = 0; i < bhajanWordsLower.length; i++) {
+      const wordSequence = bhajanWordsLower.slice(i).join(' ');
+      if (wordSequence.startsWith(searchTermLower) && searchTerm.length >= requiredLength) {
+        return true;
+      }
+    }
+
+    return false;
   });
 
   // Deduplicate by name, keeping only the latest dateSung
@@ -240,7 +268,42 @@ function resetOtherFilters(changedFilter) {
       deityFilter.value = "all";
       speedFilter.value = "all";
     }
+    // Automatically show songs when singer is selected
+    showSingerSongs();
   }
+}
+
+// Show singer's songs automatically when singer is selected from dropdown
+function showSingerSongs() {
+  const singerFilter = document.getElementById("singerFilter").value;
+
+  // Clear name search results
+  const nameSearchResults = document.getElementById("nameSearchResults");
+  if (nameSearchResults) nameSearchResults.innerHTML = "";
+
+  // If no singer selected, hide results
+  if (singerFilter === "all") {
+    const resultsSection = document.getElementById("resultsSection");
+    if (resultsSection) resultsSection.style.display = "none";
+    return;
+  }
+
+  // Filter bhajans by the selected singer
+  let results = bhajansDatabase.filter((bhajan) => {
+    // For "singers" field, do exact match (e.g., "Geetha,Jyothi & Eshwari")
+    if (bhajan.singers) {
+      return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
+    }
+    // For "singer" field, check if selected singer is in the list
+    if (bhajan.singer) {
+      const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim().toLowerCase());
+      return singerList.includes(singerFilter.toLowerCase());
+    }
+    return false;
+  });
+
+  // Display the results with clickable audio links
+  displaySingerResults(results, singerFilter);
 }
 
 // Quick Search Function
@@ -316,6 +379,55 @@ function populateSingerDropdown() {
     option.textContent = singer;
     singerSelect.appendChild(option);
   });
+}
+
+// Display singer-specific results with clickable audio links
+function displaySingerResults(results, singerName) {
+  const resultsSection = document.getElementById("resultsSection");
+  const resultsContainer = document.getElementById("resultsContainer");
+
+  if (results.length === 0) {
+    resultsContainer.innerHTML = `
+            <div class="result-item">
+                <p class="result-title">No bhajans found for ${singerName}</p>
+                <p class="result-details">Try selecting a different singer</p>
+            </div>
+        `;
+  } else {
+    resultsContainer.innerHTML = `
+      <div class="singer-results-header">
+        <h3 class="singer-results-title">Songs by ${singerName}</h3>
+        <p class="singer-results-subtitle">Click on any song to play</p>
+      </div>
+      ${results
+        .map((bhajan, index) => {
+          // Check if audio is available for this bhajan
+          const audioEntry = bhajanAudios.find((audio) => audio.date === bhajan.dateSung);
+          const hasAudio = audioEntry && audioEntry.audioFile && bhajan.startTime;
+
+          // Calculate end time as the start time of the next bhajan (if available)
+          const bhajansForDate = bhajansDatabase.filter(b => b.dateSung === bhajan.dateSung);
+          const bhajanIndex = bhajansForDate.findIndex(b => b.name === bhajan.name);
+          const nextBhajan = bhajanIndex >= 0 && bhajanIndex < bhajansForDate.length - 1 ? bhajansForDate[bhajanIndex + 1] : null;
+          const endTime = nextBhajan ? nextBhajan.startTime : null;
+
+          return `
+            <div class="result-item singer-search-item ${hasAudio ? 'clickable-row has-audio-indicator' : 'no-audio-item'}"
+                 ${hasAudio ? `onclick="playBhajanAudio('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})"` : ''}>
+                <div class="singer-result-content">
+                  <span class="result-number">${index + 1}.</span>
+                  <h3 class="result-title">${bhajan.name}</h3>
+                  ${hasAudio ? '<span class="audio-play-icon">▶</span>' : ''}
+                </div>
+            </div>
+        `;
+        })
+        .join("")}
+    `;
+  }
+
+  resultsSection.style.display = "block";
+  resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // Display Results Function (Quick Search)
@@ -606,6 +718,11 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     item.classList.remove("playing");
   });
 
+  // Remove currently-playing class from all singer search items
+  document.querySelectorAll(".singer-search-item.currently-playing").forEach((item) => {
+    item.classList.remove("currently-playing");
+  });
+
   // Add playing class to the selected bhajan item
   const selectedItem = document.querySelector(
     `.audio-bhajan-item[data-bhajan-name="${bhajanName.replace(/"/g, "&quot;")}"]`
@@ -613,6 +730,14 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
   if (selectedItem) {
     selectedItem.classList.add("playing");
   }
+
+  // Add currently-playing class to singer search items
+  document.querySelectorAll(".singer-search-item").forEach((item) => {
+    const itemTitle = item.querySelector(".result-title");
+    if (itemTitle && itemTitle.textContent === bhajanName) {
+      item.classList.add("currently-playing");
+    }
+  });
 
   // Parse start timestamp (supports both seconds and "MM:SS" format)
   const startSeconds = parseTime(startTime);
@@ -691,12 +816,24 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
         document.querySelectorAll(".audio-bhajan-item.playing").forEach((item) => {
           item.classList.remove("playing");
         });
+        document.querySelectorAll(".singer-search-item.currently-playing").forEach((item) => {
+          item.classList.remove("currently-playing");
+        });
+
         const newPlayingItem = document.querySelector(
           `.audio-bhajan-item[data-bhajan-name="${currentBhajan.name.replace(/"/g, "&quot;")}"]`
         );
         if (newPlayingItem) {
           newPlayingItem.classList.add("playing");
         }
+
+        // Update currently-playing class for singer search items
+        document.querySelectorAll(".singer-search-item").forEach((item) => {
+          const itemTitle = item.querySelector(".result-title");
+          if (itemTitle && itemTitle.textContent === currentBhajan.name) {
+            item.classList.add("currently-playing");
+          }
+        });
       }
     };
 
