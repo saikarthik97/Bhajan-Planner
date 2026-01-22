@@ -333,7 +333,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "7P" },
     day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "2:11",
+    startTime: "2:17",
     singer: 'Shantha Krishna'
 },
 {
@@ -343,7 +343,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "6P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "5:53",
+    startTime: "5:52",
     singer: 'Yoshitha & Vani'
 },
 {
@@ -363,17 +363,17 @@ const thursdayBhajansRawData = [
     shruthi: { ladies: "6P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "12:46",
+    startTime: "12:51",
     singer: 'Geetha,Jyothi & Eshwari'
 },
 {
-    name: "ArunaChala Shiva (3) Arunashiva",
+    name: "Aruna Chala Shiva (3) Arunashiva",
     deity: "shiva",
     speed: "slow",
     shruthi: { gents: "2P", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "16:15",
+    startTime: "16:10",
     singer: 'Karthik'
 },
 {
@@ -393,7 +393,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "5P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "26:18",
+    startTime: "26:21",
     singer: 'Abhishek'
 },
 {
@@ -403,7 +403,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "2P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "31:59",
+    startTime: "32:02",
     singer: 'Chamundeshwari'
 },
 {
@@ -413,7 +413,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6½P", ladies: "2P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "35:16",
+    startTime: "35:24",
     singer: 'A.Srinivas'
 },
 {
@@ -423,7 +423,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "38:58",
+    startTime: "39:01",
     singer: 'Vathsalya & Chandini'
 },
 {
