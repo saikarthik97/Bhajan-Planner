@@ -214,10 +214,19 @@
                         </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Show Bhajan List Button (appears when list is hidden) -->
-                <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()" style="display: none;">
+            <!-- Show Bhajan List Button (appears when list is hidden) -->
+            <div id="showBhajanListContainer" style="display: none; margin-top: 12px;">
+                <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()">
                     🎵 Show Playing Bhajans List
+                </button>
+            </div>
+
+            <!-- Stop Audio Button (appears when audio is playing) -->
+            <div id="stopAudioContainer" style="display: none; margin-top: 12px;">
+                <button id="stopAudioBtn" class="stop-audio-btn" onclick="stopAudioPlayback()">
+                    ⏹️ Stop Playing
                 </button>
             </div>
 
@@ -243,10 +252,18 @@
         <section id="resultsSection" class="results-section" style="display: none;">
             <div class="results-header">
                 <h2 class="section-title">Search Results</h2>
-                <button class="close-results-btn" onclick="closeResults()">✕ Close</button>
+                <div class="results-header-buttons">
+                    <button id="hideResultsBtn" class="hide-results-btn" onclick="hideResults()" style="display: none;">Hide</button>
+                    <button class="close-results-btn" onclick="closeResults()">✕ Close</button>
+                </div>
             </div>
             <div id="resultsContainer" class="results-container"></div>
         </section>
+
+        <!-- Floating Show Button for Singer Results -->
+        <button id="floatingShowSingerBtn" class="floating-show-singer-btn" onclick="showSingerResults()" style="display: none;">
+            🎤 Show Singer List
+        </button>
         
         <!-- ================================================================== -->
         <!-- 8. FOOTER SECTION -->

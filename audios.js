@@ -12,6 +12,7 @@ const bhajanAudios = [
   { date: '2026-01-14',audioFile: "audios/Jan 14th 2026.mp3",label: "Wednesday Bhajans" },
   { date: '2026-01-15',audioFile: "audios/Jan 15th 2026.mp3",label: "Thursday Bhajans" },
   { date: '2026-01-18',audioFile: "audios/18 Jan 2026.mp3",label: "Sunday Bhajans" },
+  { date: '2026-01-22',audioFile: "audios/22nd Jan 2026.mp3",label: "Thursday Bhajans" },
 
 
 

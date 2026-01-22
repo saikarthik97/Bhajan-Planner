@@ -79,7 +79,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "23:22",
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
   },
   {
     name: "Sarva Dharma Swaroopa Sai",
@@ -179,7 +179,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-01",
     startTime: "53:40",
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
   },
   {
     name: "Sai Prem Dey Shanti Dey",
@@ -230,7 +230,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: '6:49',
-    singer: 'Shanta Krishna'
+    singer: 'Shantha Krishna'
   },
   {
     name: "Ayodhya Vihari Sri Rama(2)",
