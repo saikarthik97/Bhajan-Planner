@@ -1168,7 +1168,7 @@ const sundayBhajansRawData = [
   },  {
     name: "Hey Deena Dayala Sai Rama Ram",
     deity: "rama",
-    speed: "medium",
+    speed: "slow",
     shruthi: { gents: "2P", ladies: "7P" },
     day: "sunday ", 
     dateSung: "2026-02-01",
@@ -1177,7 +1177,7 @@ const sundayBhajansRawData = [
   },  {
     name: "Nache Tribhanga Krishna Murari",
     deity: "krishna",
-    speed: "fast",
+    speed: "medium",
     shruthi: { gents: "4P"},
     day: "sunday",
     dateSung: "2026-02-01",
@@ -1204,7 +1204,7 @@ const sundayBhajansRawData = [
   },  {
     name: "Raghupathe Sri Ramachandra Raghava Dayanidhe",
     deity: "rama",
-    speed: "fast",
+    speed: "medium",
     shruthi: { gents: "3P", ladies: "6P" },
     day: "sunday",
     dateSung: "2026-02-01",
@@ -1240,7 +1240,7 @@ const sundayBhajansRawData = [
   },  {
     name: "Jaya Nandalala Jai Jai Gopala",
     deity: "gopala",
-    speed: "fast",
+    speed: "slow",
     shruthi: { gents: "4P" },
     day: "sunday",
     dateSung: "2026-02-01",
