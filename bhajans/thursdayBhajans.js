@@ -436,5 +436,86 @@ const thursdayBhajansRawData = [
     startTime: "41:12",
     singer: 'Charan'
 },
+//5th Feb 2026
+  {
+    name: "Gajavadana Gananatha Gajavadana Vinayaka",
+    deity: "ganesha",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Chandini'
+  },
+    {
+    name: "Narayan(2) Bhajamana Narayan",
+    deity: "narayana",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+    {
+    name: "Jai (2) Janani Sai Janani Ambe Bhavani Maa",
+    deity: "devi",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Abhishek'
+  },
+    {
+    name: "Govinda Rama Jai(2) Gopala Rama",
+    deity: "rama",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Chandini'
+  },
+    {
+    name: "Panduranga Vittala Jai Pandarinatha Vittala",
+    deity: "vittala",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+    {
+    name: "Lingodhbhavakara Lingeshwara",
+    deity: "shiva",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Ramakrishna'
+  },
+    {
+    name: "Ramakrishna Tumaho Jayaram Jayaram",
+    deity: "sarvadharma",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Abhishek'
+  },
+    {
+    name: "Hey Sai Jagannatha",
+    deity: "sai",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "",
+    singer: 'Chandini'
+  },
 
 ];
