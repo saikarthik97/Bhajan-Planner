@@ -444,7 +444,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "0:01",
     singer: 'Chandini'
   },
     {
@@ -454,7 +454,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "3:36",
     singers: 'Geetha,Jyothi & Eshwari'
   },
     {
@@ -464,7 +464,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "7:29",
     singer: 'Abhishek'
   },
     {
@@ -474,7 +474,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "12:52",
     singer: 'Chandini'
   },
     {
@@ -484,7 +484,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "15:38",
     singers: 'Geetha,Jyothi & Eshwari'
   },
     {
@@ -494,7 +494,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "19:08",
     singer: 'Ramakrishna'
   },
     {
@@ -504,7 +504,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "20:58",
     singer: 'Abhishek'
   },
     {
@@ -514,7 +514,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-05",
-    startTime: "",
+    startTime: "25:34",
     singer: 'Chandini'
   },
 
