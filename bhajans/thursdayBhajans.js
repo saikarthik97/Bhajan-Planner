@@ -535,7 +535,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-12",
-    startTime: "2:26",
+    startTime: "2:32",
     singer: 'Ramakrishna'
   },
    {
@@ -565,7 +565,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-12",
-    startTime: "14:03",
+    startTime: "14:01",
     singer: 'Vani & Yoshitha'
   },
    {
@@ -595,7 +595,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-12",
-    startTime: "25:40",
+    startTime: "25:46",
     singer: 'Shantha Krishna'
   },
    {
@@ -615,11 +615,11 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "3P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-12",
-    startTime: "31:37",
+    startTime: "31:44",
     singer: 'Abhishek'
   },
    {
-    name: "Narayana Hari Narayana Hari Narayana Veda Parayana",
+    name: "Narayana Hari(2) Narayana Veda Parayana",
     deity: "narayana",
     speed: "fast",
     shruthi: { gents: "7P", ladies: "4P" },
@@ -635,7 +635,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-12",
-    startTime: "37:36",
+    startTime: "37:42",
     singer: 'Eshwar'
   },
    {
@@ -645,7 +645,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "7P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-02-15",
-    startTime: "39:40",
+    startTime: "39:53",
     singer: 'Ramakrishna'
   },
   //  {
