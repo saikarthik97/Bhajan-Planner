@@ -517,5 +517,135 @@ const thursdayBhajansRawData = [
     startTime: "",
     singer: 'Chandini'
   },
-
+  //12th Feb 2026
+ {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    deity: "",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+  //  {
+  //   name: "",
+  //   deity: "",
+  //   speed: "",
+  //   shruthi: { gents: "", ladies: "" },
+  //   day: "",
+  //   dateSung: "",
+  //   startTime: "",
+  //   singer: ''
+  // }
 ];
