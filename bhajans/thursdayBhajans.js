@@ -626,7 +626,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-02-12",
     startTime: "35:12",
-    singer: 'Praneetha Vathsalya & Yoshitha'
+    singer: 'Praneetha, Vani & Yoshitha'
   },
    {
     name: "Jai(3) Manamohana Jai(3) Madhusudana",
