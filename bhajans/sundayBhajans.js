@@ -55,7 +55,7 @@ const sundayBhajansRawData = [
 
   },
   {
-    name: "Ravikula Bhanjana Rama Sri Rama",
+    name: "Ravikula Ranjana Rama Sri Rama",
     deity: "rama",
     speed: "slow",
     shruthi: { gents: "2P" },
@@ -1136,4 +1136,135 @@ const sundayBhajansRawData = [
     startTime: "44:06",
     singer: "G.Srinivas"
   },
+  //1st February 2026
+  {
+    name: "Amba Bhavani Shiva Shambhu Kumara",
+    deity: "ganesha",
+    speed: "slow",
+    shruthi: { gents: "2P", ladies: "5P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "0:01",
+    singer: 'Lal'
+  },
+    {
+    name: "Guru Dhyaaye Guru Dhyaaye",
+    deity: "guru",
+    speed: "medium",
+    shruthi: { ladies: "3P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "2:13",
+    singer: 'Sunitha'
+  },  {
+    name: "Devi Bhavani Maa Satya Sai Bhavani Maa",
+    deity: "devi",
+    speed: "medium",
+    shruthi: { gents: "2½ P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "4:08",
+    singer: 'Karthik'
+  },  {
+    name: "Hey Deena Dayala Sai Rama Ram",
+    deity: "rama",
+    speed: "slow",
+    shruthi: { gents: "2P", ladies: "7P" },
+    day: "sunday ", 
+    dateSung: "2026-02-01",
+    startTime: "8:00",
+    singer: 'Praneetha & Vani'
+  },  {
+    name: "Nache Tribhanga Krishna Murari",
+    deity: "krishna",
+    speed: "medium",
+    shruthi: { gents: "4P"},
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "11:20",
+    singer: 'Venu'
+  },  {
+    name: "Shiva(4) Shiridipurishwara Shambho Shankara",
+    deity: "shiva",
+    speed: "fast",
+    shruthi: { gents: "6P", ladies: "3P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "13:46",
+    singer: 'Chandini, Sri & Sai Harshitha'
+  },  {
+    name: "Giridhari Murari Govinda",
+    deity: "krishna",
+    speed: "fast",
+    shruthi: { gents: "4P"},
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "18:08",
+    singer: 'Sridhar'
+  },  {
+    name: "Raghupathe Sri Ramachandra Raghava Dayanidhe",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { gents: "3P", ladies: "6P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "20:44",
+    singer: 'Abhishek'
+  },  {
+    name: "Madhuvana Murali Shyama Murari",
+    deity: "krishna",
+    speed: "slow",
+    shruthi: { gents: "2P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "23:30",
+    singer: 'A.Srinivas'
+  },  {
+    name: "Jayaho Nataraj",
+    deity: "nataraja",
+    speed: "slow",
+    shruthi: { gents: "1½ P", ladies: "5P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "26:39",
+    singer: 'G.Srinivas'
+  },  {
+    name: "Sarvadharma Priya Deva",
+    deity: "sarvadharma",
+    speed: "fast",
+    shruthi: { gents: "1P", ladies: "5P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "29:20",
+    singer: 'Shantha Krishna'
+  },  {
+    name: "Jaya Nandalala Jai Jai Gopala",
+    deity: "gopala",
+    speed: "slow",
+    shruthi: { gents: "4P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "32:00",
+    singer: 'Lal'
+  },  {
+    name: "Rama Sai(2) Rama Sai Rama Sai Ram",
+    deity: "rama",
+    speed: "fast",
+    shruthi: { gents: "1½", ladies: "5P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "33:55",
+    singer: 'Eshwar'
+  },
+  {
+    name: "Hari Narayana Govinda Jaya Narayana Gopala",
+    deity: "narayana",
+    speed: "fast",
+    shruthi: { gents: "6P", ladies: "3P" },
+    day: "sunday",
+    dateSung: "2026-02-01",
+    startTime: "38:02",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+
 ];

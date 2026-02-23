@@ -7,7 +7,7 @@
 // ============================================================================
 
 // Combine Sunday, Thursday, and Special Occasions bhajans into a single database
-const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026];
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData];
 const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
   id: index + 1,
   ...bhajan,
@@ -16,7 +16,8 @@ const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
 // Festival dates mapping
 const festivalDates = {
   "2026-01-14": "Festival - Bhogi",
-  "2026-01-15": "Festival - Sankranti"
+  "2026-01-15": "Festival - Sankranti",
+  "2026-02-15": "Festival - Maha Shivarathri"
 };
 
 // Get festival name for a given date
@@ -522,7 +523,7 @@ function displayDateResults(results, selectedDate) {
     const dayOfWeek = results[0].day;
     const festivalName = getFestivalName(selectedDate);
     const headerHtml = `
-      <div class="date-results-header">
+      <div class="date-results-header${festivalName ? ' special-occasion-header' : ''}">
         <h3 class="date-results-title">Bhajans on ${formatDate(selectedDate)}</h3>
         <div class="date-results-badges">
           <span class="detail-badge day-badge day-${dayOfWeek.toLowerCase()}">${dayOfWeek}</span>
@@ -567,7 +568,6 @@ function populateAudioDates() {
   const audioDateSelect = document.getElementById("audioDateSelect");
   if (!audioDateSelect || typeof bhajanAudios === "undefined") return;
 
-  // Clear existing options except the first one
   audioDateSelect.innerHTML = '<option value="">-- Choose a date --</option>';
 
   // Sort audios by date (newest first)
@@ -575,17 +575,200 @@ function populateAudioDates() {
     (a, b) => new Date(b.date) - new Date(a.date)
   );
 
-  // Add options for each available date
-  sortedAudios.forEach((audio) => {
+  // Split into special occasions and regular sessions
+  const specialOccasions = sortedAudios.filter((a) => festivalDates[a.date]);
+  const regularSessions = sortedAudios.filter((a) => !festivalDates[a.date]);
+
+  // Helper to build an option element
+  function makeOption(audio) {
     const option = document.createElement("option");
     option.value = audio.date;
     const formattedDate = formatDate(audio.date);
-    option.textContent = audio.label
-      ? `${formattedDate} - ${audio.label}`
-      : formattedDate;
-    audioDateSelect.appendChild(option);
-  });
+    const festival = festivalDates[audio.date];
+    option.textContent = festival
+      ? `${formattedDate} - ${festival.replace("Festival - ", "")}`
+      : `${formattedDate} - ${audio.label || ""}`;
+    return option;
+  }
+
+  // Special Occasions group
+  if (specialOccasions.length > 0) {
+    const group = document.createElement("optgroup");
+    group.label = "✨ SPECIAL OCCASIONS ✨";
+    specialOccasions.forEach((audio) => group.appendChild(makeOption(audio)));
+    audioDateSelect.appendChild(group);
+  }
+
+  // Regular Sessions group
+  if (regularSessions.length > 0) {
+    const group = document.createElement("optgroup");
+    group.label = "📅 REGULAR SESSIONS";
+    regularSessions.forEach((audio) => group.appendChild(makeOption(audio)));
+    audioDateSelect.appendChild(group);
+  }
+
+  // Build the custom styled dropdown after populating native select
+  buildCustomAudioDropdown();
 }
+
+// Build a fully custom dropdown to replace the native <select> for full CSS control
+function buildCustomAudioDropdown() {
+  const nativeSelect = document.getElementById("audioDateSelect");
+  if (!nativeSelect) return;
+
+  // Remove any existing custom dropdown and panel
+  const existing = document.getElementById("customAudioDropdown");
+  if (existing) existing.remove();
+  const existingPanel = document.getElementById("customAudioPanel");
+  if (existingPanel) existingPanel.remove();
+
+  // Hide native select
+  nativeSelect.style.display = "none";
+
+  // Create wrapper (trigger only — no panel inside)
+  const wrapper = document.createElement("div");
+  wrapper.id = "customAudioDropdown";
+  wrapper.className = "custom-audio-select";
+
+  // Create trigger button
+  const trigger = document.createElement("div");
+  trigger.className = "custom-audio-trigger";
+  trigger.innerHTML =
+    '<span class="custom-audio-selected-text" id="customAudioSelectedText">-- Choose a date --</span>' +
+    '<span class="custom-audio-arrow" id="customAudioArrow">▼</span>';
+
+  wrapper.appendChild(trigger);
+  nativeSelect.parentNode.insertBefore(wrapper, nativeSelect.nextSibling);
+
+  // Create panel — attached to body to escape overflow:hidden on .container
+  const panel = document.createElement("div");
+  panel.className = "custom-audio-panel";
+  panel.id = "customAudioPanel";
+  document.body.appendChild(panel);
+
+  // Mirror optgroups and options from native select (no duplicate default option)
+  Array.from(nativeSelect.children).forEach((child) => {
+    if (child.tagName === "OPTGROUP") {
+      const isSpecial = child.label.toUpperCase().includes("SPECIAL");
+      const header = document.createElement("div");
+      header.className = "custom-audio-group-header " + (isSpecial ? "special" : "regular");
+      header.textContent = child.label;
+      panel.appendChild(header);
+
+      Array.from(child.children).forEach((optEl) => {
+        const opt = document.createElement("div");
+        opt.className = "custom-audio-option";
+        opt.textContent = optEl.textContent;
+        opt.dataset.value = optEl.value;
+        panel.appendChild(opt);
+      });
+    }
+  });
+
+  // Position panel using fixed coords based on trigger location
+  function positionPanel() {
+    const rect = trigger.getBoundingClientRect();
+    const spaceBelow = window.innerHeight - rect.bottom - 8;
+    const spaceAbove = rect.top - 8;
+    const panelMaxH = 280;
+
+    panel.style.left   = rect.left + "px";
+    panel.style.width  = rect.width + "px";
+    panel.style.maxHeight = panelMaxH + "px";
+
+    if (spaceBelow >= Math.min(panelMaxH, 120) || spaceBelow >= spaceAbove) {
+      // Open downward
+      panel.style.top    = rect.bottom + "px";
+      panel.style.bottom = "auto";
+      panel.style.borderRadius    = "0 0 12px 12px";
+      panel.style.borderTop       = "none";
+      panel.style.borderBottom    = "2px solid #667eea";
+      trigger.style.borderRadius  = "12px 12px 0 0";
+      trigger.style.borderBottom  = "2px solid #667eea";
+    } else {
+      // Open upward
+      panel.style.bottom = (window.innerHeight - rect.top) + "px";
+      panel.style.top    = "auto";
+      panel.style.borderRadius    = "12px 12px 0 0";
+      panel.style.borderBottom    = "none";
+      panel.style.borderTop       = "2px solid #667eea";
+      trigger.style.borderRadius  = "0 0 12px 12px";
+      trigger.style.borderTop     = "2px solid #667eea";
+    }
+  }
+
+  function openPanel() {
+    positionPanel();
+    panel.classList.add("open");
+    wrapper.classList.add("open");
+  }
+
+  function closePanel() {
+    panel.classList.remove("open");
+    wrapper.classList.remove("open");
+    trigger.style.borderRadius = "";
+    trigger.style.borderTop    = "";
+    trigger.style.borderBottom = "";
+  }
+
+  // Toggle on trigger click
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    panel.classList.contains("open") ? closePanel() : openPanel();
+  });
+
+  // Option selection
+  panel.addEventListener("click", (e) => {
+    const opt = e.target.closest(".custom-audio-option");
+    if (!opt) return;
+
+    const value = opt.dataset.value;
+    nativeSelect.value = value;
+
+    const selectedText = document.getElementById("customAudioSelectedText");
+    if (selectedText) {
+      selectedText.textContent = value ? opt.textContent : "-- Choose a date --";
+      selectedText.classList.toggle("has-value", !!value);
+    }
+
+    panel.querySelectorAll(".custom-audio-option").forEach((o) => o.classList.remove("selected"));
+    if (value) opt.classList.add("selected");
+
+    closePanel();
+    loadAudio();
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!wrapper.contains(e.target) && !panel.contains(e.target)) closePanel();
+  });
+
+  // Reposition on scroll/resize
+  window.addEventListener("scroll", () => { if (panel.classList.contains("open")) positionPanel(); }, true);
+  window.addEventListener("resize", () => { if (panel.classList.contains("open")) positionPanel(); });
+}
+
+// Sync custom dropdown display when audioDateSelect.value is set programmatically
+function syncCustomDropdown(value) {
+  const panel = document.getElementById("customAudioPanel");
+  const selectedText = document.getElementById("customAudioSelectedText");
+  if (!panel || !selectedText) return;
+
+  panel.querySelectorAll(".custom-audio-option").forEach((o) => o.classList.remove("selected"));
+
+  if (value) {
+    const opt = panel.querySelector(`.custom-audio-option[data-value="${value}"]`);
+    if (opt) {
+      selectedText.textContent = opt.textContent;
+      selectedText.classList.add("has-value");
+      opt.classList.add("selected");
+    }
+  } else {
+    selectedText.textContent = "-- Choose a date --";
+    selectedText.classList.remove("has-value");
+  }
+}
+
 function loadAudio() {
   const audioDateSelect = document.getElementById("audioDateSelect");
   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
@@ -624,7 +807,7 @@ function loadAudio() {
     const dayOfWeek = bhajansForDate[0].day;
     const festivalName = getFestivalName(selectedDate);
     audioBhajanList.innerHTML = `
-      <div class="audio-bhajan-list-header">
+      <div class="audio-bhajan-list-header${festivalName ? ' special-occasion-header' : ''}">
         <div class="audio-bhajan-header-content">
           <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(selectedDate)}</h3>
           <div class="audio-bhajan-badges">
@@ -670,6 +853,11 @@ function loadAudio() {
       </div>
     `;
     audioBhajanList.style.display = "block";
+    if (festivalName) {
+      audioBhajanList.classList.add("special-occasion-list");
+    } else {
+      audioBhajanList.classList.remove("special-occasion-list");
+    }
     // Show the selection prompt if audio is available
     if (hasAudio && audioSelectionPrompt) {
       audioSelectionPrompt.style.display = "block";
@@ -770,6 +958,7 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     const audioDateSelect = document.getElementById("audioDateSelect");
     if (audioDateSelect) {
       audioDateSelect.value = dateSung;
+      syncCustomDropdown(dateSung);
     }
 
     // Store the bhajans for this date for tracking
@@ -909,7 +1098,7 @@ function closeAudioBhajanList() {
   hideStopAudioButton();
 
   // Reset the dropdown
-  if (audioDateSelect) audioDateSelect.value = "";
+  if (audioDateSelect) { audioDateSelect.value = ""; syncCustomDropdown(""); }
 
   // Stop audio if playing
   if (audioPlayer) audioPlayer.pause();

@@ -4,8 +4,8 @@
     deity: "",
     speed: "",
     shruthi: { gents: "", ladies: "" },
-    day: "",
-    dateSung: "",
+    day: "Thursday",
+    dateSung: "2026-02-12",
     startTime: "",
     singer: ''
   },
@@ -333,7 +333,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "7P" },
     day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "2:11",
+    startTime: "2:17",
     singer: 'Shantha Krishna'
 },
 {
@@ -343,7 +343,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "6P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "5:53",
+    startTime: "5:52",
     singer: 'Yoshitha & Vani'
 },
 {
@@ -363,17 +363,17 @@ const thursdayBhajansRawData = [
     shruthi: { ladies: "6P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "12:46",
-    singer: 'Geetha,Jyothi & Eshwari'
+    startTime: "12:51",
+    singers: 'Geetha,Jyothi & Eshwari'
 },
 {
-    name: "ArunaChala Shiva (3) Arunashiva",
+    name: "Aruna Chala Shiva (3) Arunashiva",
     deity: "shiva",
     speed: "slow",
     shruthi: { gents: "2P", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "16:15",
+    startTime: "16:10",
     singer: 'Karthik'
 },
 {
@@ -393,7 +393,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "5P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "26:18",
+    startTime: "26:21",
     singer: 'Abhishek'
 },
 {
@@ -403,7 +403,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6P", ladies: "2P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "31:59",
+    startTime: "32:02",
     singer: 'Chamundeshwari'
 },
 {
@@ -413,7 +413,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "6½P", ladies: "2P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "35:16",
+    startTime: "35:24",
     singer: 'A.Srinivas'
 },
 {
@@ -423,7 +423,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "5P" },
      day: "Thursday",
     dateSung: "2026-01-22",
-    startTime: "38:58",
+    startTime: "39:01",
     singer: 'Vathsalya & Chandini'
 },
 {
@@ -436,5 +436,226 @@ const thursdayBhajansRawData = [
     startTime: "41:12",
     singer: 'Charan'
 },
-
+//5th Feb 2026
+  {
+    name: "Gajavadana Gananatha Gajavadana Vinayaka",
+    deity: "ganesha",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "0:01",
+    singer: 'Chandini'
+  },
+    {
+    name: "Narayan(2) Bhajamana Narayan",
+    deity: "narayana",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "3:36",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+    {
+    name: "Jai (2) Janani Sai Janani Ambe Bhavani Maa",
+    deity: "devi",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "7:29",
+    singer: 'Abhishek'
+  },
+    {
+    name: "Govinda Rama Jai(2) Gopala Rama",
+    deity: "rama",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "12:52",
+    singer: 'Chandini'
+  },
+    {
+    name: "Panduranga Vittala Jai Pandarinatha Vittala",
+    deity: "vittala",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "15:38",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+    {
+    name: "Lingodhbhavakara Lingeshwara",
+    deity: "shiva",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "19:08",
+    singer: 'Ramakrishna'
+  },
+    {
+    name: "Ramakrishna Tumaho Jayaram Jayaram",
+    deity: "sarvadharma",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "20:58",
+    singer: 'Abhishek'
+  },
+    {
+    name: "Hey Sai Jagannatha",
+    deity: "sai",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-05",
+    startTime: "25:34",
+    singer: 'Chandini'
+  },
+  //12th Feb 2026
+ {
+    name: "Matanga Vadana Maam palaya",
+    deity: "ganesha",
+    speed: "medium",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "0:01",
+    singer: 'Chandini & Vathsalya'
+  },
+   {
+    name: "Jaya Guru(2) Sairam",
+    deity: "guru",
+    speed: "medium",
+    shruthi: { gents: "2P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "2:32",
+    singer: 'Ramakrishna'
+  },
+   {
+    name: "Durga Amba Bhavani Jai (2)",
+    deity: "devi",
+    speed: "slow",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "6:02",
+    singers: 'Geetha,Jyothi & Eshwari'
+  },
+   {
+    name: "Rama Chandra Sriram",
+    deity: "rama",
+    speed: "slow",
+    shruthi: { gents: "3P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "9:02",
+    singer: 'A.Srinivas'
+  },
+   {
+    name: "Rahiman(2) Ram Rahim",
+    deity: "sarvadharma",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "14:01",
+    singer: 'Vani & Yoshitha'
+  },
+   {
+    name: "Murali Manohara Shyama Murari",
+    deity: "krishna",
+    speed: "slow",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "17:22",
+    singer: 'Karthik'
+  },
+   {
+    name: "Deena Bandho Vittala Jai",
+    deity: "vittala",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "21:24",
+    singer: 'Praneetha & Vani'
+  },
+   {
+    name: "Hara Hara Shankara Sai",
+    deity: "shiva",
+    speed: "medium",
+    shruthi: { gents: "2P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "25:46",
+    singer: 'Shantha Krishna'
+  },
+   {
+    name: "Sri Rama Jaya Rama Jaya(2) Ram",
+    deity: "rama",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "4P" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "29:22",
+    singer: 'Chandini & Vathsalya'
+  },
+   {
+    name: "Hari (6) Bolo",
+    deity: "narayana",
+    speed: "fast",
+    shruthi: { gents: "3P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "31:44",
+    singer: 'Abhishek'
+  },
+   {
+    name: "Narayana Hari(2) Narayana Veda Parayana",
+    deity: "narayana",
+    speed: "fast",
+    shruthi: { gents: "7P", ladies: "4P" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "35:12",
+    singer: 'Praneetha, Vani & Yoshitha'
+  },
+   {
+    name: "Jai(3) Manamohana Jai(3) Madhusudana",
+    deity: "krishna",
+    speed: "fast",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "37:42",
+    singer: 'Eshwar'
+  },
+   {
+    name: "Bhashma Vibhushitha Bhavani Shankara",
+    deity: "shiva",
+    speed: "fast",
+    shruthi: { gents: "7P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-02-12",
+    startTime: "39:53",
+    singer: 'Ramakrishna'
+  },
+  //  {
+  //   name: "",
+  //   deity: "",
+  //   speed: "",
+  //   shruthi: { gents: "", ladies: "" },
+  //   day: "",
+  //   dateSung: "",
+  //   startTime: "",
+  //   singer: ''
+  // }
 ];
