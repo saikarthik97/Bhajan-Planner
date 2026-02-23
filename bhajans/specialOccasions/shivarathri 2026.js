@@ -39,7 +39,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "17:56",
+        startTime: "18:22",
         singer: "Praneetha & Vani"
     },
     {
@@ -156,7 +156,7 @@ const shivarathri2026RawData = [
         speed: "medium",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "62:50",
+        startTime: "62:38",
         singer: "A.Srinivas"
     },
     {
