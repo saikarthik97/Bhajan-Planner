@@ -148,7 +148,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "58:40",
-        singer: "Yoshitha & Chandini garu"
+        singer: "Yoshitha & Chandini"
     },
     {
         name: "Agarva Sarva Mangala Om Namah Shivayaa",
@@ -202,7 +202,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "1:23:53",
-        singer: ""
+        singer: "Vathsalya,Shruthi,Yoshitha & Chandini"
     },
     {
         name: "Jaya Ho Nataraj",
@@ -265,7 +265,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "1:44:14",
-        singer: ""
+        singer: "Vani & Chandini"
     },
     {
         name: "Bhavanaasha Puttaparthi Purisha",
@@ -319,7 +319,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "2:16:17",
-        singer: ""
+        singer: "Vani , Yoshitha & Chandini"
     },
     {
         name: "Hara(2) Sambashiva",
@@ -346,7 +346,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "2:18:30",
-        singer: ""
+        singer: "Vathsalya,Shruthi & Yoshitha"
     },
     {
         name: "Gowrinathaya Vishwanathaya",
@@ -372,7 +372,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "2:30:22",
-        singer: ""
+        singer: "Vathsalya,Shruthi & Yoshitha"
     }, {
         name: "Hara Bholanatha Umapathe",
         deity: "shiva",
