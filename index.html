@@ -175,42 +175,36 @@
             <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
                 <div class="audio-label" id="audioLabel"></div>
 
-                <!-- Desktop Audio Player -->
-                <div class="audio-controls-row desktop-audio">
-                    <button class="skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
-                        <span class="skip-icon">⏪</span>
-                        <span class="skip-text">10s</span>
-                    </button>
-                    <audio id="audioPlayer" controls>
-                        Your browser does not support the audio element.
-                    </audio>
-                    <button class="skip-btn" onclick="skipAudio(10)" title="Forward 10 seconds">
-                        <span class="skip-text">10s</span>
-                        <span class="skip-icon">⏩</span>
-                    </button>
-                </div>
+                <!-- Hidden native audio element -->
+                <audio id="audioPlayer" preload="auto" style="display:none;"></audio>
 
-                <!-- Mobile Custom Audio Player -->
-                <div class="mobile-audio-player">
-                    <div class="mobile-seekbar-row">
-                        <span class="mobile-time" id="mobileCurrentTime">0:00</span>
-                        <input type="range" id="mobileSeekbar" class="mobile-seekbar" value="0" min="0" max="100">
-                        <span class="mobile-time" id="mobileDuration">0:00</span>
+                <!-- Unified Custom Player -->
+                <div class="custom-player">
+                    <!-- Seekbar row -->
+                    <div class="cp-progress-row">
+                        <span class="cp-time" id="cpCurrentTime">0:00</span>
+                        <div class="cp-bar-wrap">
+                            <input type="range" id="cpSeekbar" class="cp-seekbar" min="0" max="100" value="0" step="0.1">
+                        </div>
+                        <span class="cp-time" id="cpDuration">0:00</span>
                     </div>
-                    <div class="mobile-controls-row">
-                        <button class="mobile-ctrl-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
-                            <span>⏪</span>
-                            <span>10s</span>
+                    <!-- Controls row -->
+                    <div class="cp-controls-row">
+                        <button class="cp-btn cp-skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
+                            <span class="cp-skip-arrow">&#9194;</span>
+                            <span class="cp-skip-s">10s</span>
                         </button>
-                        <button class="mobile-ctrl-btn mobile-play-btn" id="mobilePlayBtn" onclick="togglePlayPause()">
-                            ▶️
+                        <button class="cp-btn cp-play-btn" id="cpPlayBtn" onclick="togglePlayPause()">
+                            <span class="cp-btn-icon" id="cpPlayIcon">&#9654;</span>
+                            <span class="cp-btn-label" id="cpPlayLabel">Play</span>
                         </button>
-                        <button class="mobile-ctrl-btn" id="mobileMuteBtn" onclick="toggleMute()">
-                            🔊
+                        <button class="cp-btn cp-mute-btn" id="cpMuteBtn" onclick="toggleMute()">
+                            <span class="cp-btn-icon" id="cpMuteIcon">&#128266;</span>
+                            <span class="cp-btn-label" id="cpMuteLabel">Mute</span>
                         </button>
-                        <button class="mobile-ctrl-btn" onclick="skipAudio(10)" title="Forward 10 seconds">
-                            <span>10s</span>
-                            <span>⏩</span>
+                        <button class="cp-btn cp-skip-btn cp-skip-fwd" onclick="skipAudio(10)" title="Forward 10 seconds">
+                            <span class="cp-skip-arrow">&#9193;</span>
+                            <span class="cp-skip-s">10s</span>
                         </button>
                     </div>
                 </div>

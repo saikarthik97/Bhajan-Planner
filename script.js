@@ -1004,10 +1004,18 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     audioPlayer.onloadedmetadata = function () {
       if (hasTimestamps) {
         audioPlayer.currentTime = startSeconds;
+        const onSeeked = function () {
+          audioPlayer.removeEventListener("seeked", onSeeked);
+          audioPlayer.play().catch(function (err) {
+            console.log("Audio autoplay prevented:", err);
+          });
+        };
+        audioPlayer.addEventListener("seeked", onSeeked);
+      } else {
+        audioPlayer.play().catch(function (err) {
+          console.log("Audio autoplay prevented:", err);
+        });
       }
-      audioPlayer.play().catch(function (err) {
-        console.log("Audio autoplay prevented:", err);
-      });
     };
 
     // Track which bhajan is playing and update the label
@@ -1235,32 +1243,41 @@ function resetAudioListButtons() {
 // 8. MOBILE AUDIO PLAYER CONTROLS
 // ============================================================================
 
-// Toggle play/pause for mobile player
+// Helper: set play button state
+function setPlayBtnState(playing) {
+  const icon = document.getElementById("cpPlayIcon");
+  const label = document.getElementById("cpPlayLabel");
+  if (icon) icon.innerHTML = playing ? "&#9646;&#9646;" : "&#9654;";
+  if (label) label.textContent = playing ? "Pause" : "Play";
+}
+
+// Toggle play/pause
 function togglePlayPause() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const playBtn = document.getElementById("mobilePlayBtn");
   if (audioPlayer && audioPlayer.src) {
     if (audioPlayer.paused) {
       audioPlayer.play();
-      playBtn.textContent = "⏸️";
+      setPlayBtnState(true);
     } else {
       audioPlayer.pause();
-      playBtn.textContent = "▶️";
+      setPlayBtnState(false);
     }
   }
 }
 
-// Toggle mute for mobile player
+// Toggle mute
 function toggleMute() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const muteBtn = document.getElementById("mobileMuteBtn");
+  const muteIcon = document.getElementById("cpMuteIcon");
+  const muteLabel = document.getElementById("cpMuteLabel");
   if (audioPlayer) {
     audioPlayer.muted = !audioPlayer.muted;
-    muteBtn.textContent = audioPlayer.muted ? "🔇" : "🔊";
+    if (muteIcon) muteIcon.innerHTML = audioPlayer.muted ? "&#128263;" : "&#128266;";
+    if (muteLabel) muteLabel.textContent = audioPlayer.muted ? "Unmute" : "Mute";
   }
 }
 
-// Format time for mobile player display
+// Format time display
 function formatMobileTime(seconds) {
   if (isNaN(seconds) || !isFinite(seconds)) return "0:00";
   const mins = Math.floor(seconds / 60);
@@ -1268,13 +1285,13 @@ function formatMobileTime(seconds) {
   return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
-// Initialize mobile audio player controls
+// Initialize custom audio player controls
 function initMobileAudioPlayer() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const seekbar = document.getElementById("mobileSeekbar");
-  const currentTimeEl = document.getElementById("mobileCurrentTime");
-  const durationEl = document.getElementById("mobileDuration");
-  const playBtn = document.getElementById("mobilePlayBtn");
+  const seekbar = document.getElementById("cpSeekbar");
+  const currentTimeEl = document.getElementById("cpCurrentTime");
+  const durationEl = document.getElementById("cpDuration");
+  const playBtn = document.getElementById("cpPlayBtn");
 
   if (!audioPlayer || !seekbar) return;
 
@@ -1283,6 +1300,7 @@ function initMobileAudioPlayer() {
     if (audioPlayer.duration) {
       const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
       seekbar.value = progress;
+      seekbar.style.setProperty("--cp-progress", `${progress}%`);
       currentTimeEl.textContent = formatMobileTime(audioPlayer.currentTime);
     }
   });
@@ -1291,20 +1309,22 @@ function initMobileAudioPlayer() {
   audioPlayer.addEventListener("loadedmetadata", function () {
     durationEl.textContent = formatMobileTime(audioPlayer.duration);
     seekbar.value = 0;
+    seekbar.style.setProperty("--cp-progress", "0%");
     currentTimeEl.textContent = "0:00";
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
   });
 
   // Seek when user drags the seekbar
   seekbar.addEventListener("input", function () {
     if (audioPlayer.duration) {
       audioPlayer.currentTime = (seekbar.value / 100) * audioPlayer.duration;
+      seekbar.style.setProperty("--cp-progress", `${seekbar.value}%`);
     }
   });
 
   // Update play button when audio ends
   audioPlayer.addEventListener("ended", function () {
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
     // Hide floating show button and update list buttons when audio ends
     hideFloatingShowBtn();
     hideStopAudioButton();
@@ -1313,11 +1333,11 @@ function initMobileAudioPlayer() {
 
   // Update play button when audio is paused externally
   audioPlayer.addEventListener("pause", function () {
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
   });
 
   audioPlayer.addEventListener("play", function () {
-    playBtn.textContent = "⏸️";
+    setPlayBtnState(true);
   });
 }
 
