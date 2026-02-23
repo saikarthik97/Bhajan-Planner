@@ -21,7 +21,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "7:10",
+        startTime: "7:18",
         singer: "Lavanya"
     },
     {
@@ -39,7 +39,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "17:57",
+        startTime: "18:24",
         singer: "Praneetha & Vani"
     },
     {
@@ -57,7 +57,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "25:36",
+        startTime: "26:0",
         singer: "Gayathri"
     },
     {
@@ -148,7 +148,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "58:40",
-        singer: "Yoshitha & Chandibi"
+        singer: "Yoshitha & Chandini garu"
     },
     {
         name: "Agarva Sarva Mangala Om Namah Shivayaa",
