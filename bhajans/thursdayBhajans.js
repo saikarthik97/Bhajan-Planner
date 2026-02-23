@@ -644,7 +644,7 @@ const thursdayBhajansRawData = [
     speed: "fast",
     shruthi: { gents: "7P", ladies: "" },
     day: "Thursday",
-    dateSung: "2026-02-15",
+    dateSung: "2026-02-12",
     startTime: "39:53",
     singer: 'Ramakrishna'
   },

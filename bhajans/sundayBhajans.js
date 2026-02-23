@@ -55,7 +55,7 @@ const sundayBhajansRawData = [
 
   },
   {
-    name: "Ravikula Bhanjana Rama Sri Rama",
+    name: "Ravikula Ranjana Rama Sri Rama",
     deity: "rama",
     speed: "slow",
     shruthi: { gents: "2P" },
