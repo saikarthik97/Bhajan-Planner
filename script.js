@@ -579,6 +579,14 @@ function populateAudioDates() {
   const specialOccasions = sortedAudios.filter((a) => festivalDates[a.date]);
   const regularSessions = sortedAudios.filter((a) => !festivalDates[a.date]);
 
+  // Helper to pick an icon for a festival
+  function getFestivalIcon(festival) {
+    if (festival.includes("Shivarathri") || festival.includes("Shivaratri")) return "🔱 ";
+    if (festival.includes("Bhogi")) return "🔥 ";
+    if (festival.includes("Sankranti") || festival.includes("Sankranthi")) return "🌾 ";
+    return "";
+  }
+
   // Helper to build an option element
   function makeOption(audio) {
     const option = document.createElement("option");
@@ -586,7 +594,7 @@ function populateAudioDates() {
     const formattedDate = formatDate(audio.date);
     const festival = festivalDates[audio.date];
     option.textContent = festival
-      ? `${formattedDate} - ${festival.replace("Festival - ", "")}`
+      ? `${getFestivalIcon(festival)}${formattedDate} - ${festival.replace("Festival - ", "")}`
       : `${formattedDate} - ${audio.label || ""}`;
     return option;
   }

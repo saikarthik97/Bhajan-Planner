@@ -39,7 +39,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "18:24",
+        startTime: "17:56",
         singer: "Praneetha & Vani"
     },
     {
@@ -57,7 +57,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "26:0",
+        startTime: "26:07",
         singer: "Gayathri"
     },
     {
@@ -66,7 +66,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "30:00",
+        startTime: "30:33",
         singer: "Lal"
     },
     {
@@ -75,7 +75,7 @@ const shivarathri2026RawData = [
         speed: "medium",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "33:05",
+        startTime: "33:08",
         singer: "Sai Harshitha & Sri"
     },
     {
@@ -84,7 +84,7 @@ const shivarathri2026RawData = [
         speed: "medium",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "37:40",
+        startTime: "38:08",
         singer: "Swaroop"
     },
     {
@@ -93,7 +93,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "42:47",
+        startTime: "43:18",
         singer: "Sunitha"
     },
     {
@@ -102,7 +102,7 @@ const shivarathri2026RawData = [
         speed: "slow",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "46:02",
+        startTime: "46:00",
         singer: "Eshwar"
     },
     {
@@ -120,7 +120,7 @@ const shivarathri2026RawData = [
         speed: "fast",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "51:50",
+        startTime: "52:38",
         singer: "Venu"
     },
     {
@@ -129,7 +129,7 @@ const shivarathri2026RawData = [
         speed: "fast",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "53:52",
+        startTime: "53:44",
         singer: "Vathsalya & Shruthi"
     },
     {
@@ -138,7 +138,7 @@ const shivarathri2026RawData = [
         speed: "fast",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "56:08",
+        startTime: "56:20",
         singer: "Ganapathi"
     },
     {
@@ -147,7 +147,7 @@ const shivarathri2026RawData = [
         speed: "fast",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "58:40",
+        startTime: "58:35",
         singer: "Yoshitha & Chandini"
     },
     {
@@ -156,7 +156,7 @@ const shivarathri2026RawData = [
         speed: "medium",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "1:02:12",
+        startTime: "62:50",
         singer: "A.Srinivas"
     },
     {
@@ -322,7 +322,7 @@ const shivarathri2026RawData = [
         singer: "Vani , Yoshitha & Chandini"
     },
     {
-        name: "Hara(2) Sambashiva",
+        name: "Hara(4) Sambashiva",
         deity: "shiva",
         speed: "slow",
         day: "Sunday",
