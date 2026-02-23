@@ -201,7 +201,7 @@ const shivarathri2026RawData = [
         speed: "fast",
         day: "Sunday",
         dateSung: "2026-02-15",
-        startTime: "84:20",
+        startTime: "84:45",
         singer: "Vathsalya,Shruthi,Yoshitha & Chandini"
     },
     {
