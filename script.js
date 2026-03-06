@@ -250,17 +250,7 @@ function closeAudioHint() {
 
 // Reset other filters when one is changed
 function resetOtherFilters(changedFilter) {
-  const deityFilter = document.getElementById("deityFilter");
-  const singerFilter = document.getElementById("singerFilter");
-
-  if (changedFilter === "deity") {
-    if (deityFilter.value !== "all") {
-      singerFilter.value = "all";
-    }
-  } else if (changedFilter === "singer") {
-    if (singerFilter.value !== "all") {
-      deityFilter.value = "all";
-    }
+  if (changedFilter === "singer") {
     // Automatically show songs when singer is selected
     showSingerSongs();
   }
@@ -317,15 +307,9 @@ function quickSearch() {
   const nameSearchResults = document.getElementById("nameSearchResults");
   if (nameSearchResults) nameSearchResults.innerHTML = "";
 
-  const deity = document.getElementById("deityFilter").value;
   const singerFilter = document.getElementById("singerFilter").value;
 
   let results = bhajansDatabase;
-
-  // Filter by deity
-  if (deity !== "all") {
-    results = results.filter((bhajan) => bhajan.deity === deity);
-  }
 
   // Filter by singer (check if singer name appears in the singer or singers field)
   if (singerFilter !== "all") {
@@ -343,9 +327,7 @@ function quickSearch() {
     });
   }
 
-  // Determine search type for display formatting
-  const searchType = deity !== "all" ? "deity" : "singer";
-  displayResults(results, "Quick Search Results", searchType);
+  displayResults(results, "Quick Search Results");
 }
 
 // Populate Singer Dropdown
@@ -438,7 +420,7 @@ function displaySingerResults(results, singerName) {
 }
 
 // Display Results Function (Quick Search)
-function displayResults(results, title, searchType = "all") {
+function displayResults(results, title) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
 
@@ -458,7 +440,6 @@ function displayResults(results, title, searchType = "all") {
             )}')">
                 <span class="result-number">${index + 1}.</span>
                 <h3 class="result-title">${bhajan.name}</h3>
-                ${searchType === "deity" ? `<span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>` : ''}
             </div>
         `
       )
