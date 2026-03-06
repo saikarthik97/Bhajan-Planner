@@ -1266,5 +1266,135 @@ const sundayBhajansRawData = [
     startTime: "38:02",
     singers: 'Geetha,Jyothi & Eshwari'
   },
+     {
+    name: "Jaya Sri Ganesha Vigna Nasha Gajanana",
+    deity: "ganesha",
+    speed: "slow2P",
+    shruthi: { gents: "2P" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'A.Srinivas'
+  },
+   {
+    name: "Hare Sai(2) Sai Sai Hare(2)",
+    deity: "guru",
+    speed: "slow",
+    shruthi: { ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "Jaya Jaya Shankari Jaya Parameshwari",
+    deity: "devi",
+    speed: "slow",
+    shruthi: { gents: "6P"},
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Karthik'
+  },
+   {
+    name: "Sri Sai Padam Shiva Sai Padam",
+    deity: "sai",
+    speed: "slow",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Lavanya'
+  },
+   {
+    name: "Manuva Bolo Radhe(4) Shyama Shyam",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { gents: "5P" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Charan'
+  },
+   {
+    name: "Dasaratha Nandana Rama Dayasagara Rama",
+    deity: "rama",
+    speed: "medium",
+    shruthi: { ladies: "6P" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "Neelakanta Mahadeva Gowri Vandana",
+    deity: "shiva",
+    speed: "",
+    shruthi: { gents: "5P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Eshwar'
+  },
+   {
+    name: "Mohana mukunda hari Giridhara Govinda hari",
+    deity: "narayana",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Gayathri'
+  },
+   {
+    name: "Sai Rama Hey Parandhama",
+    deity: "rama",
+    speed: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'G.Srinivas'
+  },
+   {
+    name: "Krishna(2) Mukunda Janardhana ",
+    deity: "krishna",
+    speed: "speed",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "Manamohana Muraligopala",
+    deity: "krishna",
+    speed: "speed",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singer: 'Lal'
+  },
+   {
+    name: "Shyama Komala Krishna Murari",
+    deity: "krishna",
+    speed: "speed",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-01",
+    startTime: "",
+    singers: 'Gayathri & Lavanya'
+  },
+  //  {
+  //   name: "",
+  //   deity: "",
+  //   speed: "",
+  //   shruthi: { gents: "", ladies: "" },
+  //   day: "Sunday",
+  //   dateSung: "2026-03-01",
+  //   startTime: "",
+  //   singer: ''
+  // },
 
 ];

@@ -17,4 +17,7 @@ const bhajanAudios = [
   { date: '2026-02-05',audioFile: "audios/Feb 5th 2026.mp3",label: "Thursday Bhajans" },
   { date: '2026-02-15',audioFile: "audios/Shivaratri session.mp3",label: "Sunday Bhajans" },
   { date: '2026-02-12',audioFile: "audios/12 Feb 2026.mp3",label: "Thursday Bhajans" },
+  { date: '2026-03-01',audioFile: "audios/1st Mar 2026.mp3",label: "Sunday Bhajans" },
+  { date: '2026-03-05',audioFile: "audios/5th Mar 2026.mp3",label: "Thursday Bhajans" },
+
 ];
