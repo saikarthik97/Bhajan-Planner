@@ -530,7 +530,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-03-05",
     startTime: "9:36",
-    singer: 'Vathsalya & Chandini'
+    singer: 'Vathsalya & Vani'
   },
   {
     name: "Ravikula Ranjana Ram Sri Rama",
@@ -554,7 +554,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-03-05",
     startTime: "23:50",
-    singer: 'Chandini and Harshitha'
+    singer: 'Chandini & Harshitha'
   },
   {
     name: "Mahadeva Maheshwara",

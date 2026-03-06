@@ -1018,7 +1018,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "4:30",
-    singer: "",
+    singer: "Harshitha & Chandini",
   },
   {
     name: "Jaya Jaya Shankari Jaya Parameshwari",
@@ -1049,7 +1049,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "21:30",
-    singer: "",
+    singer: "Praneetha & Chandini",
   },
   {
     name: "Neelakanta Mahadeva Gowri Vandana",
@@ -1078,7 +1078,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "37:25",
-    singer: "",
+    singer: "Yoshitha & Shruthi",
   },
   {
     name: "Manamohana Muraligopala",

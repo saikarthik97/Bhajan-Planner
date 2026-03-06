@@ -22,10 +22,10 @@
         <div class="curtain curtain-left"></div>
         <div class="curtain curtain-right"></div>
         <div class="welcome-content">
-            <img src="images/swami-blessing.jpg" alt="Swami's Blessing" class="swami-image">
-            <h1 class="welcome-title">Om Sri Sai Ram</h1>
+            <img src="images/swami-blessing.jpg" alt="Swami's Blessing" class="swami-image" loading="eager">
+            
             <p class="welcome-subtitle">Welcome to Premsadan Bhajans Planner</p>
-            <button class="enter-btn" onclick="openCurtains()">Enter</button>
+            <button class="enter-btn" onclick="openCurtains()">Sairam</button>
         </div>
     </div>
 
@@ -55,7 +55,7 @@
             <div class="search-box">
                 <div class="search-input-wrapper">
                     <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
-                        oninput="searchByName()">
+                        oninput="searchByName()" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
                     <button type="button" id="clearNameSearch" class="clear-search-btn" onclick="clearNameSearch()" title="Clear search">×</button>
                 </div>
             </div>
