@@ -1,135 +1,116 @@
-  /*
+/*
     name: "",
-    deity: "",
-    speed: "",
-    shruthi: { gents: "", ladies: "" },
     day: "",
     dateSung: "",
     startTime: "",
     singer: ''
   },*/
-  
+
 const sundayBhajansRawData = [
   // 28th Dec 2025 - Audio: audios/28th December.mp3
   {
     name: "Gajanana Hey Shubhanana Parama Niranjana Gajavadana",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "0:30",
-    singer: 'Lal'
+    singer: "Lal",
   },
   {
     name: "Karunakaro Sai Dev",
     deity: "devi",
-    speed: "slow",
     shruthi: { ladies: "6½P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "4:30",
-    singer: 'Sunitha'
-
+    singer: "Sunitha",
   },
   {
     name: "Jaya Maa Ananda Mayi Janani",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "8:32",
-    singer: 'A.Srinivas'
-
+    singer: "A.Srinivas",
   },
   {
     name: "Govinda Madhava Gopala Keshava (Jaya Nanda Mukunda)",
     deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "12:50",
-    singer: 'Lavanya'
-
+    singer: "Lavanya",
   },
   {
     name: "Ravikula Ranjana Rama Sri Rama",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "2P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "18:36",
-    singer: 'Shantha Krishna'
-
+    singer: "Shantha Krishna",
   },
   {
     name: "Namo Namo Nataraja Namo",
     deity: "shiva",
-    speed: "medium",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "23:15",
-    singer: 'Gayathri'
+    singer: "Gayathri",
   },
   {
     name: "Radheshyama Hey Ghanashyama",
     deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "27:36",
-    singer: 'G.Srinivas'
+    singer: "G.Srinivas",
   },
   {
     name: "Satya Dharma Shanti Prema Swaroopa Prashanthi Nilaya Deva",
     deity: "sarvadharma",
-    speed: "medium",
     shruthi: { gents: "3P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "32:30",
-    singer:'Vani & Praneetha'
+    singer: "Vani & Praneetha",
   },
   {
     name: "Hey Ayodhya Vasi Ram(2) Dasaratha Nandana Ram",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "36:47",
-    singer: 'Sridhar'
+    singer: "Sridhar",
   },
   {
     name: "Subha Aur Shyam Bol Hari Naam",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "40:42",
-    singer:'Vathsalya & Shruthi & Harshitha'
+    singer: "Vathsalya & Shruthi & Harshitha",
   },
   {
     name: "Manamohana Krishna Kunja Vihari",
     deity: "vittala",
-    speed: "medium",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-12-28",
     startTime: "43:08",
-    singer: 'Swaroop'
+    singer: "Swaroop",
   },
   // 21st Dec 2025 - No audio file available
   {
     name: "Sri Ganapathi Hari Om",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -138,7 +119,6 @@ const sundayBhajansRawData = [
   {
     name: "Maata Pita Guru Bandhu Sakha",
     deity: "sarvadharma",
-    speed: "slow",
     shruthi: { gents: "4P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -147,7 +127,6 @@ const sundayBhajansRawData = [
   {
     name: "Nada Brahma Nayi Sai Eshwari",
     deity: "shiva",
-    speed: "medium",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -156,7 +135,6 @@ const sundayBhajansRawData = [
   {
     name: "Sai Charan Sukhdaayiman",
     deity: "sai",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -165,7 +143,6 @@ const sundayBhajansRawData = [
   {
     name: "Muralidhara Gopal Madhura",
     deity: "krishna",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -174,7 +151,6 @@ const sundayBhajansRawData = [
   {
     name: "Nacho Hey Nataraj shiva shambho",
     deity: "shiva",
-    speed: "medium",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -183,7 +159,6 @@ const sundayBhajansRawData = [
   {
     name: "Radhe Govinda Krishna Murari",
     deity: "krishna",
-    speed: "medium",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -192,7 +167,6 @@ const sundayBhajansRawData = [
   {
     name: "Prabhu Ramachandra Ke",
     deity: "hanuman",
-    speed: "fast",
     shruthi: { gents: "3P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -201,7 +175,6 @@ const sundayBhajansRawData = [
   {
     name: "Hari Ananda Maya Jaya",
     deity: "narayana",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -210,7 +183,6 @@ const sundayBhajansRawData = [
   {
     name: "Mandir Mein Aao Madhava",
     deity: "vittala",
-    speed: "slow",
     shruthi: { gents: "6P", ladies: "4P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -219,7 +191,6 @@ const sundayBhajansRawData = [
   {
     name: "Hey Sai Jagannatha",
     deity: "sai",
-    speed: "medium",
     shruthi: { gents: "1½P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-12-21",
@@ -229,546 +200,478 @@ const sundayBhajansRawData = [
   {
     name: "Lambodara Hey Gowri Nandana",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "0:00",
-    singer: 'Karthik'
+    singer: "Karthik",
   },
   {
     name: "Satya Dharma Shanti prema Sabko Deejo",
     deity: "sarvadharma",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "3:09",
-    singer: 'Vathsalya & Chandini & Yoshitha'
+    singer: "Vathsalya & Chandini & Yoshitha",
   },
   {
     name: "Maata Maheshwari Tribhuvani Janani",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "6:03",
-    singer: 'A.Srinivas'
+    singer: "A.Srinivas",
   },
   {
     name: "Sita Rama Sri Raghurama",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "10:21",
-    singer: 'Sunitha'
+    singer: "Sunitha",
   },
   {
     name: "Ghana Ghana Neela Vadana Ati Sundara",
     deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "14:20",
-    singer: 'Sharath'
+    singer: "Sharath",
   },
   {
     name: "Yuga Yuga Ke Avataara Tum Hi Ho",
     deity: "sarvadharma",
-    speed: "medium",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "18:27",
-    singer: 'Sahiti'
+    singer: "Sahiti",
   },
   {
     name: "Tum ho Shankara Daata Sai Shankara",
     deity: "shiva",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "22:57",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
   {
     name: "Manuva Bolo Radhe(3) Shyama Naam",
     deity: "vittala",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "26:20",
-    singer: 'Eshwar'
-
+    singer: "Eshwar",
   },
   {
     name: "Jaya Jaya Mangala Sai Namo",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "30:11",
-    singer: 'Sridhar'
+    singer: "Sridhar",
   },
   {
     name: "Bhajo Mathura Hari Naam Nirantara",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "32:48",
-    singer:'Vathsalya & Chandini & Yoshitha'
+    singer: "Vathsalya & Chandini & Yoshitha",
   },
   {
     name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
     deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "35:58",
-    singer: 'Sharath'
+    singer: "Sharath",
   },
   {
     name: "Aao Pyaare Nayan Hamare ",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "6½P", ladies: "4½P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "38:04",
-    singer: 'Sahiti'
+    singer: "Sahiti",
   },
   {
     name: "Sharanu Ghosha Priyaney Ayyappa",
     deity: "subramanya",
-    speed: "fast",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "42:00",
-    singer: 'G.Srinivas'
+    singer: "G.Srinivas",
   },
   // 4th Jan 2026 - Audio: audios/4th Jan 2026.mp3
   {
     name: "Prathama Sharana Gananayaka",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "0:29",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Jaya Guru Omkara Sadguru Omkaara",
     deity: "sarvadharma",
-    speed: "slow",
     shruthi: { gents: "2P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "3:32",
-    singer: 'A.Srinivas'
+    singer: "A.Srinivas",
   },
   {
     name: "Jaya Maa Hey Sai Maa",
     deity: "devi",
-    speed: "slow",
     shruthi: { ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "7:46",
-    singer: 'Sunitha'
+    singer: "Sunitha",
   },
   {
     name: "Narayana Hari Narayana",
     deity: "narayana",
-    speed: "slow",
     shruthi: { gents: "2½P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "12:31",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
   {
     name: "Murali Krishna mukunda krishna",
     deity: "krishna",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "19:05",
-    singers: 'Geetha,Jyothi & Eshwari'
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Srirama Bhadra Sri rama chandra Sri Rama Jaya Sri Ram",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "1P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "22:52",
-    singer: 'Shantha Krishna'
+    singer: "Shantha Krishna",
   },
   {
     name: "Hari Om Namah Shivaya",
     deity: "shiva",
-    speed: "slow",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "28:02",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Jai(3) Manamohana Jai(3) Madhusudana",
     deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "31:51",
-    singer: 'Eshwar'
+    singer: "Eshwar",
   },
   {
     name: "Sitaram Nama Bhajo",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "4P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "34:07",
-    singer:'Harshitha & Sri'
-
+    singer: "Harshitha & Sri",
   },
   {
     name: "Shiva(2) Shambho hara(2) Shambho Sai Shambho Shankara ",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "3P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "36:10",
     // singers:'Rajesh'
-
   },
   {
     name: "Seeta Rakshaka Rama Doota",
     deity: "hanuman",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "39:20",
-    singer: 'Sunitha'
-
+    singer: "Sunitha",
   },
   {
     name: "Sri Ranga Hare Vittala Sai Ranga hare vittala",
     deity: "vittala",
-    speed: "fast",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "41:22",
-    singer: 'Venu'
-
+    singer: "Venu",
   },
   //19th Oct 2025
-   {
+  {
     name: "Neela Greeva Kumara",
     deity: "ganesha",
-    speed: "slow",
-    shruthi: { gents: "4P"},
+    shruthi: { gents: "4P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "01:36",
-    singer: 'G.Srinivas'
-
+    singer: "G.Srinivas",
   },
-   {
+  {
     name: "Jaya Guru Shankara Girija Ramana",
     deity: "guru",
-    speed: "slow",
-    shruthi: {ladies: "6P" },
+    shruthi: { ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "04:19",
-    singer: 'Lavanya'
-    
+    singer: "Lavanya",
   },
-   {
+  {
     name: "Janani Sai Devi Dayamayi",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "2½P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "07:25",
-        singer: 'Venu'
-
+    singer: "Venu",
   },
-   {
+  {
     name: "Ajanubahum Aravinda Netram",
     deity: "sai",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "10:55",
-    singer:'Chandini & Harshitha'
-
+    singer: "Chandini & Harshitha",
   },
-   {
+  {
     name: "Chaitanya Mayi Sai",
     deity: "sai",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "14:36",
-    singer: 'Lal'
-
+    singer: "Lal",
   },
-   {
+  {
     name: "Govinda Sai Krishna Govinda(2)",
     deity: "krishna",
-    speed: "medium",
     shruthi: { gents: "1½P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "20:32",
-    singer:'Vani & Yoshitha'
-
+    singer: "Vani & Yoshitha",
   },
-   {
+  {
     name: "Madhura(2) hey Muralidhari",
     deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "1½P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "23:33",
-    singer: 'Sridhar'
-
+    singer: "Sridhar",
   },
-{
+  {
     name: "Rama hare Sai Krishna Hare Sarvadharma Priya",
     deity: "sarvadharma",
-    speed: "fast",
     shruthi: { gents: "2½P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "26:13",
-    singer:'Sai Harshitha & Ravali'
-
+    singer: "Sai Harshitha & Ravali",
   },
   {
     name: "Jaya(2) Rama Jaya Raghurama",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "29:55",
-        singer: 'A.Srinivas'
-
+    singer: "A.Srinivas",
   },
   {
     name: "Panduranga Vittala Jai Pandarinatha Vittala",
     deity: "vittala",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "33:55",
-    singers: 'Geetha,Jyothi & Eshwari'
-
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Shambho Murarey Shankara Murarey",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "37:13",
-    singer: 'Eshwar'
+    singer: "Eshwar",
   },
   {
     name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
     deity: "hanuman",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "39:28",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Meeru Meghalaya Mayurasana",
     deity: "subramanya",
-    speed: "fast",
-    shruthi: { gents: "5P"},
+    shruthi: { gents: "5P" },
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "43:06",
-    singer: 'G.Srinivas'
+    singer: "G.Srinivas",
   },
   //31st August 2025
-   {
+  {
     name: "Sri Ganapati Hari Om",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "0:00",
-    singer: 'A.Srinivas'
+    singer: "A.Srinivas",
   },
   {
     name: "Sri Sai Natha Guru Govinda",
     deity: "guru",
-    speed: "medium",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "4:31",
-    singer:'Vathsalya & Shruthi'
+    singer: "Vathsalya & Shruthi",
   },
   {
     name: "Devi Bhavani Jagat Janani",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "6:54",
-    singer: 'Sridhar'
+    singer: "Sridhar",
   },
   {
     name: "Jaya Jaya Shankara Kailaasa Vaasi",
     deity: "shiva",
-    speed: "slow",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "10:35",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Madhuvana Sanchari Shyama Murari",
     deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "6P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "14:42",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
   {
     name: "Jaya(2) Mangala Sai Namo",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "18:16",
-    singer:'Vani & Vathsalya'
+    singer: "Vani & Vathsalya",
   },
   {
     name: "Shiva(2) Shankara Hara Parameshwara",
     deity: "shiva",
-    speed: "slow",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "20:58",
-    singer: 'Venu'
+    singer: "Venu",
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
     deity: "narayana",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "24:24",
-    singers: 'Geetha,Jyothi & Eshwari'
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Sri Rama Paratparara Ram Hey Rajeeva Lochana Ram",
     deity: "rama",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "7P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "26:24",
-    singer: 'Eshwar'
+    singer: "Eshwar",
   },
   {
     name: "Bhavasagara Se Paar Uthaaro",
     deity: "sarvadharma",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "30:03",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Sai Natha Bhagawaan",
     deity: "sarvadharma",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "34:21",
-    singer: 'Venu'
+    singer: "Venu",
   },
   {
     name: "Vittala Vittala Sai Narayana",
     deity: "vittala",
-    speed: "fast",
-    shruthi: { gents: "6½P"},
+    shruthi: { gents: "6½P" },
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "38:26",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
-//21st September 2025 Add
-{
+  //21st September 2025 Add
+  {
     name: "Namami Nityam Smarami Nityam Gajavadanam",
     deity: "ganesha",
-    speed: "medium",
     day: "Sunday",
     shruthi: { gents: "4P", ladies: "1P" },
     dateSung: "2025-09-21",
     startTime: "0:00",
-    singer:'Vathsalya & Shruthi'
+    singer: "Vathsalya & Shruthi",
   },
   {
     name: "Aruna Ramana Sri Gurudeva",
     deity: "guru",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "2:18",
-    singer: 'A.Srinivas'
+    singer: "A.Srinivas",
   },
   {
     name: "Durga Amba Bhavani Jai Jai",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "2½P", ladies: "6½P" },
     day: "Sunday",
     dateSung: "2025-09-21",
@@ -777,624 +680,557 @@ const sundayBhajansRawData = [
   {
     name: "Kausalya Nandana Vaidehi Mohana",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "9:56",
-    singer: 'Lal'
+    singer: "Lal",
   },
   {
     name: "Kamala Nayana Narayana",
     deity: "narayana",
-    speed: "medium",
     shruthi: { gents: "7P", ladies: "4½P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "14:32",
-    singer: 'Sunitha'
+    singer: "Sunitha",
   },
   {
     name: "Satya Dharma Shanti Prema Swaroopa Prashanthi Nilaya Deva",
     deity: "sarvadharma",
-    speed: "medium",
     shruthi: { gents: "4P", ladies: "6P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "16:49",
-    singer: 'Karthik'
+    singer: "Karthik",
   },
   {
     name: "Atma Ram Aananda Ram",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "21:22",
-    singers:'Geetha,Jyothi & Eshwari'
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Madhava Madhusudana Muralidhara Mohana",
     deity: "krishna",
-    speed: "fast",
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "24:10",
-    singer:'Venu'
+    singer: "Venu",
   },
   {
     name: "Ganga Jatadhara Gowri Shankara Girija Mano Ramana",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "5½P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "26:22",
-    singer:'Sai Harshitha & Ravali'
+    singer: "Sai Harshitha & Ravali",
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
     deity: "narayana",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "30:22",
-    singer:'Eshwar'
+    singer: "Eshwar",
   },
   {
     name: "Manamohana Nandalaal",
     deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "32:32",
-    singer:'Surekha & Praneetha'
-    
+    singer: "Surekha & Praneetha",
   },
   {
     name: "Vaheguru(3)Ji Bolo",
     deity: "guru",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "35:53",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
   {
     name: "Hey Rama Doota Hey Rama Bhakta",
     deity: "hanuman",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "40:24",
-    singer:'Yoshitha & Vani'
+    singer: "Yoshitha & Vani",
   },
   {
     name: "Om Shivaaya Shivaaya",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "43:15",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   //11th January 2026
   {
     name: "Gajamukha Gajamukha",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "0:00",
-    singer: 'Abhiram'
+    singer: "Abhiram",
   },
   {
     name: "Karunya Roopa Sri Sai Deva",
     deity: "guru",
-    speed: "slow",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "3:13",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
   {
     name: "Jaya Devi Bhavani Maa",
     deity: "devi",
-    speed: "slow",
     shruthi: { gents: "1½P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "6:39",
-    singer: 'G.Srinivas'
+    singer: "G.Srinivas",
   },
   {
     name: "Allah Sai Allah Maula Sai Maula",
     deity: "sarvadharma",
-    speed: "slow",
     shruthi: { gents: "2½P", ladies: "6½P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "11:40",
-    singer: 'Gayathri'
+    singer: "Gayathri",
   },
   {
     name: "Kodanda Rama Kalyana Rama",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "1½P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "16:26",
-    singer: 'Shantha Krishna'
+    singer: "Shantha Krishna",
   },
   {
     name: "Panduranga(3) Vittala",
     deity: "vittala",
-    speed: "medium",
     shruthi: { ladies: "6P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "20:20",
-    singers: 'Geetha,Jyothi & Eshwari'
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Ram(2) Bhajamana Hare Hare",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "23:40",
-    singer: 'Sridhar'
+    singer: "Sridhar",
   },
   {
     name: "Sarvatra Govinda Namasankeerthana Govinda Haro Govinda",
     deity: "sai",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "26:49",
-    singer:'Vathsalya & Chandini'
+    singer: "Vathsalya & Chandini",
   },
   {
     name: "Nandalala(2) Nanda Mukunda Hari Nandalala",
     deity: "krishna",
-    speed: "fast",
-    shruthi: { gents: "1½P"},
+    shruthi: { gents: "1½P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "29:51",
-    singer: 'Abhishek'
+    singer: "Abhishek",
   },
   {
     name: "Jai Hari Bol Jai Sitaram",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "7P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "31:52",
-    singer:'Vani & Praneetha'
+    singer: "Vani & Praneetha",
   },
   {
     name: "Vanamali Vasudeva Jaganmohana Radha Ramana",
     deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "2P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "35:36",
-    singer: 'Abhiram'
+    singer: "Abhiram",
   },
   {
     name: "Shambho Shankara Parvati Ramana Pasupati Paramesha",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5½P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "39:20",
-    singer:'Sowmya & Sri Vidya'
+    singer: "Sowmya & Sri Vidya",
   },
   {
     name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
     deity: "hanuman",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "41:39",
-    singer:'Swaroop'
+    singer: "Swaroop",
   },
   //18th Jan 2026
- {
+  {
     name: "Parvati Nandana Gajanana",
     deity: "ganesh",
-    speed: "",
     shruthi: { gents: "5½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "0:00",
-    singer: "Abhishek"
+    singer: "Abhishek",
   },
   {
     name: "Gurudeva Priyadeva Saideva Dayamaya",
     deity: "guru",
-    speed: "",
     shruthi: { gents: "7", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "3:32",
-    singer: "Gayathri"
+    singer: "Gayathri",
   },
   {
     name: "Devi Sai Maa Devi Saraswati Maa",
     deity: "devi",
-    speed: "",
     shruthi: { gents: "1", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "8:52",
-    singer: "Sridhar"
+    singer: "Sridhar",
   },
   {
     name: "Govinda Bolo Gopala Bolo",
     deity: "sarvadharma",
-    speed: "",
     shruthi: { gents: "2½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "12:45",
-    singer: "A.Srinivas"
+    singer: "A.Srinivas",
   },
   {
     name: "Tumaho Ram Tumaho Shyam",
     deity: "rama",
-    speed: "",
     shruthi: { gents: "7½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "17:32",
-    singer: "Shruthi & Vathsalya"
+    singer: "Shruthi & Vathsalya",
   },
   {
     name: "Jaya Jaya Ram Jagadabhi Ram",
     deity: "rama",
-    speed: "",
     shruthi: { gents: "2", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "20:45",
-    singer: "Ganapathi"
+    singer: "Ganapathi",
   },
   {
     name: "Hey Partipurisha Prashanthi Vaasa Sai Murari",
     deity: "sai",
-    speed: "",
     shruthi: { gents: "1½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "25:57",
-    singer: "Karthik"
+    singer: "Karthik",
   },
   {
     name: "Kodanda Rama Raghava Jaya Kalyana Krishna Keshava",
     deity: "rama",
-    speed: "",
     shruthi: { gents: "6", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "30:32",
-    singer: "Chandini & Praneetha"
+    singer: "Chandini & Praneetha",
   },
   {
     name: "Hey Govinda Hey Ananda Nanda Gopala",
     deity: "krishna",
-    speed: "",
     shruthi: { gents: "2½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "34:38",
-    singer: "Charan"
+    singer: "Charan",
   },
   {
     name: "Rama Jai Jai Ram Sai Ram Jai Jai Ram",
     deity: "rama",
-    speed: "",
     shruthi: { gents: "1½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "36:56",
-    singer: "G.Srinivas"
+    singer: "G.Srinivas",
   },
   {
     name: "Arunachala Shiva Shiva Shankara SambaShiva",
     deity: "shiva",
-    speed: "",
     shruthi: { gents: "4", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "40:17",
-    singer: "Shantha Krishna"
+    singer: "Shantha Krishna",
   },
   {
     name: "Narayana Hari Nama Bhajore Narayana Veda Parayana",
     deity: "narayana",
-    speed: "",
     shruthi: { gents: "1½P", ladies: "" },
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "44:06",
-    singer: "G.Srinivas"
+    singer: "G.Srinivas",
   },
   //1st February 2026
   {
     name: "Amba Bhavani Shiva Shambhu Kumara",
     deity: "ganesha",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "5P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "0:01",
-    singer: 'Lal'
+    singer: "Lal",
   },
-    {
+  {
     name: "Guru Dhyaaye Guru Dhyaaye",
     deity: "guru",
-    speed: "medium",
     shruthi: { ladies: "3P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "2:13",
-    singer: 'Sunitha'
-  },  {
+    singer: "Sunitha",
+  },
+  {
     name: "Devi Bhavani Maa Satya Sai Bhavani Maa",
     deity: "devi",
-    speed: "medium",
     shruthi: { gents: "2½ P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "4:08",
-    singer: 'Karthik'
-  },  {
+    singer: "Karthik",
+  },
+  {
     name: "Hey Deena Dayala Sai Rama Ram",
     deity: "rama",
-    speed: "slow",
     shruthi: { gents: "2P", ladies: "7P" },
-    day: "sunday ", 
+    day: "sunday ",
     dateSung: "2026-02-01",
     startTime: "8:00",
-    singer: 'Praneetha & Vani'
-  },  {
+    singer: "Praneetha & Vani",
+  },
+  {
     name: "Nache Tribhanga Krishna Murari",
     deity: "krishna",
-    speed: "medium",
-    shruthi: { gents: "4P"},
+    shruthi: { gents: "4P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "11:20",
-    singer: 'Venu'
-  },  {
+    singer: "Venu",
+  },
+  {
     name: "Shiva(4) Shiridipurishwara Shambho Shankara",
     deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "3P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "13:46",
-    singer: 'Chandini, Sri & Sai Harshitha'
-  },  {
+    singer: "Chandini, Sri & Sai Harshitha",
+  },
+  {
     name: "Giridhari Murari Govinda",
     deity: "krishna",
-    speed: "fast",
-    shruthi: { gents: "4P"},
+    shruthi: { gents: "4P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "18:08",
-    singer: 'Sridhar'
-  },  {
+    singer: "Sridhar",
+  },
+  {
     name: "Raghupathe Sri Ramachandra Raghava Dayanidhe",
     deity: "rama",
-    speed: "medium",
     shruthi: { gents: "3P", ladies: "6P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "20:44",
-    singer: 'Abhishek'
-  },  {
+    singer: "Abhishek",
+  },
+  {
     name: "Madhuvana Murali Shyama Murari",
     deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "2P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "23:30",
-    singer: 'A.Srinivas'
-  },  {
+    singer: "A.Srinivas",
+  },
+  {
     name: "Jayaho Nataraj",
     deity: "nataraja",
-    speed: "slow",
     shruthi: { gents: "1½ P", ladies: "5P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "26:39",
-    singer: 'G.Srinivas'
-  },  {
+    singer: "G.Srinivas",
+  },
+  {
     name: "Sarvadharma Priya Deva",
     deity: "sarvadharma",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "29:20",
-    singer: 'Shantha Krishna'
-  },  {
+    singer: "Shantha Krishna",
+  },
+  {
     name: "Jaya Nandalala Jai Jai Gopala",
     deity: "gopala",
-    speed: "slow",
     shruthi: { gents: "4P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "32:00",
-    singer: 'Lal'
-  },  {
+    singer: "Lal",
+  },
+  {
     name: "Rama Sai(2) Rama Sai Rama Sai Ram",
     deity: "rama",
-    speed: "fast",
     shruthi: { gents: "1½", ladies: "5P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "33:55",
-    singer: 'Eshwar'
+    singer: "Eshwar",
   },
   {
     name: "Hari Narayana Govinda Jaya Narayana Gopala",
     deity: "narayana",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "3P" },
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "38:02",
-    singers: 'Geetha,Jyothi & Eshwari'
+    singers: "Geetha,Jyothi & Eshwari",
   },
-     {
+  // 1st March 2026
+  {
     name: "Jaya Sri Ganesha Vigna Nasha Gajanana",
     deity: "ganesha",
-    speed: "slow2P",
     shruthi: { gents: "2P" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'A.Srinivas'
+    singer: "A.Srinivas",
   },
-   {
+  {
     name: "Hare Sai(2) Sai Sai Hare(2)",
-    deity: "guru",
-    speed: "slow",
-    shruthi: { ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: ''
+    singer: "",
   },
-   {
+  {
     name: "Jaya Jaya Shankari Jaya Parameshwari",
     deity: "devi",
-    speed: "slow",
-    shruthi: { gents: "6P"},
+    shruthi: { gents: "6P" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Karthik'
+    singer: "Karthik",
   },
-   {
+  {
     name: "Sri Sai Padam Shiva Sai Padam",
-    deity: "sai",
-    speed: "slow",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Lavanya'
+    singer: "Lavanya",
   },
-   {
+  {
     name: "Manuva Bolo Radhe(4) Shyama Shyam",
     deity: "rama",
-    speed: "medium",
     shruthi: { gents: "5P" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Charan'
+    singer: "Charan",
   },
-   {
+  {
     name: "Dasaratha Nandana Rama Dayasagara Rama",
     deity: "rama",
-    speed: "medium",
     shruthi: { ladies: "6P" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: ''
+    singer: "",
   },
-   {
+  {
     name: "Neelakanta Mahadeva Gowri Vandana",
     deity: "shiva",
-    speed: "",
     shruthi: { gents: "5P", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Eshwar'
+    singer: "Eshwar",
   },
-   {
+  {
     name: "Mohana mukunda hari Giridhara Govinda hari",
-    deity: "narayana",
-    speed: "",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Gayathri'
+    singer: "Gayathri",
   },
-   {
+  {
     name: "Sai Rama Hey Parandhama",
-    deity: "rama",
-    speed: "",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'G.Srinivas'
+    singer: "G.Srinivas",
   },
-   {
+  {
     name: "Krishna(2) Mukunda Janardhana ",
-    deity: "krishna",
-    speed: "speed",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: ''
+    singer: "",
   },
-   {
+  {
     name: "Manamohana Muraligopala",
-    deity: "krishna",
-    speed: "speed",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singer: 'Lal'
+    singer: "Lal",
   },
-   {
+  {
     name: "Shyama Komala Krishna Murari",
-    deity: "krishna",
-    speed: "speed",
-    shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "",
-    singers: 'Gayathri & Lavanya'
+    singers: "Gayathri & Lavanya",
   },
   //  {
   //   name: "",
   //   deity: "",
-  //   speed: "",
   //   shruthi: { gents: "", ladies: "" },
   //   day: "Sunday",
   //   dateSung: "2026-03-01",
   //   startTime: "",
   //   singer: ''
   // },
-
 ];

@@ -251,23 +251,15 @@ function closeAudioHint() {
 // Reset other filters when one is changed
 function resetOtherFilters(changedFilter) {
   const deityFilter = document.getElementById("deityFilter");
-  const speedFilter = document.getElementById("speedFilter");
   const singerFilter = document.getElementById("singerFilter");
 
   if (changedFilter === "deity") {
     if (deityFilter.value !== "all") {
-      speedFilter.value = "all";
-      singerFilter.value = "all";
-    }
-  } else if (changedFilter === "speed") {
-    if (speedFilter.value !== "all") {
-      deityFilter.value = "all";
       singerFilter.value = "all";
     }
   } else if (changedFilter === "singer") {
     if (singerFilter.value !== "all") {
       deityFilter.value = "all";
-      speedFilter.value = "all";
     }
     // Automatically show songs when singer is selected
     showSingerSongs();
@@ -326,7 +318,6 @@ function quickSearch() {
   if (nameSearchResults) nameSearchResults.innerHTML = "";
 
   const deity = document.getElementById("deityFilter").value;
-  const speed = document.getElementById("speedFilter").value;
   const singerFilter = document.getElementById("singerFilter").value;
 
   let results = bhajansDatabase;
@@ -334,11 +325,6 @@ function quickSearch() {
   // Filter by deity
   if (deity !== "all") {
     results = results.filter((bhajan) => bhajan.deity === deity);
-  }
-
-  // Filter by speed
-  if (speed !== "all") {
-    results = results.filter((bhajan) => bhajan.speed === speed);
   }
 
   // Filter by singer (check if singer name appears in the singer or singers field)
@@ -358,7 +344,7 @@ function quickSearch() {
   }
 
   // Determine search type for display formatting
-  const searchType = deity !== "all" ? "deity" : (speed !== "all" ? "speed" : "singer");
+  const searchType = deity !== "all" ? "deity" : "singer";
   displayResults(results, "Quick Search Results", searchType);
 }
 
@@ -866,9 +852,10 @@ function loadAudio() {
     } else {
       audioBhajanList.classList.remove("special-occasion-list");
     }
-    // Show the selection prompt if audio is available
-    if (hasAudio && audioSelectionPrompt) {
-      audioSelectionPrompt.style.display = "block";
+    // Auto-play audio from the beginning when a date with audio is selected
+    if (hasAudio) {
+      if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+      playBhajanAudio(selectedDate, "All Bhajans", null, null);
     } else if (audioSelectionPrompt) {
       audioSelectionPrompt.style.display = "none";
     }
@@ -1457,16 +1444,6 @@ function formatTimeAttr(time) {
 // Capitalize first letter of a string
 function capitalizeFirst(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-// Format speed value for display
-function formatSpeed(speed) {
-  const speedMap = {
-    slow: "Slow",
-    medium: "Medium",
-    fast: "Fast",
-  };
-  return speedMap[speed] || speed;
 }
 
 // Format shruthi with HTML tags
