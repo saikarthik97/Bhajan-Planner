@@ -1102,7 +1102,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
+    startTime: "0:01",
     singer: 'A.Srinivas'
   },
   {
@@ -1112,88 +1112,88 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
-    singer: 'Vathsalya'
+    startTime: "5:08",
+    singer: 'Vathsalya '
   }, {
     name: "Jagadhodharini Mata Durga ",
     deity: "devi",
-    speed: "",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
+    startTime: "8:08",
     singer: 'G.Srinivas'
   }, {
     name: "Sai narayana (2) Mangala Naam",
-    deity: "",
-    speed: "",
+    deity: "sai",
+    speed: "medium",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
+    startTime: "12:22",
     singer: ''
   }, {
     name: "Antaryaami Sai",
-    deity: "",
-    speed: "",
+    deity: "krishna",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
+    startTime: "16:00",
     singer: 'Abhishek'
   }, {
     name: "Shiridi Sai parti sai Humko Deejo",
-    deity: "",
-    speed: "",
+    deity: "sai",
+    speed: "medium",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-08",
-    startTime: "",
-    singer: ''
+    startTime: "21:48",
+    singer: 'Chandini & Harshitha'
   }, {
     name: "Gopala giridhara Baala",
-    deity: "",
-    speed: "",
+    deity: "krishna",
+    speed: "slow",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
-    dateSung: "2026-08-03",
-    startTime: "",
+    dateSung: "2026-03-08",
+    startTime: "26:32",
     singer: 'Eshwar'
   }, {
     name: "Jaya ho Sairam(2)",
-    deity: "",
-    speed: "",
+    deity: "sarvadharma",
+    speed: "speed",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
-    dateSung: "2026-08-03",
-    startTime: "",
+    dateSung: "2026-03-08",
+    startTime: "30:09",
     singer: 'Praneetha & Vani'
   }, {
     name: "Hari Om Namah Shivaya ",
-    deity: "",
-    speed: "",
-    shruthi: { gents: "", ladies: "" },
+    deity: "shiva",
+    speed: "speed",
+    shruthi: { gents: "6P", ladies: "" },
     day: "Sunday",
-    dateSung: "2026-08-03",
-    startTime: "",
+    dateSung: "2026-03-08",
+    startTime: "35:18",
     singer: 'Charan'
   }, {
     name: "Ram (2) Bhajaman Hare Hare",
-    deity: "",
-    speed: "",
+    deity: "rama",
+    speed: "speed",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
-    dateSung: "2026-08-03",
-    startTime: "",
+    dateSung: "2026-03-08",
+    startTime: "37:50",
     singers: 'Geetha,Jyothi & Eshwari'
   }, {
     name: "Vittala Narayana",
     deity: "vittala",
-    speed: "",
+    speed: "speed",
     shruthi: { gents: "", ladies: "6P" },
     day: "Sunday",
-    dateSung: "2026-08-03",
-    startTime: "",
+    dateSung: "2026-03-08",
+    startTime: "40:21",
     singer: 'Lavanya'
   },
   //  {
