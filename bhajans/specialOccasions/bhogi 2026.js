@@ -1,8 +1,6 @@
 const bhogi2026RawData = [
   {
     name: "Hari Om Namo Shiva Shakti Namo",
-    deity: "shiva",
-    speed: "medium",
     shruthi: { gents: "1P", ladies: "5P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -11,8 +9,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Jagadeeshwari Dayakaro Maa",
-    deity: "devi",
-    speed: "medium",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -21,8 +17,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Neela Megha Shyama Krishna Gopala Krishna",
-    deity: "krishna",
-    speed: "slow",
     shruthi: { gents: "5P", ladies: "2P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -31,8 +25,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Nirupama Gunasadana Charana Neeraja Dhala Nayana",
-    deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -41,8 +33,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Gopala Radha Lola",
-    deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -51,8 +41,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Rama Hare Sai Krishna Hare Sarvadharma Priya",
-    deity: "sarvadharma",
-    speed: "fast",
     shruthi: { gents: "3P", ladies: "5P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -61,8 +49,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Manamohana Nandalal",
-    deity: "krishna",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -71,8 +57,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Alak Niranjana Bhava Bhaya Bhanjana Narayan",
-    deity: "narayan",
-    speed: "fast",
     shruthi: { gents: "6P", ladies: "3P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -81,8 +65,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Shivaya Namah Shivaya (2) Shivaya Namah Om",
-    deity: "shiva",
-    speed: "fast",
     shruthi: { gents: "1P", ladies: "4½ P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -91,8 +73,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Rama(2) Sai Rama",
-    deity: "rama",
-    speed: "medium",
     shruthi: { gents: "6P", ladies: "2½ P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -101,8 +81,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Jaya Panduranga Ranga Jaya Vittala",
-    deity: "panduranga",
-    speed: "fast",
     shruthi: { gents: "4P", ladies: "1½ P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -111,8 +89,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Pavanasuta Hanuman Ki Jai",
-    deity: "hanuman",
-    speed: "medium",
     shruthi: { gents: "2P", ladies: "6P" },
     day: "Wednesday",
     dateSung: "2026-01-14",
@@ -121,8 +97,6 @@ const bhogi2026RawData = [
   },
   {
     name: "Sharana Mayappa Swami (2)",
-    deity: "subramanya",
-    speed: "fast",
     shruthi: { gents: "4P" },
     day: "Wednesday",
     dateSung: "2026-01-14",

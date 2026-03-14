@@ -22,10 +22,10 @@
         <div class="curtain curtain-left"></div>
         <div class="curtain curtain-right"></div>
         <div class="welcome-content">
-            <img src="images/swami-blessing.jpg" alt="Swami's Blessing" class="swami-image">
-            <h1 class="welcome-title">Om Sri Sai Ram</h1>
+            <img src="images/swami-blessing.jpg" alt="Swami's Blessing" class="swami-image" loading="eager">
+            
             <p class="welcome-subtitle">Welcome to Premsadan Bhajans Planner</p>
-            <button class="enter-btn" onclick="openCurtains()">Enter</button>
+            <button class="enter-btn" onclick="openCurtains()">Sairam</button>
         </div>
     </div>
 
@@ -55,7 +55,7 @@
             <div class="search-box">
                 <div class="search-input-wrapper">
                     <input type="text" id="nameSearch" placeholder="Enter bhajan name to find..." class="search-input"
-                        oninput="searchByName()">
+                        oninput="searchByName()" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
                     <button type="button" id="clearNameSearch" class="clear-search-btn" onclick="clearNameSearch()" title="Clear search">×</button>
                 </div>
             </div>
@@ -72,29 +72,6 @@
         <section class="search-section">
             <h2 class="section-title">Quick Search</h2>
             <div class="quick-search-grid">
-                <!-- Deity Filter -->
-                <div class="filter-group">
-                    <label for="deityFilter" class="filter-label">Deity:</label>
-                    <select id="deityFilter" class="filter-select" onchange="resetOtherFilters('deity')">
-                        <option value="all">-- Select Deity --</option>
-                        <option value="ganesha">ganesha</option>
-                        <option value="guru">guru</option>
-                        <option value="devi">devi</option>
-                        <option value="eshwaramba">eshwaramba</option>
-                        <option value="sai">sai</option>
-                        <option value="sarvadharma">sarvadharma</option>
-                        <option value="vittala">vittala</option>
-                        <option value="rama">rama</option>
-                        <option value="dattatreya">dattatreya</option>
-                        <option value="krishna">krishna</option>
-                        <option value="narayana">narayana</option>
-                        <option value="shiva">shiva</option>
-                        <option value="srinivasa">srinivasa</option>
-                        <option value="hanuman">hanuman</option>
-                        <option value="subramanya">subramanya</option>
-                    </select>
-                </div>
-
                 <!-- Beat Filter (commented out for future use)
                 <div class="filter-group">
                     <label class="filter-label">Beat:</label>
@@ -114,17 +91,6 @@
                     </div>
                 </div>
                 -->
-
-                <!-- Speed Filter -->
-                <div class="filter-group">
-                    <label for="speedFilter" class="filter-label">Search by Speed:</label>
-                    <select id="speedFilter" class="filter-select" onchange="resetOtherFilters('speed')">
-                        <option value="all">-- Select Speed --</option>
-                        <option value="slow">Slow</option>
-                        <option value="medium">Medium</option>
-                        <option value="fast">Fast</option>
-                    </select>
-                </div>
 
                 <!-- Singer Filter -->
                 <div class="filter-group">
