@@ -1113,7 +1113,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-08",
     startTime: "5:08",
-    singer: 'Vathsalya '
+    singer: 'Vathsalya & Sai Harshitha'
   }, {
     name: "Jagadhodharini Mata Durga ",
     deity: "devi",
@@ -1131,7 +1131,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-08",
     startTime: "12:22",
-    singer: ''
+    singer: 'Yoshitha & Vani'
   }, {
     name: "Antaryaami Sai",
     deity: "krishna",
