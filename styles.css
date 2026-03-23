@@ -1191,6 +1191,12 @@ body {
     border: 1px solid #c2410c;
 }
 
+/* Friday - Green */
+.day-badge.day-friday {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border: 1px solid #166534;
+}
+
 /* Festival Badge */
 .festival-badge {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
