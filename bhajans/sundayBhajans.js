@@ -1196,11 +1196,108 @@ const sundayBhajansRawData = [
     startTime: "40:21",
     singer: 'Lavanya'
   },
+  // 22 march 2206
+{
+    name: "Jai (3) Gananayaka",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "0:05",
+    singer: "Lavanya"
+  },
+  {
+    name: "Gurudev (2) Satya sai Natha sadguru Dev",
+    shruthi: { gents: "2P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "4:22",
+    singer: "Lal"
+  },
+  {
+    name: "Triloka Palini Jagadeeshwari",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "8:35",
+    singer: "Geetha, Jyothi & Eshwari"
+  },
+  {
+    name: "Jaya Jaya Govinda Narayana",
+    shruthi: { gents: "1½ P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "11:23",
+    singer: "Karthik"
+  },
+  {
+    name: "Neela Megha Shyama Krishna",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "15:53",
+    singer: ""
+  },
+  {
+    name: "Veera Dheera Shoora Hanuman Ki Jai",
+    shruthi: { gents: "2P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "19:38",
+    singer: ""
+  },
+  {
+    name: "Eshwaramba Priya Nandana",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "23:35",
+    singer: "Chandini & Praneetha"
+  },
+  {
+    name: "Hari Nam Gathe Chalo",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "28:22",
+    singer: "Santosh"
+  },
+  {
+    name: "Beda Paar karo mera sai",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "33:15",
+    singer: "Lavanya"
+  },
+  {
+    name: "Namami Brahma Namami Vishnu",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "36:52",
+    singer: "Lal"
+  },
+  {
+    name: "Sri Rama Charanam (3) Bhaje",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "39:20",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Meeru Meghalaya Mayurasana",
+    shruthi: { gents: "5P", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-03-22",
+    startTime: "45:31",
+    singer: "Karthik"
+  },
   //  {
   //   name: "",
   //   shruthi: { gents: "", ladies: "" },
-  //   day: "Sunday",
-  //   dateSung: "2026-08-03",
+  //   day: "Friday",
+  //   dateSung: "2026-03-20",
   //   startTime: "",
   //   singer: ''
   // },

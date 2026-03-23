@@ -7,7 +7,7 @@
 // ============================================================================
 
 // Combine Sunday, Thursday, and Special Occasions bhajans into a single database
-const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData];
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData, ...ramzan2026RawData];
 const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
   id: index + 1,
   ...bhajan,
@@ -17,7 +17,8 @@ const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
 const festivalDates = {
   "2026-01-14": "Festival - Bhogi",
   "2026-01-15": "Festival - Sankranti",
-  "2026-02-15": "Festival - Maha Shivarathri"
+  "2026-02-15": "Festival - Maha Shivarathri",
+  "2026-03-20": "Festival - Ramzan"
 };
 
 // Get festival name for a given date
@@ -551,6 +552,7 @@ function populateAudioDates() {
     if (festival.includes("Shivarathri") || festival.includes("Shivaratri")) return "🔱 ";
     if (festival.includes("Bhogi")) return "🔥 ";
     if (festival.includes("Sankranti") || festival.includes("Sankranthi")) return "🌾 ";
+    if (festival.includes("Ramzan")) return "🌙 ";
     return "";
   }
 
@@ -843,6 +845,10 @@ function loadAudio() {
   } else {
     audioBhajanList.style.display = "none";
     if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+    // No bhajan list but audio exists — still play it
+    if (hasAudio) {
+      playBhajanAudio(selectedDate, "All Bhajans", null, null);
+    }
   }
 }
 
@@ -950,8 +956,9 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     // Check if timestamps are available
     const hasTimestamps = startSeconds !== null;
 
-    // Set the audio source
+    // Set the audio source and force reload
     audioPlayer.src = audioEntry.audioFile;
+    audioPlayer.load();
 
     // Update label with just the bhajan name
     audioLabel.textContent = bhajanName;
