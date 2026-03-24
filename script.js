@@ -18,7 +18,7 @@ const festivalDates = {
   "2026-01-14": "Festival - Bhogi",
   "2026-01-15": "Festival - Sankranti",
   "2026-02-15": "Festival - Maha Shivarathri",
-  "2026-03-20": "Festival - Ramzan"
+  "2026-03-21": "Festival - Ramzan"
 };
 
 // Get festival name for a given date

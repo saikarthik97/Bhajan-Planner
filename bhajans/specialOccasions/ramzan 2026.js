@@ -54,7 +54,7 @@ const ramzan2026RawData = [
     day: "Saturday",
     dateSung: "2026-03-21",
     startTime: "25:30",
-    singer: ""
+    singer: "Eshwari & Leela"
   },
   {
     name: "Allah Ho Akbar",

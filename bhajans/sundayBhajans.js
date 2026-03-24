@@ -1235,7 +1235,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-22",
     startTime: "15:53",
-    singer: ""
+    singer: "Sai Harshitha & Sri"
   },
   {
     name: "Veera Dheera Shoora Hanuman Ki Jai",
@@ -1262,7 +1262,7 @@ const sundayBhajansRawData = [
     singer: "Santosh"
   },
   {
-    name: "Beda Paar karo mera sai",
+    name: "Beda Paar karo mere sai",
     shruthi: { gents: "", ladies: "" },
     day: "Sunday",
     dateSung: "2026-03-22",
