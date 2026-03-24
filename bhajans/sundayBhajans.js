@@ -1243,7 +1243,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-22",
     startTime: "19:38",
-    singer: ""
+    singer: "Sridhar"
   },
   {
     name: "Eshwaramba Priya Nandana",
