@@ -1293,12 +1293,110 @@ const sundayBhajansRawData = [
     startTime: "45:31",
     singer: "Karthik"
   },
-  //  {
-  //   name: "",
-  //   shruthi: { gents: "", ladies: "" },
-  //   day: "Friday",
-  //   dateSung: "2026-03-20",
-  //   startTime: "",
-  //   singer: ''
-  // },
+  //5th apr 2026
+   {
+    name: "Maha Ganapathe Namostuthe",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: 'Lavanya'
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "Sunday",
+    dateSung: "2026-04-05",
+    startTime: "",
+    singer: ''
+  },
+
 ];
