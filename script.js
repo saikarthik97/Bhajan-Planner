@@ -86,12 +86,13 @@ function searchByName() {
   }
 
   // Hide loading if search term is empty or too short
-  if (!searchTerm || searchTerm.length < 3) {
+  if (!searchTerm || searchTerm.length < 2) {
     if (loadingIndicator) loadingIndicator.classList.remove("active");
+    if (!searchTerm) resultsContainer.innerHTML = "";
   }
 
   // Show loading indicator for valid searches
-  if (searchTerm.length >= 3 && loadingIndicator) {
+  if (searchTerm.length >= 2 && loadingIndicator) {
     loadingIndicator.classList.add("active");
     resultsContainer.innerHTML = "";
   }
@@ -131,52 +132,33 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
     return;
   }
 
-  // Require at least 5 characters before searching
-  if (searchTerm.length < 5) {
+  // Require at least 2 characters before searching
+  if (searchTerm.length < 2) {
     resultsContainer.innerHTML = `
             <div class="live-result-item no-results">
-                Please enter at least 5 characters to search
+                Type at least 2 characters to search
             </div>
         `;
     return;
   }
 
-  // Filter bhajans with strict matching - case-sensitive and 30% complete name required
+  // Filter bhajans: prefix match first, then any-word-start, then substring
+  const searchTermLower = searchTerm.toLowerCase();
   const filteredResults = bhajansDatabase.filter((bhajan) => {
-    const bhajanName = bhajan.name;
-    const bhajanNameLower = bhajanName.toLowerCase();
-    const searchTermLower = searchTerm.toLowerCase();
+    if (!bhajan.name) return false;
+    const nameLower = bhajan.name.toLowerCase();
 
-    // Calculate 70% of the complete bhajan name length
-    const requiredLength = Math.ceil(bhajanName.length * 0.3);
+    // Prefix match
+    if (nameLower.startsWith(searchTermLower)) return true;
 
-    // First try case-sensitive exact prefix match
-    if (bhajanName.startsWith(searchTerm)) {
-      return searchTerm.length >= requiredLength;
+    // Match start of any word
+    const words = nameLower.split(/\s+/);
+    for (const word of words) {
+      if (word.startsWith(searchTermLower)) return true;
     }
 
-    // Then try case-insensitive prefix match
-    if (bhajanNameLower.startsWith(searchTermLower)) {
-      return searchTerm.length >= requiredLength;
-    }
-
-    // Check if search matches the start of any word sequence (case-sensitive first)
-    const bhajanWords = bhajanName.split(/\s+/);
-    for (let i = 0; i < bhajanWords.length; i++) {
-      const wordSequence = bhajanWords.slice(i).join(' ');
-      if (wordSequence.startsWith(searchTerm) && searchTerm.length >= requiredLength) {
-        return true;
-      }
-    }
-
-    // Check case-insensitive word sequence match
-    const bhajanWordsLower = bhajanNameLower.split(/\s+/);
-    for (let i = 0; i < bhajanWordsLower.length; i++) {
-      const wordSequence = bhajanWordsLower.slice(i).join(' ');
-      if (wordSequence.startsWith(searchTermLower) && searchTerm.length >= requiredLength) {
-        return true;
-      }
-    }
+    // Substring match (anywhere in name)
+    if (nameLower.includes(searchTermLower)) return true;
 
     return false;
   });
@@ -198,27 +180,28 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
             </div>
         `;
   } else {
-    resultsContainer.innerHTML = results
-      .map(
-        (bhajan) => `
-            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
-              bhajan.dateSung
-            )}')">
+    const hasAudioSet = new Set(bhajanAudios.map(a => a.date));
+    resultsContainer.innerHTML =
+      `<div class="search-result-count">${results.length} bhajan${results.length > 1 ? 's' : ''} found</div>` +
+      results.map((bhajan) => {
+        const hasAudio = hasAudioSet.has(bhajan.dateSung);
+        return `
+            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(bhajan.dateSung)}')">
                 <div class="name-search-line-1">
                     <span class="bhajan-name">${bhajan.name}</span>
-                    <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
+                    ${hasAudio ? '<span class="has-audio-tag">🎵</span>' : ''}
                 </div>
                 <div class="name-search-line-2">
                     <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                     <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                    ${formatShruthiSimple(bhajan.shruthi)}
                 </div>
                 ${(bhajan.singer || bhajan.singers) ? `<div class="name-search-line-4">
-                    <span class="singer-info">Last Sung by: <strong>${bhajan.singer || bhajan.singers}</strong></span>
+                    <span class="singer-info">🎤 ${bhajan.singer || bhajan.singers}</span>
                 </div>` : ''}
             </div>
-        `
-      )
-      .join("");
+        `;
+      }).join("");
   }
 }
 
@@ -1429,31 +1412,6 @@ function formatTimeAttr(time) {
   return `'${time}'`;
 }
 
-// Capitalize first letter of a string
-function capitalizeFirst(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-// Format shruthi with HTML tags
-function formatShruthi(shruthi) {
-  if (typeof shruthi === "string") {
-    return `<span class="shruthi-value">${shruthi}</span>`;
-  }
-  if (typeof shruthi === "object" && shruthi !== null) {
-    const parts = [];
-    if (shruthi.gents)
-      parts.push(
-        `<span class="shruthi-gents">Gents: <strong>${shruthi.gents}</strong></span>`
-      );
-    if (shruthi.ladies)
-      parts.push(
-        `<span class="shruthi-ladies">Ladies: <strong>${shruthi.ladies}</strong></span>`
-      );
-    return parts.join(" ");
-  }
-  return shruthi;
-}
-
 // Simple shruthi format for date search results
 function formatShruthiSimple(shruthi) {
   if (!shruthi) return "";
@@ -1480,24 +1438,6 @@ function formatDate(dateString) {
   });
 }
 
-// Format seconds to MM:SS display
-function formatTimeDisplay(seconds) {
-  const mins = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-  return `${mins}:${secs.toString().padStart(2, "0")}`;
-}
-
-// ============================================================================
-// 11. EVENT LISTENERS & INITIALIZATION
-// ============================================================================
-
-// Close modal when clicking outside
-window.onclick = function (event) {
-  const modal = document.getElementById("loginModal");
-  if (event.target === modal) {
-    closeLogin();
-  }
-};
 
 // Close all open sections when clicking outside of them
 document.addEventListener("click", function (event) {

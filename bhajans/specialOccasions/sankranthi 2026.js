@@ -45,7 +45,7 @@ const sankranthi2026 = [
         day: "Thursday",
         dateSung: "2026-01-15",
         startTime: "25:36",
-        singer: "Vathsalya & Shruthi"
+        singer: "Vathsalya & Sai Shruthi"
     },
     {
         name: "Narayana Hari Om(3)",

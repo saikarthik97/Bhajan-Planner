@@ -3533,3 +3533,693 @@ body {
         font-size: 0.7rem;
     }
 }
+
+/* ── Mobile scrollbar improvements ── */
+/* Hide default scrollbar on touch devices, use momentum scrolling */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Thin, styled scrollbar for webkit (Chrome/Safari on Android/iOS desktop mode) */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 107, 107, 0.4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(255, 107, 107, 0.7);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 107, 107, 0.4) transparent;
+}
+
+/* On small screens, hide scrollbar entirely for cleaner swipe feel */
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    * {
+        scrollbar-width: none;
+    }
+
+    /* Ensure all scrollable containers use momentum scrolling on iOS */
+    .results-container,
+    .singer-results-container,
+    .main-container,
+    .section,
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* ======================================================================
+   DEVOTIONAL THEME OVERRIDES — Saffron / Gold / Maroon
+   ====================================================================== */
+
+/* CSS variables for the devotional palette — soft & pleasant */
+:root {
+    --dev-saffron:      #F4A340;
+    --dev-saffron-light:#F7BF72;
+    --dev-gold:         #E8A020;
+    --dev-gold-light:   #FFD97A;
+    --dev-maroon:       #B05A3A;
+    --dev-maroon-dark:  #7C3A22;
+    --dev-cream:        #FFFBF5;
+    --dev-cream-mid:    #FFF5E8;
+    --dev-amber:        #F4A340;
+    --dev-border:       rgba(244, 163, 64, 0.22);
+    --dev-glow:         rgba(244, 163, 64, 0.15);
+}
+
+/* ── Body & page background ── */
+body {
+    background: linear-gradient(160deg, #FEF9F2 0%, #FFF4E3 50%, #FEF0E8 100%) !important;
+    animation: none !important;
+}
+
+/* ── Main container ── */
+.container {
+    background: transparent !important;
+}
+
+/* ── Section cards ── */
+.search-section {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+    box-shadow: 0 2px 12px rgba(244, 163, 64, 0.08), 0 1px 4px rgba(0,0,0,0.04) !important;
+}
+
+/* ── Section titles ── */
+.section-title {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-saffron) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ── Filter labels ── */
+.filter-label {
+    color: var(--dev-maroon) !important;
+    font-weight: 600 !important;
+}
+
+/* ── Search & filter inputs ── */
+.search-input,
+.filter-select,
+.date-input {
+    border-color: rgba(244, 163, 64, 0.35) !important;
+    background: #FFFFFF !important;
+}
+
+.search-input:focus,
+.filter-select:focus,
+.date-input:focus {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 0 0 3px var(--dev-glow) !important;
+    outline: none !important;
+}
+
+.filter-select:hover,
+.date-input:hover {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 4px 12px var(--dev-glow) !important;
+}
+
+/* ── Search buttons ── */
+.search-button {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+}
+
+.search-button:hover {
+    background: linear-gradient(135deg, var(--dev-saffron-light) 0%, var(--dev-saffron) 100%) !important;
+    box-shadow: 0 8px 25px rgba(230, 92, 0, 0.40) !important;
+}
+
+/* ── Day badges (Thursday is purple → maroon) ── */
+.day-badge.day-thursday {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    color: #fff !important;
+}
+
+/* ── Live results (name search dropdown) ── */
+.live-results {
+    border-color: var(--dev-border) !important;
+    background: #FFFFFF !important;
+}
+
+.live-result-item {
+    border-bottom-color: var(--dev-border) !important;
+    background: #FFFFFF !important;
+}
+
+.live-result-item.clickable-row:hover,
+.live-result-item.clickable-row:active {
+    background: #FFF8EE !important;
+    border-left: 3px solid var(--dev-saffron) !important;
+}
+
+.bhajan-name {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 600 !important;
+}
+
+.sung-date {
+    color: #5C3D1E !important;
+}
+
+.singer-info {
+    color: var(--dev-maroon) !important;
+}
+
+.has-audio-tag {
+    font-size: 0.85rem;
+    margin-left: 4px;
+}
+
+.search-result-count {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--dev-maroon);
+    background: linear-gradient(90deg, #FFF3DC, #FFFAF4);
+    border-bottom: 1px solid var(--dev-border);
+    letter-spacing: 0.02em;
+}
+
+/* ── Results section ── */
+.results-section {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+}
+
+.result-item {
+    border-left: 4px solid var(--dev-saffron) !important;
+    background: #FFFFFF !important;
+}
+
+.result-item:hover {
+    background: #FFF8EE !important;
+    border-left-color: var(--dev-maroon) !important;
+}
+
+.result-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+.result-number {
+    color: var(--dev-saffron) !important;
+}
+
+/* ── Hide / Close / Show buttons (results) ── */
+.hide-results-btn,
+.close-results-btn,
+.show-bhajan-list-btn,
+.stop-audio-btn,
+.floating-show-singer-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.hide-results-btn:hover,
+.close-results-btn:hover,
+.show-bhajan-list-btn:hover,
+.stop-audio-btn:hover,
+.floating-show-singer-btn:hover {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-maroon-dark) 100%) !important;
+}
+
+/* ── Audio section ── */
+.audio-section {
+    background: #FFFFFF !important;
+    border-top: 3px solid var(--dev-saffron-light) !important;
+}
+
+/* ── Audio dropdown — custom trigger ── */
+.custom-audio-trigger {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+    color: var(--dev-maroon-dark) !important;
+}
+
+.custom-audio-trigger:hover,
+.custom-audio-select.open .custom-audio-trigger {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 0 0 3px var(--dev-glow) !important;
+}
+
+.custom-audio-selected-text.has-value {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 600 !important;
+}
+
+.custom-audio-arrow {
+    color: var(--dev-saffron) !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── Audio dropdown — panel ── */
+.custom-audio-panel {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+    box-shadow: 0 12px 40px rgba(123, 24, 24, 0.18), 0 4px 12px rgba(0,0,0,0.08) !important;
+    border-radius: 0 0 14px 14px !important;
+    z-index: 99999 !important;
+}
+
+/* Group headers */
+.custom-audio-group-header.regular {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    color: #FFD700 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.06em !important;
+    padding: 10px 16px !important;
+}
+
+.custom-audio-group-header.special {
+    background: linear-gradient(135deg, var(--dev-gold) 0%, var(--dev-saffron) 100%) !important;
+    color: #fff !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.06em !important;
+    padding: 10px 16px !important;
+}
+
+/* Dropdown options */
+.custom-audio-option {
+    padding: 12px 16px 12px 22px !important;
+    font-size: 0.92rem !important;
+    color: #3B1A0A !important;
+    border-bottom: 1px solid rgba(200, 144, 10, 0.12) !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1.3 !important;
+}
+
+.custom-audio-option:hover {
+    background: linear-gradient(90deg, #FFF3DC, #FFE9C0) !important;
+    color: var(--dev-maroon) !important;
+    padding-left: 26px !important;
+    font-weight: 500 !important;
+}
+
+.custom-audio-option.selected {
+    background: linear-gradient(90deg, #FFE0A0, #FFD070) !important;
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 700 !important;
+}
+
+/* ── Audio player container ── */
+.audio-player-container {
+    background: #FFF9F2 !important;
+    border: 2px solid var(--dev-border) !important;
+}
+
+.audio-label {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 700 !important;
+}
+
+/* Custom player controls */
+.cp-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.cp-btn:hover {
+    background: linear-gradient(135deg, var(--dev-saffron-light) 0%, var(--dev-saffron) 100%) !important;
+}
+
+.cp-time {
+    color: var(--dev-maroon) !important;
+}
+
+/* Seekbar track */
+.cp-seekbar {
+    accent-color: var(--dev-saffron) !important;
+}
+
+/* ── Audio bhajan list ── */
+.audio-bhajan-list {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+}
+
+.audio-bhajan-list-header {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    border-bottom: 2px solid var(--dev-gold) !important;
+}
+
+.audio-bhajan-list-title {
+    color: #FFD700 !important;
+}
+
+.audio-bhajan-item {
+    border-bottom: 1px solid rgba(244, 163, 64, 0.12) !important;
+    background: #FFFFFF !important;
+    min-height: 48px !important;
+}
+
+.audio-bhajan-item.has-audio:hover {
+    background: #FFF5E8 !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+}
+
+.audio-bhajan-item.playing {
+    background: #FFF0D4 !important;
+    border-left: 4px solid var(--dev-maroon) !important;
+}
+
+.audio-bhajan-name {
+    color: var(--dev-maroon-dark) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+.audio-bhajan-number {
+    color: var(--dev-saffron) !important;
+    font-weight: 700 !important;
+}
+
+.audio-bhajan-singer {
+    color: var(--dev-maroon) !important;
+}
+
+/* Close / Hide buttons on audio list */
+.close-audio-list-btn,
+.hide-audio-list-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* ── Audio hint modal ── */
+.hint-modal-content {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+}
+
+.hint-ok-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* ── Connect & footer ── */
+.connect-section {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-maroon-dark) 100%) !important;
+    color: #FFD700 !important;
+}
+
+.connect-email {
+    color: #FFD700 !important;
+}
+
+.footer {
+    background: var(--dev-maroon-dark) !important;
+    color: rgba(255, 215, 0, 0.85) !important;
+}
+
+/* ── Singer results ── */
+.singer-results-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+.singer-search-item.has-audio-indicator {
+    border-left: 3px solid var(--dev-saffron) !important;
+}
+
+.singer-search-item.currently-playing {
+    background: linear-gradient(90deg, #FFE0A0, #FFD070) !important;
+    border-left: 4px solid var(--dev-maroon) !important;
+}
+
+/* ── Shruthi badge ── */
+.shruthi-simple {
+    background: linear-gradient(135deg, #FFF0D0, #FFE4A0) !important;
+    color: var(--dev-maroon) !important;
+    border: 1px solid var(--dev-border) !important;
+}
+
+/* ── Playing bars (animated) ── */
+.playing-bar {
+    background: var(--dev-saffron) !important;
+}
+
+/* ── Date results header ── */
+.date-results-header {
+    background: linear-gradient(135deg, #FFF3DC, #FFE9C0) !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+}
+
+.date-results-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+/* ── Mobile: larger touch targets for audio dropdown ── */
+@media (max-width: 768px) {
+    .custom-audio-trigger {
+        padding: 14px 16px !important;
+        font-size: 0.95rem !important;
+        min-height: 52px !important;
+    }
+
+    .custom-audio-option {
+        padding: 14px 16px 14px 22px !important;
+        font-size: 0.9rem !important;
+        min-height: 52px !important;
+    }
+
+    .custom-audio-group-header {
+        font-size: 0.78rem !important;
+        padding: 10px 14px !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .audio-bhajan-item {
+        min-height: 52px !important;
+        padding: 10px 10px !important;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.9rem !important;
+    }
+
+    /* Bigger, thumb-friendly buttons */
+    .search-button,
+    .cp-btn,
+    .close-audio-list-btn,
+    .hide-audio-list-btn,
+    .show-bhajan-list-btn,
+    .stop-audio-btn {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Name search result items — comfortable tap targets */
+    .live-result-item {
+        padding: 14px 14px !important;
+    }
+
+    .bhajan-name {
+        font-size: 0.95rem !important;
+    }
+
+    /* Slightly larger filter select */
+    .filter-select,
+    .date-input {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Page title */
+    .page-title h1 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Section cards: less horizontal padding on small screens */
+    .search-section {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-audio-trigger {
+        font-size: 0.9rem !important;
+        min-height: 50px !important;
+    }
+
+    .custom-audio-option {
+        font-size: 0.88rem !important;
+        min-height: 50px !important;
+        padding: 12px 14px 12px 20px !important;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.85rem !important;
+    }
+
+    .search-section {
+        padding: 14px 10px !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* ======================================================================
+   SEARCH RESULTS — Clean & Aligned
+   ====================================================================== */
+
+/* Container: tighter gap, no extra margin */
+.live-results {
+    margin-top: 12px !important;
+    gap: 6px !important;
+}
+
+/* Each result card */
+.live-result-item {
+    padding: 11px 14px !important;
+    border-radius: 10px !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+    background: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    box-shadow: 0 1px 4px rgba(200,144,10,0.08) !important;
+    transition: background 0.18s ease, border-left-color 0.18s ease !important;
+    transform: none !important;
+}
+
+.live-result-item.clickable-row:hover,
+.live-result-item.clickable-row:active {
+    background: #FFF0D8 !important;
+    border-left-color: var(--dev-maroon) !important;
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(123,24,24,0.12) !important;
+}
+
+.live-result-item.no-results {
+    border-left: 4px solid #e2e8f0 !important;
+    background: #fafafa !important;
+    color: #9ca3af !important;
+    font-style: italic !important;
+    font-size: 0.88rem !important;
+    padding: 14px !important;
+}
+
+/* Line 1: name + audio icon — space between */
+.name-search-line-1 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+}
+
+.live-result-item .bhajan-name {
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+    color: var(--dev-maroon-dark) !important;
+    line-height: 1.3 !important;
+    flex: 1 !important;
+    min-width: 0 !important;         /* allow text truncation if needed */
+}
+
+.has-audio-tag {
+    font-size: 0.85rem !important;
+    flex-shrink: 0 !important;
+    opacity: 0.75 !important;
+}
+
+/* Line 2: day badge + date + shruthi — all in one row, aligned */
+.name-search-line-2 {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+}
+
+.name-search-line-2 .detail-badge.day-badge {
+    font-size: 0.7rem !important;
+    padding: 2px 8px !important;
+    border-radius: 20px !important;
+    flex-shrink: 0 !important;
+    line-height: 1.6 !important;
+}
+
+.live-result-item .sung-date {
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    color: #5C3D1E !important;
+    flex-shrink: 0 !important;
+}
+
+.name-search-line-2 .shruthi-simple {
+    font-size: 0.7rem !important;
+    padding: 2px 7px !important;
+    border-radius: 6px !important;
+    line-height: 1.5 !important;
+}
+
+/* Line 4: singer */
+.name-search-line-4 {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.singer-info {
+    font-size: 0.76rem !important;
+    color: var(--dev-maroon) !important;
+    opacity: 0.85 !important;
+}
+
+/* Result count pill */
+.search-result-count {
+    padding: 5px 12px !important;
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    background: linear-gradient(90deg, #FFF3DC, #FFFAF4) !important;
+    border-bottom: 1px solid var(--dev-border) !important;
+    color: var(--dev-maroon) !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+    .live-result-item {
+        padding: 10px 12px !important;
+        gap: 4px !important;
+    }
+
+    .live-result-item .bhajan-name {
+        font-size: 0.92rem !important;
+    }
+
+    .live-result-item .sung-date {
+        font-size: 0.74rem !important;
+    }
+
+    .singer-info {
+        font-size: 0.72rem !important;
+    }
+}

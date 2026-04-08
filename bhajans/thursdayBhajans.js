@@ -161,7 +161,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "0:01",
-    singer: 'Vathsalya & Shruthi'
+    singer: 'Vathsalya & Sai Shruthi'
   },
   {
     name: "Guru Paada Vandana ShataVandana",
@@ -193,7 +193,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "11:46",
-    singer: 'Vathsalya & Shruthi'
+    singer: 'Vathsalya & Sai Shruthi'
 
   },
   {

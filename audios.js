@@ -22,6 +22,6 @@ const bhajanAudios = [
   { date: '2026-03-08', audioFile: "audios/8 Mar 2026.mp3", label: "Sunday Bhajans" },
   { date: '2026-03-21', audioFile: "audios/Ramzan Bhajan.mp3", label: "Ramzan Bhajans" },
   { date: '2026-03-22', audioFile: "audios/22 Mar 2026.mp3", label: "Sunday Bhajans" },
-  { date: '2026-04-05', audioFile: "audios/5th Apr 2026.mp3", label: "Sunday Bhajans" },
+  { date: '2026-04-05', audioFile: "audios/5th April 2026.mp3", label: "Sunday Bhajans" },
 
 ];

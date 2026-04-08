@@ -5,7 +5,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "00:01",
-    singer: "Vathsalya & Shruthi",
+    singer: "Vathsalya & Sai Shruthi",
   },
   {
     name: "Jagadeeshwari Dayakaro Maa",
@@ -69,7 +69,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "25:11",
-    singer: "Vathsalya & Shruthi"
+    singer: "Vathsalya & Sai Shruthi"
   },
   {
     name: "Rama(2) Sai Rama",

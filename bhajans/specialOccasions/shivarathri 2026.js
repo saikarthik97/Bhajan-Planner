@@ -101,7 +101,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "53:44",
-        singer: "Vathsalya & Shruthi"
+        singer: "Vathsalya & Sai Shruthi"
     },
     {
         name: "Hey Shiva Shankara Namami Shankara",
@@ -157,7 +157,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "84:45",
-        singer: "Vathsalya,Shruthi,Yoshitha & Chandini"
+        singer: "Vathsalya,Sai Shruthi,Yoshitha & Chandini"
     },
     {
         name: "Jaya Ho Nataraj",
@@ -269,7 +269,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "139:20",
-        singer: "Vathsalya,Shruthi & Yoshitha"
+        singer: "Vathsalya,Sai Shruthi & Yoshitha"
     },
     {
         name: "Gowrinathaya Vishwanathaya",
@@ -290,7 +290,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "151:46",
-        singer: "Vathsalya, Shruthi & Yoshitha"
+        singer: "Vathsalya, Sai Shruthi & Yoshitha"
     },
     {
         name: "Hara Bholanatha Umapathe",
