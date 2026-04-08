@@ -7,7 +7,7 @@
 // ============================================================================
 
 // Combine Sunday, Thursday, and Special Occasions bhajans into a single database
-const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData];
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData, ...ramzan2026RawData];
 const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
   id: index + 1,
   ...bhajan,
@@ -17,7 +17,8 @@ const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
 const festivalDates = {
   "2026-01-14": "Festival - Bhogi",
   "2026-01-15": "Festival - Sankranti",
-  "2026-02-15": "Festival - Maha Shivarathri"
+  "2026-02-15": "Festival - Maha Shivarathri",
+  "2026-03-21": "Festival - Ramzan"
 };
 
 // Get festival name for a given date
@@ -85,12 +86,13 @@ function searchByName() {
   }
 
   // Hide loading if search term is empty or too short
-  if (!searchTerm || searchTerm.length < 3) {
+  if (!searchTerm || searchTerm.length < 2) {
     if (loadingIndicator) loadingIndicator.classList.remove("active");
+    if (!searchTerm) resultsContainer.innerHTML = "";
   }
 
   // Show loading indicator for valid searches
-  if (searchTerm.length >= 3 && loadingIndicator) {
+  if (searchTerm.length >= 2 && loadingIndicator) {
     loadingIndicator.classList.add("active");
     resultsContainer.innerHTML = "";
   }
@@ -130,52 +132,33 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
     return;
   }
 
-  // Require at least 5 characters before searching
-  if (searchTerm.length < 5) {
+  // Require at least 2 characters before searching
+  if (searchTerm.length < 2) {
     resultsContainer.innerHTML = `
             <div class="live-result-item no-results">
-                Please enter at least 5 characters to search
+                Type at least 2 characters to search
             </div>
         `;
     return;
   }
 
-  // Filter bhajans with strict matching - case-sensitive and 30% complete name required
+  // Filter bhajans: prefix match first, then any-word-start, then substring
+  const searchTermLower = searchTerm.toLowerCase();
   const filteredResults = bhajansDatabase.filter((bhajan) => {
-    const bhajanName = bhajan.name;
-    const bhajanNameLower = bhajanName.toLowerCase();
-    const searchTermLower = searchTerm.toLowerCase();
+    if (!bhajan.name) return false;
+    const nameLower = bhajan.name.toLowerCase();
 
-    // Calculate 70% of the complete bhajan name length
-    const requiredLength = Math.ceil(bhajanName.length * 0.3);
+    // Prefix match
+    if (nameLower.startsWith(searchTermLower)) return true;
 
-    // First try case-sensitive exact prefix match
-    if (bhajanName.startsWith(searchTerm)) {
-      return searchTerm.length >= requiredLength;
+    // Match start of any word
+    const words = nameLower.split(/\s+/);
+    for (const word of words) {
+      if (word.startsWith(searchTermLower)) return true;
     }
 
-    // Then try case-insensitive prefix match
-    if (bhajanNameLower.startsWith(searchTermLower)) {
-      return searchTerm.length >= requiredLength;
-    }
-
-    // Check if search matches the start of any word sequence (case-sensitive first)
-    const bhajanWords = bhajanName.split(/\s+/);
-    for (let i = 0; i < bhajanWords.length; i++) {
-      const wordSequence = bhajanWords.slice(i).join(' ');
-      if (wordSequence.startsWith(searchTerm) && searchTerm.length >= requiredLength) {
-        return true;
-      }
-    }
-
-    // Check case-insensitive word sequence match
-    const bhajanWordsLower = bhajanNameLower.split(/\s+/);
-    for (let i = 0; i < bhajanWordsLower.length; i++) {
-      const wordSequence = bhajanWordsLower.slice(i).join(' ');
-      if (wordSequence.startsWith(searchTermLower) && searchTerm.length >= requiredLength) {
-        return true;
-      }
-    }
+    // Substring match (anywhere in name)
+    if (nameLower.includes(searchTermLower)) return true;
 
     return false;
   });
@@ -197,27 +180,28 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
             </div>
         `;
   } else {
-    resultsContainer.innerHTML = results
-      .map(
-        (bhajan) => `
-            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(
-              bhajan.dateSung
-            )}')">
+    const hasAudioSet = new Set(bhajanAudios.map(a => a.date));
+    resultsContainer.innerHTML =
+      `<div class="search-result-count">${results.length} bhajan${results.length > 1 ? 's' : ''} found</div>` +
+      results.map((bhajan) => {
+        const hasAudio = hasAudioSet.has(bhajan.dateSung);
+        return `
+            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(bhajan.dateSung)}')">
                 <div class="name-search-line-1">
                     <span class="bhajan-name">${bhajan.name}</span>
-                    <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
+                    ${hasAudio ? '<span class="has-audio-tag">🎵</span>' : ''}
                 </div>
                 <div class="name-search-line-2">
                     <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
                     <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
+                    ${formatShruthiSimple(bhajan.shruthi)}
                 </div>
                 ${(bhajan.singer || bhajan.singers) ? `<div class="name-search-line-4">
-                    <span class="singer-info">Last Sung by: <strong>${bhajan.singer || bhajan.singers}</strong></span>
+                    <span class="singer-info">🎤 ${bhajan.singer || bhajan.singers}</span>
                 </div>` : ''}
             </div>
-        `
-      )
-      .join("");
+        `;
+      }).join("");
   }
 }
 
@@ -250,25 +234,7 @@ function closeAudioHint() {
 
 // Reset other filters when one is changed
 function resetOtherFilters(changedFilter) {
-  const deityFilter = document.getElementById("deityFilter");
-  const speedFilter = document.getElementById("speedFilter");
-  const singerFilter = document.getElementById("singerFilter");
-
-  if (changedFilter === "deity") {
-    if (deityFilter.value !== "all") {
-      speedFilter.value = "all";
-      singerFilter.value = "all";
-    }
-  } else if (changedFilter === "speed") {
-    if (speedFilter.value !== "all") {
-      deityFilter.value = "all";
-      singerFilter.value = "all";
-    }
-  } else if (changedFilter === "singer") {
-    if (singerFilter.value !== "all") {
-      deityFilter.value = "all";
-      speedFilter.value = "all";
-    }
+  if (changedFilter === "singer") {
     // Automatically show songs when singer is selected
     showSingerSongs();
   }
@@ -325,21 +291,9 @@ function quickSearch() {
   const nameSearchResults = document.getElementById("nameSearchResults");
   if (nameSearchResults) nameSearchResults.innerHTML = "";
 
-  const deity = document.getElementById("deityFilter").value;
-  const speed = document.getElementById("speedFilter").value;
   const singerFilter = document.getElementById("singerFilter").value;
 
   let results = bhajansDatabase;
-
-  // Filter by deity
-  if (deity !== "all") {
-    results = results.filter((bhajan) => bhajan.deity === deity);
-  }
-
-  // Filter by speed
-  if (speed !== "all") {
-    results = results.filter((bhajan) => bhajan.speed === speed);
-  }
 
   // Filter by singer (check if singer name appears in the singer or singers field)
   if (singerFilter !== "all") {
@@ -357,9 +311,7 @@ function quickSearch() {
     });
   }
 
-  // Determine search type for display formatting
-  const searchType = deity !== "all" ? "deity" : (speed !== "all" ? "speed" : "singer");
-  displayResults(results, "Quick Search Results", searchType);
+  displayResults(results, "Quick Search Results");
 }
 
 // Populate Singer Dropdown
@@ -452,7 +404,7 @@ function displaySingerResults(results, singerName) {
 }
 
 // Display Results Function (Quick Search)
-function displayResults(results, title, searchType = "all") {
+function displayResults(results, title) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
 
@@ -472,7 +424,6 @@ function displayResults(results, title, searchType = "all") {
             )}')">
                 <span class="result-number">${index + 1}.</span>
                 <h3 class="result-title">${bhajan.name}</h3>
-                ${searchType === "deity" ? `<span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>` : ''}
             </div>
         `
       )
@@ -579,6 +530,15 @@ function populateAudioDates() {
   const specialOccasions = sortedAudios.filter((a) => festivalDates[a.date]);
   const regularSessions = sortedAudios.filter((a) => !festivalDates[a.date]);
 
+  // Helper to pick an icon for a festival
+  function getFestivalIcon(festival) {
+    if (festival.includes("Shivarathri") || festival.includes("Shivaratri")) return "🔱 ";
+    if (festival.includes("Bhogi")) return "🔥 ";
+    if (festival.includes("Sankranti") || festival.includes("Sankranthi")) return "🌾 ";
+    if (festival.includes("Ramzan")) return "🌙 ";
+    return "";
+  }
+
   // Helper to build an option element
   function makeOption(audio) {
     const option = document.createElement("option");
@@ -586,7 +546,7 @@ function populateAudioDates() {
     const formattedDate = formatDate(audio.date);
     const festival = festivalDates[audio.date];
     option.textContent = festival
-      ? `${formattedDate} - ${festival.replace("Festival - ", "")}`
+      ? `${getFestivalIcon(festival)}${formattedDate} - ${festival.replace("Festival - ", "")}`
       : `${formattedDate} - ${audio.label || ""}`;
     return option;
   }
@@ -858,15 +818,20 @@ function loadAudio() {
     } else {
       audioBhajanList.classList.remove("special-occasion-list");
     }
-    // Show the selection prompt if audio is available
-    if (hasAudio && audioSelectionPrompt) {
-      audioSelectionPrompt.style.display = "block";
+    // Auto-play audio from the beginning when a date with audio is selected
+    if (hasAudio) {
+      if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+      playBhajanAudio(selectedDate, "All Bhajans", null, null);
     } else if (audioSelectionPrompt) {
       audioSelectionPrompt.style.display = "none";
     }
   } else {
     audioBhajanList.style.display = "none";
     if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+    // No bhajan list but audio exists — still play it
+    if (hasAudio) {
+      playBhajanAudio(selectedDate, "All Bhajans", null, null);
+    }
   }
 }
 
@@ -974,8 +939,9 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     // Check if timestamps are available
     const hasTimestamps = startSeconds !== null;
 
-    // Set the audio source
+    // Set the audio source and force reload
     audioPlayer.src = audioEntry.audioFile;
+    audioPlayer.load();
 
     // Update label with just the bhajan name
     audioLabel.textContent = bhajanName;
@@ -996,10 +962,18 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
     audioPlayer.onloadedmetadata = function () {
       if (hasTimestamps) {
         audioPlayer.currentTime = startSeconds;
+        const onSeeked = function () {
+          audioPlayer.removeEventListener("seeked", onSeeked);
+          audioPlayer.play().catch(function (err) {
+            console.log("Audio autoplay prevented:", err);
+          });
+        };
+        audioPlayer.addEventListener("seeked", onSeeked);
+      } else {
+        audioPlayer.play().catch(function (err) {
+          console.log("Audio autoplay prevented:", err);
+        });
       }
-      audioPlayer.play().catch(function (err) {
-        console.log("Audio autoplay prevented:", err);
-      });
     };
 
     // Track which bhajan is playing and update the label
@@ -1227,32 +1201,41 @@ function resetAudioListButtons() {
 // 8. MOBILE AUDIO PLAYER CONTROLS
 // ============================================================================
 
-// Toggle play/pause for mobile player
+// Helper: set play button state
+function setPlayBtnState(playing) {
+  const icon = document.getElementById("cpPlayIcon");
+  const label = document.getElementById("cpPlayLabel");
+  if (icon) icon.innerHTML = playing ? "&#9646;&#9646;" : "&#9654;";
+  if (label) label.textContent = playing ? "Pause" : "Play";
+}
+
+// Toggle play/pause
 function togglePlayPause() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const playBtn = document.getElementById("mobilePlayBtn");
   if (audioPlayer && audioPlayer.src) {
     if (audioPlayer.paused) {
       audioPlayer.play();
-      playBtn.textContent = "⏸️";
+      setPlayBtnState(true);
     } else {
       audioPlayer.pause();
-      playBtn.textContent = "▶️";
+      setPlayBtnState(false);
     }
   }
 }
 
-// Toggle mute for mobile player
+// Toggle mute
 function toggleMute() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const muteBtn = document.getElementById("mobileMuteBtn");
+  const muteIcon = document.getElementById("cpMuteIcon");
+  const muteLabel = document.getElementById("cpMuteLabel");
   if (audioPlayer) {
     audioPlayer.muted = !audioPlayer.muted;
-    muteBtn.textContent = audioPlayer.muted ? "🔇" : "🔊";
+    if (muteIcon) muteIcon.innerHTML = audioPlayer.muted ? "&#128263;" : "&#128266;";
+    if (muteLabel) muteLabel.textContent = audioPlayer.muted ? "Unmute" : "Mute";
   }
 }
 
-// Format time for mobile player display
+// Format time display
 function formatMobileTime(seconds) {
   if (isNaN(seconds) || !isFinite(seconds)) return "0:00";
   const mins = Math.floor(seconds / 60);
@@ -1260,13 +1243,13 @@ function formatMobileTime(seconds) {
   return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
-// Initialize mobile audio player controls
+// Initialize custom audio player controls
 function initMobileAudioPlayer() {
   const audioPlayer = document.getElementById("audioPlayer");
-  const seekbar = document.getElementById("mobileSeekbar");
-  const currentTimeEl = document.getElementById("mobileCurrentTime");
-  const durationEl = document.getElementById("mobileDuration");
-  const playBtn = document.getElementById("mobilePlayBtn");
+  const seekbar = document.getElementById("cpSeekbar");
+  const currentTimeEl = document.getElementById("cpCurrentTime");
+  const durationEl = document.getElementById("cpDuration");
+  const playBtn = document.getElementById("cpPlayBtn");
 
   if (!audioPlayer || !seekbar) return;
 
@@ -1275,6 +1258,7 @@ function initMobileAudioPlayer() {
     if (audioPlayer.duration) {
       const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
       seekbar.value = progress;
+      seekbar.style.setProperty("--cp-progress", `${progress}%`);
       currentTimeEl.textContent = formatMobileTime(audioPlayer.currentTime);
     }
   });
@@ -1283,20 +1267,22 @@ function initMobileAudioPlayer() {
   audioPlayer.addEventListener("loadedmetadata", function () {
     durationEl.textContent = formatMobileTime(audioPlayer.duration);
     seekbar.value = 0;
+    seekbar.style.setProperty("--cp-progress", "0%");
     currentTimeEl.textContent = "0:00";
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
   });
 
   // Seek when user drags the seekbar
   seekbar.addEventListener("input", function () {
     if (audioPlayer.duration) {
       audioPlayer.currentTime = (seekbar.value / 100) * audioPlayer.duration;
+      seekbar.style.setProperty("--cp-progress", `${seekbar.value}%`);
     }
   });
 
   // Update play button when audio ends
   audioPlayer.addEventListener("ended", function () {
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
     // Hide floating show button and update list buttons when audio ends
     hideFloatingShowBtn();
     hideStopAudioButton();
@@ -1305,11 +1291,11 @@ function initMobileAudioPlayer() {
 
   // Update play button when audio is paused externally
   audioPlayer.addEventListener("pause", function () {
-    playBtn.textContent = "▶️";
+    setPlayBtnState(false);
   });
 
   audioPlayer.addEventListener("play", function () {
-    playBtn.textContent = "⏸️";
+    setPlayBtnState(true);
   });
 }
 
@@ -1426,41 +1412,6 @@ function formatTimeAttr(time) {
   return `'${time}'`;
 }
 
-// Capitalize first letter of a string
-function capitalizeFirst(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-// Format speed value for display
-function formatSpeed(speed) {
-  const speedMap = {
-    slow: "Slow",
-    medium: "Medium",
-    fast: "Fast",
-  };
-  return speedMap[speed] || speed;
-}
-
-// Format shruthi with HTML tags
-function formatShruthi(shruthi) {
-  if (typeof shruthi === "string") {
-    return `<span class="shruthi-value">${shruthi}</span>`;
-  }
-  if (typeof shruthi === "object" && shruthi !== null) {
-    const parts = [];
-    if (shruthi.gents)
-      parts.push(
-        `<span class="shruthi-gents">Gents: <strong>${shruthi.gents}</strong></span>`
-      );
-    if (shruthi.ladies)
-      parts.push(
-        `<span class="shruthi-ladies">Ladies: <strong>${shruthi.ladies}</strong></span>`
-      );
-    return parts.join(" ");
-  }
-  return shruthi;
-}
-
 // Simple shruthi format for date search results
 function formatShruthiSimple(shruthi) {
   if (!shruthi) return "";
@@ -1487,24 +1438,6 @@ function formatDate(dateString) {
   });
 }
 
-// Format seconds to MM:SS display
-function formatTimeDisplay(seconds) {
-  const mins = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-  return `${mins}:${secs.toString().padStart(2, "0")}`;
-}
-
-// ============================================================================
-// 11. EVENT LISTENERS & INITIALIZATION
-// ============================================================================
-
-// Close modal when clicking outside
-window.onclick = function (event) {
-  const modal = document.getElementById("loginModal");
-  if (event.target === modal) {
-    closeLogin();
-  }
-};
 
 // Close all open sections when clicking outside of them
 document.addEventListener("click", function (event) {

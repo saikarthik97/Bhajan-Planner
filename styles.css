@@ -1191,6 +1191,12 @@ body {
     border: 1px solid #c2410c;
 }
 
+/* Friday - Green */
+.day-badge.day-friday {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+    border: 1px solid #166534;
+}
+
 /* Festival Badge */
 .festival-badge {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
@@ -2260,123 +2266,244 @@ body {
    ============================================ */
 
 .audio-section {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%) !important;
+    background: #fff8f0 !important;
+    border-top: 3px solid #f59e0b;
 }
 
 .audio-controls {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .audio-player-container {
-    margin-top: 25px;
-    padding: 25px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    border: 3px solid transparent;
-    background-clip: padding-box;
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #fde68a;
     position: relative;
     animation: fadeIn 0.4s ease;
     max-width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
-}
-
-.audio-player-container::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(135deg, #f59e0b, #d97706, #b45309);
-    border-radius: 22px;
-    z-index: -1;
 }
 
 .audio-label {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #92400e;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #78350f;
+    margin-bottom: 16px;
     text-align: center;
-}
-
-.bhajan-audio-player {
-    width: 100%;
-    border-radius: 12px;
-    outline: none;
-}
-
-.bhajan-audio-player::-webkit-media-controls-panel {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding-bottom: 12px;
+    border-bottom: 1px solid #fde68a;
 }
 
 .no-audio-message {
-    margin-top: 20px;
-    padding: 20px;
-    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
-    border-radius: 15px;
+    margin-top: 16px;
+    padding: 14px 18px;
+    background: #fef2f2;
+    border-radius: 10px;
     color: #991b1b;
     font-weight: 600;
     text-align: center;
-    border: 2px solid #fca5a5;
+    border: 1px solid #fca5a5;
+    font-size: 0.9rem;
 }
 
-.audio-controls-row {
+/* ============================================================ */
+/* UNIFIED CUSTOM AUDIO PLAYER                                  */
+/* ============================================================ */
+
+.custom-player {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 4px 0;
+}
+
+/* Progress row */
+.cp-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.cp-time {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #78350f;
+    min-width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.cp-bar-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.cp-seekbar {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(
+        to right,
+        #f59e0b 0%,
+        #f59e0b var(--cp-progress, 0%),
+        #e5e7eb var(--cp-progress, 0%),
+        #e5e7eb 100%
+    );
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cp-seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    background: radial-gradient(circle at 35% 35%, #ffd54f, #f59e0b);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.5), 0 0 0 3px rgba(245, 158, 11, 0.18);
+    border: 2px solid #fff;
+}
+
+.cp-seekbar::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    background: radial-gradient(circle at 35% 35%, #ffd54f, #f59e0b);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.5), 0 0 0 3px rgba(245, 158, 11, 0.18);
+    border: 2px solid #fff;
+    border-style: solid;
+}
+
+/* Controls row — 4 equal buttons */
+.cp-controls-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.cp-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-}
-
-.audio-controls-row audio {
-    flex: 1;
-    max-width: 500px;
-    border-radius: 12px;
-}
-
-.skip-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 10px 14px;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    color: white;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    flex-shrink: 0;
 }
 
-.skip-btn:hover {
+/* All 4 buttons in the controls row: equal width, column layout */
+.cp-controls-row .cp-btn {
+    flex: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 4px;
+    border-radius: 10px;
+    min-height: 46px;
+}
+
+/* Icon inside any control button */
+.cp-btn-icon,
+.cp-skip-arrow {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+/* Label text inside any control button */
+.cp-btn-label,
+.cp-skip-s {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1;
+}
+
+/* Backward skip button — blue/indigo */
+.cp-skip-btn:not(.cp-skip-fwd) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Forward skip button — orange/amber */
+.cp-skip-fwd {
+    background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cp-skip-btn:not(.cp-skip-fwd):hover {
+    background: linear-gradient(135deg, #5a6fd6 0%, #6a3f9a 100%);
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
 }
 
-.skip-btn:active {
-    transform: scale(0.98);
+.cp-skip-fwd:hover {
+    background: linear-gradient(135deg, #fbbf24 0%, #ea6c0a 100%);
+    transform: scale(1.05);
 }
 
-.skip-icon {
-    font-size: 1rem;
+.cp-skip-btn:active {
+    transform: scale(0.96);
+    opacity: 0.85;
 }
 
-.skip-text {
-    font-size: 0.75rem;
+/* Play/Pause button — red/pink */
+.cp-play-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee0979 100%);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cp-play-btn:hover {
+    background: linear-gradient(135deg, #ff5252 0%, #d4006a 100%);
+    transform: scale(1.05);
+}
+
+.cp-play-btn:active {
+    transform: scale(0.96);
+}
+
+/* Mute button — green */
+.cp-mute-btn {
+    background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cp-mute-btn:hover {
+    background: linear-gradient(135deg, #34d058 0%, #128c38 100%);
+    transform: scale(1.05);
+}
+
+.cp-mute-btn:active {
+    transform: scale(0.96);
 }
 
 /* Audio Bhajan List Styles */
 .audio-bhajan-list {
-    margin-top: 20px;
-    padding: 15px;
-    background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+    margin-top: 16px;
+    padding: 12px;
+    background: #ffffff;
     border-radius: 12px;
-    border: 2px solid #fcd34d;
+    border: 1px solid #e5e7eb;
 }
 
 .audio-bhajan-list-header {
@@ -2385,136 +2512,132 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #fcd34d;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .audio-bhajan-list-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #92400e;
+    color: #1f2937;
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
 }
 
 .close-audio-list-btn {
-    padding: 6px 12px;
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    color: white;
-    border: none;
+    padding: 5px 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
 .close-audio-list-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    background: #fecaca;
+    color: #991b1b;
 }
 
 .close-audio-list-btn:active {
-    transform: translateY(0);
+    opacity: 0.8;
 }
 
 .hide-audio-list-btn {
-    padding: 6px 14px;
-    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-    color: white;
-    border: none;
+    padding: 5px 12px;
+    background: #ede9fe;
+    color: #4f46e5;
+    border: 1px solid #c4b5fd;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 .hide-audio-list-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    background: #ddd6fe;
 }
 
 .hide-audio-list-btn:active {
-    transform: translateY(0);
+    opacity: 0.8;
 }
 
 .show-audio-list-btn {
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
-    border: none;
+    padding: 9px 18px;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
     margin-top: 10px;
 }
 
 .show-audio-list-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    background: #d1fae5;
 }
 
 .show-audio-list-btn:active {
-    transform: translateY(0);
+    opacity: 0.8;
 }
 
 .audio-bhajan-items {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
 }
 
 .audio-bhajan-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 12px;
-    background: white;
+    padding: 8px 10px;
+    background: #f9fafb;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #fde68a;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .audio-bhajan-item.has-audio:hover {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    transform: translateX(5px);
-    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.2);
+    background: #fef3c7;
+    border-color: #fde68a;
 }
 
 .audio-bhajan-item.no-audio {
     cursor: default;
-    opacity: 0.8;
+    opacity: 0.55;
 }
 
 .audio-bhajan-number {
     font-weight: 700;
     color: #d97706;
-    min-width: 20px;
-    font-size: 0.9rem;
+    min-width: 22px;
+    font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
 .audio-bhajan-name {
     flex: 1;
-    font-weight: 600;
+    font-weight: 500;
     color: #1f2937;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .audio-bhajan-shruthi {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #6b7280;
+    flex-shrink: 0;
 }
 
 /* Playing indicator - hidden by default */
@@ -2522,33 +2645,33 @@ body {
     display: none;
     align-items: flex-end;
     justify-content: center;
-    gap: 4px;
-    height: 28px;
-    padding: 6px 14px;
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+    gap: 3px;
+    height: 22px;
+    padding: 4px 10px;
+    background: #dc2626;
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
 .playing-bar {
-    width: 5px;
+    width: 4px;
     background: #ffffff;
-    border-radius: 3px;
+    border-radius: 2px;
     animation: playing-bounce 0.5s ease-in-out infinite;
 }
 
 .playing-bar:nth-child(1) {
-    height: 12px;
+    height: 10px;
     animation-delay: 0s;
 }
 
 .playing-bar:nth-child(2) {
-    height: 20px;
+    height: 16px;
     animation-delay: 0.12s;
 }
 
 .playing-bar:nth-child(3) {
-    height: 14px;
+    height: 12px;
     animation-delay: 0.24s;
 }
 
@@ -2567,10 +2690,9 @@ body {
 }
 
 .audio-bhajan-item.playing {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border-color: #f59e0b;
-    border-left: 5px solid #dc2626;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    background: #fef3c7;
+    border-color: #fbbf24;
+    border-left: 3px solid #dc2626;
 }
 
 .audio-bhajan-item.playing .audio-bhajan-number {
@@ -2578,262 +2700,120 @@ body {
 }
 
 .audio-bhajan-item.playing .audio-bhajan-name {
-    color: #b45309;
-    font-weight: 700;
-}
-
-/* Mobile Audio Player Styles */
-.mobile-audio-player {
-    display: none;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.mobile-seekbar-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.mobile-time {
-    font-size: 0.75rem;
-    font-weight: 600;
     color: #92400e;
-    min-width: 35px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-.mobile-seekbar {
-    flex: 1;
-    height: 6px;
-    -webkit-appearance: none;
-    appearance: none;
-    background: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-}
-
-.mobile-seekbar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4);
-    border: 2px solid white;
-}
-
-.mobile-seekbar::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.4);
-    border: 2px solid white;
-}
-
-.mobile-controls-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 8px;
-    width: 100%;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-}
-
-.mobile-ctrl-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    padding: 4px 5px;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
-    min-width: auto;
-}
-
-.mobile-ctrl-btn span {
-    font-size: 1.4rem;
-}
-
-.mobile-ctrl-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
-}
-
-.mobile-ctrl-btn:active {
-    transform: scale(0.98);
-}
-
-.mobile-play-btn {
-    padding: 5px 8px;
-    font-size: 1.8rem;
 }
 
 /* Audio selection prompt */
 .audio-selection-prompt {
     text-align: center;
-    padding: 15px;
-    color: #92400e;
-    font-weight: 600;
-    font-size: 1rem;
-    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-    border-radius: 12px;
-    margin-top: 15px;
-    border: 2px dashed #fcd34d;
+    padding: 14px;
+    color: #78350f;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: #fffbeb;
+    border-radius: 10px;
+    margin-top: 12px;
+    border: 1px dashed #fcd34d;
 }
 
 .play-all-btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 25px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 8px 22px;
+    background: #059669;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
+    transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .play-all-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+    background: #047857;
+    transform: translateY(-1px);
 }
 
 /* Responsive styles for audio section */
 @media (max-width: 768px) {
     .audio-player-container {
-        padding: 15px 12px;
-        margin-top: 15px;
-        border-radius: 15px;
-    }
-
-    .audio-player-container::before {
-        border-radius: 17px;
+        padding: 16px 14px;
+        margin-top: 14px;
     }
 
     .audio-label {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
         word-wrap: break-word;
     }
 
-    .desktop-audio {
-        display: none;
-    }
-
-    .mobile-audio-player {
-        display: block;
-    }
-
-    .mobile-seekbar-row {
+    .cp-controls-row {
         gap: 6px;
-        margin-bottom: 10px;
     }
 
-    .mobile-time {
-        font-size: 0.7rem;
-        min-width: 32px;
-    }
-
-    .mobile-controls-row {
-        gap: 6px;
+    .cp-controls-row .cp-btn {
+        min-height: 48px;
+        padding: 7px 4px;
     }
 
     .audio-bhajan-list {
-        padding: 15px;
+        padding: 10px;
     }
 
     .audio-bhajan-item {
         flex-wrap: wrap;
-        padding: 8px 12px;
+        padding: 7px 10px;
     }
 
     .audio-bhajan-shruthi {
         width: 100%;
-        margin-top: 5px;
-        padding-left: 35px;
+        margin-top: 3px;
+        padding-left: 30px;
     }
 }
 
 @media (max-width: 480px) {
     .audio-player-container {
-        padding: 10px 8px;
+        padding: 12px 10px;
         margin-top: 10px;
-        border-radius: 12px;
-    }
-
-    .audio-player-container::before {
-        border-radius: 14px;
     }
 
     .audio-label {
-        font-size: 0.9rem;
-        margin-bottom: 8px;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
     }
 
-    .mobile-seekbar-row {
-        gap: 5px;
-        margin-bottom: 8px;
-    }
-
-    .mobile-time {
-        font-size: 0.65rem;
-        min-width: 28px;
-    }
-
-    .mobile-seekbar {
-        height: 5px;
-    }
-
-    .mobile-seekbar::-webkit-slider-thumb {
-        width: 16px;
-        height: 16px;
-    }
-
-    .mobile-seekbar::-moz-range-thumb {
-        width: 16px;
-        height: 16px;
-    }
-
-    .mobile-controls-row {
+    .cp-controls-row {
         gap: 5px;
     }
 
-    .mobile-ctrl-btn {
-        padding: 4px 5px;
-        font-size: 1.2rem;
-        border-radius: 6px;
+    .cp-controls-row .cp-btn {
+        min-height: 44px;
+        padding: 6px 3px;
+        border-radius: 8px;
     }
 
-    .mobile-ctrl-btn span {
-        font-size: 1rem;
+    .cp-btn-icon,
+    .cp-skip-arrow {
+        font-size: 1.5rem;
     }
 
-    .mobile-play-btn {
-        padding: 5px 8px;
-        font-size: 1.4rem;
+    .cp-time {
+        font-size: 0.72rem;
+        min-width: 34px;
+    }
+
+    .cp-seekbar::-webkit-slider-thumb {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cp-seekbar::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
     }
 
 }
@@ -2877,27 +2857,27 @@ body {
 .show-bhajan-list-btn {
     display: inline-block;
     width: 100%;
-    max-width: 350px;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 0.95rem;
+    max-width: 320px;
+    padding: 10px 20px;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.2s ease, transform 0.15s ease;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.4);
 }
 
 .show-bhajan-list-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 16px rgba(16, 185, 129, 0.5);
+    background: #d1fae5;
+    transform: translateY(-1px);
 }
 
 .show-bhajan-list-btn:active {
     transform: translateY(0);
+    opacity: 0.8;
 }
 
 /* Mobile adjustments for show button */
@@ -2907,7 +2887,7 @@ body {
     }
 
     .show-bhajan-list-btn {
-        padding: 10px 20px;
+        padding: 9px 18px;
         font-size: 0.85rem;
     }
 }
@@ -2918,7 +2898,7 @@ body {
     }
 
     .show-bhajan-list-btn {
-        padding: 8px 16px;
+        padding: 8px 14px;
         font-size: 0.8rem;
     }
 }
@@ -2937,27 +2917,27 @@ body {
 .stop-audio-btn {
     display: inline-block;
     width: 100%;
-    max-width: 350px;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 0.95rem;
+    max-width: 320px;
+    padding: 10px 20px;
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.2s ease, transform 0.15s ease;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 3px 12px rgba(239, 68, 68, 0.4);
 }
 
 .stop-audio-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 16px rgba(239, 68, 68, 0.5);
+    background: #fecaca;
+    transform: translateY(-1px);
 }
 
 .stop-audio-btn:active {
     transform: translateY(0);
+    opacity: 0.8;
 }
 
 /* Mobile adjustments for stop button */
@@ -3132,6 +3112,7 @@ body {
 /* Improved contrast for audio label */
 .audio-label {
     color: #78350f;
+    font-size: 1rem;
 }
 
 /* Improved contrast for placeholder text */
@@ -3550,5 +3531,695 @@ body {
     .singer-result-details .bhajan-shruthi,
     .singer-result-details .sung-date {
         font-size: 0.7rem;
+    }
+}
+
+/* ── Mobile scrollbar improvements ── */
+/* Hide default scrollbar on touch devices, use momentum scrolling */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Thin, styled scrollbar for webkit (Chrome/Safari on Android/iOS desktop mode) */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 107, 107, 0.4);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(255, 107, 107, 0.7);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 107, 107, 0.4) transparent;
+}
+
+/* On small screens, hide scrollbar entirely for cleaner swipe feel */
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    * {
+        scrollbar-width: none;
+    }
+
+    /* Ensure all scrollable containers use momentum scrolling on iOS */
+    .results-container,
+    .singer-results-container,
+    .main-container,
+    .section,
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* ======================================================================
+   DEVOTIONAL THEME OVERRIDES — Saffron / Gold / Maroon
+   ====================================================================== */
+
+/* CSS variables for the devotional palette — soft & pleasant */
+:root {
+    --dev-saffron:      #F4A340;
+    --dev-saffron-light:#F7BF72;
+    --dev-gold:         #E8A020;
+    --dev-gold-light:   #FFD97A;
+    --dev-maroon:       #B05A3A;
+    --dev-maroon-dark:  #7C3A22;
+    --dev-cream:        #FFFBF5;
+    --dev-cream-mid:    #FFF5E8;
+    --dev-amber:        #F4A340;
+    --dev-border:       rgba(244, 163, 64, 0.22);
+    --dev-glow:         rgba(244, 163, 64, 0.15);
+}
+
+/* ── Body & page background ── */
+body {
+    background: linear-gradient(160deg, #FEF9F2 0%, #FFF4E3 50%, #FEF0E8 100%) !important;
+    animation: none !important;
+}
+
+/* ── Main container ── */
+.container {
+    background: transparent !important;
+}
+
+/* ── Section cards ── */
+.search-section {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+    box-shadow: 0 2px 12px rgba(244, 163, 64, 0.08), 0 1px 4px rgba(0,0,0,0.04) !important;
+}
+
+/* ── Section titles ── */
+.section-title {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-saffron) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ── Filter labels ── */
+.filter-label {
+    color: var(--dev-maroon) !important;
+    font-weight: 600 !important;
+}
+
+/* ── Search & filter inputs ── */
+.search-input,
+.filter-select,
+.date-input {
+    border-color: rgba(244, 163, 64, 0.35) !important;
+    background: #FFFFFF !important;
+}
+
+.search-input:focus,
+.filter-select:focus,
+.date-input:focus {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 0 0 3px var(--dev-glow) !important;
+    outline: none !important;
+}
+
+.filter-select:hover,
+.date-input:hover {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 4px 12px var(--dev-glow) !important;
+}
+
+/* ── Search buttons ── */
+.search-button {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+}
+
+.search-button:hover {
+    background: linear-gradient(135deg, var(--dev-saffron-light) 0%, var(--dev-saffron) 100%) !important;
+    box-shadow: 0 8px 25px rgba(230, 92, 0, 0.40) !important;
+}
+
+/* ── Day badges (Thursday is purple → maroon) ── */
+.day-badge.day-thursday {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    color: #fff !important;
+}
+
+/* ── Live results (name search dropdown) ── */
+.live-results {
+    border-color: var(--dev-border) !important;
+    background: #FFFFFF !important;
+}
+
+.live-result-item {
+    border-bottom-color: var(--dev-border) !important;
+    background: #FFFFFF !important;
+}
+
+.live-result-item.clickable-row:hover,
+.live-result-item.clickable-row:active {
+    background: #FFF8EE !important;
+    border-left: 3px solid var(--dev-saffron) !important;
+}
+
+.bhajan-name {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 600 !important;
+}
+
+.sung-date {
+    color: #5C3D1E !important;
+}
+
+.singer-info {
+    color: var(--dev-maroon) !important;
+}
+
+.has-audio-tag {
+    font-size: 0.85rem;
+    margin-left: 4px;
+}
+
+.search-result-count {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--dev-maroon);
+    background: linear-gradient(90deg, #FFF3DC, #FFFAF4);
+    border-bottom: 1px solid var(--dev-border);
+    letter-spacing: 0.02em;
+}
+
+/* ── Results section ── */
+.results-section {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+}
+
+.result-item {
+    border-left: 4px solid var(--dev-saffron) !important;
+    background: #FFFFFF !important;
+}
+
+.result-item:hover {
+    background: #FFF8EE !important;
+    border-left-color: var(--dev-maroon) !important;
+}
+
+.result-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+.result-number {
+    color: var(--dev-saffron) !important;
+}
+
+/* ── Hide / Close / Show buttons (results) ── */
+.hide-results-btn,
+.close-results-btn,
+.show-bhajan-list-btn,
+.stop-audio-btn,
+.floating-show-singer-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.hide-results-btn:hover,
+.close-results-btn:hover,
+.show-bhajan-list-btn:hover,
+.stop-audio-btn:hover,
+.floating-show-singer-btn:hover {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-maroon-dark) 100%) !important;
+}
+
+/* ── Audio section ── */
+.audio-section {
+    background: #FFFFFF !important;
+    border-top: 3px solid var(--dev-saffron-light) !important;
+}
+
+/* ── Audio dropdown — custom trigger ── */
+.custom-audio-trigger {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+    color: var(--dev-maroon-dark) !important;
+}
+
+.custom-audio-trigger:hover,
+.custom-audio-select.open .custom-audio-trigger {
+    border-color: var(--dev-saffron) !important;
+    box-shadow: 0 0 0 3px var(--dev-glow) !important;
+}
+
+.custom-audio-selected-text.has-value {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 600 !important;
+}
+
+.custom-audio-arrow {
+    color: var(--dev-saffron) !important;
+    font-size: 0.85rem !important;
+}
+
+/* ── Audio dropdown — panel ── */
+.custom-audio-panel {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+    box-shadow: 0 12px 40px rgba(123, 24, 24, 0.18), 0 4px 12px rgba(0,0,0,0.08) !important;
+    border-radius: 0 0 14px 14px !important;
+    z-index: 99999 !important;
+}
+
+/* Group headers */
+.custom-audio-group-header.regular {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    color: #FFD700 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.06em !important;
+    padding: 10px 16px !important;
+}
+
+.custom-audio-group-header.special {
+    background: linear-gradient(135deg, var(--dev-gold) 0%, var(--dev-saffron) 100%) !important;
+    color: #fff !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.06em !important;
+    padding: 10px 16px !important;
+}
+
+/* Dropdown options */
+.custom-audio-option {
+    padding: 12px 16px 12px 22px !important;
+    font-size: 0.92rem !important;
+    color: #3B1A0A !important;
+    border-bottom: 1px solid rgba(200, 144, 10, 0.12) !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1.3 !important;
+}
+
+.custom-audio-option:hover {
+    background: linear-gradient(90deg, #FFF3DC, #FFE9C0) !important;
+    color: var(--dev-maroon) !important;
+    padding-left: 26px !important;
+    font-weight: 500 !important;
+}
+
+.custom-audio-option.selected {
+    background: linear-gradient(90deg, #FFE0A0, #FFD070) !important;
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 700 !important;
+}
+
+/* ── Audio player container ── */
+.audio-player-container {
+    background: #FFF9F2 !important;
+    border: 2px solid var(--dev-border) !important;
+}
+
+.audio-label {
+    color: var(--dev-maroon-dark) !important;
+    font-weight: 700 !important;
+}
+
+/* Custom player controls */
+.cp-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.cp-btn:hover {
+    background: linear-gradient(135deg, var(--dev-saffron-light) 0%, var(--dev-saffron) 100%) !important;
+}
+
+.cp-time {
+    color: var(--dev-maroon) !important;
+}
+
+/* Seekbar track */
+.cp-seekbar {
+    accent-color: var(--dev-saffron) !important;
+}
+
+/* ── Audio bhajan list ── */
+.audio-bhajan-list {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--dev-border) !important;
+}
+
+.audio-bhajan-list-header {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, #9B2335 100%) !important;
+    border-bottom: 2px solid var(--dev-gold) !important;
+}
+
+.audio-bhajan-list-title {
+    color: #FFD700 !important;
+}
+
+.audio-bhajan-item {
+    border-bottom: 1px solid rgba(244, 163, 64, 0.12) !important;
+    background: #FFFFFF !important;
+    min-height: 48px !important;
+}
+
+.audio-bhajan-item.has-audio:hover {
+    background: #FFF5E8 !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+}
+
+.audio-bhajan-item.playing {
+    background: #FFF0D4 !important;
+    border-left: 4px solid var(--dev-maroon) !important;
+}
+
+.audio-bhajan-name {
+    color: var(--dev-maroon-dark) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+.audio-bhajan-number {
+    color: var(--dev-saffron) !important;
+    font-weight: 700 !important;
+}
+
+.audio-bhajan-singer {
+    color: var(--dev-maroon) !important;
+}
+
+/* Close / Hide buttons on audio list */
+.close-audio-list-btn,
+.hide-audio-list-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* ── Audio hint modal ── */
+.hint-modal-content {
+    background: #FFFFFF !important;
+    border: 2px solid var(--dev-border) !important;
+}
+
+.hint-ok-btn {
+    background: linear-gradient(135deg, var(--dev-saffron) 0%, var(--dev-maroon) 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* ── Connect & footer ── */
+.connect-section {
+    background: linear-gradient(135deg, var(--dev-maroon) 0%, var(--dev-maroon-dark) 100%) !important;
+    color: #FFD700 !important;
+}
+
+.connect-email {
+    color: #FFD700 !important;
+}
+
+.footer {
+    background: var(--dev-maroon-dark) !important;
+    color: rgba(255, 215, 0, 0.85) !important;
+}
+
+/* ── Singer results ── */
+.singer-results-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+.singer-search-item.has-audio-indicator {
+    border-left: 3px solid var(--dev-saffron) !important;
+}
+
+.singer-search-item.currently-playing {
+    background: linear-gradient(90deg, #FFE0A0, #FFD070) !important;
+    border-left: 4px solid var(--dev-maroon) !important;
+}
+
+/* ── Shruthi badge ── */
+.shruthi-simple {
+    background: linear-gradient(135deg, #FFF0D0, #FFE4A0) !important;
+    color: var(--dev-maroon) !important;
+    border: 1px solid var(--dev-border) !important;
+}
+
+/* ── Playing bars (animated) ── */
+.playing-bar {
+    background: var(--dev-saffron) !important;
+}
+
+/* ── Date results header ── */
+.date-results-header {
+    background: linear-gradient(135deg, #FFF3DC, #FFE9C0) !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+}
+
+.date-results-title {
+    color: var(--dev-maroon-dark) !important;
+}
+
+/* ── Mobile: larger touch targets for audio dropdown ── */
+@media (max-width: 768px) {
+    .custom-audio-trigger {
+        padding: 14px 16px !important;
+        font-size: 0.95rem !important;
+        min-height: 52px !important;
+    }
+
+    .custom-audio-option {
+        padding: 14px 16px 14px 22px !important;
+        font-size: 0.9rem !important;
+        min-height: 52px !important;
+    }
+
+    .custom-audio-group-header {
+        font-size: 0.78rem !important;
+        padding: 10px 14px !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .audio-bhajan-item {
+        min-height: 52px !important;
+        padding: 10px 10px !important;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.9rem !important;
+    }
+
+    /* Bigger, thumb-friendly buttons */
+    .search-button,
+    .cp-btn,
+    .close-audio-list-btn,
+    .hide-audio-list-btn,
+    .show-bhajan-list-btn,
+    .stop-audio-btn {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Name search result items — comfortable tap targets */
+    .live-result-item {
+        padding: 14px 14px !important;
+    }
+
+    .bhajan-name {
+        font-size: 0.95rem !important;
+    }
+
+    /* Slightly larger filter select */
+    .filter-select,
+    .date-input {
+        min-height: 48px !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Page title */
+    .page-title h1 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Section cards: less horizontal padding on small screens */
+    .search-section {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-audio-trigger {
+        font-size: 0.9rem !important;
+        min-height: 50px !important;
+    }
+
+    .custom-audio-option {
+        font-size: 0.88rem !important;
+        min-height: 50px !important;
+        padding: 12px 14px 12px 20px !important;
+    }
+
+    .audio-bhajan-name {
+        font-size: 0.85rem !important;
+    }
+
+    .search-section {
+        padding: 14px 10px !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* ======================================================================
+   SEARCH RESULTS — Clean & Aligned
+   ====================================================================== */
+
+/* Container: tighter gap, no extra margin */
+.live-results {
+    margin-top: 12px !important;
+    gap: 6px !important;
+}
+
+/* Each result card */
+.live-result-item {
+    padding: 11px 14px !important;
+    border-radius: 10px !important;
+    border-left: 4px solid var(--dev-saffron) !important;
+    background: #FFFFFF !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    box-shadow: 0 1px 4px rgba(200,144,10,0.08) !important;
+    transition: background 0.18s ease, border-left-color 0.18s ease !important;
+    transform: none !important;
+}
+
+.live-result-item.clickable-row:hover,
+.live-result-item.clickable-row:active {
+    background: #FFF0D8 !important;
+    border-left-color: var(--dev-maroon) !important;
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(123,24,24,0.12) !important;
+}
+
+.live-result-item.no-results {
+    border-left: 4px solid #e2e8f0 !important;
+    background: #fafafa !important;
+    color: #9ca3af !important;
+    font-style: italic !important;
+    font-size: 0.88rem !important;
+    padding: 14px !important;
+}
+
+/* Line 1: name + audio icon — space between */
+.name-search-line-1 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+}
+
+.live-result-item .bhajan-name {
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+    color: var(--dev-maroon-dark) !important;
+    line-height: 1.3 !important;
+    flex: 1 !important;
+    min-width: 0 !important;         /* allow text truncation if needed */
+}
+
+.has-audio-tag {
+    font-size: 0.85rem !important;
+    flex-shrink: 0 !important;
+    opacity: 0.75 !important;
+}
+
+/* Line 2: day badge + date + shruthi — all in one row, aligned */
+.name-search-line-2 {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+}
+
+.name-search-line-2 .detail-badge.day-badge {
+    font-size: 0.7rem !important;
+    padding: 2px 8px !important;
+    border-radius: 20px !important;
+    flex-shrink: 0 !important;
+    line-height: 1.6 !important;
+}
+
+.live-result-item .sung-date {
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    color: #5C3D1E !important;
+    flex-shrink: 0 !important;
+}
+
+.name-search-line-2 .shruthi-simple {
+    font-size: 0.7rem !important;
+    padding: 2px 7px !important;
+    border-radius: 6px !important;
+    line-height: 1.5 !important;
+}
+
+/* Line 4: singer */
+.name-search-line-4 {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.singer-info {
+    font-size: 0.76rem !important;
+    color: var(--dev-maroon) !important;
+    opacity: 0.85 !important;
+}
+
+/* Result count pill */
+.search-result-count {
+    padding: 5px 12px !important;
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em !important;
+    background: linear-gradient(90deg, #FFF3DC, #FFFAF4) !important;
+    border-bottom: 1px solid var(--dev-border) !important;
+    color: var(--dev-maroon) !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+    .live-result-item {
+        padding: 10px 12px !important;
+        gap: 4px !important;
+    }
+
+    .live-result-item .bhajan-name {
+        font-size: 0.92rem !important;
+    }
+
+    .live-result-item .sung-date {
+        font-size: 0.74rem !important;
+    }
+
+    .singer-info {
+        font-size: 0.72rem !important;
     }
 }
