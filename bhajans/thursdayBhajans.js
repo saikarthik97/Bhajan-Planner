@@ -202,7 +202,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-08",
     startTime: "16:12",
-    singer: 'Karthik'
+    singer: 'Sai Karthik'
   },
   {
     name: "Bhajaranga Hare Vittala",
@@ -299,7 +299,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-01-22",
     startTime: "16:10",
-    singer: 'Karthik'
+    singer: 'Sai Karthik'
   },
   {
     name: "Govinda Hare Gopala Hare Hey Gopi Gopa Bala",
@@ -451,7 +451,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-02-12",
     startTime: "17:22",
-    singer: 'Karthik'
+    singer: 'Sai Karthik'
   },
   {
     name: "Deena Bandho Vittala Jai",
@@ -522,7 +522,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-03-05",
     startTime: "3:52",
-    singer: 'Karthik'
+    singer: 'Sai Karthik'
   },
   {
     name: "Satyaswaroopini Maa",
@@ -601,7 +601,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "0:01",
     singer: 'A.Srinivas'
   },
   {
@@ -609,39 +609,39 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "5.5P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
-    singer: 'Geetha,Jyothi & Eshwari'
+    startTime: "5:08",
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Jagadeshwari Dayakaro Maa",
     shruthi: { gents: "4P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "8:34",
     singer: 'Eshwar'
   },
    {
     name: "Bala Gopala(2) Bala Gopala",
-    shruthi: { gents: "", ladies: "" },
+    shruthi: { gents: "", ladies: "7P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "11:27",
     singer: 'Praneetha & Sri'
   },
    {
     name: "Bhajare Rama Charan",
     shruthi: { gents: "1P", ladies: "" },
-    day: "",
+    day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "17:06",
     singer: 'Santosh'
   },
    {
     name: "Allah Sai Allah Maula Sai Allah",
-    shruthi: { gents: "", ladies: "" },
+    shruthi: { gents: "", ladies: "1P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "21:27",
     singer: 'Lavanya'
   },
    {
@@ -649,23 +649,23 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
-    singer: 'Karthik'
+    startTime: "26:35",
+    singer: 'Sai Karthik'
   },
    {
     name: "Shailaja Vallabha Shambho Shiva",
     shruthi: { gents: "", ladies: "6P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
-    singer: 'Geetha,Jyothi & Eshwari'
+    startTime: "30:10",
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Raksha Raksha Jagadeeshwara",
     shruthi: { gents: "5.5P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "33:20",
     singer: 'Ankit'
   },
    {
@@ -673,7 +673,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "35:22",
     singer: 'Praneetha & Sri'
   },
    {
@@ -681,7 +681,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "1P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "38:24",
     singer: 'A.Srinivas'
   },
    {
@@ -689,7 +689,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "6P" },
     day: "Thursday",
     dateSung: "2026-04-16",
-    startTime: "",
+    startTime: "40:53",
     singer: 'Lavanya'
   },
   //  {

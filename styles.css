@@ -3170,6 +3170,38 @@ body {
     margin-top: 4px;
 }
 
+.name-search-last-sung {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.last-sung-label {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.last-sung-date {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 0.01em;
+}
+
+.last-sung-by {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 400;
+}
+
+.last-sung-by strong {
+    color: #6d28d9;
+    font-weight: 700;
+}
+
 /* Singer info text styling */
 .singer-info {
     color: #7c3aed;

@@ -14,7 +14,7 @@ const ramzan2026RawData = [
     day: "Saturday",
     dateSung: "2026-03-21",
     startTime: "3:08",
-    singer: "Karthik"
+    singer: "Sai Karthik"
   },
   {
     name: "Mata Pita Guru Bandhu Sakha Hari",
@@ -54,7 +54,7 @@ const ramzan2026RawData = [
     day: "Saturday",
     dateSung: "2026-03-21",
     startTime: "25:30",
-    singer: "Eshwari & Leela"
+    singers: "Eshwari & Leela"
   },
   {
     name: "Allah Ho Akbar",
@@ -78,7 +78,7 @@ const ramzan2026RawData = [
     day: "Saturday",
     dateSung: "2026-03-21",
     startTime: "37:33",
-    singer: "Karthik"
+    singer: "Sai Karthik"
   },
   {
     name: "Salam Valekhum (2)",

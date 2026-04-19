@@ -181,7 +181,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "0:00",
-    singer: "Karthik",
+    singer: "Sai Karthik",
   },
   {
     name: "Satya Dharma Shanti prema Sabko Deejo",
@@ -624,7 +624,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "16:49",
-    singer: "Karthik",
+    singer: "Sai Karthik",
   },
   {
     name: "Atma Ram Aananda Ram",
@@ -849,7 +849,7 @@ const sundayBhajansRawData = [
     day: "sunday",
     dateSung: "2026-01-18",
     startTime: "25:57",
-    singer: "Karthik",
+    singer: "Sai Karthik",
   },
   {
     name: "Kodanda Rama Raghava Jaya Kalyana Krishna Keshava",
@@ -914,7 +914,7 @@ const sundayBhajansRawData = [
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "4:08",
-    singer: "Karthik",
+    singer: "Sai Karthik",
   },
   {
     name: "Hey Deena Dayala Sai Rama Ram",
@@ -1026,7 +1026,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-01",
     startTime: "8:15",
-    singer: "Karthik",
+    singer: "Sai Karthik",
   },
   {
     name: "Sri Sai Padam Shiva Sai Padam",
@@ -1227,7 +1227,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-22",
     startTime: "11:23",
-    singer: "Karthik"
+    singer: "Sai Karthik"
   },
   {
     name: "Neela Megha Shyama Krishna",
@@ -1291,7 +1291,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-22",
     startTime: "45:31",
-    singer: "Karthik"
+    singer: "Sai Karthik"
   },
   //5th apr 2026
   {
@@ -1356,7 +1356,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-04-05",
     startTime: "25:48",
-    singer: 'Karthik'
+    singer: 'Sai Karthik'
   },
   {
     name: "Dhimitha Dhim(2) Nache Bhola Naam",
@@ -1404,15 +1404,15 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "7P" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
-    singer: '',
+    startTime: "0:01",
+    singer: 'Gayathri',
   },
    {
     name: "Satya Sai Smaranam(2)",
     shruthi: { gents: "4P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "2:30",
     singer: 'Lal',
   },
    {
@@ -1420,23 +1420,23 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "6:26",
     singer: 'Sunitha',
   },
    {
-    name: "Dayakaro Sai Narayana",
+    name: "Dayakaro Sai Narayana (Raag pilu) ",
     shruthi: { gents: "3P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
-    singer: 'Karthik',
+    startTime: "10:38",
+    singer: 'Sai Karthik',
   },
    {
     name: "Aao Aao Sai Pyaare",
     shruthi: { gents: "", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "15:33",
     singer: 'Lavanya',
   },
    {
@@ -1444,7 +1444,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "2P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "19:03",
     singer: 'Swaroop',
   },
    {
@@ -1452,7 +1452,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "4P" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "23:26",
     singer: 'Sri Vidya & Vani',
   },
    {
@@ -1460,7 +1460,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "5P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "27:00",
     singer: 'G.Srinivas',
   },
    {
@@ -1468,15 +1468,15 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "2P" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
-    singer: 'Geetha,Jyothi & Eshwari',
+    startTime: "31:37",
+    singers: 'Geetha,Jyothi & Eshwari',
   },
    {
     name: "Hey Nanda(2) Gopala Aananda(2) Gopala",
     shruthi: { gents: "5P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "34:08",
     singer: 'Eshwar',
   },
    {
@@ -1484,7 +1484,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "", ladies: "4P" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "36:11",
     singer: 'Yoshitha & Vathsalya',
   },
    {
@@ -1492,7 +1492,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "38:33",
     singer: 'Venu',
   },
    {
@@ -1500,7 +1500,7 @@ const sundayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "sunday",
     dateSung: "2026-04-19",
-    startTime: "",
+    startTime: "41:37",
     singer: 'Sridhar',
   },
 
