@@ -24,7 +24,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "12:33",
-        singer: "Karthik"
+        singer: "Sai Karthik"
     },
     {
         name: "Dayakaro Shiva Gangadhari",
@@ -150,7 +150,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "79:58",
-        singer: "Karthik"
+        singer: "Sai Karthik"
     },
     {
         name: "Shaila Girishwara Uma Maheshwara",
@@ -255,7 +255,7 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "129:56",
-        singer: "Karthik"
+        singer: "Sai Karthik"
     },
     {
         name: "Shiva(2) hara(2) Bhola Maheshwara",
@@ -332,13 +332,13 @@ const shivarathri2026RawData = [
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "170:42",
-        singers: "Karthik & Abhishek"
+        singers: "Sai Karthik & Abhishek"
     },
     {
         name: "Hara Ganga Jatadhara [ gents ]",
         day: "Sunday",
         dateSung: "2026-02-15",
         startTime: "172:40",
-        singers: "Abhishek, Swaroop & Karthik"
+        singers: "Abhishek, Swaroop & Sai Karthik"
     },
 ]

@@ -142,25 +142,14 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
     return;
   }
 
-  // Filter bhajans: prefix match first, then any-word-start, then substring
+  // Filter: typed text (spaces ignored) must be >= 70% of bhajan name length and match from start
   const searchTermLower = searchTerm.toLowerCase();
+  const searchCompact = searchTermLower.replace(/\s+/g, "");
   const filteredResults = bhajansDatabase.filter((bhajan) => {
     if (!bhajan.name) return false;
-    const nameLower = bhajan.name.toLowerCase();
-
-    // Prefix match
-    if (nameLower.startsWith(searchTermLower)) return true;
-
-    // Match start of any word
-    const words = nameLower.split(/\s+/);
-    for (const word of words) {
-      if (word.startsWith(searchTermLower)) return true;
-    }
-
-    // Substring match (anywhere in name)
-    if (nameLower.includes(searchTermLower)) return true;
-
-    return false;
+    const nameCompact = bhajan.name.toLowerCase().replace(/\s+/g, "");
+    const threshold = Math.ceil(nameCompact.length * 0.6);
+    return searchCompact.length >= threshold && nameCompact.startsWith(searchCompact);
   });
 
   // Deduplicate by name, keeping only the latest dateSung
@@ -193,12 +182,13 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
                 </div>
                 <div class="name-search-line-2">
                     <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
-                    <span class="sung-date">${formatDate(bhajan.dateSung)}</span>
                     ${formatShruthiSimple(bhajan.shruthi)}
                 </div>
-                ${(bhajan.singer || bhajan.singers) ? `<div class="name-search-line-4">
-                    <span class="singer-info">🎤 ${bhajan.singer || bhajan.singers}</span>
-                </div>` : ''}
+                <div class="name-search-last-sung">
+                    <span class="last-sung-label">Last sung on</span>
+                    <span class="last-sung-date">${formatDate(bhajan.dateSung)}</span>
+                    ${(bhajan.singer || bhajan.singers) ? `<span class="last-sung-by">by <strong>${bhajan.singer || bhajan.singers}</strong></span>` : ''}
+                </div>
             </div>
         `;
       }).join("");
@@ -244,9 +234,35 @@ function resetOtherFilters(changedFilter) {
 let currentSingerFilter = null;
 let currentSingerResults = [];
 
+const GENTS_SINGERS = new Set([
+  // Individual names (matching split values from singer field)
+  "A.Srinivas", "Abhishek", "Abhiram", "Ankit", "Charan", "Eshwar", "G.Srinivas", "Lal", "Ganapathi",
+  "Sai Karthik", "Ramakrishna", "Santosh", "Shantha Krishna", "Sharath", "Sridhar", "Swaroop", "Venu",
+  // Group entries (matching singers field exactly)
+  "Abhishek & Swaroop", "Sai Karthik & Abhishek", "Abhishek, Swaroop & Sai Karthik"
+].map(s => s.toLowerCase()));
+
+function getSelectedSinger() {
+  const gents = document.getElementById("singerFilterGents");
+  const ladies = document.getElementById("singerFilterLadies");
+  if (gents && gents.value !== "all") return gents.value;
+  if (ladies && ladies.value !== "all") return ladies.value;
+  return "all";
+}
+
+function onSingerDropdownChange(changed) {
+  if (changed === "gents") {
+    const ladies = document.getElementById("singerFilterLadies");
+    if (ladies) ladies.value = "all";
+  } else {
+    const gents = document.getElementById("singerFilterGents");
+    if (gents) gents.value = "all";
+  }
+}
+
 // Show singer's songs automatically when singer is selected from dropdown
 function showSingerSongs() {
-  const singerFilter = document.getElementById("singerFilter").value;
+  const singerFilter = getSelectedSinger();
 
   // Clear name search results
   const nameSearchResults = document.getElementById("nameSearchResults");
@@ -266,11 +282,9 @@ function showSingerSongs() {
 
   // Filter bhajans by the selected singer
   let results = bhajansDatabase.filter((bhajan) => {
-    // For "singers" field, do exact match (e.g., "Geetha,Jyothi & Eshwari")
     if (bhajan.singers) {
       return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
     }
-    // For "singer" field, check if selected singer is in the list
     if (bhajan.singer) {
       const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim().toLowerCase());
       return singerList.includes(singerFilter.toLowerCase());
@@ -287,22 +301,18 @@ function showSingerSongs() {
 
 // Quick Search Function
 function quickSearch() {
-  // Close other sections first (but keep audio playing)
   const nameSearchResults = document.getElementById("nameSearchResults");
   if (nameSearchResults) nameSearchResults.innerHTML = "";
 
-  const singerFilter = document.getElementById("singerFilter").value;
+  const singerFilter = getSelectedSinger();
 
   let results = bhajansDatabase;
 
-  // Filter by singer (check if singer name appears in the singer or singers field)
   if (singerFilter !== "all") {
     results = results.filter((bhajan) => {
-      // For "singers" field, do exact match (e.g., "Geetha,Jyothi & Eshwari")
       if (bhajan.singers) {
         return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
       }
-      // For "singer" field, check if selected singer is in the list
       if (bhajan.singer) {
         const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim().toLowerCase());
         return singerList.includes(singerFilter.toLowerCase());
@@ -314,35 +324,30 @@ function quickSearch() {
   displayResults(results, "Quick Search Results");
 }
 
-// Populate Singer Dropdown
+// Populate Singer Dropdowns
 function populateSingerDropdown() {
-  const singerSelect = document.getElementById("singerFilter");
-  if (!singerSelect) return;
+  const gentsSelect = document.getElementById("singerFilterGents");
+  const ladiesSelect = document.getElementById("singerFilterLadies");
+  if (!gentsSelect || !ladiesSelect) return;
 
-  // Get unique singers from the database (handles both singer and singers fields)
-  const singers = new Set();
+  // Get unique singers from the database
+  const allSingers = new Set();
   bhajansDatabase.forEach((bhajan) => {
-    // If it's a "singers" field (like "Geetha,Jyothi & Eshwari"), keep as single entry
     if (bhajan.singers && bhajan.singers.trim() !== "") {
-      singers.add(bhajan.singers.trim());
+      allSingers.add(bhajan.singers.trim());
     } else if (bhajan.singer && bhajan.singer.trim() !== "") {
-      // Split by & or , to handle multiple singers in singer field
-      const singerList = bhajan.singer.split(/[&,]/).map(s => s.trim()).filter(s => s);
-      singerList.forEach(singer => {
-        singers.add(singer);
-      });
+      bhajan.singer.split(/[&,]/).map(s => s.trim()).filter(s => s).forEach(s => allSingers.add(s));
     }
   });
 
-  // Sort singers alphabetically (case-insensitive)
-  const sortedSingers = Array.from(singers).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const sorted = Array.from(allSingers).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
-  // Add options for each singer
-  sortedSingers.forEach((singer) => {
+  sorted.forEach((singer) => {
     const option = document.createElement("option");
     option.value = singer;
     option.textContent = singer;
-    singerSelect.appendChild(option);
+    const isGents = GENTS_SINGERS.has(singer.toLowerCase());
+    (isGents ? gentsSelect : ladiesSelect).appendChild(option);
   });
 }
 
@@ -1383,9 +1388,11 @@ function closeResults() {
   currentSingerFilter = null;
   currentSingerResults = [];
 
-  // Reset the singer dropdown
-  const singerFilter = document.getElementById("singerFilter");
-  if (singerFilter) singerFilter.value = "all";
+  // Reset the singer dropdowns
+  const gents = document.getElementById("singerFilterGents");
+  const ladies = document.getElementById("singerFilterLadies");
+  if (gents) gents.value = "all";
+  if (ladies) ladies.value = "all";
 }
 
 // Helper function to close all open sections

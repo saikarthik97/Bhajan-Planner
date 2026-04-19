@@ -70,32 +70,19 @@
         <!-- 4. QUICK SEARCH SECTION -->
         <!-- ================================================================== -->
         <section class="search-section">
-            <h2 class="section-title">Quick Search</h2>
             <div class="quick-search-grid">
-                <!-- Beat Filter (commented out for future use)
+                <!-- Gents Singer Filter -->
                 <div class="filter-group">
-                    <label class="filter-label">Beat:</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="beat6" value="6">
-                            <span>6 Beat</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="beat7" value="7">
-                            <span>7 Beat</span>
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="beat8" value="8">
-                            <span>8 Beat</span>
-                        </label>
-                    </div>
+                    <label for="singerFilterGents" class="filter-label">Singer Name - Gents:</label>
+                    <select id="singerFilterGents" class="filter-select" onchange="onSingerDropdownChange('gents')">
+                        <option value="all">-- Select Singer --</option>
+                    </select>
                 </div>
-                -->
 
-                <!-- Singer Filter -->
+                <!-- Ladies Singer Filter -->
                 <div class="filter-group">
-                    <label for="singerFilter" class="filter-label">Search By Singer Name:</label>
-                    <select id="singerFilter" class="filter-select" onchange="resetOtherFilters('singer')">
+                    <label for="singerFilterLadies" class="filter-label">Singer Name - Ladies:</label>
+                    <select id="singerFilterLadies" class="filter-select" onchange="onSingerDropdownChange('ladies')">
                         <option value="all">-- Select Singer --</option>
                     </select>
                 </div>

@@ -5,7 +5,7 @@ const sankranthi2026 = [
         day: "Thursday",
         dateSung: "2026-01-15",
         startTime: "00:01",
-        singer: "Karthik"
+        singer: "Sai Karthik"
     },
     {
         name: "Ksheerabdhi Sayana Narayana",
