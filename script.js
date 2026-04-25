@@ -506,7 +506,7 @@ function displayDateResults(results, selectedDate) {
         <h3 class="date-results-title">Bhajans on ${formatDate(selectedDate)}</h3>
         <div class="date-results-badges">
           <span class="detail-badge day-badge day-${dayOfWeek.toLowerCase()}">${dayOfWeek}</span>
-          ${festivalName ? `<span class="detail-badge festival-badge">${festivalName}</span>` : ''}
+          ${festivalName ? `<span class="detail-badge festival-badge">${festivalName.replace('Festival - ', '')}</span>` : ''}
         </div>
       </div>
     `;
@@ -569,6 +569,7 @@ function populateAudioDates() {
     if (festival.includes("Bhogi")) return "🔥 ";
     if (festival.includes("Sankranti") || festival.includes("Sankranthi")) return "🌾 ";
     if (festival.includes("Ramzan")) return "🌙 ";
+    if (festival.includes("Aaradhana")) return "🙏 ";
     return "";
   }
 
@@ -805,7 +806,7 @@ function loadAudio() {
           <h3 class="audio-bhajan-list-title">Bhajans on ${formatDate(selectedDate)}</h3>
           <div class="audio-bhajan-badges">
             <span class="detail-badge day-badge day-${dayOfWeek.toLowerCase()}">${dayOfWeek}</span>
-            ${festivalName ? `<span class="detail-badge festival-badge">${festivalName}</span>` : ''}
+            ${festivalName ? `<span class="detail-badge festival-badge">${festivalName.replace('Festival - ', '')}</span>` : ''}
           </div>
         </div>
         <div class="audio-bhajan-header-buttons">
@@ -832,13 +833,15 @@ function loadAudio() {
                 : ""
             }>
             <span class="audio-bhajan-number">${index + 1}.</span>
-            <span class="audio-bhajan-name">${bhajan.name}</span>
+            <div class="audio-bhajan-content">
+              <span class="audio-bhajan-name">${bhajan.name}</span>
+              ${(bhajan.singer || bhajan.singers) ? `<span class="audio-bhajan-singer">${bhajan.singer || bhajan.singers}</span>` : ''}
+            </div>
             <span class="playing-indicator">
               <span class="playing-bar"></span>
               <span class="playing-bar"></span>
               <span class="playing-bar"></span>
             </span>
-            ${(bhajan.singer || bhajan.singers) ? `<span class="audio-bhajan-singer">${bhajan.singer || bhajan.singers}</span>` : ''}
           </div>
         `;
           })

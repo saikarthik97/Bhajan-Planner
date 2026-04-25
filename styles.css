@@ -3955,6 +3955,40 @@ body {
     color: var(--dev-maroon) !important;
 }
 
+/* Name + singer stacked layout inside each bhajan item */
+.audio-bhajan-content {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.audio-bhajan-content .audio-bhajan-name {
+    flex: none;
+}
+
+.audio-bhajan-content .audio-bhajan-singer {
+    margin-left: 0 !important;
+    font-size: 0.75rem !important;
+    align-self: flex-start;
+}
+
+/* Festival badge — keep on one line */
+.festival-badge {
+    white-space: nowrap !important;
+}
+
+/* Special occasion items get a warm cream tint, not stark white */
+.special-occasion-list .audio-bhajan-item {
+    background: #FFFBF2 !important;
+}
+
+.special-occasion-list .audio-bhajan-item.playing {
+    background: #FFF0D4 !important;
+    border-left: 4px solid var(--dev-maroon) !important;
+}
+
 /* Close / Hide buttons on audio list */
 .close-audio-list-btn,
 .hide-audio-list-btn {
