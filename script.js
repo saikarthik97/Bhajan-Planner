@@ -321,7 +321,13 @@ function quickSearch() {
     });
   }
 
-  displayResults(results, "Quick Search Results");
+  if (singerFilter !== "all") {
+    currentSingerFilter = singerFilter;
+    currentSingerResults = results;
+    displaySingerResults(results, singerFilter);
+  } else {
+    displayResults(results, "Quick Search Results");
+  }
 }
 
 // Populate Singer Dropdowns
@@ -399,8 +405,8 @@ function displaySingerResults(results, singerName) {
         })
         .join("")}
     `;
-    // Show both Hide and Close buttons
-    if (hideBtn) hideBtn.style.display = "none";
+    // Show Hide button so users can collapse/restore the list
+    if (hideBtn) hideBtn.style.display = "inline-block";
     if (closeBtn) closeBtn.style.display = "inline-block";
   }
 
@@ -1454,8 +1460,9 @@ document.addEventListener("click", function (event) {
   if (isClickOnModal) return;
 
   // Close results section (date search and quick search)
+  // But never auto-close when singer results are active — user must use Close button
   const resultsSection = document.getElementById("resultsSection");
-  if (resultsSection && resultsSection.style.display !== "none") {
+  if (resultsSection && resultsSection.style.display !== "none" && !currentSingerFilter) {
     const isClickInsideResults = resultsSection.contains(event.target);
     const isClickOnSearchButton = event.target.closest('button[onclick="searchByDate()"]') ||
                                    event.target.closest('button[onclick="quickSearch()"]');
