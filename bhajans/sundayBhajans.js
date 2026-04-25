@@ -1503,6 +1503,111 @@ const sundayBhajansRawData = [
     startTime: "41:37",
     singer: 'Sridhar',
   },
-
+//26th April 2026
+{
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    {
+ name: "",
+        shruthi: { gents: "2P", ladies: "5P" },
+        day: "Friday",
+        dateSung: "2026-04-24",
+        startTime: "",
+        singer: ""
+    },
+    
   
 ];

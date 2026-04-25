@@ -692,6 +692,127 @@ const thursdayBhajansRawData = [
     startTime: "40:53",
     singer: 'Lavanya'
   },
+  //14th April 2026
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
+   {
+    name: "",
+    shruthi: { gents: "", ladies: "" },
+    day: "",
+    dateSung: "",
+    startTime: "",
+    singer: ''
+  },
   //  {
   //   name: "",
   //   shruthi: { gents: "", ladies: "" },
