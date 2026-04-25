@@ -7,7 +7,7 @@
 // ============================================================================
 
 // Combine Sunday, Thursday, and Special Occasions bhajans into a single database
-const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData, ...ramzan2026RawData];
+const bhajansRawData = [...sundayBhajansRawData, ...thursdayBhajansRawData, ...bhogi2026RawData, ...sankranthi2026, ...shivarathri2026RawData, ...ramzan2026RawData, ...aaradhana2026RawData];
 const bhajansDatabase = bhajansRawData.map((bhajan, index) => ({
   id: index + 1,
   ...bhajan,
@@ -18,7 +18,8 @@ const festivalDates = {
   "2026-01-14": "Festival - Bhogi",
   "2026-01-15": "Festival - Sankranti",
   "2026-02-15": "Festival - Maha Shivarathri",
-  "2026-03-21": "Festival - Ramzan"
+  "2026-03-21": "Festival - Ramzan",
+  "2026-04-24": "Festival - Aaradhana Mahotsavam"
 };
 
 // Get festival name for a given date
@@ -280,8 +281,9 @@ function showSingerSongs() {
   // Store the current singer filter
   currentSingerFilter = singerFilter;
 
-  // Filter bhajans by the selected singer
+  // Filter bhajans by the selected singer, excluding Aaradhana Mahotsavam
   let results = bhajansDatabase.filter((bhajan) => {
+    if (bhajan.dateSung === "2026-04-24") return false;
     if (bhajan.singers) {
       return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
     }
@@ -310,6 +312,7 @@ function quickSearch() {
 
   if (singerFilter !== "all") {
     results = results.filter((bhajan) => {
+      if (bhajan.dateSung === "2026-04-24") return false;
       if (bhajan.singers) {
         return bhajan.singers.trim().toLowerCase() === singerFilter.toLowerCase();
       }
@@ -409,6 +412,20 @@ function displaySingerResults(results, singerName) {
     if (hideBtn) hideBtn.style.display = "inline-block";
     if (closeBtn) closeBtn.style.display = "inline-block";
   }
+
+  // Build ordered playlist of this singer's bhajans that have audio
+  singerPlaylist = results
+    .filter(bhajan => {
+      const audioEntry = bhajanAudios.find(a => a.date === bhajan.dateSung);
+      return audioEntry && audioEntry.audioFile && bhajan.startTime;
+    })
+    .map(bhajan => {
+      const bhajansForDate = bhajansDatabase.filter(b => b.dateSung === bhajan.dateSung);
+      const bIdx = bhajansForDate.findIndex(b => b.name === bhajan.name);
+      const nextB = bIdx >= 0 && bIdx < bhajansForDate.length - 1 ? bhajansForDate[bIdx + 1] : null;
+      return { dateSung: bhajan.dateSung, name: bhajan.name, startTime: bhajan.startTime, endTime: nextB ? nextB.startTime : null };
+    });
+  singerPlaylistIndex = -1;
 
   resultsSection.style.display = "block";
   resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -524,6 +541,11 @@ function displayDateResults(results, selectedDate) {
 // Store current date's bhajans for tracking which one is playing
 let currentDateBhajans = [];
 let currentPlayingBhajanName = "";
+
+let singerPlaylist = [];
+let singerPlaylistIndex = -1;
+let isPlayingFromSingerList = false;
+let singerEndTimeTriggered = false;
 
 // Populate Audio Dates Dropdown
 function populateAudioDates() {
@@ -802,7 +824,7 @@ function loadAudio() {
             hasAudio ? "has-audio" : "no-audio"
           }" data-bhajan-name="${bhajan.name.replace(/"/g, "&quot;")}" ${
               hasAudio
-                ? `onclick="playBhajanAudio('${
+                ? `onclick="isPlayingFromSingerList=false; playBhajanAudio('${
                     bhajan.dateSung
                   }', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(
                     bhajan.startTime
@@ -832,6 +854,7 @@ function loadAudio() {
     // Auto-play audio from the beginning when a date with audio is selected
     if (hasAudio) {
       if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
+      isPlayingFromSingerList = false;
       playBhajanAudio(selectedDate, "All Bhajans", null, null);
     } else if (audioSelectionPrompt) {
       audioSelectionPrompt.style.display = "none";
@@ -841,6 +864,7 @@ function loadAudio() {
     if (audioSelectionPrompt) audioSelectionPrompt.style.display = "none";
     // No bhajan list but audio exists — still play it
     if (hasAudio) {
+      isPlayingFromSingerList = false;
       playBhajanAudio(selectedDate, "All Bhajans", null, null);
     }
   }
@@ -861,6 +885,7 @@ function playAllBhajans() {
   if (bhajansForDate.length > 0) {
     // Play the first bhajan (which starts the full audio)
     const firstBhajan = bhajansForDate[0];
+    isPlayingFromSingerList = false;
     playBhajanAudio(firstBhajan.dateSung, "All Bhajans", null, null);
 
     // Hide the selection prompt
@@ -890,6 +915,7 @@ function parseTime(time) {
 
 // Play audio for a specific bhajan by its dateSung with optional timestamps
 function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
+  const endTimeSeconds = parseTime(endTime);
   const audioPlayerContainer = document.getElementById("audioPlayerContainer");
   const audioPlayer = document.getElementById("audioPlayer");
   const audioLabel = document.getElementById("audioLabel");
@@ -1031,6 +1057,12 @@ function playBhajanAudio(dateSung, bhajanName, startTime, endTime) {
             item.classList.add("currently-playing");
           }
         });
+      }
+
+      // Singer playlist: stop at endTime and advance to next singer bhajan
+      if (isPlayingFromSingerList && endTimeSeconds !== null && !singerEndTimeTriggered && currentTime >= endTimeSeconds) {
+        singerEndTimeTriggered = true;
+        playNextInSingerPlaylist();
       }
     };
 
@@ -1294,10 +1326,12 @@ function initMobileAudioPlayer() {
   // Update play button when audio ends
   audioPlayer.addEventListener("ended", function () {
     setPlayBtnState(false);
-    // Hide floating show button and update list buttons when audio ends
     hideFloatingShowBtn();
     hideStopAudioButton();
     resetAudioListButtons();
+    if (isPlayingFromSingerList) {
+      playNextInSingerPlaylist();
+    }
   });
 
   // Update play button when audio is paused externally
@@ -1314,8 +1348,24 @@ function initMobileAudioPlayer() {
 // 9. RESULTS SECTION CONTROLS
 // ============================================================================
 
+function playNextInSingerPlaylist() {
+  singerPlaylistIndex++;
+  if (singerPlaylistIndex < singerPlaylist.length) {
+    const next = singerPlaylist[singerPlaylistIndex];
+    singerEndTimeTriggered = false;
+    playBhajanAudio(next.dateSung, next.name, next.startTime, next.endTime);
+  } else {
+    isPlayingFromSingerList = false;
+    singerPlaylistIndex = -1;
+  }
+}
+
 // Play audio from singer list (wrapper to track we're playing from singer list)
 function playBhajanAudioFromSinger(dateSung, bhajanName, startTime, endTime) {
+  isPlayingFromSingerList = true;
+  singerEndTimeTriggered = false;
+  singerPlaylistIndex = singerPlaylist.findIndex(b => b.name === bhajanName && b.dateSung === dateSung);
+
   playBhajanAudio(dateSung, bhajanName, startTime, endTime);
 
   // Show hide button since audio is now playing

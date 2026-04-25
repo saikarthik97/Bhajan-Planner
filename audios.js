@@ -25,5 +25,6 @@ const bhajanAudios = [
   { date: '2026-04-05', audioFile: "audios/5th April 2026.mp3", label: "Sunday Bhajans" },
   { date: '2026-04-16', audioFile: "audios/16th April.mp3", label: "Thursday Bhajans" },
   {date: '2026-04-19', audioFile: "audios/19th April.mp3", label: "Sunday Bhajans" },
+  {date: '2026-04-24', audioFile: "audios/Aradhana Mahotsavam 2026 .mp3", label: "Aaradhana Mahotsavam" },
 
 ];
