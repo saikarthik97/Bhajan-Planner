@@ -1503,111 +1503,75 @@ const sundayBhajansRawData = [
     startTime: "41:37",
     singer: 'Sridhar',
   },
-//26th April 2026
-{
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    {
- name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    
-  
+  // 26th April 2026
+  {
+    name: "Sai Mukunda Janardhana",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Neela Kanta Gangadhara Hara Umapathe",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Eshwar"
+  },
+  {
+    name: "Deena Dayala Hari Parama Dayala",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+  {
+    name: "Jaya Kausalya Nandana Ram",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Lal"
+  },
+  {
+    name: "Parthishwara Satya Saishwara",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Radhe Govinda Hare Murare - [ Malkauns ]",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Gayatri"
+  },
+  {
+    name: "Rama Kaho Krishna Kaho",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Sridhar"
+  },
+  {
+    name: "Vittobha Vittala Panduranga",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Gopala Sai Gopala",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Lal"
+  },
+  {
+    name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "",
+    singer: "Sai Karthik"
+  },
 ];

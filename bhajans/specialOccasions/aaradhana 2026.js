@@ -1,104 +1,85 @@
 const aaradhana2026RawData = [
   {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    // music Songs
+    name: "Satyaswaroopini Maa",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Allah Bhajo Moula bhajo hey allah Sai Bhagawan",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Sunitha"
+  },
+  {
+    name: "Karuna sindho Dasaratha Nandana",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Govinda hare gopala hare Hey Gopi gopa Bala",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+  {
+    name: "Bolo bolo sabmil bolo",
+    day: "Friday",
+    Shruthi:"2P",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Sai Narayana (2)",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Yoshitha & Vani"
+  },
+  {
+    name: "Prabhu Ramachandra ke Doota",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Sridhar"
+  },
+  {
+    name: "Sai hamara",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Sri & Praneetha"
+  },
+  {
+    name: "Hari Ananda Maya Jaya Narayana",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Name Parvati Pataye Hara Hara",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "Lavanya"
+  },
+  {
+    name: "Radheshyam Panduranga vitale Rakumayi",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    startTime: "",
+    singer: "A. Srinivas"
+  },
+  // music Songs
   {
     name: "Janulae Madhya Tirugaade Jagapati",
-    shruthi: { gents: "1.5P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "0:50",
@@ -106,7 +87,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Teliyaga Tarama",
-    shruthi: {ladies: "1.5P" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "10:00",
@@ -114,7 +94,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Maa Paapala Toliginchu",
-    shruthi: { gents: "1.5P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "14:06",
@@ -122,7 +101,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Nee Chirunavve Chaalu",
-    shruthi: { gents: "", ladies: "1P" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "18:08",
@@ -130,7 +108,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Yennenno Janmala Bandham",
-    shruthi: { gents: "", ladies: "3P" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "23:10",
@@ -138,7 +115,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Mere Maula Karam De",
-    shruthi: { gents: "2P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "29:20",
@@ -146,7 +122,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "O Morey Sai Ki - Quawaali",
-    shruthi: { gents: "2P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "30:29",
@@ -154,7 +129,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Tum Hamaare Ban Gaye Sai Maa",
-    shruthi: { gents: "", ladies: "5.5P" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "39:21",
@@ -162,7 +136,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Chandra Chooda Shiva Shankara Parvathi",
-    shruthi: { gents: "", ladies: "6P" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "45:00",
@@ -170,7 +143,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Sai Anu Kammani Pilupe",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "51:32",
@@ -178,7 +150,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Sai Maa Jeevithaana",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "56:36",
@@ -186,7 +157,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Hum Ko Tumse",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "61:50",
@@ -194,7 +164,6 @@ const aaradhana2026RawData = [
   },
   {
     name: "Aashirvadinchu",
-    shruthi: { gents: "3P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
     startTime: "66:28",

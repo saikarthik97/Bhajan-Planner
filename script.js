@@ -580,7 +580,7 @@ function populateAudioDates() {
     const formattedDate = formatDate(audio.date);
     const festival = festivalDates[audio.date];
     option.textContent = festival
-      ? `${getFestivalIcon(festival)}${formattedDate} - ${festival.replace("Festival - ", "")}`
+      ? `${getFestivalIcon(festival)}${formattedDate} - ${audio.label || festival.replace("Festival - ", "")}`
       : `${formattedDate} - ${audio.label || ""}`;
     return option;
   }
