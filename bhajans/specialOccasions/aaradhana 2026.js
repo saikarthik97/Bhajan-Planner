@@ -3,28 +3,28 @@ const aaradhana2026RawData = [
     name: "Satyaswaroopini Maa",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "0:01",
     singer: "G.Srinivas"
   },
   {
     name: "Allah Bhajo Moula bhajo hey allah Sai Bhagawan",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "3:13",
     singer: "Sunitha"
   },
   {
     name: "Karuna sindho Dasaratha Nandana",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "8:34",
     singer: "A.Srinivas"
   },
   {
     name: "Govinda hare gopala hare Hey Gopi gopa Bala",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "12:44",
     singer: "Geetha,Jyothi & Eshwari"
   },
   {
@@ -32,49 +32,49 @@ const aaradhana2026RawData = [
     day: "Friday",
     Shruthi:"2P",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "16:23",
     singer: "Sai Karthik"
   },
   {
     name: "Sai Narayana (2)",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "20:44",
     singer: "Yoshitha & Vani"
   },
   {
     name: "Prabhu Ramachandra ke Doota",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "22:45",
     singer: "Sridhar"
   },
   {
     name: "Sai hamara",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "26:26",
     singer: "Sri & Praneetha"
   },
   {
     name: "Hari Ananda Maya Jaya Narayana",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "31:20",
     singer: "G.Srinivas"
   },
   {
     name: "Name Parvati Pataye Hara Hara",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "33:55",
     singer: "Lavanya"
   },
   {
     name: "Radheshyam Panduranga vitale Rakumayi",
     day: "Friday",
     dateSung: "2026-04-24",
-    startTime: "",
+    startTime: "37:02",
     singer: "A. Srinivas"
   },
   // music Songs

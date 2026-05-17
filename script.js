@@ -149,8 +149,8 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
   const filteredResults = bhajansDatabase.filter((bhajan) => {
     if (!bhajan.name) return false;
     const nameCompact = bhajan.name.toLowerCase().replace(/\s+/g, "");
-    const threshold = Math.ceil(nameCompact.length * 0.6);
-    return searchCompact.length >= threshold && nameCompact.startsWith(searchCompact);
+    const threshold = Math.ceil(nameCompact.length * 0.4);
+    return searchCompact.length >= threshold && nameCompact.includes(searchCompact);
   });
 
   // Deduplicate by name, keeping only the latest dateSung
@@ -176,7 +176,7 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
       results.map((bhajan) => {
         const hasAudio = hasAudioSet.has(bhajan.dateSung);
         return `
-            <div class="live-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(bhajan.dateSung)}')">
+            <div class="live-result-item ${hasAudio ? 'clickable-row' : ''}" ${hasAudio ? `onclick="playFromNameSearch('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}')"` : ''}>
                 <div class="name-search-line-1">
                     <span class="bhajan-name">${bhajan.name}</span>
                     ${hasAudio ? '<span class="has-audio-tag">🎵</span>' : ''}
@@ -219,6 +219,18 @@ function closeAudioHint() {
   modal.style.display = "none";
 }
 
+// Play a bhajan directly from name search results
+function playFromNameSearch(dateSung, bhajanName) {
+  const bhajansForDate = bhajansDatabase.filter(b => b.dateSung === dateSung);
+  const bhajan = bhajansForDate.find(b => b.name === bhajanName);
+  if (!bhajan) return;
+  const idx = bhajansForDate.indexOf(bhajan);
+  const nextWithTime = bhajansForDate.slice(idx + 1).find(b => b.startTime && parseTime(b.startTime) !== null);
+  const endTime = nextWithTime ? nextWithTime.startTime : null;
+  isPlayingFromSingerList = false;
+  playBhajanAudio(dateSung, bhajanName, bhajan.startTime || null, endTime);
+}
+
 // ============================================================================
 // 4. QUICK SEARCH FEATURE CODE
 // ============================================================================
@@ -238,7 +250,7 @@ let currentSingerResults = [];
 const GENTS_SINGERS = new Set([
   // Individual names (matching split values from singer field)
   "A.Srinivas", "Abhishek", "Abhiram", "Ankit", "Charan", "Eshwar", "G.Srinivas", "Lal", "Ganapathi",
-  "Sai Karthik", "Ramakrishna", "Santosh", "Shantha Krishna", "Sharath", "Sridhar", "Swaroop", "Venu",
+  "Sai Karthik", "Ramakrishna", "Santosh", "Shantha Krishna", "Sharath", "Neeraj","Sridhar", "Swaroop", "Venu",
   // Group entries (matching singers field exactly)
   "Abhishek & Swaroop", "Sai Karthik & Abhishek", "Abhishek, Swaroop & Sai Karthik"
 ].map(s => s.toLowerCase()));
@@ -389,18 +401,21 @@ function displaySingerResults(results, singerName) {
           const audioEntry = bhajanAudios.find((audio) => audio.date === bhajan.dateSung);
           const hasAudio = audioEntry && audioEntry.audioFile && bhajan.startTime;
 
-          // Calculate end time as the start time of the next bhajan (if available)
+          // Find the next bhajan on the same date with a valid startTime (so audio stops at the right place)
           const bhajansForDate = bhajansDatabase.filter(b => b.dateSung === bhajan.dateSung);
           const bhajanIndex = bhajansForDate.findIndex(b => b.name === bhajan.name);
-          const nextBhajan = bhajanIndex >= 0 && bhajanIndex < bhajansForDate.length - 1 ? bhajansForDate[bhajanIndex + 1] : null;
-          const endTime = nextBhajan ? nextBhajan.startTime : null;
+          const nextWithTime = bhajansForDate.slice(bhajanIndex + 1).find(b => b.startTime && parseTime(b.startTime) !== null);
+          const endTime = nextWithTime ? nextWithTime.startTime : null;
 
           return `
             <div class="result-item singer-search-item ${hasAudio ? 'clickable-row has-audio-indicator' : 'no-audio-item'}"
                  ${hasAudio ? `onclick="playBhajanAudioFromSinger('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})"` : ''}>
                 <div class="singer-result-content">
                   <span class="result-number">${index + 1}.</span>
-                  <h3 class="result-title">${bhajan.name}</h3>
+                  <div class="singer-result-text">
+                    <h3 class="result-title">${bhajan.name}</h3>
+                    ${formatShruthiSimple(bhajan.shruthi)}
+                  </div>
                   ${hasAudio ? '<span class="audio-play-icon">▶</span>' : ''}
                 </div>
             </div>
@@ -422,8 +437,9 @@ function displaySingerResults(results, singerName) {
     .map(bhajan => {
       const bhajansForDate = bhajansDatabase.filter(b => b.dateSung === bhajan.dateSung);
       const bIdx = bhajansForDate.findIndex(b => b.name === bhajan.name);
-      const nextB = bIdx >= 0 && bIdx < bhajansForDate.length - 1 ? bhajansForDate[bIdx + 1] : null;
-      return { dateSung: bhajan.dateSung, name: bhajan.name, startTime: bhajan.startTime, endTime: nextB ? nextB.startTime : null };
+      // Find the next bhajan on the same date that has a valid startTime (to stop audio there)
+      const nextWithTime = bhajansForDate.slice(bIdx + 1).find(b => b.startTime && parseTime(b.startTime) !== null);
+      return { dateSung: bhajan.dateSung, name: bhajan.name, startTime: bhajan.startTime, endTime: nextWithTime ? nextWithTime.startTime : null };
     });
   singerPlaylistIndex = -1;
 
