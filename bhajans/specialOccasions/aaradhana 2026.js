@@ -3,6 +3,7 @@ const aaradhana2026RawData = [
     name: "Satyaswaroopini Maa",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "0:01",
     singer: "G.Srinivas"
   },
@@ -10,6 +11,7 @@ const aaradhana2026RawData = [
     name: "Allah Bhajo Moula bhajo hey allah Sai Bhagawan",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "3:13",
     singer: "Sunitha"
   },
@@ -17,6 +19,7 @@ const aaradhana2026RawData = [
     name: "Karuna sindho Dasaratha Nandana",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "8:34",
     singer: "A.Srinivas"
   },
@@ -24,6 +27,7 @@ const aaradhana2026RawData = [
     name: "Govinda hare gopala hare Hey Gopi gopa Bala",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "12:44",
     singer: "Geetha,Jyothi & Eshwari"
   },
@@ -32,6 +36,7 @@ const aaradhana2026RawData = [
     day: "Friday",
     Shruthi:"2P",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "16:23",
     singer: "Sai Karthik"
   },
@@ -39,6 +44,7 @@ const aaradhana2026RawData = [
     name: "Sai Narayana (2)",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "20:44",
     singer: "Yoshitha & Vani"
   },
@@ -46,6 +52,7 @@ const aaradhana2026RawData = [
     name: "Prabhu Ramachandra ke Doota",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "22:45",
     singer: "Sridhar"
   },
@@ -53,6 +60,7 @@ const aaradhana2026RawData = [
     name: "Sai hamara",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "26:26",
     singer: "Sri & Praneetha"
   },
@@ -60,6 +68,7 @@ const aaradhana2026RawData = [
     name: "Hari Ananda Maya Jaya Narayana",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "31:20",
     singer: "G.Srinivas"
   },
@@ -67,6 +76,7 @@ const aaradhana2026RawData = [
     name: "Name Parvati Pataye Hara Hara",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "33:55",
     singer: "Lavanya"
   },
@@ -74,6 +84,7 @@ const aaradhana2026RawData = [
     name: "Radheshyam Panduranga vitale Rakumayi",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
     startTime: "37:02",
     singer: "A. Srinivas"
   },
@@ -82,6 +93,7 @@ const aaradhana2026RawData = [
     name: "Janulae Madhya Tirugaade Jagapati",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "0:50",
     singer: "Swaroop"
   },
@@ -89,6 +101,7 @@ const aaradhana2026RawData = [
     name: "Teliyaga Tarama",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "10:00",
     singer: "Geetha Eshwari and Jyothi"
   },
@@ -96,6 +109,7 @@ const aaradhana2026RawData = [
     name: "Maa Paapala Toliginchu",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "14:06",
     singer: "Sridhar"
   },
@@ -103,6 +117,7 @@ const aaradhana2026RawData = [
     name: "Nee Chirunavve Chaalu",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "18:08",
     singer: "Sri & Praneetha"
   },
@@ -110,6 +125,7 @@ const aaradhana2026RawData = [
     name: "Yennenno Janmala Bandham",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "23:10",
     singer: "Harshitha & Vatsalya"
   },
@@ -117,6 +133,7 @@ const aaradhana2026RawData = [
     name: "Mere Maula Karam De",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "29:20",
     singer: "A.Srinivas"
   },
@@ -124,6 +141,7 @@ const aaradhana2026RawData = [
     name: "O Morey Sai Ki - Quawaali",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "30:29",
     singer: "Sai Karthik & Abhishek"
   },
@@ -131,6 +149,7 @@ const aaradhana2026RawData = [
     name: "Tum Hamaare Ban Gaye Sai Maa",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "39:21",
     singer: "Sri Vidya, Yoshitha & Vani"
   },
@@ -138,6 +157,7 @@ const aaradhana2026RawData = [
     name: "Chandra Chooda Shiva Shankara Parvathi",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "45:00",
     singer: "Lavanya & Gayathri"
   },
@@ -145,6 +165,7 @@ const aaradhana2026RawData = [
     name: "Sai Anu Kammani Pilupe",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "51:32",
     singer: "PS Bhajan Group"
   },
@@ -152,6 +173,7 @@ const aaradhana2026RawData = [
     name: "Sai Maa Jeevithaana",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "56:36",
     singer: "PS Bhajan Group"
   },
@@ -159,6 +181,7 @@ const aaradhana2026RawData = [
     name: "Hum Ko Tumse",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "61:50",
     singer: "PS Bhajan Group"
   },
@@ -166,6 +189,7 @@ const aaradhana2026RawData = [
     name: "Aashirvadinchu",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "66:28",
     singer: "A.Srinivas"
   }
