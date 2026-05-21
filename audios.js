@@ -25,5 +25,10 @@ const bhajanAudios = [
   { date: '2026-04-05', audioFile: "audios/5th April 2026.mp3", label: "Sunday Bhajans" },
   { date: '2026-04-16', audioFile: "audios/16th April.mp3", label: "Thursday Bhajans" },
   {date: '2026-04-19', audioFile: "audios/19th April.mp3", label: "Sunday Bhajans" },
+  {date: '2026-04-24', audioFile: "audios/24th April 2026 Bhajan.mp3", label: "Aaradhana Day - Bhajans", programme: "bhajans" },
+  {date: '2026-04-24', audioFile: "audios/Aradhana Mahotsavam 2026 .mp3", label: "Aaradhana Mahotsavam - Music Programme", programme: "music" },
+  {date: '2026-04-26', audioFile: "audios/26th April 2026,Bhajan.mp3", label: "Sunday Bhajans" },
+  {date: '2026-05-14', audioFile: "audios/14th May 2026,Bhajan.mp3", label: "Thursday Bhajans" },
+
 
 ];

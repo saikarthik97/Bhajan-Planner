@@ -692,6 +692,111 @@ const thursdayBhajansRawData = [
     startTime: "40:53",
     singer: 'Lavanya'
   },
+  // 14th May 2026
+   {
+    name: "Matanga Vadana Mampalaya",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "0:01",
+    singer: 'Sai Karthik'
+  },
+   {
+    name: "Guru Bhagawan Sairam",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "2:37",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+   {
+    name: "Jai Jai Bhavani Maa",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "5:53",
+    singer: 'Sunitha'
+  },
+   {
+    name: "Ayodhya Vihari Sri Rama Rama Rama",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "8:35",
+    singer: 'Yoshitha'
+  },
+   {
+    name: "Man Me Mere Gopala Shyama Radhe Nandala",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "13:08",
+    singer: 'Neeraj'
+  },
+   {
+    name: "Jaya Jaya Rama Janaki Rama",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "18:07",
+    singer: 'Chamundeshwari'
+  },
+   {
+    name: "Hara Shiva Shankara Bholanath",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "21:25",
+    singer: 'Geetha,Jyothi & Ishwari'
+  },
+   {
+    name: "Bhajare Manasa Sairam",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "24:55",
+    singer: 'Neeraj'
+  },
+   {
+    name: "Sada Nirantara Hari Guna Gao",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "28:24",
+    singer: 'Sunitha'
+  },
+   {
+    name: "Sai Narayana Narayana",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "32:00",
+    singer: 'Yoshitha'
+  },
+   {
+    name: "Hari Hari Govinda Narayana",
+    shruthi: { gents: "5.5P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "34:11",
+    singer: 'Sai Karthik'
+  },
+   {
+    name: "Rama Rama Sai Rama",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "37:02",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+   {
+    name: "Vayukumara Vanara Veera",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-14",
+    startTime: "40:19",
+    singer: 'Neeraj'
+  },
   //  {
   //   name: "",
   //   shruthi: { gents: "", ladies: "" },

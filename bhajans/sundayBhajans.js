@@ -1503,6 +1503,75 @@ const sundayBhajansRawData = [
     startTime: "41:37",
     singer: 'Sridhar',
   },
-
-  
+  // 26th April 2026
+  {
+    name: "Sai Mukunda Janardhana",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "0:01",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Neela Kanta Gangadhara Hara Umapathe",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "2:56",
+    singer: "Eshwar"
+  },
+  {
+    name: "Deena Dayala Hari Parama Dayala",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "6:24",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+  {
+    name: "Jaya Kausalya Nandana Ram",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "9:52",
+    singer: "Lal"
+  },
+  {
+    name: "Parthishwara Satya Saishwara",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "13:59",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Radhe Govinda Hare Murare - [ Malkauns ]",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "18:48",
+    singer: "Gayatri"
+  },
+  {
+    name: "Rama Kaho Krishna Kaho",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "21:48",
+    singer: "Sridhar"
+  },
+  {
+    name: "Vittobha Vittala Panduranga",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "25:34",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Gopala Sai Gopala",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "28:40",
+    singer: "Lal"
+  },
+  {
+    name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
+    day: "Sunday",
+    dateSung: "2026-04-26",
+    startTime: "30:45",
+    singer: "Sai Karthik"
+  },
 ];
