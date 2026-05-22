@@ -797,11 +797,83 @@ const thursdayBhajansRawData = [
     startTime: "40:19",
     singer: 'Neeraj'
   },
-  //  {
+  //21st May 2026
+   {
+    name: "Baba Aao Mere Keerthan Mein",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "0:01",
+    singer: 'Sahithi'
+  },
+   {
+    name: "Eshwar Allah Terenam Sai Terenam",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "4:00",
+    singer: 'Sridhar'
+  },
+  {
+    name: "Hey madhava Hey Madhusudana",
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "7:50",
+    singer: 'Yoshitha & Vani'
+  },
+  {
+    name: "Jagatpalana Jaganmohana",
+    shruthi: { gents: "2P"},
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "11:00",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Jaya Ho Sairam (2)",
+    shruthi: { gents: "", ladies: "5P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "15:25",
+    singer: 'Sahithi & Praneetha'
+  },
+  {
+    name: "Bolo Narayana Jai(2) Vittala",
+    shruthi: { gents: "", ladies: "7P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "22:13",
+    singer: 'Chamundeshwari '
+  },
+  {
+    name: "Gangadhara Hara Gangadhara Hara Kailasa natha prabho",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "25:10",
+    singer: 'Vathsalya & Sai Shruthi'
+  },
+  {
+    name: "Sharavana Bhavatava Sharanam(2)",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "27:15",
+    singer: 'Lal '
+  },
+  // {
   //   name: "",
   //   shruthi: { gents: "", ladies: "" },
-  //   day: "",
-  //   dateSung: "",
+  //   day: "Thursday",
+  //   dateSung: "2026-05-21",
+  //   startTime: "",
+  //   singer: ''
+  // },
+  // {
+  //   name: "",
+  //   shruthi: { gents: "", ladies: "" },
+  //   day: "Thursday",
+  //   dateSung: "2026-05-21",
   //   startTime: "",
   //   singer: ''
   // }

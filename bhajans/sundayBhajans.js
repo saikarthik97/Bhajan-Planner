@@ -1574,4 +1574,41 @@ const sundayBhajansRawData = [
     startTime: "30:45",
     singer: "Sai Karthik"
   },
-];
+  //17th May 2026
+    {
+    name: "Hey Gananatha Gajanana",
+    day: "Sunday",
+    shruthi: { gents: "2P"},
+    dateSung: "2026-05-17",
+    startTime: "0:00",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Sada Shiva Ranjani Sai Janani",
+    day: "Sunday",
+    dateSung: "2026-05-17",
+    startTime: "3:50",
+    singer: "Neeraj"
+  },
+  {
+    name: "Jaya Jaya Shankara Kailasa Vaasi",
+    day: "Sunday",
+    dateSung: "2026-05-17",
+    startTime: "7:00",
+    singer: "Neeraj"
+  },
+  {
+    name: "Sri Rama Chandra Jaya Rama Chandra",
+    day: "Sunday",
+    dateSung: "2026-05-17",
+    startTime: "11:30",
+    singer: "Lal"
+  },
+  {
+    name: "Giridhara Gopala Muralidhara Harey",
+    day: "Sunday",
+    dateSung: "2026-05-17",
+    startTime: "15:10",
+    singer: "Praneetha & Vani"
+  },
+]
