@@ -1,202 +1,195 @@
 const aaradhana2026RawData = [
   {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-      {
-   name: "",
-        shruthi: { gents: "2P", ladies: "5P" },
-        day: "Friday",
-        dateSung: "2026-04-24",
-        startTime: "",
-        singer: ""
-    },
-    // music Songs
-  {
-    name: "Janulae Madhya Tirugaade Jagapati",
-    shruthi: { gents: "1.5P", ladies: "" },
+    name: "Satyaswaroopini Maa",
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "0:01",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Allah Bhajo Moula bhajo hey allah Sai Bhagawan",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "3:13",
+    singer: "Sunitha"
+  },
+  {
+    name: "Karuna sindho Dasaratha Nandana",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "8:34",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Govinda hare gopala hare Hey Gopi gopa Bala",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "12:44",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+  {
+    name: "Bolo bolo sabmil bolo",
+    day: "Friday",
+    Shruthi:"2P",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "16:23",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Sai Narayana (2)",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "20:44",
+    singer: "Yoshitha & Vani"
+  },
+  {
+    name: "Prabhu Ramachandra ke Doota",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "22:45",
+    singer: "Sridhar"
+  },
+  {
+    name: "Sai hamara",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "26:26",
+    singer: "Sri & Praneetha"
+  },
+  {
+    name: "Hari Ananda Maya Jaya Narayana",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "31:20",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Name Parvati Pataye Hara Hara",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "33:55",
+    singer: "Lavanya"
+  },
+  {
+    name: "Radheshyam Panduranga vitale Rakumayi",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "bhajans",
+    startTime: "37:02",
+    singer: "A. Srinivas"
+  },
+  // music Songs
+  {
+    name: "Janulae Madhya Tirugaade Jagapati",
+    day: "Friday",
+    dateSung: "2026-04-24",
+    programme: "music",
     startTime: "0:50",
     singer: "Swaroop"
   },
   {
     name: "Teliyaga Tarama",
-    shruthi: {ladies: "1.5P" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "10:00",
     singer: "Geetha Eshwari and Jyothi"
   },
   {
     name: "Maa Paapala Toliginchu",
-    shruthi: { gents: "1.5P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "14:06",
     singer: "Sridhar"
   },
   {
     name: "Nee Chirunavve Chaalu",
-    shruthi: { gents: "", ladies: "1P" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "18:08",
     singer: "Sri & Praneetha"
   },
   {
     name: "Yennenno Janmala Bandham",
-    shruthi: { gents: "", ladies: "3P" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "23:10",
     singer: "Harshitha & Vatsalya"
   },
   {
     name: "Mere Maula Karam De",
-    shruthi: { gents: "2P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "29:20",
     singer: "A.Srinivas"
   },
   {
     name: "O Morey Sai Ki - Quawaali",
-    shruthi: { gents: "2P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "30:29",
     singer: "Sai Karthik & Abhishek"
   },
   {
     name: "Tum Hamaare Ban Gaye Sai Maa",
-    shruthi: { gents: "", ladies: "5.5P" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "39:21",
     singer: "Sri Vidya, Yoshitha & Vani"
   },
   {
     name: "Chandra Chooda Shiva Shankara Parvathi",
-    shruthi: { gents: "", ladies: "6P" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "45:00",
     singer: "Lavanya & Gayathri"
   },
   {
     name: "Sai Anu Kammani Pilupe",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "51:32",
     singer: "PS Bhajan Group"
   },
   {
     name: "Sai Maa Jeevithaana",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "56:36",
     singer: "PS Bhajan Group"
   },
   {
     name: "Hum Ko Tumse",
-    shruthi: { gents: "", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "61:50",
     singer: "PS Bhajan Group"
   },
   {
     name: "Aashirvadinchu",
-    shruthi: { gents: "3P", ladies: "" },
     day: "Friday",
     dateSung: "2026-04-24",
+    programme: "music",
     startTime: "66:28",
     singer: "A.Srinivas"
   }

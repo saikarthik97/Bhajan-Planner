@@ -93,7 +93,26 @@
         </section>
 
         <!-- ================================================================== -->
-        <!-- 5. DATE SEARCH SECTION (BHAJANS SUNG ON) -->
+        <!-- 5. OLD BHAJANS DROPDOWN SECTION -->
+        <!-- ================================================================== -->
+        <section class="search-section old-bhajans-section">
+            <h2 class="section-title">Old Bhajans Collection</h2>
+            <div class="filter-group">
+                <label class="filter-label">Select to view bhajans:</label>
+                <div class="old-bhajans-dropdown-wrap">
+                    <button class="old-bhajans-trigger" id="oldBhajansTrigger" onclick="toggleOldBhajans()">
+                        Click to View
+                        <span class="old-bhajans-arrow" id="oldBhajansArrow">&#9660;</span>
+                    </button>
+                    <div id="oldBhajansList" class="old-bhajans-panel" style="display: none;">
+                        <ol class="old-bhajans-ol" id="oldBhajansOl"></ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================== -->
+        <!-- 6. DATE SEARCH SECTION (BHAJANS SUNG ON) -->
         <!-- ================================================================== -->
         <section class="search-section">
             <h2 class="section-title">Bhajans Sung On</h2>
@@ -194,7 +213,7 @@
         </section>
 
         <!-- ================================================================== -->
-        <!-- 7. SEARCH RESULTS SECTION -->
+        <!-- 9. SEARCH RESULTS SECTION -->
         <!-- ================================================================== -->
         <section id="resultsSection" class="results-section" style="display: none;">
             <div class="results-header">
@@ -255,6 +274,7 @@
     <script src="bhajans/specialOccasions/shivarathri 2026.js"></script>
     <script src="bhajans/specialOccasions/ramzan 2026.js"></script>
     <script src="bhajans/specialOccasions/aaradhana 2026.js"></script>
+    <script src="bhajans/oldBhajans.js"></script>
     <script src="audios.js"></script>
     <script src="script.js"></script>
 </body>
