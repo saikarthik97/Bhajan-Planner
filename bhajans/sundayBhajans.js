@@ -1611,4 +1611,126 @@ const sundayBhajansRawData = [
     startTime: "15:10",
     singer: "Praneetha & Vani"
   },
+  //24th May 2026
+    {
+    name: "",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: ""
+  },
+   {
+    name: "Sadguru Brahma Sanatana Hey",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Lavanya"
+  },
+   {
+    name: "Jagat Janani Shiva Sai Shankari",
+    shruthi: { gents: "7P" },
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Sai Karthik"
+  },
+   {
+    name: "Sundara Padam Sai Padam",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Sahithi"
+  },
+   {
+    name: "Premamrutha Barsaao baba",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "A.Srinivas"
+  },
+   {
+    name: "Sitarama Sri Raghurama",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Yoshitha & Vani"
+  },
+    {
+    name: "Boloram Sairam Satyasai Ram",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Lal"
+  },
+    {
+    name: "Shankara Naam Bhajo",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Praneetha & Vani"
+  },
+
+   {
+    name: "Rajeeva Lochana Jaya Jaya Ram",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Neeraj"
+  },
+   {
+    name: "Govinda Govinda Bhajaman Radhe Govinda",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+   {
+    name: "Neela Megha Shyama Krishna Gopala Krishna",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Sridhar"
+  },
+   {
+    name: "Allah Sai Bolo Maula Sai Bolo",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Vathsalya & Sai Shruthi"
+  },
+   {
+    name: "Yadukula Nandana Sri Hari Madhava",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Eshwar"
+  },
+   {
+    name: "Shambho Shankara Parvati Ramana Pashupathi Paramesha",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Divya & Gayathri"
+  },
+   {
+    name: "Veera Hanumana Ati Balavana Raam Naam Japiyaare",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+   {
+    name: "Bolo Jai Sairam (2)",
+    day: "Sunday",
+    dateSung: "2026-05-24",
+    startTime: "",
+    singer: "Neeraj"
+  },
+    // {
+  //   name: "",
+  //   day: "Sunday",
+  //   dateSung: "2026-05-24",
+  //   startTime: "",
+  //   singer: ""
+  // },
 ]
