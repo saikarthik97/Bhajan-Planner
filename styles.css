@@ -4349,9 +4349,69 @@ body {
     margin: 0;
 }
 
+/* --- Old Bhajans: Deity Accordion --- */
+.old-bhajan-deity-section {
+    list-style: none;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
+}
+
+.old-bhajan-deity-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+}
+
+.old-bhajan-deity-header:active {
+    background: linear-gradient(90deg, #6d28d9, #9333ea);
+}
+
+.old-bhajan-deity-name {
+    flex: 1;
+}
+
+.old-bhajan-deity-count {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.25);
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.old-bhajan-deity-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
+}
+
+.old-bhajan-deity-section.open .old-bhajan-deity-arrow {
+    transform: rotate(180deg);
+}
+
+.old-bhajan-sublist {
+    margin: 0;
+    padding: 4px 0;
+    background: #faf8ff;
+    border: 1px solid #ede9fe;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
 .old-bhajan-item {
-    padding: 9px 4px;
-    font-size: 0.93rem;
+    list-style: none;
+    padding: 9px 16px;
+    font-size: 0.92rem;
     font-family: 'Poppins', sans-serif;
     color: #3b1f6b;
     border-bottom: 1px solid #f3f0fa;
@@ -4363,8 +4423,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .old-bhajan-deity-header {
+        font-size: 0.88rem;
+        padding: 11px 12px;
+    }
     .old-bhajan-item {
-        padding: 10px 4px;
-        font-size: 0.9rem;
+        padding: 10px 14px;
+        font-size: 0.88rem;
     }
 }
