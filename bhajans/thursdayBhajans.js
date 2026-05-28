@@ -861,14 +861,103 @@ const thursdayBhajansRawData = [
     startTime: "27:15",
     singer: 'Lal '
   },
-  // {
-  //   name: "",
-  //   shruthi: { gents: "", ladies: "" },
-  //   day: "Thursday",
-  //   dateSung: "2026-05-21",
-  //   startTime: "",
-  //   singer: ''
-  // },
+  //28th May 2026
+  {
+    name: "Sharanam Sharanam Pahi Gajanana",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Neeraj'
+  },
+  {
+    name: "Budha Mahavir Eshu Sai",
+    shruthi: { gents: "", ladies: "5P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Sahithi'
+  },
+  {
+    name: "Omkaara Bheejaakshari Saishwari",
+    shruthi: { gents: "", ladies: "1P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+  {
+    name: "Raghunandana Raghava Rama Hare",
+    shruthi: { gents: "3P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Mohana Mukunda Hari Giridhara Govinda Hari",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Praneetha & Vani'
+  },
+  {
+    name: "Sarvadharma Swaroopa Sai",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "",
+    singer: 'Sai Harshitha & Yoshitha'
+  },
+  {
+    name: "Gopala Giridhara Bala",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Eshwar'
+  },
+  {
+    name: "Keshava Madhava Tumaho Aatma Rama",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "",
+    singer: 'Geeta,Jyothi & Eshwari'
+  },
+  {
+    name: "Chandravadana Kamala Nayana",
+    shruthi: { gents: "", ladies: "3P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Chamundeshwari'
+  },
+  {
+    name: "Shath Baar Kahore Sairam",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Neeraj'
+  },
+  {
+    name: "Gurunanak jiki Jai Jai Kaar",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "",
+    singer: 'Sahithi & Yoshitha'
+  },
+  {
+    name: "Sarvadharma Priya Deva",
+    shruthi: { gents: "", ladies: "4P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "",
+    singer: 'Sai Harshitha & Vani'
+  },
   // {
   //   name: "",
   //   shruthi: { gents: "", ladies: "" },
