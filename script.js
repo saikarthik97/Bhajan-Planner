@@ -1141,11 +1141,36 @@ function toggleOldBhajans() {
 
   if (panel.style.display === "none") {
     if (ol.children.length === 0) {
-      oldBhajansCollection.forEach((name) => {
-        const li = document.createElement("li");
-        li.className = "old-bhajan-item";
-        li.textContent = name;
-        ol.appendChild(li);
+      Object.entries(oldBhajansCollection).forEach(([deity, bhajans]) => {
+        const section = document.createElement("li");
+        section.className = "old-bhajan-deity-section";
+
+        const header = document.createElement("div");
+        header.className = "old-bhajan-deity-header";
+        header.innerHTML = `
+          <span class="old-bhajan-deity-name">${deity}</span>
+          <span class="old-bhajan-deity-count">${bhajans.length}</span>
+          <span class="old-bhajan-deity-arrow">&#9660;</span>
+        `;
+
+        const list = document.createElement("ul");
+        list.className = "old-bhajan-sublist";
+        bhajans.forEach((name, idx) => {
+          const li = document.createElement("li");
+          li.className = "old-bhajan-item";
+          li.textContent = `${idx + 1}. ${name}`;
+          list.appendChild(li);
+        });
+
+        header.addEventListener("click", () => {
+          const isOpen = section.classList.toggle("open");
+          list.style.display = isOpen ? "block" : "none";
+        });
+
+        list.style.display = "none";
+        section.appendChild(header);
+        section.appendChild(list);
+        ol.appendChild(section);
       });
     }
     panel.style.display = "block";
