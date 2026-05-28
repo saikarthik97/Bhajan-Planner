@@ -867,7 +867,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "0:01",
     singer: 'Neeraj'
   },
   {
@@ -875,7 +875,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "5P" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "4:32",
     singer: 'Sahithi'
   },
   {
@@ -883,7 +883,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "1P" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "9:06",
     singer: 'Geetha,Jyothi & Eshwari'
   },
   {
@@ -891,7 +891,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "3P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "12:15",
     singer: 'Sai Karthik'
   },
   {
@@ -899,7 +899,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "17:56",
     singer: 'Praneetha & Vani'
   },
   {
@@ -907,7 +907,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-05-21",
-    startTime: "",
+    startTime: "22:25",
     singer: 'Sai Harshitha & Yoshitha'
   },
   {
@@ -915,7 +915,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "27:08",
     singer: 'Eshwar'
   },
   {
@@ -923,7 +923,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-05-21",
-    startTime: "",
+    startTime: "31:08",
     singer: 'Geeta,Jyothi & Eshwari'
   },
   {
@@ -931,7 +931,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "3P" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "34:28",
     singer: 'Chamundeshwari'
   },
   {
@@ -939,7 +939,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P", ladies: "" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "36:48",
     singer: 'Neeraj'
   },
   {
@@ -947,7 +947,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "2P" },
     day: "Thursday",
     dateSung: "2026-05-28",
-    startTime: "",
+    startTime: "40:46",
     singer: 'Sahithi & Yoshitha'
   },
   {
@@ -955,7 +955,7 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "", ladies: "4P" },
     day: "Thursday",
     dateSung: "2026-05-21",
-    startTime: "",
+    startTime: "44:25",
     singer: 'Sai Harshitha & Vani'
   },
   // {
