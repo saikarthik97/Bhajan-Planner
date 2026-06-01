@@ -906,7 +906,7 @@ const thursdayBhajansRawData = [
     name: "Sarvadharma Swaroopa Sai",
     shruthi: { gents: "", ladies: "2P" },
     day: "Thursday",
-    dateSung: "2026-05-21",
+    dateSung: "2026-05-28",
     startTime: "22:25",
     singer: 'Sai Harshitha & Yoshitha'
   },
@@ -922,7 +922,7 @@ const thursdayBhajansRawData = [
     name: "Keshava Madhava Tumaho Aatma Rama",
     shruthi: { gents: "", ladies: "2P" },
     day: "Thursday",
-    dateSung: "2026-05-21",
+    dateSung: "2026-05-28",
     startTime: "31:08",
     singer: 'Geeta,Jyothi & Eshwari'
   },
@@ -954,7 +954,7 @@ const thursdayBhajansRawData = [
     name: "Sarvadharma Priya Deva",
     shruthi: { gents: "", ladies: "4P" },
     day: "Thursday",
-    dateSung: "2026-05-21",
+    dateSung: "2026-05-28",
     startTime: "44:25",
     singer: 'Sai Harshitha & Vani'
   },

@@ -1726,7 +1726,85 @@ const sundayBhajansRawData = [
     startTime: "56:14",
     singer: "Neeraj"
   },
-    // {
+  //31st May 2026
+    {
+    name: "Ambika Tanaya Gajanana",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Lavanya"
+  },
+   {
+    name: "Hey Parthipurisha Prashanthivasa Sadguru Sairam",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Lal"
+  },
+   {
+    name: "Ganapriye Sai Karunamayi",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Gayathri"
+  },
+   {
+    name: "Bhavanasha Puttaparthipurisha",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Neeraj"
+  },
+   {
+    name: "Madhuvana murali Shyama Murari",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Sahithi"
+  },
+   {
+    name: "Sundara Vadana Sarasija Nayana",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Sai Karthik"
+  },
+   {
+    name: "Rama(3) Jaya Kodanda Rama",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Geetha,Jyothi & Eshwari"
+  },
+   {
+    name: "Hey Nirakaari Allah",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "G.Srinivas"
+  },
+   {
+    name: "Hara Bholanatha Umapathey",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer:"Yoshitha & Sai harshitha"
+  },
+   {
+    name: "Deena Bandhu vittala Jai",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Sridhar"
+  },
+   {
+    name: "Rama Lakshmana Janaki Jai Bolo Hanuman Ki",
+    day: "Sunday",
+    dateSung: "2026-05-31",
+    startTime: "",
+    singer: "Neeraj"
+  },
+  //  {
   //   name: "",
   //   day: "Sunday",
   //   dateSung: "2026-05-24",
