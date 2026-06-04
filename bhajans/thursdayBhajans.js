@@ -964,84 +964,84 @@ const thursdayBhajansRawData = [
     name: "Jai(4) Ganapathi Deva",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "0:01",
     singer: 'Sai Harshitha & Vathsalya'
   },
    {
     name: "Sadguru Sairam Jai Bolo Sadguru Sairam",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "4:10",
     singer: 'Lal'
   },
    {
     name: "Jaya Devi Durga gowri Shankari parvati",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "9:00",
     singer: 'Praneetha & Vani'
   },
    {
     name: "Pannaga Sayana Kali Avatara",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "13:58",
     singer: 'A.Srinivas'
   },
    {
     name: "Jaya(2)Rama Jaya Raghurama Dasaratha Nandana",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "19:34",
     singer: 'Sahithi'
   },
    {
     name: "Dayakaro Sai Narayana",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "24:08",
     singer: 'Abhishek'
   },
    {
     name: "Radhe Radhe Govinda Gopala Radhe",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "29:43",
     singer: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Bhajamana Panduranga Vittala Jai Vittala",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "32:23",
     singer: 'Sai Karthik'
   },
    {
     name: "Kailasa Nathaya Namah Om",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "35:19",
     singer: 'Chamundeshwari'
   },
    {
     name: "Satyam Gnanamanantham Brahma",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "37:50",
     singer: 'Eshwar'
   },
    {
     name: "Nandalala yadu nandalala",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "40:03",
     singer: 'Vathsalya & Nivedita'
   },
    {
     name: "Gopala Sai gopala",
     day: "Thursday",
     dateSung: "2026-06-04",
-    startTime: "",
+    startTime: "42:07",
     singer: 'Lal'
   },
   //  {
