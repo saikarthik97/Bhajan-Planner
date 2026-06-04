@@ -958,13 +958,98 @@ const thursdayBhajansRawData = [
     startTime: "44:25",
     singer: 'Sai Harshitha & Vani'
   },
-  // {
+  //4th June 2026
+
+  {
+    name: "Jai(4) Ganapathi Deva",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Sai Harshitha & Vathsalya'
+  },
+   {
+    name: "Sadguru Sairam Jai Bolo Sadguru Sairam",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Lal'
+  },
+   {
+    name: "Jaya Devi Durga gowri Shankari parvati",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Praneetha & Vani'
+  },
+   {
+    name: "Pannaga Sayana Kali Avatara",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'A.Srinivas'
+  },
+   {
+    name: "Jaya(2)Rama Jaya Raghurama Dasaratha Nandana",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Sahithi'
+  },
+   {
+    name: "Dayakaro Sai Narayana",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Abhishek'
+  },
+   {
+    name: "Radhe Radhe Govinda Gopala Radhe",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+   {
+    name: "Bhajamana Panduranga Vittala Jai Vittala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Sai Karthik'
+  },
+   {
+    name: "Kailasa Nathaya Namah Om",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Chamundeshwari'
+  },
+   {
+    name: "Satyam Gnanamanantham Brahma",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Eshwar'
+  },
+   {
+    name: "Nandalala yadu nandalala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Vathsalya & Nivedita'
+  },
+   {
+    name: "Gopala Sai gopala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "",
+    singer: 'Lal'
+  },
+  //  {
   //   name: "",
-  //   shruthi: { gents: "", ladies: "" },
   //   day: "Thursday",
-  //   dateSung: "2026-05-21",
+  //   dateSung: "2026-06-04",
   //   startTime: "",
   //   singer: ''
-  // }
+  // },
 
 ];
