@@ -1049,84 +1049,84 @@ const thursdayBhajansRawData = [
     name: "Paahi Gajaana Parvati nandana",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "0:01",
     singer: 'A. Srinivas'
   },
   {
     name: "Guru brahma guru vishnu guru devo maheshwara",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "4:20",
     singer: 'Geetha, Jyothi & Eshwari'
   },
   {
     name: "Amba mandahasa vadani manohari sai jagat janani",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "8:36",
     singer: 'Sai Karthik'
   },
   {
     name: "Daykaro shiva gangadhari",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "13:24",
     singer: 'Sahithi'
   },
   {
     name: "Sundara Shyama murari sai",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "17:18",
     singer: 'A. Srinivas'
   },
   {
     name: "Ramacharana sukhadaayi bhajore",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "21:05",
     singer: 'Praneetha & Vani'
   },
   {
     name: "Sai mahadeva satya sai mahadeva",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "25:41",
     singer: 'Sai Karthik'
   },
   {
     name: "Om shiva shiva satchida nanda shiva",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "30:22",
     singer: 'Geetha, Jyothi & Eshwari'
   },
   {
     name: "Krishna Krishna Radha krishna",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "33:05",
     singer: 'Eshwar'
   },
   {
     name: "Allah allah karopukar",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "35:17",
     singer: 'Sahithi'
   },
   {
     name: "Patita pavana ram partipurushwara ram",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "38:01",
     singer: 'A. Srinivas'
   },
   {
     name: "Prabhu ramachandra ke doota",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "",
+    startTime: "41:55",
     singer: 'Praneetha & Vani'
   },
 
