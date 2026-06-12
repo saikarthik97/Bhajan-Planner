@@ -1544,7 +1544,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-04-26",
     startTime: "18:48",
-    singer: "Gayatri"
+    singer: "Gayathri"
   },
   {
     name: "Rama Kaho Krishna Kaho",

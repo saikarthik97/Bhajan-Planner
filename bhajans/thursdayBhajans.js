@@ -1044,12 +1044,90 @@ const thursdayBhajansRawData = [
     startTime: "42:07",
     singer: 'Lal'
   },
-  //  {
-  //   name: "",
-  //   day: "Thursday",
-  //   dateSung: "2026-06-04",
-  //   startTime: "",
-  //   singer: ''
-  // },
+  // 11th June 2026
+  {
+    name: "Paahi Gajaana Parvati nandana",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'A. Srinivas'
+  },
+  {
+    name: "Guru brahma guru vishnu guru devo maheshwara",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Geetha, Jyothi & Eshwari'
+  },
+  {
+    name: "Amba mandahasa vadani manohari sai jagat janani",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Daykaro shiva gangadhari",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Sahithi'
+  },
+  {
+    name: "Sundara Shyama murari sai",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'A. Srinivas'
+  },
+  {
+    name: "Ramacharana sukhadaayi bhajore",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Praneetha & Vani'
+  },
+  {
+    name: "Sai mahadeva satya sai mahadeva",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Om shiva shiva satchida nanda shiva",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Geetha, Jyothi & Eshwari'
+  },
+  {
+    name: "Krishna Krishna Radha krishna",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Eshwar'
+  },
+  {
+    name: "Allah allah karopukar",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Sahithi'
+  },
+  {
+    name: "Patita pavana ram partipurushwara ram",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'A. Srinivas'
+  },
+  {
+    name: "Prabhu ramachandra ke doota",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    startTime: "",
+    singer: 'Praneetha & Vani'
+  },
 
 ];
