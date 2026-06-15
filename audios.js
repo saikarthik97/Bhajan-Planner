@@ -34,8 +34,8 @@ const bhajanAudios = [
 { date: '2026-05-24', audioFile: "audios/24th may 2026.mp3", label: "Sunday Bhajans" },
 { date: '2026-05-28', audioFile: "audios/28th may2026.mp3", label: "Thursday Bhajans" },
 { date: '2026-05-31', audioFile: "audios/31st May 2026.mp3", label: "Sunday Bhajans" },
-  {date: '2026-06-04', audioFile: "audios/4th june.mp3", label: "Thursday Bhajans" },
-    {date: '2026-06-11', audioFile: "audios/11th June 2026.mp3", label: "Thursday Bhajans" },
-
+{date: '2026-06-04', audioFile: "audios/4th june.mp3", label: "Thursday Bhajans" },
+{date: '2026-06-11', audioFile: "audios/11th June 2026.mp3", label: "Thursday Bhajans" },
+{ date: '2026-06-14', audioFile: "audios/14th June 2026.mp3", label: "Sunday Bhajans" },
 
 ];
