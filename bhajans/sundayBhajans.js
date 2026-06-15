@@ -1809,70 +1809,70 @@ const sundayBhajansRawData = [
     name: "Jaya Pandarinatha Panduranga pundaleeka Varaa",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "0:01",
     singer: "Sahithi"
   },
    {
     name: "Hey Shyama Sundara Hey Sai Sundara",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "6:41",
     singer: "Abhishek"
   },
    {
     name: "Tumaho Shyama Ram Rahim",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "11:34",
     singer: "Gayathri"
   },
    {
     name: "Saibaba Saibaba",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "14:56",
     singer: "A.Srinivas"
   },
    {
     name: "Hari(6) Bolo",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
-    singer: ""
+    startTime: "18:35",
+    singer: "Vathsalya"
   },
    {
     name: "Shiridi Sai Hey Bhagawan",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "22:29",
     singer: "Lal"
   },
    {
     name: "Sitaram Naama Bhajo",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "25:36",
     singer: "Geetha,Jyothi & Eshwari"
   },
    {
     name: "Hey Nanda Nanda Gopala Aananda Gopala",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "27:35",
     singer: "Eshwar"
   },
    {
     name: "Om Shivaaya",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "29:31",
     singer: "Lavanya"
   },
    {
     name: "Sai Siva Siva Subramanyam",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "",
+    startTime: "31:20",
     singer: "Venu & Sridhar"
   },
   //  {
