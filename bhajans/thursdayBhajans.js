@@ -961,7 +961,7 @@ const thursdayBhajansRawData = [
   //4th June 2026
 
   {
-    name: "Jai(4) Ganapathi Deva",
+    name: "Jai Ganesh(3) Deva",
     day: "Thursday",
     dateSung: "2026-06-04",
     startTime: "0:01",
