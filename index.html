@@ -29,6 +29,8 @@
         </div>
     </div>
 
+    <div class="scroll-wrapper">
+
     <div class="container">
 
         <!-- ================================================================== -->
@@ -127,89 +129,27 @@
         </section>
 
         <!-- ================================================================== -->
-        <!-- 6. LIVE BHAJAN AUDIOS SECTION -->
+        <!-- YOUTUBE LIVE BHAJANS SECTION -->
         <!-- ================================================================== -->
-        <section class="search-section audio-section">
-            <h2 class="section-title">🎵 Live Bhajan Audios</h2>
-            <p class="section-description">Select a date to listen to bhajans recorded on that day.</p>
-
-            <!-- Audio Date Selector -->
-            <div class="audio-controls">
-                <div class="filter-group">
-                    <label for="audioDateSelect" class="filter-label">Select Date:</label>
-                    <select id="audioDateSelect" class="filter-select" onchange="loadAudio()">
-                        <option value="">-- Choose a date --</option>
-                    </select>
+        <section class="search-section youtube-section">
+            <div class="youtube-header">
+                <svg class="yt-logo-icon" viewBox="0 0 90 63" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M88.1 9.9C87 5.8 83.8 2.6 79.7 1.5 72.7 0 45 0 45 0S17.3 0 10.3 1.5C6.2 2.6 3 5.8 1.9 9.9 0 16.9 0 31.5 0 31.5S0 46.1 1.9 53.1C3 57.2 6.2 60.4 10.3 61.5 17.3 63 45 63 45 63s27.7 0 34.7-1.5c4.1-1.1 7.3-4.3 8.4-8.4C90 46.1 90 31.5 90 31.5S90 16.9 88.1 9.9z" fill="#FF0000"/>
+                    <path d="M36 45l23.5-13.5L36 18v27z" fill="#ffffff"/>
+                </svg>
+                <div class="youtube-title-block">
+                    <h2 class="section-title yt-section-title">Live Bhajan Audios</h2>
+                    <span class="yt-subtitle">on YouTube</span>
                 </div>
             </div>
-
-            <!-- Audio Player Container -->
-            <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
-                <div class="audio-label" id="audioLabel"></div>
-
-                <!-- Hidden native audio element -->
-                <audio id="audioPlayer" preload="auto" style="display:none;"></audio>
-
-                <!-- Unified Custom Player -->
-                <div class="custom-player">
-                    <!-- Seekbar row -->
-                    <div class="cp-progress-row">
-                        <span class="cp-time" id="cpCurrentTime">0:00</span>
-                        <div class="cp-bar-wrap">
-                            <input type="range" id="cpSeekbar" class="cp-seekbar" min="0" max="100" value="0" step="0.1">
-                        </div>
-                        <span class="cp-time" id="cpDuration">0:00</span>
-                    </div>
-                    <!-- Controls row -->
-                    <div class="cp-controls-row">
-                        <button class="cp-btn cp-skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
-                            <span class="cp-skip-arrow">&#9194;</span>
-                            <span class="cp-skip-s">10s</span>
-                        </button>
-                        <button class="cp-btn cp-play-btn" id="cpPlayBtn" onclick="togglePlayPause()">
-                            <span class="cp-btn-icon" id="cpPlayIcon">&#9654;</span>
-                            <span class="cp-btn-label" id="cpPlayLabel">Play</span>
-                        </button>
-                        <button class="cp-btn cp-mute-btn" id="cpMuteBtn" onclick="toggleMute()">
-                            <span class="cp-btn-icon" id="cpMuteIcon">&#128266;</span>
-                            <span class="cp-btn-label" id="cpMuteLabel">Mute</span>
-                        </button>
-                        <button class="cp-btn cp-skip-btn cp-skip-fwd" onclick="skipAudio(10)" title="Forward 10 seconds">
-                            <span class="cp-skip-arrow">&#9193;</span>
-                            <span class="cp-skip-s">10s</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Show Bhajan List Button (appears when list is hidden) -->
-            <div id="showBhajanListContainer" style="display: none; margin-top: 12px;">
-                <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()">
-                    🎵 Show Playing Bhajans List
-                </button>
-            </div>
-
-            <!-- Stop Audio Button (appears when audio is playing) -->
-            <div id="stopAudioContainer" style="display: none; margin-top: 12px;">
-                <button id="stopAudioBtn" class="stop-audio-btn" onclick="stopAudioPlayback()">
-                    ⏹️ Stop Playing
-                </button>
-            </div>
-
-            <!-- No Audio Message -->
-            <div id="noAudioMessage" class="no-audio-message" style="display: none;">
-                No audio available for the selected date.
-            </div>
-
-            <!-- Audio Selection Prompt -->
-            <div id="audioSelectionPrompt" class="audio-selection-prompt" style="display: none;">
-                Select a bhajan to play or
-                <br>
-                <button class="play-all-btn" onclick="playAllBhajans()">▶ Play All</button>
-            </div>
-
-            <!-- Audio Bhajan List -->
-            <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
+            <p class="section-description yt-desc">Click below for Live Bhajan audios from our YouTube channel</p>
+            <a href="https://www.youtube.com/@satyasaipremasadan/videos" target="_blank" rel="noopener noreferrer" class="youtube-link-btn">
+                <svg class="yt-btn-icon" viewBox="0 0 90 63" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M88.1 9.9C87 5.8 83.8 2.6 79.7 1.5 72.7 0 45 0 45 0S17.3 0 10.3 1.5C6.2 2.6 3 5.8 1.9 9.9 0 16.9 0 31.5 0 31.5S0 46.1 1.9 53.1C3 57.2 6.2 60.4 10.3 61.5 17.3 63 45 63 45 63s27.7 0 34.7-1.5c4.1-1.1 7.3-4.3 8.4-8.4C90 46.1 90 31.5 90 31.5S90 16.9 88.1 9.9z" fill="#ffffff" fill-opacity="0.25"/>
+                    <path d="M36 45l23.5-13.5L36 18v27z" fill="#ffffff"/>
+                </svg>
+                Satyasai Premasadan
+            </a>
         </section>
 
         <!-- ================================================================== -->
@@ -238,8 +178,8 @@
         <!-- Connect With Us Section -->
         <section class="connect-section">
             <span class="connect-title">Connect With Us at </span>
-            <a href="mailto:premsadanvizag@gmail.com" class="connect-email">
-                &#9993; premsadanvizag@gmail.com
+            <a href="mailto:vizagmandir@gmail.com" class="connect-email">
+                &#9993; vizagmandir@gmail.com
             </a>
         </section>
 
@@ -248,20 +188,6 @@
             <p>&copy; 2026 Premsadan Planner. All rights reserved.</p>
             <p>Aum Sri Sai Ram</p>
         </footer>
-    </div>
-
-    <!-- ================================================================== -->
-    <!-- 9. MODALS -->
-    <!-- ================================================================== -->
-
-    <!-- Audio Hint Modal -->
-    <div id="audioHintModal" class="hint-modal" style="display: none;">
-        <div class="hint-modal-content">
-            <span class="hint-close" onclick="closeAudioHint()">&times;</span>
-            <div class="hint-icon">🎵</div>
-            <p id="audioHintMessage" class="hint-message"></p>
-            <button class="hint-ok-btn" onclick="closeAudioHint()">OK</button>
-        </div>
     </div>
 
     <!-- ================================================================== -->
@@ -275,7 +201,105 @@
     <script src="bhajans/specialOccasions/ramzan 2026.js"></script>
     <script src="bhajans/specialOccasions/aaradhana 2026.js"></script>
     <script src="bhajans/oldBhajans.js"></script>
-    <script src="audios.js"></script>
     <script src="script.js"></script>
+
+    <!-- ================================================================== -->
+    <!-- LIVE AUDIO SECTION
+         
+    ================================================================== -->
+    <div class="container">
+        <section class="search-section audio-section">
+            <h2 class="section-title">🎵 Live Bhajan Audios</h2>
+            <p class="section-description">Select a date to listen to bhajans recorded on that day.</p>
+
+            <!-- Audio Date Selector -->
+            <div class="audio-controls">
+                <div class="filter-group">
+                    <label for="audioDateSelect" class="filter-label">Select Date:</label>
+                    <select id="audioDateSelect" class="filter-select" onchange="loadAudio()">
+                        <option value="">-- Choose a date --</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Audio Player Container -->
+            <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
+                <div class="audio-label" id="audioLabel"></div>
+                <audio id="audioPlayer" preload="auto" style="display:none;"></audio>
+                <div class="custom-player">
+                    <div class="cp-progress-row">
+                        <span class="cp-time" id="cpCurrentTime">0:00</span>
+                        <div class="cp-bar-wrap">
+                            <input type="range" id="cpSeekbar" class="cp-seekbar" min="0" max="100" value="0" step="0.1">
+                        </div>
+                        <span class="cp-time" id="cpDuration">0:00</span>
+                    </div>
+                    <div class="cp-controls-row">
+                        <button class="cp-btn cp-skip-btn" onclick="skipAudio(-10)" title="Back 10 seconds">
+                            <span class="cp-skip-arrow">&#9194;</span>
+                            <span class="cp-skip-s">10s</span>
+                        </button>
+                        <button class="cp-btn cp-play-btn" id="cpPlayBtn" onclick="togglePlayPause()">
+                            <span class="cp-btn-icon" id="cpPlayIcon">&#9654;</span>
+                            <span class="cp-btn-label" id="cpPlayLabel">Play</span>
+                        </button>
+                        <button class="cp-btn cp-mute-btn" id="cpMuteBtn" onclick="toggleMute()">
+                            <span class="cp-btn-icon" id="cpMuteIcon">&#128266;</span>
+                            <span class="cp-btn-label" id="cpMuteLabel">Mute</span>
+                        </button>
+                        <button class="cp-btn cp-skip-btn cp-skip-fwd" onclick="skipAudio(10)" title="Forward 10 seconds">
+                            <span class="cp-skip-arrow">&#9193;</span>
+                            <span class="cp-skip-s">10s</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show Bhajan List Button -->
+            <div id="showBhajanListContainer" style="display: none; margin-top: 12px;">
+                <button id="floatingShowBtn" class="show-bhajan-list-btn" onclick="showAudioBhajanList()">
+                    🎵 Show Playing Bhajans List
+                </button>
+            </div>
+
+            <!-- Stop Audio Button -->
+            <div id="stopAudioContainer" style="display: none; margin-top: 12px;">
+                <button id="stopAudioBtn" class="stop-audio-btn" onclick="stopAudioPlayback()">
+                    ⏹️ Stop Playing
+                </button>
+            </div>
+
+            <!-- No Audio Message -->
+            <div id="noAudioMessage" class="no-audio-message" style="display: none;">
+                No audio available for the selected date.
+            </div>
+
+            <!-- Audio Selection Prompt -->
+            <div id="audioSelectionPrompt" class="audio-selection-prompt" style="display: none;">
+                Select a bhajan to play or
+                <br>
+                <button class="play-all-btn" onclick="playAllBhajans()">▶ Play All</button>
+            </div>
+
+            <!-- Audio Bhajan List -->
+            <div id="audioBhajanList" class="audio-bhajan-list" style="display: none;"></div>
+        </section>
+    </div>
+
+    </div><!-- /.scroll-wrapper -->
+
+    <!-- Audio Hint Modal -->
+    <div id="audioHintModal" class="hint-modal" style="display: none;">
+        <div class="hint-modal-content">
+            <span class="hint-close" onclick="closeAudioHint()">&times;</span>
+            <div class="hint-icon">🎵</div>
+            <p id="audioHintMessage" class="hint-message"></p>
+            <button class="hint-ok-btn" onclick="closeAudioHint()">OK</button>
+        </div>
+    </div>
+
+    <script src="audios.js"></script>
+    <script src="audioPlayer.js"></script>
+    <!-- END LIVE AUDIO SECTION -->
 </body>
 </html>
