@@ -797,13 +797,392 @@ const thursdayBhajansRawData = [
     startTime: "40:19",
     singer: 'Neeraj'
   },
-  //  {
-  //   name: "",
-  //   shruthi: { gents: "", ladies: "" },
-  //   day: "",
-  //   dateSung: "",
-  //   startTime: "",
-  //   singer: ''
-  // }
+  //21st May 2026
+   {
+    name: "Baba Aao Mere Keerthan Mein",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "0:01",
+    singer: 'sahiti'
+  },
+   {
+    name: "Eshwar Allah Terenam Sai Terenam",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "4:00",
+    singer: 'Sridhar'
+  },
+  {
+    name: "Hey madhava Hey Madhusudana",
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "7:50",
+    singer: 'Yoshitha & Vani'
+  },
+  {
+    name: "Jagatpalana Jaganmohana",
+    shruthi: { gents: "2P"},
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "11:00",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Jaya Ho Sairam (2)",
+    shruthi: { gents: "", ladies: "5P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "15:25",
+    singer: 'sahiti & Praneetha'
+  },
+  {
+    name: "Bolo Narayana Jai(2) Vittala",
+    shruthi: { gents: "", ladies: "7P" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "22:13",
+    singer: 'Chamundeshwari '
+  },
+  {
+    name: "Gangadhara Hara Gangadhara Hara Kailasa natha prabho",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "25:10",
+    singer: 'Vathsalya & Sai Shruthi'
+  },
+  {
+    name: "Sharavana Bhavatava Sharanam(2)",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-21",
+    startTime: "27:15",
+    singer: 'Lal '
+  },
+  //28th May 2026
+  {
+    name: "Sharanam Sharanam Pahi Gajanana",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "0:01",
+    singer: 'Neeraj'
+  },
+  {
+    name: "Budha Mahavir Eshu Sai",
+    shruthi: { gents: "", ladies: "5P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "4:32",
+    singer: 'sahiti'
+  },
+  {
+    name: "Omkaara Bheejaakshari Saishwari",
+    shruthi: { gents: "", ladies: "1P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "9:06",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+  {
+    name: "Raghunandana Raghava Rama Hare",
+    shruthi: { gents: "3P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "12:15",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Mohana Mukunda Hari Giridhara Govinda Hari",
+    shruthi: { gents: "", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "17:56",
+    singer: 'Praneetha & Vani'
+  },
+  {
+    name: "Sarvadharma Swaroopa Sai",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "22:25",
+    singer: 'Sai Harshitha & Yoshitha'
+  },
+  {
+    name: "Gopala Giridhara Bala",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "27:08",
+    singer: 'Eshwar'
+  },
+  {
+    name: "Keshava Madhava Tumaho Aatma Rama",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "31:08",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+  {
+    name: "Chandravadana Kamala Nayana",
+    shruthi: { gents: "", ladies: "3P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "34:28",
+    singer: 'Chamundeshwari'
+  },
+  {
+    name: "Shath Baar Kahore Sairam",
+    shruthi: { gents: "4P", ladies: "" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "36:48",
+    singer: 'Neeraj'
+  },
+  {
+    name: "Gurunanak jiki Jai Jai Kaar",
+    shruthi: { gents: "", ladies: "2P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "40:46",
+    singer: 'sahiti & Yoshitha'
+  },
+  {
+    name: "Sarvadharma Priya Deva",
+    shruthi: { gents: "", ladies: "4P" },
+    day: "Thursday",
+    dateSung: "2026-05-28",
+    startTime: "44:25",
+    singer: 'Sai Harshitha & Vani'
+  },
+  //4th June 2026
+
+  {
+    name: "Jai Ganesh(3) Deva",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "0:01",
+    singer: 'Sai Harshitha & Vathsalya'
+  },
+   {
+    name: "Sadguru Sairam Jai Bolo Sadguru Sairam",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "4:10",
+    singer: 'Lal'
+  },
+   {
+    name: "Jaya Devi Durga gowri Shankari parvati",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "9:00",
+    singer: 'Praneetha & Vani'
+  },
+   {
+    name: "Pannaga Sayana Kali Avatara",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "13:58",
+    singer: 'A.Srinivas'
+  },
+   {
+    name: "Jaya(2)Rama Jaya Raghurama Dasaratha Nandana",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "19:34",
+    singer: 'sahiti'
+  },
+   {
+    name: "Dayakaro Sai Narayana",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "24:08",
+    singer: 'Abhishek'
+  },
+   {
+    name: "Radhe Radhe Govinda Gopala Radhe",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "29:43",
+    singer: 'Geetha,Jyothi & Eshwari'
+  },
+   {
+    name: "Bhajamana Panduranga Vittala Jai Vittala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "32:23",
+    singer: 'Sai Karthik'
+  },
+   {
+    name: "Kailasa Nathaya Namah Om",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "35:19",
+    singer: 'Chamundeshwari'
+  },
+   {
+    name: "Satyam Gnanamanantham Brahma",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "37:50",
+    singer: 'Eshwar'
+  },
+   {
+    name: "Nandalala yadu nandalala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "40:03",
+    singer: 'Vathsalya & Nivedita'
+  },
+   {
+    name: "Gopala Sai gopala",
+    day: "Thursday",
+    dateSung: "2026-06-04",
+    startTime: "42:07",
+    singer: 'Lal'
+  },
+  // 11th June 2026
+  {
+    name: "Paahi Gajaana Parvati nandana",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'A.Srinivas'
+  },
+  {
+    name: "Guru brahma guru vishnu guru devo maheshwara",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Geetha, Jyothi & Eshwari'
+  },
+  {
+    name: "Amba mandahasa vadani manohari sai jagat janani",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Daykaro shiva gangadhari",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'sahiti'
+  },
+  {
+    name: "Sundara Shyama murari sai",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'A. Srinivas'
+  },
+  {
+    name: "Ramacharana sukhadaayi bhajore",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Praneetha & Vani'
+  },
+  {
+    name: "Sai mahadeva satya sai mahadeva",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Sai Karthik'
+  },
+  {
+    name: "Om shiva shiva satchida nanda shiva",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Geetha, Jyothi & Eshwari'
+  },
+  {
+    name: "Krishna Krishna Radha krishna",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Eshwar'
+  },
+  {
+    name: "Allah allah karopukar",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'sahiti'
+  },
+  {
+    name: "Patita pavana ram partipurushwara ram",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'A. Srinivas'
+  },
+  {
+    name: "Prabhu ramachandra ke doota",
+    day: "Thursday",
+    dateSung: "2026-06-11",
+    singer: 'Praneetha & Vani'
+  },
+  // 18th June 2026
+  {
+    name: "Gajanana Gajanana",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Praneetha"
+  },
+  {
+    name: "Gurubaba Gurubaba",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singers: "Geetha & Eshwari"
+  },
+  {
+    name: "Durga Bhavani Maa Jaya Jaya Sai Maa",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Chamundeshwari"
+  },
+  {
+    name: "Hare Rama Hare Rama Rama Rama Hare Hare",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Lal"
+  },
+  {
+    name: "Muralidhara Hare Mohana Krishna",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singers: "Eshwari & Geetha"
+  },
+  {
+    name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Krishna Murari Gopala Krishna Krishna Sai Gopala",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Hare Krishna Hare Ram Sairam Sairam",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Lal"
+  },
+  {
+    name: "Jai (3) Narayana",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Shambho Mahadeva",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Bolo Bolo Sabmil Bolo",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Praneetha & Vani"
+  },
 
 ];
