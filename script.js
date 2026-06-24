@@ -215,7 +215,7 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
 const GENTS_SINGERS = new Set([
   "A.Srinivas", "Abhishek", "Abhiram", "Ankit", "Charan", "Eshwar", "G.Srinivas",
   "Lal", "Ganapathi", "Sai Karthik", "Ramakrishna", "Santosh", "Shantha Krishna",
-  "Sharath", "Neeraj", "Sridhar", "Swaroop", "Venu",
+  "Sharath", "Sharat", "Neeraj", "Sridhar", "Swaroop", "Venu",
   "Abhishek & Swaroop", "Sai Karthik & Abhishek", "Abhishek, Swaroop & Sai Karthik",
 ].map((s) => s.toLowerCase()));
 
