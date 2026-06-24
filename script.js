@@ -492,6 +492,7 @@ function displayDateResults(results, selectedDate) {
             <h3 class="result-title">${bhajan.name}</h3>
           </div>
           <div class="result-line-2">
+            ${bhajan.singer ? `<span class="date-result-singer">&#9835; ${bhajan.singer}</span>` : ""}
             <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
           </div>
         </div>`).join("");

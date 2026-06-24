@@ -103,7 +103,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "10:00",
-    singer: "Geetha Eshwari and Jyothi"
+    singer: "Geetha,Eshwari and Jyothi"
   },
   {
     name: "Maa Paapala Toliginchu",
@@ -167,7 +167,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "51:32",
-    singer: "PS Bhajan Group"
+    singer: "PremSadan Ladies Group"
   },
   {
     name: "Sai Maa Jeevithaana",
@@ -175,7 +175,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "56:36",
-    singer: "PS Bhajan Group"
+    singer: "PremSadan Ladies Group"
   },
   {
     name: "Hum Ko Tumse",
@@ -183,7 +183,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "61:50",
-    singer: "PS Bhajan Group"
+    singer: "PremSadan Ladies Group"
   },
   {
     name: "Aashirvadinchu",

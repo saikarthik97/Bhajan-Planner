@@ -804,7 +804,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-21",
     startTime: "0:01",
-    singer: 'Sahithi'
+    singer: 'sahiti'
   },
    {
     name: "Eshwar Allah Terenam Sai Terenam",
@@ -835,7 +835,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-21",
     startTime: "15:25",
-    singer: 'Sahithi & Praneetha'
+    singer: 'sahiti & Praneetha'
   },
   {
     name: "Bolo Narayana Jai(2) Vittala",
@@ -876,7 +876,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-28",
     startTime: "4:32",
-    singer: 'Sahithi'
+    singer: 'sahiti'
   },
   {
     name: "Omkaara Bheejaakshari Saishwari",
@@ -924,7 +924,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-28",
     startTime: "31:08",
-    singer: 'Geeta,Jyothi & Eshwari'
+    singer: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Chandravadana Kamala Nayana",
@@ -948,7 +948,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-28",
     startTime: "40:46",
-    singer: 'Sahithi & Yoshitha'
+    singer: 'sahiti & Yoshitha'
   },
   {
     name: "Sarvadharma Priya Deva",
@@ -993,7 +993,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-06-04",
     startTime: "19:34",
-    singer: 'Sahithi'
+    singer: 'sahiti'
   },
    {
     name: "Dayakaro Sai Narayana",
@@ -1049,84 +1049,72 @@ const thursdayBhajansRawData = [
     name: "Paahi Gajaana Parvati nandana",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "0:01",
-    singer: 'A. Srinivas'
+    singer: 'A.Srinivas'
   },
   {
     name: "Guru brahma guru vishnu guru devo maheshwara",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "4:20",
     singer: 'Geetha, Jyothi & Eshwari'
   },
   {
     name: "Amba mandahasa vadani manohari sai jagat janani",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "8:36",
     singer: 'Sai Karthik'
   },
   {
     name: "Daykaro shiva gangadhari",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "13:24",
-    singer: 'Sahithi'
+    singer: 'sahiti'
   },
   {
     name: "Sundara Shyama murari sai",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "17:18",
     singer: 'A. Srinivas'
   },
   {
     name: "Ramacharana sukhadaayi bhajore",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "21:05",
     singer: 'Praneetha & Vani'
   },
   {
     name: "Sai mahadeva satya sai mahadeva",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "25:41",
     singer: 'Sai Karthik'
   },
   {
     name: "Om shiva shiva satchida nanda shiva",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "30:22",
     singer: 'Geetha, Jyothi & Eshwari'
   },
   {
     name: "Krishna Krishna Radha krishna",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "33:05",
     singer: 'Eshwar'
   },
   {
     name: "Allah allah karopukar",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "35:17",
-    singer: 'Sahithi'
+    singer: 'sahiti'
   },
   {
     name: "Patita pavana ram partipurushwara ram",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "38:01",
     singer: 'A. Srinivas'
   },
   {
     name: "Prabhu ramachandra ke doota",
     day: "Thursday",
     dateSung: "2026-06-11",
-    startTime: "41:55",
     singer: 'Praneetha & Vani'
   },
   // 18th June 2026
@@ -1140,7 +1128,7 @@ const thursdayBhajansRawData = [
     name: "Gurubaba Gurubaba",
     day: "Thursday",
     dateSung: "2026-06-18",
-    singer: "Geetha & Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Durga Bhavani Maa Jaya Jaya Sai Maa",
@@ -1158,7 +1146,7 @@ const thursdayBhajansRawData = [
     name: "Muralidhara Hare Mohana Krishna",
     day: "Thursday",
     dateSung: "2026-06-18",
-    singer: "Eshwari & Geetha"
+    singers: "Eshwari & Geetha"
   },
   {
     name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",

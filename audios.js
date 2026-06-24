@@ -29,6 +29,4 @@ const bhajanAudios = [
   { date: '2026-05-28', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284071/28th_may2026_z1uxrc.mp3", label: "Thursday Bhajans" },
   { date: '2026-05-31', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284078/31st_May_2026_qe2opq.mp3", label: "Sunday Bhajans" },
   { date: '2026-06-04', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284071/4th_june_houdox.mp3", label: "Thursday Bhajans" },
-  { date: '2026-06-11', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284062/11th_June_2026_ive5ye.mp3", label: "Thursday Bhajans" },
-  { date: '2026-06-14', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782283972/14th_June_2026_yamqgy.mp3", label: "Sunday Bhajans" },
 ];

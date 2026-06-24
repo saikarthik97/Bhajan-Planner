@@ -1561,7 +1561,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-24",
     startTime: "13:21",
-    singer: "Sahithi"
+    singer: "sahiti"
   },
    {
     name: "Premamrutha Barsaao baba",
@@ -1632,7 +1632,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-24",
     startTime: "50:16",
-    singer: "Divya & Gayathri"
+    singer: "Divya & Gayatri"
   },
    {
     name: "Veera Hanumana Ati Balavana Raam Naam Japiyaare",
@@ -1682,7 +1682,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-31",
     startTime: "18:36",
-    singer: "Sahithi"
+    singer: "sahiti"
   },
    {
     name: "Sundara Vadana Sarasija Nayana",
@@ -1731,70 +1731,60 @@ const sundayBhajansRawData = [
     name: "Jaya Pandarinatha Panduranga pundaleeka Varaa",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "0:01",
-    singer: "Sahithi"
+    singer: "sahiti"
   },
    {
     name: "Hey Shyama Sundara Hey Sai Sundara",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "6:41",
     singer: "Abhishek"
   },
    {
     name: "Tumaho Shyama Ram Rahim",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "11:34",
     singer: "Gayathri"
   },
    {
     name: "Saibaba Saibaba",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "14:56",
     singer: "A.Srinivas"
   },
    {
     name: "Hari(6) Bolo",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "18:35",
     singer: "Vathsalya"
   },
    {
     name: "Shiridi Sai Hey Bhagawan",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "22:29",
     singer: "Lal"
   },
    {
     name: "Sitaram Naama Bhajo",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "25:36",
     singer: "Geetha,Jyothi & Eshwari"
   },
    {
     name: "Hey Nanda Nanda Gopala Aananda Gopala",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "27:35",
     singer: "Eshwar"
   },
    {
     name: "Om Shivaaya",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "29:31",
     singer: "Lavanya"
   },
    {
     name: "Sai Siva Siva Subramanyam",
     day: "Sunday",
     dateSung: "2026-06-14",
-    startTime: "31:20",
     singer: "Venu & Sridhar"
   },
   // 21st June 2026
