@@ -213,7 +213,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "14:20",
-    singer: "Sharath",
+    singer: "Sharat",
   },
   {
     name: "Yuga Yuga Ke Avataara Tum Hi Ho",
@@ -261,7 +261,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "35:58",
-    singer: "Sharath",
+    singer: "Sharat",
   },
   {
     name: "Aao Pyaare Nayan Hamare ",
@@ -1875,25 +1875,59 @@ const sundayBhajansRawData = [
     startTime: "31:20",
     singer: "Venu & Sridhar"
   },
-  //  {
-  //   name: "",
-  //   day: "Sunday",
-  //   dateSung: "2026-06-14",
-  //   startTime: "",
-  //   singer: ""
-  // },
-  //  {
-  //   name: "",
-  //   day: "Sunday",
-  //   dateSung: "2026-06-14",
-  //   startTime: "",
-  //   singer: ""
-  // },
-  //  {
-  //   name: "",
-  //   day: "Sunday",
-  //   dateSung: "2026-06-14",
-  //   startTime: "",
-  //   singer: ""
-  // },
+  // 21st June 2026
+  {
+    name: "Prathama Vandana Gowri Nandana",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sharat"
+  },
+  {
+    name: "Gurupadavandana Shatavandana",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sridhar"
+  },
+  {
+    name: "Durga Amba Bhavani Jai Jai",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sruthi & Vathsalya"
+  },
+  {
+    name: "Radhe Govinda Gopala Jaya Govinda Radhe Gopala",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Venu"
+  },
+  {
+    name: "Bhuvana Bandhava Sai Bhagawaan",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "G.Srinivas"
+  },
+  {
+    name: "Maithilipathe Raghunandana",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sunitha"
+  },
+  {
+    name: "Shailagirishwara Uma Maheshwara",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Eshwar"
+  },
+  {
+    name: "Hey Kamala Vadana Sai Ranga",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sharat"
+  },
+  {
+    name: "Narayana Hari Narayana",
+    day: "Sunday",
+    dateSung: "2026-06-21",
+    singer: "Sunitha"
+  },
 ]

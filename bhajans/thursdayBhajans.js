@@ -1129,5 +1129,72 @@ const thursdayBhajansRawData = [
     startTime: "41:55",
     singer: 'Praneetha & Vani'
   },
+  // 18th June 2026
+  {
+    name: "Gajanana Gajanana",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Praneetha"
+  },
+  {
+    name: "Gurubaba Gurubaba",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Geetha & Eshwari"
+  },
+  {
+    name: "Durga Bhavani Maa Jaya Jaya Sai Maa",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Chamundeshwari"
+  },
+  {
+    name: "Hare Rama Hare Rama Rama Rama Hare Hare",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Lal"
+  },
+  {
+    name: "Muralidhara Hare Mohana Krishna",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Eshwari & Geetha"
+  },
+  {
+    name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Krishna Murari Gopala Krishna Krishna Sai Gopala",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Hare Krishna Hare Ram Sairam Sairam",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Lal"
+  },
+  {
+    name: "Jai (3) Narayana",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Shambho Mahadeva",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: ""
+  },
+  {
+    name: "Bolo Bolo Sabmil Bolo",
+    day: "Thursday",
+    dateSung: "2026-06-18",
+    singer: "Praneetha & Vani"
+  },
 
 ];
