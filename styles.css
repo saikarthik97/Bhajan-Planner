@@ -38,16 +38,16 @@
     background:
         repeating-linear-gradient(
             90deg,
-            rgba(255, 253, 250, 0.97) 0px,
-            rgba(238, 233, 225, 0.93) 8px,
-            rgba(255, 254, 252, 0.98) 16px,
-            rgba(232, 227, 218, 0.91) 24px,
-            rgba(255, 253, 250, 0.97) 32px,
-            rgba(255, 254, 252, 0.98) 40px
+            #8B0000 0px,
+            #6d0000 8px,
+            #8B0000 16px,
+            #9a0000 24px,
+            #7a0000 32px,
+            #8B0000 40px
         );
-    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 10;
-    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.18), inset 0 0 60px rgba(210, 200, 185, 0.15);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 /* Fabric folds effect */
@@ -59,23 +59,22 @@
     width: 100%;
     height: 100%;
     background:
-        linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.0) 25%, rgba(255,255,255,0.08) 100%),
         repeating-linear-gradient(
             90deg,
             transparent 0px,
             transparent 15px,
-            rgba(0, 0, 0, 0.03) 16px,
-            rgba(0, 0, 0, 0.055) 20px,
-            rgba(0, 0, 0, 0.03) 24px,
+            rgba(0, 0, 0, 0.2) 16px,
+            rgba(0, 0, 0, 0.3) 20px,
+            rgba(0, 0, 0, 0.2) 24px,
             transparent 25px,
             transparent 40px
         ),
         repeating-linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.55) 0px,
+            rgba(255, 255, 255, 0.05) 0px,
             transparent 8px,
             transparent 32px,
-            rgba(255, 255, 255, 0.55) 40px
+            rgba(255, 255, 255, 0.05) 40px
         );
     pointer-events: none;
     animation: curtainSway 4s ease-in-out infinite;
@@ -97,14 +96,14 @@
     background:
         repeating-linear-gradient(
             90deg,
-            #f0ece5 0px,
-            #f9f6f2 5px,
-            #e8e3db 10px,
-            #f9f6f2 15px,
-            #f0ece5 20px
+            #7a0000 0px,
+            #8B0000 5px,
+            #6d0000 10px,
+            #8B0000 15px,
+            #9a0000 20px
         );
     border-radius: 0 0 50% 50% / 0 0 30px 30px;
-    box-shadow: 0 8px 24px rgba(180, 160, 140, 0.22);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .curtain-left {
@@ -4220,355 +4219,6 @@ body {
     }
 }
 
-/* ======================================================================
-   COOL HAPPY VIBES THEME
-   ====================================================================== */
-
-/* ── Override CSS variables to cool sky/purple/mint palette ── */
-:root {
-    --dev-saffron:       #4FACFE;   /* sky blue */
-    --dev-saffron-light: #74C0FC;   /* lighter sky */
-    --dev-gold:          #00F2FE;   /* bright cyan */
-    --dev-gold-light:    #A5F3FD;   /* pale cyan */
-    --dev-maroon:        #8B5CF6;   /* vivid violet-purple */
-    --dev-maroon-dark:   #5B21B6;   /* deep indigo-purple */
-    --dev-cream:         #F0F7FF;   /* alice blue */
-    --dev-cream-mid:     #E8F0FF;   /* light periwinkle */
-    --dev-amber:         #4FACFE;
-    --dev-border:        rgba(79, 172, 254, 0.25);
-    --dev-glow:          rgba(79, 172, 254, 0.15);
-}
-
-/* ── Body: animated cool pastel gradient ── */
-body {
-    background: linear-gradient(135deg, #bfdbfe 0%, #fbcfe8 33%, #a7f3d0 66%, #ddd6fe 100%) !important;
-    background-size: 400% 400% !important;
-    animation: gradientShift 15s ease infinite !important;
-}
-
-/* ── Header: sky blue → cyan → violet ── */
-.header {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #a78bfa 100%) !important;
-    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.4) !important;
-}
-
-/* ── Page title: deep indigo → violet → sky ── */
-.page-title {
-    background: linear-gradient(135deg, #4338ca 0%, #7c3aed 55%, #4facfe 100%) !important;
-}
-
-/* ── Filter groups: cool light periwinkle ── */
-.filter-group {
-    background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%) !important;
-    border-color: rgba(79, 172, 254, 0.28) !important;
-}
-
-.filter-group:hover {
-    border-color: #4facfe !important;
-    box-shadow: 0 6px 18px rgba(79, 172, 254, 0.2) !important;
-}
-
-/* ── Old bhajans: cool theme ── */
-.old-bhajans-trigger {
-    background: linear-gradient(135deg, #f0f7ff 0%, #e8f0ff 100%) !important;
-    border: 1.5px solid rgba(79, 172, 254, 0.28) !important;
-}
-
-.old-bhajans-trigger:hover {
-    border-color: #4facfe !important;
-    box-shadow: 0 4px 16px rgba(79, 172, 254, 0.2) !important;
-}
-
-.old-bhajans-panel {
-    background: #f4faff !important;
-    border: 1.5px solid rgba(79, 172, 254, 0.28) !important;
-    box-shadow: 0 8px 28px rgba(79, 172, 254, 0.12) !important;
-}
-
-.old-bhajan-sublist {
-    background: #f4faff !important;
-    border: 1px solid rgba(79, 172, 254, 0.2) !important;
-}
-
-/* ── Audio seekbar: sky blue fill ── */
-.cp-seekbar {
-    background: linear-gradient(
-        to right,
-        #4facfe 0%,
-        #4facfe var(--cp-progress, 0%),
-        #e5e7eb var(--cp-progress, 0%),
-        #e5e7eb 100%
-    ) !important;
-}
-
-.cp-seekbar::-webkit-slider-thumb {
-    background: radial-gradient(circle at 35% 35%, #93c5fd, #4facfe) !important;
-    box-shadow: 0 2px 6px rgba(79, 172, 254, 0.55), 0 0 0 3px rgba(79, 172, 254, 0.18) !important;
-}
-
-.cp-seekbar::-moz-range-thumb {
-    background: radial-gradient(circle at 35% 35%, #93c5fd, #4facfe) !important;
-    box-shadow: 0 2px 6px rgba(79, 172, 254, 0.55), 0 0 0 3px rgba(79, 172, 254, 0.18) !important;
-}
-
-/* ── Audio section: light sky tint ── */
-.audio-section {
-    background: #f0f7ff !important;
-    border-top: 3px solid #74c0fc !important;
-}
-
-.audio-player-container {
-    background: #f8fbff !important;
-    border: 1px solid #bfdbfe !important;
-}
-
-.audio-label {
-    border-bottom: 1px solid #bfdbfe !important;
-}
-
-.audio-selection-prompt {
-    background: #eff6ff !important;
-    border: 1px dashed #93c5fd !important;
-    color: #1d4ed8 !important;
-}
-
-.play-all-btn {
-    background: #2563eb !important;
-}
-
-.play-all-btn:hover {
-    background: #1d4ed8 !important;
-}
-
-/* ── Audio dropdown: regular group header ── */
-.custom-audio-group-header.regular {
-    background: linear-gradient(135deg, #5b21b6 0%, #8b5cf6 50%, #4facfe 100%) !important;
-    color: #e0f2fe !important;
-}
-
-/* ── Audio bhajan list header ── */
-.audio-bhajan-list-header {
-    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 50%, #4facfe 100%) !important;
-    border-bottom: 2px solid #74c0fc !important;
-}
-
-.audio-bhajan-list-title {
-    color: #e0f2fe !important;
-}
-
-/* ── Audio bhajan item hover/playing: cool blue tones ── */
-.audio-bhajan-item.has-audio:hover {
-    background: #eff6ff !important;
-    border-left: 4px solid #4facfe !important;
-}
-
-.audio-bhajan-item.playing {
-    background: #eef2ff !important;
-    border-left: 4px solid #6d28d9 !important;
-}
-
-.audio-bhajan-item.playing .audio-bhajan-number {
-    color: #4338ca !important;
-}
-
-.audio-bhajan-item.playing .audio-bhajan-name {
-    color: #312e81 !important;
-}
-
-/* ── Playing bars: sky blue ── */
-.playing-indicator {
-    background: #4338ca !important;
-}
-
-/* ── Day badge: Thursday → cool indigo (not red-maroon) ── */
-.day-badge.day-thursday {
-    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
-    border: 1px solid #3730a3 !important;
-}
-
-/* ── Shruthi badge: cool periwinkle tint ── */
-.shruthi-simple {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
-    color: #1d4ed8 !important;
-    border: 1px solid rgba(79, 172, 254, 0.3) !important;
-}
-
-/* ── Date results header: sky blue accent ── */
-.date-results-header {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
-    border-left: 4px solid #4facfe !important;
-}
-
-.date-results-title {
-    color: #1e3a8a !important;
-}
-
-/* ── Singer search: cool green audio indicator stays; currently-playing → sky ── */
-.singer-search-item.currently-playing {
-    background: linear-gradient(90deg, #dbeafe, #bfdbfe) !important;
-    border-left: 4px solid #2563eb !important;
-}
-
-.singer-search-item.currently-playing .result-number {
-    color: #2563eb !important;
-}
-
-.singer-search-item.currently-playing .result-title {
-    color: #1e3a8a !important;
-}
-
-.singer-search-item.currently-playing .audio-play-icon {
-    color: #2563eb !important;
-}
-
-/* ── Singer info pill: cool periwinkle ── */
-.singer-info {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
-    border: 1px solid #bfdbfe !important;
-    color: #3730a3 !important;
-}
-
-.singer-info strong {
-    color: #1d4ed8 !important;
-}
-
-/* ── Audio bhajan singer badge: cool periwinkle ── */
-.audio-bhajan-singer {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
-    border: 1px solid #bfdbfe !important;
-    color: #4338ca !important;
-}
-
-/* ── Date result items: clear song vs singer differentiation ── */
-.date-result-item .result-title {
-    color: #1e293b !important;   /* dark slate — strong, readable song name */
-    font-weight: 700 !important;
-}
-
-.date-result-singer {
-    color: #047857 !important;                                          /* emerald green */
-    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%) !important;
-    border: 1px solid #6ee7b7 !important;
-    border-radius: 20px !important;
-    padding: 2px 10px !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-}
-
-/* ── Result number: sky blue ── */
-.result-number {
-    color: #4facfe !important;
-}
-
-/* ── Footer: deep indigo/navy with sky blue text ── */
-.footer {
-    background: linear-gradient(135deg, #1e1b4b 0%, #1a1a3e 50%, #0c1445 100%) !important;
-    color: rgba(147, 197, 253, 0.9) !important;
-}
-
-.footer::before {
-    background: linear-gradient(90deg, #4facfe, #00f2fe, #a78bfa, #f472b6, #4facfe) !important;
-}
-
-.footer p {
-    color: rgba(147, 197, 253, 0.75) !important;
-}
-
-.connect-title {
-    color: #cbd5e1 !important;
-}
-
-.connect-email {
-    color: #93c5fd !important;
-}
-
-/* ── Hint modal ok button ── */
-.hint-ok-btn {
-    background: linear-gradient(135deg, #4facfe 0%, #5b21b6 100%) !important;
-}
-
-/* ── Action buttons: distinct warm colours (not blue) ── */
-
-/* Show Bhajans List → emerald green */
-.show-bhajan-list-btn {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
-}
-.show-bhajan-list-btn:hover {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5) !important;
-}
-
-/* Stop Playing → orange */
-.stop-audio-btn {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4) !important;
-}
-.stop-audio-btn:hover {
-    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%) !important;
-    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5) !important;
-}
-
-/* Close / Hide results → rose-red */
-.close-results-btn {
-    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    box-shadow: 0 3px 12px rgba(244, 63, 94, 0.35) !important;
-}
-.close-results-btn:hover {
-    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
-}
-.hide-results-btn {
-    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    box-shadow: 0 3px 12px rgba(244, 63, 94, 0.35) !important;
-}
-.hide-results-btn:hover {
-    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
-}
-
-/* Audio list Hide / Close buttons → rose-red */
-.close-audio-list-btn,
-.hide-audio-list-btn {
-    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%) !important;
-    color: #fff !important;
-    border: none !important;
-}
-.close-audio-list-btn:hover,
-.hide-audio-list-btn:hover {
-    background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
-}
-
-/* Floating Show Singer → violet-to-pink */
-.floating-show-singer-btn {
-    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
-    color: #fff !important;
-    border: none !important;
-    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.5) !important;
-}
-.floating-show-singer-btn:hover {
-    background: linear-gradient(135deg, #9333ea 0%, #db2777 100%) !important;
-    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.6) !important;
-}
-
-/* ── Scrollbar tint: sky blue ── */
-::-webkit-scrollbar-thumb {
-    background: rgba(79, 172, 254, 0.4) !important;
-}
-
-::-webkit-scrollbar-thumb:active {
-    background: rgba(79, 172, 254, 0.7) !important;
-}
-
-* {
-    scrollbar-color: rgba(79, 172, 254, 0.4) transparent !important;
-}
 
 /* ======================================================================
    SINGER vs SONG — FINAL COLOUR DIFFERENTIATION (all sections)
