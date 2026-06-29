@@ -707,7 +707,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-14",
     startTime: "2:37",
-    singer: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Jai Jai Bhavani Maa",
@@ -747,7 +747,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-14",
     startTime: "21:25",
-    singer: 'Geetha,Jyothi & Ishwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Bhajare Manasa Sairam",
@@ -787,7 +787,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-14",
     startTime: "37:02",
-    singer: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Vayukumara Vanara Veera",
@@ -884,7 +884,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-28",
     startTime: "9:06",
-    singer: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Raghunandana Raghava Rama Hare",
@@ -924,7 +924,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-05-28",
     startTime: "31:08",
-    singer: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
   {
     name: "Chandravadana Kamala Nayana",
@@ -1005,7 +1005,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-06-04",
     startTime: "29:43",
-    singer: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi & Eshwari'
   },
    {
     name: "Bhajamana Panduranga Vittala Jai Vittala",

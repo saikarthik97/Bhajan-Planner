@@ -143,7 +143,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "18:27",
-    singer: "Sahiti",
+    singer: "sahiti",
   },
   {
     name: "Tum ho Shankara Daata Sai Shankara",
@@ -191,7 +191,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-11-30",
     startTime: "38:04",
-    singer: "Sahiti",
+    singer: "sahiti",
   },
   {
     name: "Sharanu Ghosha Priyaney Ayyappa",
@@ -1445,7 +1445,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-04-26",
     startTime: "6:24",
-    singer: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
   {
     name: "Jaya Kausalya Nandana Ram",
@@ -1604,7 +1604,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-24",
     startTime: "38:53",
-    singer: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
    {
     name: "Neela Megha Shyama Krishna Gopala Krishna",
@@ -1632,7 +1632,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-24",
     startTime: "50:16",
-    singer: "Divya & Gayatri"
+    singer: "Divya & L.Gayatri"
   },
    {
     name: "Veera Hanumana Ati Balavana Raam Naam Japiyaare",
@@ -1696,7 +1696,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-31",
     startTime: "27:30",
-    singer: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
    {
     name: "Hey Nirakaari Allah",
@@ -1710,7 +1710,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-31",
     startTime: "36:12",
-    singer:"Yoshitha & Sai harshitha"
+    singer:"Yoshitha & Sai Harshitha"
   },
    {
     name: "Deena Bandhu vittala Jai",
