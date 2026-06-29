@@ -29,4 +29,9 @@ const bhajanAudios = [
   { date: '2026-05-28', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284071/28th_may2026_z1uxrc.mp3", label: "Thursday Bhajans" },
   { date: '2026-05-31', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284078/31st_May_2026_qe2opq.mp3", label: "Sunday Bhajans" },
   { date: '2026-06-04', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284071/4th_june_houdox.mp3", label: "Thursday Bhajans" },
+  { date: '2025-10-19', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782710538/19th_october_lfs.mp3", label: "Sunday Bhajans" },
+  { date: '2026-03-22', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782710627/22_Mar_2026_lfs.mp3", label: "Sunday Bhajans" },
+  { date: '2026-05-24', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782710761/24th_may_2026_lfs.mp3", label: "Sunday Bhajans" },
+  { date: '2026-06-11', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782710897/11th_June_2026_lfs.mp3", label: "Thursday Bhajans" },
+  { date: '2026-06-14', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782711033/14th_June_2026_lfs.mp3", label: "Sunday Bhajans" },
 ];

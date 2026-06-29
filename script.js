@@ -12,8 +12,6 @@ const bhajansDatabase = [
   ...thursdayBhajansRawData,
   ...bhogi2026RawData,
   ...sankranthi2026,
-  ...shivarathri2026RawData,
-  ...ramzan2026RawData,
   ...aaradhana2026RawData,
 ].map((bhajan, index) => ({ id: index + 1, ...bhajan }));
 
