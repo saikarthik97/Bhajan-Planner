@@ -1145,7 +1145,7 @@ const thursdayBhajansRawData = [
     name: "Muralidhara Hare Mohana Krishna",
     day: "Thursday",
     dateSung: "2026-06-18",
-    singers: "Geetha& Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
@@ -1298,7 +1298,7 @@ const thursdayBhajansRawData = [
     name: "Bada Chitta Chora",
     day: "Thursday",
     dateSung: "2026-07-02",
-    singers: "Geetha& Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Manuva Bolo Radhe (4) Shyama Naam",
