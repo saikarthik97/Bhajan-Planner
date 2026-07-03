@@ -29,7 +29,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "bhajans",
     startTime: "12:44",
-    singers: "Geetha,Jyothi&Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
   {
     name: "Bolo bolo sabmil bolo",
@@ -103,7 +103,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "10:00",
-    singers: "Geetha,Jyothi&Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
   {
     name: "Maa Paapala Toliginchu",

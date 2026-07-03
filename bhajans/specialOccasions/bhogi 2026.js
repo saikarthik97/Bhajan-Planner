@@ -29,7 +29,7 @@ const bhogi2026RawData = [
     day: "Wednesday",
     dateSung: "2026-01-14",
     startTime: "09:10",
-    singers: "Geetha,Jyothi&Eshwari",
+    singers: "Geetha,Jyothi & Eshwari",
   },
   {
     name: "Gopala Radha Lola",
