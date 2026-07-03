@@ -1066,7 +1066,7 @@ const thursdayBhajansRawData = [
     name: "Dayakaro Shiva Gangadhari",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "Sahiti"
+    singer: "sahiti"
   },
   {
     name: "Sundara Shyama Murari Sai",
@@ -1102,7 +1102,7 @@ const thursdayBhajansRawData = [
     name: "Allah Allah Karopukar",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "Sahiti"
+    singer: "sahiti"
   },
   {
     name: "Patita Pavana Ram",
@@ -1286,7 +1286,7 @@ const thursdayBhajansRawData = [
     name: "Neelakanta Mahadeva Gowri Vandana",
     day: "Thursday",
     dateSung: "2026-07-02",
-    singer: "Niveditha & Sai Harshitha"
+    singer: "Nivedita & Sai Harshitha"
   },
   {
     name: "Nandakishora Navanita Chora Sai Gopala",
