@@ -1048,13 +1048,13 @@ const thursdayBhajansRawData = [
     name: "Pahi Gajanana",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   {
     name: "Guru Brahma Guru Vishnu Guru Devo Maheshwara",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "Geetha Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Amba Mandahasa Vadani Manohari Sai Jagat Janani",
@@ -1072,7 +1072,7 @@ const thursdayBhajansRawData = [
     name: "Sundara Shyama Murari Sai",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   {
     name: "Ramacharana Sukhadayi Bhajore",
@@ -1090,7 +1090,7 @@ const thursdayBhajansRawData = [
     name: "Om Shiva (2) Satchitananda Shiva",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "Jyothi & Eshwari"
+    singers: "Jyothi & Eshwari"
   },
   {
     name: "Krishna Krishna Radha Krishna",
@@ -1108,7 +1108,7 @@ const thursdayBhajansRawData = [
     name: "Patita Pavana Ram",
     day: "Thursday",
     dateSung: "2026-06-11",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   {
     name: "Prabhu Ramachandra Ke Doota",

@@ -1753,7 +1753,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-06-14",
     startTime: "15:01",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   {
     name: "Hari(6) Bolo",
@@ -1893,7 +1893,7 @@ const sundayBhajansRawData = [
     name: "Mandir Mein Aao Madhava",
     day: "Sunday",
     dateSung: "2026-06-28",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   {
     name: "Kanhaiyya Teri Bansi Bhaje Mere Lal",
