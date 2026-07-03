@@ -240,7 +240,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-04",
     startTime: "19:05",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   {
     name: "Srirama Bhadra Sri rama chandra Sri Rama Jaya Sri Ram",
@@ -377,7 +377,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-10-19",
     startTime: "33:55",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   {
     name: "Shambho Murarey Shankara Murarey",
@@ -466,7 +466,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-08-31",
     startTime: "24:24",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   {
     name: "Sri Rama Paratparara Ram Hey Rajeeva Lochana Ram",
@@ -554,7 +554,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2025-09-21",
     startTime: "21:22",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   {
     name: "Madhava Madhusudana Muralidhara Mohana",
@@ -658,7 +658,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-01-11",
     startTime: "20:20",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   {
     name: "Ram(2) Bhajamana Hare Hare",
@@ -924,7 +924,7 @@ const sundayBhajansRawData = [
     day: "sunday",
     dateSung: "2026-02-01",
     startTime: "38:02",
-    singers: "Geetha,Jyothi & Eshwari",
+    singers: "Geetha,Jyothi&Eshwari",
   },
   // 1st March 2026
   {
@@ -1107,7 +1107,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-08",
     startTime: "37:50",
-    singers: 'Geetha,Jyothi & Eshwari'
+    singers: 'Geetha,Jyothi&Eshwari'
   }, {
     name: "Vittala Narayana",
     deity: "vittala",
@@ -1141,7 +1141,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-03-22",
     startTime: "8:35",
-    singers: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi&Eshwari"
   },
   {
     name: "Jaya Jaya Govinda Narayana",
@@ -1391,7 +1391,7 @@ const sundayBhajansRawData = [
     day: "sunday",
     dateSung: "2026-04-19",
     startTime: "31:37",
-    singers: 'Geetha,Jyothi & Eshwari',
+    singers: 'Geetha,Jyothi&Eshwari',
   },
    {
     name: "Hey Nanda(2) Gopala Aananda(2) Gopala",
@@ -1445,7 +1445,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-04-26",
     startTime: "6:24",
-    singers: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi&Eshwari"
   },
   {
     name: "Jaya Kausalya Nandana Ram",
@@ -1604,7 +1604,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-24",
     startTime: "38:53",
-    singers: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi&Eshwari"
   },
    {
     name: "Neela Megha Shyama Krishna Gopala Krishna",
@@ -1696,7 +1696,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-05-31",
     startTime: "27:30",
-    singers: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi&Eshwari"
   },
    {
     name: "Hey Nirakaari Allah",
@@ -1774,7 +1774,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-06-14",
     startTime: "25:42",
-    singers: "Geetha, Jyothi & Eshwari"
+    singers: "Geetha,Jyothi& Eshwariyothi & Eshwari"
   },
   {
     name: "Hey Nanda Nanda Gopala Aananda Gopala",
