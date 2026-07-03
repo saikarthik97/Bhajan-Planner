@@ -1732,7 +1732,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-06-14",
     startTime: "0:05",
-    singer: "Sahithi"
+    singer: "sahiti"
   },
   {
     name: "Hey Shyama Sundara Hey Sai Sundara",
@@ -1774,7 +1774,7 @@ const sundayBhajansRawData = [
     day: "Sunday",
     dateSung: "2026-06-14",
     startTime: "25:42",
-    singer: "Geetha, Jyothi & Eshwari"
+    singers: "Geetha, Jyothi & Eshwari"
   },
   {
     name: "Hey Nanda Nanda Gopala Aananda Gopala",
@@ -1814,7 +1814,7 @@ const sundayBhajansRawData = [
     name: "Durga Amba Bhavani Jai Jai",
     day: "Sunday",
     dateSung: "2026-06-21",
-    singer: "Sruthi & Vathsalya"
+    singer: "Sai Shruthi & Vathsalya"
   },
   {
     name: "Radhe Govinda Gopala Jaya Govinda Radhe Gopala",
@@ -1875,7 +1875,7 @@ const sundayBhajansRawData = [
     name: "Jaya Sai Shankara Jaya Abhayankara",
     day: "Sunday",
     dateSung: "2026-06-28",
-    singer: "Sahithi"
+    singer: "sahiti"
   },
   {
     name: "Prem Eshwar Hai Eshwari Prem Hai",
@@ -1887,7 +1887,7 @@ const sundayBhajansRawData = [
     name: "Hare Ram (2) Hare Rama Krishna Hare Ram",
     day: "Sunday",
     dateSung: "2026-06-28",
-    singer: "Yoshitha & Sruthi"
+    singer: "Yoshitha & Sai Shruthi"
   },
   {
     name: "Mandir Mein Aao Madhava",

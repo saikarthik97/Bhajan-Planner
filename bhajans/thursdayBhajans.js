@@ -1127,7 +1127,7 @@ const thursdayBhajansRawData = [
     name: "Gurubaba Gurubaba",
     day: "Thursday",
     dateSung: "2026-06-18",
-    singer: "Geetha & Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Durga Bhavani Maa Jaya Jaya Sai Maa",
@@ -1145,7 +1145,7 @@ const thursdayBhajansRawData = [
     name: "Muralidhara Hare Mohana Krishna",
     day: "Thursday",
     dateSung: "2026-06-18",
-    singer: "Eshwari & Geetha"
+    singers: "Eshwari & Geetha"
   },
   {
     name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
@@ -1236,7 +1236,7 @@ const thursdayBhajansRawData = [
     name: "Nirupama Gunasadana Neeraja Dhala Nayana",
     day: "Thursday",
     dateSung: "2026-06-25",
-    singer: "Geetha & Eshwari"
+    singers: "Geetha & Eshwari"
   },
   {
     name: "Sri Ranga Hare Vittala Sai Ranga Vittala",

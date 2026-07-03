@@ -127,7 +127,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "23:10",
-    singer: "Harshitha & Vatsalya"
+    singer: "Harshitha & Vathsalya"
   },
   {
     name: "Mere Maula Karam De",
