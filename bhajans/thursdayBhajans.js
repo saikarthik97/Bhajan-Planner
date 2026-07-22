@@ -1270,8 +1270,8 @@ const thursdayBhajansRawData = [
     singer: "Vani"
   },
   {
-    name: "Mahadeva Maheshwara Sai Narayana",
-    Shruthi: { gents: "4P", },
+    name: "Mahadeva Maheshwara",
+    shruthi: { gents: "4P" },
     day: "Thursday",
     dateSung: "2026-07-02",
     singer: "Sai Karthik"
@@ -1335,6 +1335,73 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     dateSung: "2026-07-02",
     singer: "Sai Karthik"
+  },
+
+//9th July 2026
+  {
+    name: "Ganesha Charanam Parama Pavanam",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Praneetha"
+  },
+  {
+    name: "Jaya Guru Jaya Guru Sairam",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Eshwar"
+  },
+  {
+    name: "Devi Bhavani Jagat Janani",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Sai Harshitha"
+  },
+  {
+    name: "Sri Rama Jaya Rama Jaya (2) Rama",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singers: "Geetha & Eshwari"
+  },
+  {
+    name: "Hari Naam Gathe Chalo",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Lal"
+  },
+  {
+    name: "Shambho Shankara",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Vani"
+  },
+  {
+    name: "Namo Bhagavatey Vasudevaaya",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Lalitha"
+  },
+  {
+    name: "Nandalala Nandalala Nanda Gopa Nanda Nachey",
+    day: "Thursday",
+    dateSung: "2026-07-09"
+  },
+  {
+    name: "Hey Madhava Hey Madhusudana",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singers: "Vani & Sai Harshitha"
+  },
+  {
+    name: "Vittala Hari Vittala",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Chamundeshwari"
+  },
+  {
+    name: "Satennam Satennam Satennam Jai Bolo",
+    day: "Thursday",
+    dateSung: "2026-07-09",
+    singer: "Lal"
   },
 
 ];
