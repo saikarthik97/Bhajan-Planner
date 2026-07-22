@@ -1920,4 +1920,81 @@ const sundayBhajansRawData = [
     singer: "Sridhar"
   },
 
+//12th July 2026
+  {
+    name: "Gowri Sutaya Om Namah Om",
+    day: "Sunday",
+    shruthi: { gents: "6P" },
+    dateSung: "2026-07-12",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Gurudeva Priya Deva Sai Deva Dayamaya",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singer: "Lal"
+  },
+  {
+    name: "Amba Mandahasa Vadani",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singers: "Sai Harshitha & Vathsalya"
+  },
+  {
+    name: "Jaya Jagadeesha Harey Jaya Govinda Harey",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Patita Pavana Ram Partipurishwara Ram",
+    day: "Sunday",
+    shruthi: { gents: "2P" },
+    dateSung: "2026-07-12",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Aao Aao Sai Pyaare",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singers: "Praneetha & Vani"
+  },
+  {
+    name: "Guru Nanak Ji Ki Jai Jai Kaar",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singer: "Lal"
+  },
+  {
+    name: "Jai Sairam Jai Sairam",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singers: "Sruthi & Vathsalya"
+  },
+  {
+    name: "Hey Viswa Pala Gopala",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singer: "Eshwar"
+  },
+  {
+    name: "Vittala Bhajo Sai Vittala Bhajo",
+    day: "Sunday",
+    shruthi: { gents: "4P" },
+    dateSung: "2026-07-12",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Hari Narayana Govinda Jaya Narayana Gopala",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singers: "Geetha & Vathsalya"
+  },
+  {
+    name: "Sai Baba Bolo",
+    day: "Sunday",
+    dateSung: "2026-07-12",
+    singer: "A.Srinivas"
+  },
+
 ]
