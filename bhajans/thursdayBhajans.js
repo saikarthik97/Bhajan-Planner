@@ -1404,4 +1404,81 @@ const thursdayBhajansRawData = [
     singer: "Lal"
   },
 
+//16th July 2026
+  {
+    name: "Shambu Kumara Gowri Tanaya",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "Abhishek"
+  },
+  {
+    name: "Jaya Guru Omkaara Sai Sadhuru Omkaara",
+    day: "Thursday",
+    shruthi: { gents: "5P" },
+    dateSung: "2026-07-16",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Triloka Palini Jagadeeshwari",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singers: "Geetha & Eshwari"
+  },
+  {
+    name: "Namah Shivaya (2)",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Govinda Bolo Gopala Bolo",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "Abhishek"
+  },
+  {
+    name: "Hey Sai Jagannatha (3)",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "Praneetha"
+  },
+  {
+    name: "Sai Hamara Hum Sai Ke",
+    day: "Thursday",
+    shruthi: { gents: "5.5P" },
+    dateSung: "2026-07-16",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Tripuraari Shiva Shankara",
+    day: "Thursday",
+    shruthi: { gents: "5P" },
+    dateSung: "2026-07-16",
+    singer: "Eshwar"
+  },
+  {
+    name: "Sri Sai Rama Hare (2)",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singers: "Geetha & Lalitha"
+  },
+  {
+    name: "Hey Govinda Hey Ananda Nanda Gopala",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "Chamundeshwari"
+  },
+  {
+    name: "Guru Paada Vandana Shata Vandana",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Manamohana Nandalal",
+    day: "Thursday",
+    dateSung: "2026-07-16",
+    singer: "Vani"
+  },
+
 ];
