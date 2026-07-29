@@ -29,7 +29,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "bhajans",
     startTime: "12:44",
-    singer: "Geetha,Jyothi & Eshwari"
+    singers: "Geetha,Jyothi & Eshwari"
   },
   {
     name: "Bolo bolo sabmil bolo",
@@ -86,7 +86,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "bhajans",
     startTime: "37:02",
-    singer: "A. Srinivas"
+    singer: "A.Srinivas"
   },
   // music Songs
   {
@@ -103,7 +103,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "10:00",
-    singer: "Geetha,Eshwari and Jyothi"
+    singers: "Geetha,Jyothi & Eshwari"
   },
   {
     name: "Maa Paapala Toliginchu",
@@ -127,7 +127,7 @@ const aaradhana2026RawData = [
     dateSung: "2026-04-24",
     programme: "music",
     startTime: "23:10",
-    singer: "Harshitha & Vatsalya"
+    singer: "Harshitha & Vathsalya"
   },
   {
     name: "Mere Maula Karam De",

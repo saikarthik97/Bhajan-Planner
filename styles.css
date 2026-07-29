@@ -149,10 +149,10 @@
 
 .welcome-subtitle {
     font-size: 1.3rem;
-    color: #1e1b4b;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 30px;
-    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
 .enter-btn {
@@ -1298,15 +1298,23 @@ body {
 }
 
 /* Connect With Us Section */
+.connect-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+}
+
 .connect-title {
     color: #d1d5db;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
 }
 
 .connect-email {
     color: #a78bfa;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-decoration: none;
 }
@@ -1319,14 +1327,14 @@ body {
 .footer {
     background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
     color: white;
-    padding: 16px 20px;
+    padding: 10px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .footer::before {
@@ -1340,9 +1348,10 @@ body {
 }
 
 .footer p {
-    margin: 3px 0;
+    margin: 1px 0;
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
 }
 
 /* Responsive Design */
@@ -2602,8 +2611,8 @@ body {
 
 @media (max-width: 768px) {
     .connect-email {
-        font-size: 0.9rem;
-        word-break: break-all;
+        font-size: 0.8rem;
+        word-break: break-word;
     }
 }
 
@@ -2916,6 +2925,11 @@ body {
     margin-bottom: 5px;
 }
 
+.singer-result-text {
+    flex: 1;
+    min-width: 0;
+}
+
 .singer-result-details {
     display: flex;
     flex-wrap: wrap;
@@ -2929,6 +2943,8 @@ body {
     font-weight: 700;
     color: #667eea;
     min-width: 22px;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 .singer-search-item .result-title {
@@ -2942,6 +2958,7 @@ body {
     font-size: 1.1rem;
     color: #10b981;
     margin-left: auto;
+    flex-shrink: 0;
     transition: all 0.3s ease;
     animation: playPulse 2s infinite;
 }
@@ -3029,7 +3046,6 @@ body {
     }
 
     .singer-result-content {
-        flex-wrap: wrap;
         gap: 6px;
     }
 
@@ -4285,5 +4301,46 @@ body {
 
 .live-result-item .bhajan-name {
     color: #1e293b !important;
+}
+
+.youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.youtube-btn svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 1px 3px rgba(255, 0, 0, 0.35));
+}
+
+.youtube-btn:hover {
+    opacity: 0.85;
+}
+
+.youtube-btn:active {
+    transform: scale(0.92);
+}
+
+@media (hover: none) {
+    .youtube-btn:hover {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-btn {
+        width: 32px;
+    }
 }
 
