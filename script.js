@@ -12,7 +12,7 @@ const bhajansDatabase = [
   ...thursdayBhajansRawData,
   ...bhogi2026RawData,
   ...sankranthi2026,
-  // ...Gurupoornima2026RawData,
+  ...gurupoornima2026RawData,
   ...aaradhana2026RawData,
 ].map((bhajan, index) => ({ id: index + 1, ...bhajan }));
 
@@ -22,6 +22,7 @@ const festivalDates = {
   "2026-02-15": "Festival - Maha Shivarathri",
   "2026-03-21": "Festival - Ramzan",
   "2026-04-24": "Festival - Aaradhana Mahotsavam",
+  "2026-07-29": "Festival - Guru Poornima",
 };
 
 function getFestivalName(dateString) {
