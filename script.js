@@ -12,6 +12,7 @@ const bhajansDatabase = [
   ...thursdayBhajansRawData,
   ...bhogi2026RawData,
   ...sankranthi2026,
+  // ...Gurupoornima2026RawData,
   ...aaradhana2026RawData,
 ].map((bhajan, index) => ({ id: index + 1, ...bhajan }));
 
@@ -184,11 +185,18 @@ function performSearch(searchTerm, resultsContainer, loadingIndicator) {
     `<div class="search-result-count">${results.length} bhajan${results.length > 1 ? "s" : ""} found</div>` +
     results.map((bhajan) => {
       const hasAudio = hasAudioSet.has(bhajan.dateSung);
+      const hasYoutube = !hasAudio && bhajanYoutubeLinks.some((y) => y.date === bhajan.dateSung);
+      const rowClick = hasAudio
+        ? `playFromNameSearch('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}')`
+        : hasYoutube
+          ? `openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})`
+          : "";
       return `
-        <div class="live-result-item ${hasAudio ? "clickable-row" : ""}" ${hasAudio ? `onclick="playFromNameSearch('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}')"` : ""}>
+        <div class="live-result-item ${hasAudio || hasYoutube ? "clickable-row" : ""}" ${rowClick ? `onclick="${rowClick}"` : ""}>
           <div class="name-search-line-1">
             <span class="bhajan-name">${bhajan.name}</span>
             ${hasAudio ? '<span class="has-audio-tag">🎵</span>' : ""}
+            ${hasYoutube ? `<button type="button" class="youtube-btn" title="Watch on YouTube" aria-label="Watch on YouTube" onclick="openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})"><svg viewBox="0 0 30 14" width="30" height="14"><rect width="30" height="14" rx="5" fill="#FF0000"/><path d="M12.5 4.3l5.5 2.7-5.5 2.7z" fill="#fff"/></svg></button>` : ""}
           </div>
           <div class="name-search-line-2">
             <span class="detail-badge day-badge day-${bhajan.day.toLowerCase()}">${bhajan.day}</span>
@@ -327,19 +335,26 @@ function displaySingerResults(results, singerName) {
       ${results.map((bhajan, index) => {
         const audioEntry = bhajanAudios.find((a) => a.date === bhajan.dateSung);
         const hasAudio = audioEntry && audioEntry.audioFile && bhajan.startTime;
+        const hasYoutube = !hasAudio && bhajanYoutubeLinks.some((y) => y.date === bhajan.dateSung);
         const bhajansForDate = bhajansDatabase.filter((b) => b.dateSung === bhajan.dateSung);
         const bhajanIndex = bhajansForDate.findIndex((b) => b.name === bhajan.name);
         const nextWithTime = bhajansForDate.slice(bhajanIndex + 1).find((b) => b.startTime && parseTime(b.startTime) !== null);
         const endTime = nextWithTime ? nextWithTime.startTime : null;
+        const rowClick = hasAudio
+          ? `playBhajanAudioFromSinger('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})`
+          : hasYoutube
+            ? `openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})`
+            : "";
         return `
-          <div class="result-item singer-search-item ${hasAudio ? "clickable-row has-audio-indicator" : "no-audio-item"}"
-               ${hasAudio ? `onclick="playBhajanAudioFromSinger('${bhajan.dateSung}', '${bhajan.name.replace(/'/g, "\\'")}', ${formatTimeAttr(bhajan.startTime)}, ${formatTimeAttr(endTime)})"` : ""}>
+          <div class="result-item singer-search-item ${hasAudio || hasYoutube ? "clickable-row has-audio-indicator" : "no-audio-item"}"
+               ${rowClick ? `onclick="${rowClick}"` : ""}>
             <div class="singer-result-content">
               <span class="result-number">${index + 1}.</span>
               <div class="singer-result-text">
                 <h3 class="result-title">${bhajan.name}</h3>
                 ${formatShruthiSimple(bhajan.shruthi)}
               </div>
+              ${hasYoutube ? `<button type="button" class="youtube-btn" title="Watch on YouTube" aria-label="Watch on YouTube" onclick="openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})"><svg viewBox="0 0 30 14" width="30" height="14"><rect width="30" height="14" rx="5" fill="#FF0000"/><path d="M12.5 4.3l5.5 2.7-5.5 2.7z" fill="#fff"/></svg></button>` : ""}
               ${hasAudio ? '<span class="audio-play-icon">▶</span>' : ""}
             </div>
           </div>`;
@@ -462,6 +477,21 @@ function searchByDate() {
   displayDateResults(bhajansDatabase.filter((b) => b.dateSung === dateInput), dateInput);
 }
 
+// Build a YouTube link for a bhajan's date, jumping to its startTime if known
+function buildYoutubeTimestampUrl(baseUrl, startTime) {
+  const seconds = parseTime(startTime);
+  if (seconds === null) return baseUrl;
+  const separator = baseUrl.includes("?") ? "&" : "?";
+  return `${baseUrl}${separator}t=${Math.floor(seconds)}s`;
+}
+
+function openBhajanOnYoutube(event, dateSung, startTime) {
+  event.stopPropagation();
+  const entry = bhajanYoutubeLinks.find((y) => y.date === dateSung);
+  if (!entry) return;
+  window.open(buildYoutubeTimestampUrl(entry.url, startTime), "_blank", "noopener");
+}
+
 function displayDateResults(results, selectedDate) {
   const resultsSection = document.getElementById("resultsSection");
   const resultsContainer = document.getElementById("resultsContainer");
@@ -483,17 +513,25 @@ function displayDateResults(results, selectedDate) {
           ${festivalName ? `<span class="detail-badge festival-badge">${festivalName.replace("Festival - ", "")}</span>` : ""}
         </div>
       </div>` +
-      results.map((bhajan, index) => `
-        <div class="result-item date-result-item clickable-row" onclick="showAudioHint('${bhajan.dateSung}', '${formatDate(bhajan.dateSung)}')">
+      results.map((bhajan, index) => {
+        const hasAudio = bhajanAudios.some((a) => a.date === bhajan.dateSung);
+        const hasYoutube = !hasAudio && bhajanYoutubeLinks.some((y) => y.date === bhajan.dateSung);
+        const rowClick = hasYoutube
+          ? `openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})`
+          : `showAudioHint('${bhajan.dateSung}', '${formatDate(bhajan.dateSung)}')`;
+        return `
+        <div class="result-item date-result-item clickable-row" onclick="${rowClick}">
           <div class="result-line-1">
             <span class="result-number">${index + 1}.</span>
             <h3 class="result-title">${bhajan.name}</h3>
+            ${hasYoutube ? `<button type="button" class="youtube-btn" title="Watch on YouTube" aria-label="Watch on YouTube" onclick="openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})"><svg viewBox="0 0 30 14" width="30" height="14"><rect width="30" height="14" rx="5" fill="#FF0000"/><path d="M12.5 4.3l5.5 2.7-5.5 2.7z" fill="#fff"/></svg></button>` : ""}
           </div>
           <div class="result-line-2">
             ${bhajan.singer ? `<span class="date-result-singer">&#9835; ${bhajan.singer}</span>` : ""}
             <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
           </div>
-        </div>`).join("");
+        </div>`;
+      }).join("");
   }
 
   resultsSection.style.display = "block";

@@ -1121,62 +1121,73 @@ const thursdayBhajansRawData = [
     name: "Gajanana Gajanana",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "0:06",
     singer: "Praneetha"
   },
   {
     name: "Gurubaba Gurubaba",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "3:15",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Durga Bhavani Maa Jaya Jaya Sai Maa",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "5:51",
     singer: "Chamundeshwari"
   },
   {
     name: "Hare Rama Hare Rama Rama Rama Hare Hare",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "10:04",
     singer: "Lal"
   },
   {
     name: "Muralidhara Hare Mohana Krishna",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "14:34",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
     day: "Thursday",
-    dateSung: "2026-06-18"
+    dateSung: "2026-06-18",
+    startTime: "18:02"
   },
   {
     name: "Krishna Murari Gopala Krishna Krishna Sai Gopala",
     day: "Thursday",
-    dateSung: "2026-06-18"
+    dateSung: "2026-06-18",
+    startTime: "22:23"
   },
   {
     name: "Hare Krishna Hare Ram Sairam Sairam",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "26:24",
     singer: "Lal"
   },
   {
     name: "Jai (3) Narayana",
     day: "Thursday",
-    dateSung: "2026-06-18"
+    dateSung: "2026-06-18",
+    startTime: "30:42"
   },
   {
     name: "Shambho Mahadeva",
     day: "Thursday",
-    dateSung: "2026-06-18"
+    dateSung: "2026-06-18",
+    startTime: "33:56"
   },
   {
     name: "Bolo Bolo Sabmil Bolo",
     day: "Thursday",
     dateSung: "2026-06-18",
+    startTime: "37:51",
     singer: "Praneetha & Vani"
   },
   //25th June 2026
@@ -1184,70 +1195,82 @@ const thursdayBhajansRawData = [
     name: "Sanaatana Sarathey Saayeesha",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "0:06",
     singer: "Chandini & Harshitha"
   },
   {
     name: "Premamayi Sai Maa Gnanamayi Sai Maa",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "5:10",
     singer: "Sai Karthik"
   },
   {
     name: "Pranaam Sweekaro Sai Mahadeva",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "10:02",
     singer: "Praneetha & Vani"
   },
   {
     name: "Rama Sriramachandra Jaya Jaya Rama",
     day: "Thursday",
-    dateSung: "2026-06-25"
+    dateSung: "2026-06-25",
+    startTime: "16:08"
   },
   {
     name: "Madhava Mohana Murari",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "20:24",
     singers: "Eshwari & Jyothi"
   },
   {
     name: "Sadguru Nathude Maa Baba",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "23:33",
     singer: "Eshwar"
   },
   {
     name: "Srirama Jayarama Jaya Jaya Ram",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "25:35",
     singer: "Praneetha & Vani"
   },
   {
     name: "Satya Narayana Govinda Madhava",
     day: "Thursday",
-    dateSung: "2026-06-25"
+    dateSung: "2026-06-25",
+    startTime: "27:48"
   },
   {
     name: "Shiva Shambho Hara (2) Shambho",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "32:18",
     singer: "Chamundeshwari"
   },
   {
     name: "Nirupama Gunasadana Neeraja Dhala Nayana",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "34:44",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Sri Ranga Hare Vittala Sai Ranga Vittala",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "37:47",
     singer: "Chandini & Harshitha"
   },
   {
     name: "Meru Meghaya Mayurasana",
     day: "Thursday",
     dateSung: "2026-06-25",
+    startTime: "40:37",
     singer: "Sai Karthik"
   },
 //2nd July 2026
@@ -1255,18 +1278,21 @@ const thursdayBhajansRawData = [
     name: "Bhavani Nandana Bala Gajanana",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "0:06",
     singer: "Praneetha"
   },
   {
     name: "Jaya Guru Omkaara Jaya Jaya Sadguru Omkaara",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "2:10",
     singer: "Eshwar"
   },
   {
     name: "Raja Rajeshwari Jaganmohini",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "4:30",
     singer: "Vani"
   },
   {
@@ -1274,66 +1300,77 @@ const thursdayBhajansRawData = [
     shruthi: { gents: "4P" },
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "7:46",
     singer: "Sai Karthik"
   },
   {
     name: "Om Sriram Jairam Jai Jai Ram",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "14:08",
     singer: "Chamundeshwari"
   },
   {
     name: "Neelakanta Mahadeva Gowri Vandana",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "17:44",
     singer: "Nivedita & Sai Harshitha"
   },
   {
     name: "Nandakishora Navanita Chora Sai Gopala",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "20:13",
     singer: "Eshwar"
   },
   {
     name: "Bada Chitta Chora",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "24:04",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Manuva Bolo Radhe (4) Shyama Naam",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "26:25",
     singers: "Eshwari & Jyothi"
   },
   {
     name: "Narayan (2) Bhajaman Narayan",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "30:02",
     singer: "Sai Karthik"
   },
   {
     name: "Om Namo Bhagavatey Vasudevaaya",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "33:12",
     singers: "Geetha & Lalitha"
   },
   {
     name: "Jaya Jaya Mangala Sai Namo",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "36:20",
     singer: "Sai Harshitha"
   },
   {
     name: "Satyam Gnanamanantham Brahma",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "39:03",
     singer: "Eshwar"
   },
   {
     name: "Palani Muruga Vel Muruga",
     day: "Thursday",
     dateSung: "2026-07-02",
+    startTime: "41:08",
     singer: "Sai Karthik"
   },
 
@@ -1342,65 +1379,76 @@ const thursdayBhajansRawData = [
     name: "Ganesha Charanam Parama Pavanam",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "0:37",
     singer: "Praneetha"
   },
   {
     name: "Jaya Guru Jaya Guru Sairam",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "5:32",
     singer: "Eshwar"
   },
   {
     name: "Devi Bhavani Jagat Janani",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "8:56",
     singer: "Sai Harshitha"
   },
   {
     name: "Sri Rama Jaya Rama Jaya (2) Rama",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "12:37",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Hari Naam Gathe Chalo",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "16:33",
     singer: "Lal"
   },
   {
     name: "Shambho Shankara",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "21:36",
     singer: "Vani"
   },
   {
     name: "Namo Bhagavatey Vasudevaaya",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "26:58",
     singer: "Lalitha"
   },
   {
     name: "Nandalala Nandalala Nanda Gopa Nanda Nachey",
     day: "Thursday",
-    dateSung: "2026-07-09"
+    dateSung: "2026-07-09",
+    startTime: "31:09"
   },
   {
     name: "Hey Madhava Hey Madhusudana",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "35:40",
     singers: "Vani & Sai Harshitha"
   },
   {
     name: "Vittala Hari Vittala",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "38:33",
     singer: "Chamundeshwari"
   },
   {
     name: "Satennam Satennam Satennam Jai Bolo",
     day: "Thursday",
     dateSung: "2026-07-09",
+    startTime: "42:13",
     singer: "Lal"
   },
 
@@ -1409,6 +1457,7 @@ const thursdayBhajansRawData = [
     name: "Shambu Kumara Gowri Tanaya",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "0:35",
     singer: "Abhishek"
   },
   {
@@ -1416,30 +1465,35 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     shruthi: { gents: "5P" },
     dateSung: "2026-07-16",
+    startTime: "4:06",
     singer: "Sai Karthik"
   },
   {
     name: "Triloka Palini Jagadeeshwari",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "9:26",
     singers: "Geetha & Eshwari"
   },
   {
     name: "Namah Shivaya (2)",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "12:22",
     singer: "A.Srinivas"
   },
   {
     name: "Govinda Bolo Gopala Bolo",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "17:22",
     singer: "Abhishek"
   },
   {
     name: "Hey Sai Jagannatha (3)",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "22:34",
     singer: "Praneetha"
   },
   {
@@ -1447,6 +1501,7 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     shruthi: { gents: "5.5P" },
     dateSung: "2026-07-16",
+    startTime: "27:37",
     singer: "Sai Karthik"
   },
   {
@@ -1454,30 +1509,35 @@ const thursdayBhajansRawData = [
     day: "Thursday",
     shruthi: { gents: "5P" },
     dateSung: "2026-07-16",
+    startTime: "31:48",
     singer: "Eshwar"
   },
   {
     name: "Sri Sai Rama Hare (2)",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "34:23",
     singers: "Geetha & Lalitha"
   },
   {
     name: "Hey Govinda Hey Ananda Nanda Gopala",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "37:26",
     singer: "Chamundeshwari"
   },
   {
     name: "Guru Paada Vandana Shata Vandana",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "40:00",
     singer: "A.Srinivas"
   },
   {
     name: "Manamohana Nandalal",
     day: "Thursday",
     dateSung: "2026-07-16",
+    startTime: "43:00",
     singer: "Vani"
   },
 
