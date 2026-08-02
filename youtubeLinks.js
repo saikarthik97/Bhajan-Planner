@@ -11,4 +11,5 @@ const bhajanYoutubeLinks = [
   { date: "2026-07-09", url: "https://youtu.be/8WOHq_uYcrc" },
   { date: "2026-07-16", url: "https://youtu.be/xFwYtO5AQHw" },
   { date: "2026-07-29", url: "https://youtu.be/jAWLEhhrFpU" },
+  { date: "2026-08-02", url: "https://www.youtube.com/watch?v=spMydzRD81w" },
 ];

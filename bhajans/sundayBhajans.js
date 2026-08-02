@@ -2016,5 +2016,89 @@ const sundayBhajansRawData = [
     dateSung: "2026-07-12",
     singer: "A.Srinivas"
   },
+  //2nd Aug 2026
+  {
+    name: "Sharanam Sharanam Paahi Gajananam",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "0:39",
+    singer: "Swaroop"
+  },
+  {
+    name: "Sai Pita Aur Mata Sai",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "4:49",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "JagatJanani Maa Ambe Bhavani",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "9:12",
+    singers: "Geetha,Jyothi & Eshwari"
+  },
+  {
+    name: "Parthishwara Satya Saishwara",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "12:18",
+    singer: "Abhishek"
+  },
+  {
+    name: "Kamalanetra Saishwara",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "15:35",
+    singer: "Lal"
+  },
+  {
+    name: "Krishna Krishna Yaduvara Krishna",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "20:16",
+    singers: "Yoshitha & Vani"
+  },
+  {
+    name: "Ram Rahim ko Bhajanewaale Tere Pujari Baba",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "23:56",
+    singer: "Venu"
+  },
+  {
+    name: "Ram (3) Paramasumangala Ram(3)",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "29:08",
+    singer: "Sridhar"
+  },
+  {
+    name: "Sai Hai Jeevan Jeevan Satyasai",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "31:27",
+    singers: "Praneetha & Vani"
+  },
+  {
+    name: "Panduranga Vittala Jai Pandarinatha Vittala",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "34:42"
+  },
+  {
+    name: "Hey Nanda Nanda Gopala Aananda Nanda Gopala",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "37:57",
+    singer: "Eshwar"
+  },
+  {
+    name: "Bhashma Vibhushitha Bhavani Shankara",
+    day: "Sunday",
+    dateSung: "2026-08-02",
+    startTime: "39:36",
+    singers: "Abhishek & Swaroop"
+  },
 
 ]
