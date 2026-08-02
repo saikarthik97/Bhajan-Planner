@@ -528,7 +528,7 @@ function displayDateResults(results, selectedDate) {
             ${hasYoutube ? `<button type="button" class="youtube-btn" title="Watch on YouTube" aria-label="Watch on YouTube" onclick="openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})"><svg viewBox="0 0 30 14" width="30" height="14"><rect width="30" height="14" rx="5" fill="#FF0000"/><path d="M12.5 4.3l5.5 2.7-5.5 2.7z" fill="#fff"/></svg></button>` : ""}
           </div>
           <div class="result-line-2">
-            ${bhajan.singer ? `<span class="date-result-singer">&#9835; ${bhajan.singer}</span>` : ""}
+            ${(bhajan.singer || bhajan.singers) ? `<span class="date-result-singer">&#9835; ${bhajan.singer || bhajan.singers}</span>` : ""}
             <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
           </div>
         </div>`;
