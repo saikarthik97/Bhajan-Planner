@@ -273,14 +273,16 @@ function onSingerDropdownChange(changed) {
 }
 
 function filterBhajansBySinger(singerName) {
-  return bhajansDatabase.filter((bhajan) => {
-    if (bhajan.dateSung === "2026-04-24") return false;
-    if (bhajan.singers) return bhajan.singers.trim().toLowerCase() === singerName.toLowerCase();
-    if (bhajan.singer) {
-      return bhajan.singer.split(/[&,]/).map((s) => s.trim().toLowerCase()).includes(singerName.toLowerCase());
-    }
-    return false;
-  });
+  return bhajansDatabase
+    .filter((bhajan) => {
+      if (bhajan.dateSung === "2026-04-24") return false;
+      if (bhajan.singers) return bhajan.singers.trim().toLowerCase() === singerName.toLowerCase();
+      if (bhajan.singer) {
+        return bhajan.singer.split(/[&,]/).map((s) => s.trim().toLowerCase()).includes(singerName.toLowerCase());
+      }
+      return false;
+    })
+    .sort((a, b) => (a.dateSung < b.dateSung ? 1 : a.dateSung > b.dateSung ? -1 : 0));
 }
 
 function showSingerSongs() {
