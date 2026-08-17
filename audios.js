@@ -22,6 +22,7 @@ const bhajanAudios = [
   { date: '2026-04-16', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284022/16th_April_sfszko.mp3", label: "Thursday Bhajans" },
   { date: '2026-04-19', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284037/19th_April_jvz2rs.mp3", label: "Sunday Bhajans" },
   { date: '2026-04-24', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284000/24th_April_2026_Bhajan_scermf.mp3", label: "Aaradhana Day - Bhajans", programme: "bhajans" },
+  { date: '2026-04-24', audioFile: "audios/Aradhana Mahotsavam 2026.mp3", label: "Aaradhana Mahotsavam - Music Programme", programme: "music" },
   { date: '2026-04-26', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284003/26th_April_2026_Bhajan_d58nlr.mp3", label: "Sunday Bhajans" },
   { date: '2026-05-14', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782284045/14th_May_2026_Bhajan_ffvv3n.mp3", label: "Thursday Bhajans" },
   { date: '2026-05-17', audioFile: "https://res.cloudinary.com/nfe69acp/video/upload/v1782283813/17th_May_xclodd.mp3", label: "Sunday Bhajans" },
