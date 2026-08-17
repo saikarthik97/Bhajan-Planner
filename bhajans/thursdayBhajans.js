@@ -1541,4 +1541,90 @@ const thursdayBhajansRawData = [
     singer: "Vani"
   },
 
+  // 13th Aug 2026
+  {
+    name: "Jaya Jaya Girija Bala Gajanana",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "0:36",
+    singer: "Sai Sruthi"
+  },
+  {
+    name: "Tumaho Anatha Natha Bhagawan",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "4:07",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Janani Janani Satyasai Shubha Janani",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "8:41",
+    singers: "Jyothi & Eshwari"
+  },
+  {
+    name: "Rama Sri Ramachandra Jaya Jaya Rama",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "12:18",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Giridhari Lal Shyama Gopal",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "16:47",
+    singer: "Vathsalya"
+  },
+  {
+    name: "Narayana Hari Narasimha Hari",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "20:44",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Satya Dharma Shanthi Prema Swaroopa Prashanthi Nilaya Deva",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "24:15",
+    singer: "Vani"
+  },
+  {
+    name: "Raghupati Raghava Raja Ram",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "28:38",
+    singer: "Santosh"
+  },
+  {
+    name: "Shankara(4) Shambho Shankara",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "33:30",
+    singer: "Praneetha"
+  },
+  {
+    name: "Satyam Gnanamanantam Brahma",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "37:16",
+    singer: "Eshwar"
+  },
+  {
+    name: "Sriram Jayaram Jaya Jaya Ram Janaki Jeevana Ram",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "39:24",
+    singer: "Supraja"
+  },
+  {
+    name: "Jaya Jagat Janani Maa",
+    day: "Thursday",
+    dateSung: "2026-08-13",
+    startTime: "43:58",
+    singer: "Sai Karthik"
+  },
+
 ];

@@ -12,7 +12,7 @@ const bhajansDatabase = [
   ...thursdayBhajansRawData,
   ...bhogi2026RawData,
   ...sankranthi2026,
-  // ...Gurupoornima2026RawData,
+  ...gurupoornima2026RawData,
   ...aaradhana2026RawData,
 ].map((bhajan, index) => ({ id: index + 1, ...bhajan }));
 
@@ -22,6 +22,7 @@ const festivalDates = {
   "2026-02-15": "Festival - Maha Shivarathri",
   "2026-03-21": "Festival - Ramzan",
   "2026-04-24": "Festival - Aaradhana Mahotsavam",
+  "2026-07-29": "Festival - Guru Poornima",
 };
 
 function getFestivalName(dateString) {
@@ -272,14 +273,16 @@ function onSingerDropdownChange(changed) {
 }
 
 function filterBhajansBySinger(singerName) {
-  return bhajansDatabase.filter((bhajan) => {
-    if (bhajan.dateSung === "2026-04-24") return false;
-    if (bhajan.singers) return bhajan.singers.trim().toLowerCase() === singerName.toLowerCase();
-    if (bhajan.singer) {
-      return bhajan.singer.split(/[&,]/).map((s) => s.trim().toLowerCase()).includes(singerName.toLowerCase());
-    }
-    return false;
-  });
+  return bhajansDatabase
+    .filter((bhajan) => {
+      if (bhajan.dateSung === "2026-04-24") return false;
+      if (bhajan.singers) return bhajan.singers.trim().toLowerCase() === singerName.toLowerCase();
+      if (bhajan.singer) {
+        return bhajan.singer.split(/[&,]/).map((s) => s.trim().toLowerCase()).includes(singerName.toLowerCase());
+      }
+      return false;
+    })
+    .sort((a, b) => (a.dateSung < b.dateSung ? 1 : a.dateSung > b.dateSung ? -1 : 0));
 }
 
 function showSingerSongs() {
@@ -527,7 +530,7 @@ function displayDateResults(results, selectedDate) {
             ${hasYoutube ? `<button type="button" class="youtube-btn" title="Watch on YouTube" aria-label="Watch on YouTube" onclick="openBhajanOnYoutube(event, '${bhajan.dateSung}', ${formatTimeAttr(bhajan.startTime)})"><svg viewBox="0 0 30 14" width="30" height="14"><rect width="30" height="14" rx="5" fill="#FF0000"/><path d="M12.5 4.3l5.5 2.7-5.5 2.7z" fill="#fff"/></svg></button>` : ""}
           </div>
           <div class="result-line-2">
-            ${bhajan.singer ? `<span class="date-result-singer">&#9835; ${bhajan.singer}</span>` : ""}
+            ${(bhajan.singer || bhajan.singers) ? `<span class="date-result-singer">&#9835; ${bhajan.singer || bhajan.singers}</span>` : ""}
             <span class="bhajan-shruthi">${formatShruthiSimple(bhajan.shruthi)}</span>
           </div>
         </div>`;
