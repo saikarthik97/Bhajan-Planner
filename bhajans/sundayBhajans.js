@@ -2100,5 +2100,96 @@ const sundayBhajansRawData = [
     startTime: "39:36",
     singers: "Abhishek & Swaroop"
   },
+  //23rd Aug 2026 Eve
+  {
+    name: "Jaya ho(2) mooshika Vaahana",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "0:39",
+    singer: "Lal"
+  },
+  {
+    name: "Jaya Guru Omkaara Sadguru Omkaara",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "4:04",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Mangala Shubhakari Maata Maheshwari",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "8:27",
+    singer: "Lavanya"
+  },
+  {
+    name: "Kaanha Kanhaiyya Bansi Adhariya",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "11:58",
+    singer: "Sai Karthik"
+  },
+  {
+    name: "Arunachala Shiva (3) Arunashiva",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "16:34",
+    singer: "Abhishek"
+  },
+  {
+    name: "Patita Pavana Ram",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "21:24",
+    singers: "Lavanya & Vani"
+  },
+  {
+    name: "Sai Narayana Narayana",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "25:16",
+    singer: "Sridhar"
+  },
+  {
+    name: "Yuga Yuga Ke Avataraa Sai Rama Sai Krishna Sai Baba",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "27:34",
+    singer: "Venu"
+  },
+  {
+    name: "Radhe(3)shyam Rakumayi Vittala",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "32:08"
+  },
+  {
+    name: "Yadukula Nandana Srihari Madhava",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "34:58",
+    singer: "Eshwar"
+  },
+  {
+    name: "Narayana hari Nama bhajore",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "36:54",
+    singer: "Lavanya"
+  },
+  {
+    name: "Neela kanta neeleshwara Bhole Bhandari",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "39:34",
+    singer: "A.Srinivas"
+  },
+  {
+    name: "Hara Hara Mahadeva SatyaSai Mahadeva",
+    day: "Sunday",
+    dateSung: "2026-08-23",
+    startTime: "43:10",
+    singer: "Lal"
+  },
 
 ]
